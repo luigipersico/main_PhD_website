@@ -82,14 +82,11 @@
     ]
   },
   {
-    "objectID": "man/index.html",
-    "href": "man/index.html",
+    "objectID": "index.html",
+    "href": "index.html",
     "title": "About the author",
     "section": "",
-    "text": "Hi!\nMy name is Luigi Persico, I am 25 and I am from Italy. Currently I am doing a Ph.D in Plasma Physics at EPFL, and here you can have a look at what I am working on.\nEnjoy ;)",
-    "crumbs": [
-      "About the author"
-    ]
+    "text": "Hi!\nMy name is Luigi Persico, I am 25 and I am from Italy. Currently I am doing a Ph.D in Plasma Physics at EPFL, and here you can have a look at what I am working on.\nEnjoy ;)"
   },
   {
     "objectID": "project-roadmap.html",
