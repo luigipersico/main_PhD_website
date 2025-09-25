@@ -1,0 +1,21 @@
+---
+title: "Ph.D. roadmap"
+author: Luigi Persico
+institution: EPFL
+---
+
+## Overview
+
+This Ph.D. is conducted at the Swiss Plasma Center (SPC) under the supervision of Stefano Coda and Dmytry Mykytchuk.
+
+The focus of this first part will be the development of a Beam Emission Spectroscpy (BES) diagnostic on TCV, in order to measure the density fluctuations during tokamak operation. 
+
+Secondly, the work will move on the calibration of the Motional-Stark Effect (MSE) diagnostic, already implemented on TCV.
+
+## Currently to do 
+
+1. Adding BES, MSE, and NBI2 characteristics to the SPC wiki.
+2. Getting used with the matlab code for MSE.
+3. Parametric description of the neutral beam.
+4. Having a look at plasma instabilities.
+

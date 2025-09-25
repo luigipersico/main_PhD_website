@@ -1,0 +1,72 @@
+{
+  "index.qmd": {
+    "index.html": "f0942189"
+  },
+  "project-roadmap.qmd": {
+    "project-roadmap.html": "8ab360c8",
+    "project-roadmap.tex": "3b469f80"
+  },
+  "reports/2022-01.qmd": {
+    "2022-01.html": "d5efe732"
+  },
+  "reports/2022-03.qmd": {
+    "2022-03.html": "237bc826"
+  },
+  "reports/2025-09.qmd": {
+    "2025-09.html": "7730c4ac",
+    "2025-09.tex": "58c3d434"
+  },
+  "man/index.qmd": {
+    "index.html": "cec0caa2",
+    "index.tex": "90e9ffd2"
+  },
+  "theory/BES.qmd": {
+    "BES.html": "5c893f31",
+    "BES.tex": "17a325b4"
+  },
+  "theory/MSE.qmd": {
+    "MSE.html": "47233752",
+    "MSE.tex": "087cee28"
+  },
+  "theory/Safety_factor.qmd": {
+    "Safety_factor.html": "29d8a139"
+  },
+  "theory/NBI2.qmd": {
+    "NBI2.html": "22dbc46d"
+  },
+  "Courses/Plasma Instabilities/Lecture_notes.qmd": {
+    "Lecture_notes.html": "f6aae04d",
+    "Lecture_notes.tex": "97ec791f"
+  },
+  "theory/Quantum Theory/Hilbert Space.qmd": {
+    "Hilbert Space.html": "05027cef",
+    "Hilbert-Space.tex": "eb8250a5"
+  },
+  "theory/Quantum_Theory/Hilbert_Space.qmd": {
+    "Hilbert_Space.html": "4bfea03b",
+    "Hilbert_Space.tex": "2d8771f3"
+  },
+  "theory/Plasma_physics/MSE.qmd": {
+    "MSE.html": "e89243ca",
+    "MSE.tex": "14d2f6db"
+  },
+  "theory/Plasma_physics/BES.qmd": {
+    "BES.html": "022d110d",
+    "BES.tex": "2bb1e2bd"
+  },
+  "theory/Plasma_physics/NBI2.qmd": {
+    "NBI2.html": "b0fec6ea",
+    "NBI2.tex": "b977d79c"
+  },
+  "theory/Plasma_physics/Safety_factor.qmd": {
+    "Safety_factor.html": "8721d56d",
+    "Safety_factor.tex": "aad8515a"
+  },
+  "theory/Quantum_theory/Hilbert_Space.qmd": {
+    "Hilbert_Space.html": "33ec4966",
+    "Hilbert_Space.tex": "87f4ce18"
+  },
+  "theory/Mathematics/covariant_contravariant.qmd": {
+    "covariant_contravariant.html": "b7b15674"
+  }
+}

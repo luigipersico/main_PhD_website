@@ -1,0 +1,91 @@
+---
+title: "Safety Factor q"
+format:
+    html:
+        interactive: false
+jupyter: python3
+---
+
+The safety factor $q$ expresses the number of toroidal turns a magnetic field line makes for each poloidal turn in a toroidal confinement device, such as a tokamak.
+
+It corresponds to the flux-surface averaged local pitch:
+
+$$
+q(\psi) \equiv \langle q_l \rangle_{\theta} = \left\langle \frac{r B_{\varphi}}{R B_{\theta}}  \right\rangle_{\theta}
+$$
+
+
+where $r$ is the minor radius coordinate, $B_{\varphi}$ is the toroidal magnetic field component, $R$ is the major radius, and $B_{\theta}$ is the poloidal magnetic field component.
+A higher safety factor generally indicates greater stability against certain plasma instabilities.
+
+![Example of safety factor behaviour in a TCV shot](Figures/safety_factor.png)
+
+With some assumptions it is possible to estimate the safety factor behavior in a tokamak: 
+$$
+ B_{\varphi} \approx \frac{\mu_0}{2\pi R} I_{coils};
+$$
+$$
+ B_{\theta} \approx \frac{\mu_0}{2\pi r} I_p = \frac{\mu_0}{2} J_p r;
+$$
+
+$$
+\rightarrow q(\psi) = \left\langle\frac{I_{coils}}{\pi R^2J_p }\right\rangle_{\varphi, \theta}.
+$$
+
+
+```{python}
+#| echo: false
+#| fig-cap: "Top: ⟨Q⟩_θ as a function of r. Bottom: surface Q(r, θ) for the chosen R0 and minor radius a."
+#| fig-width: 9
+#| fig-height: 8
+
+import numpy as np
+import matplotlib.pyplot as plt 
+from mpl_toolkits.mplot3d import Axes3D  # ensure 3D is available
+
+# ----- PARAMETERS (tweak as you like) -----
+R0 = 0.88       # major radius
+a  = 0.25       # minor radius (max r)
+Jp = 1.0e6      # plasma current density proxy
+I_coils = 1.0e6 # coils current proxy
+Nr = 120        # radial resolution
+Nth = 240       # poloidal angle resolution
+# ------------------------------------------
+
+# Geometry
+r = np.linspace(0.0, a, Nr)
+theta = np.linspace(0.0, 2*np.pi, Nth)
+R_mesh, TH_mesh = np.meshgrid(r, theta, indexing='xy')
+
+# R(r, theta) and Q(r, theta)
+Rvals = R0 + R_mesh * np.cos(TH_mesh)
+Q_mesh = I_coils / (np.pi * (Rvals**2) * Jp)
+
+# ⟨Q⟩_θ(r): average over theta (axis 0 because theta is the first dim)
+Q_avg_theta = Q_mesh.mean(axis=0)
+
+# ---- PLOT ----
+fig = plt.figure(figsize=(9, 8))
+
+# (1) ⟨Q⟩_θ vs r
+ax1 = fig.add_subplot(2,1,1)
+ax1.plot(r, Q_avg_theta, lw=2)
+ax1.set_title(r"$\langle q \rangle_{\theta}$ vs $r$")
+ax1.set_xlabel(r"$r$")
+ax1.set_ylabel(r"$\langle q \rangle_{\theta}$")
+ax1.grid(True)
+
+# (2) Surface Q(r, θ)
+ax2 = fig.add_subplot(2,1,2, projection='3d')
+ax2.plot_surface(R_mesh, TH_mesh, Q_mesh, cmap='viridis', linewidth=0, antialiased=True)
+ax2.set_title(r"$q(r,\theta)$ surface (shown as $q(R,\theta)$ with $R=R_0+r\cos\theta$)")
+ax2.set_xlabel(r"$r$")
+ax2.set_ylabel(r"$\theta$")
+ax2.set_zlabel(r"$q$")
+# Adjust view for readability
+ax2.view_init(elev=25, azim=-130)
+
+plt.tight_layout()
+plt.show()
+plt.close(fig) 
+```

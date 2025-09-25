@@ -1,0 +1,22 @@
+---
+title: "Hilbert Space"
+---
+
+A *Hilbert Space* is a complex vector space equipped with an inner product operation. 
+
+Mathematically, a Hilbert space $\mathcal{H}$ satisfies the following properties:
+
+- **Vector Space:** $\mathcal{H}$ is a vector space over the complex numbers $\mathbb{C}$.
+- **Inner Product:** There exists an inner product $\langle \cdot, \cdot \rangle : \mathcal{H} \times \mathcal{H} \to \mathbb{C}$ that is linear in its first argument, conjugate symmetric, and positive-definite.
+- **Completeness:** $\mathcal{H}$ is complete with respect to the norm induced by the inner product, i.e., every Cauchy sequence in $\mathcal{H}$ converges to an element in $\mathcal{H}$. This means that there are no "points missing" in an Hilbert Space.
+
+The inner product generalizes the notion of the dot product to complex vector spaces and is fundamental in quantum theory and functional analysis. A Hilbert space generalizes the notion of Euclidean space to infinite dimensions.
+
+In quantum mechanics, the mathematical framework is built upon Hilbert spaces:
+
+- **States:** The possible states of a quantum system are represented by (normalized) vectors in a Hilbert space $\mathcal{H}$.
+- **Observables:** Physical quantities (observables) correspond to Hermitian (self-adjoint) operators acting on $\mathcal{H}$.
+- **Symmetries:** Symmetry transformations are represented by unitary operators on $\mathcal{H}$, preserving inner products and probabilities.
+- **Measurements:** The act of measurement is mathematically described by orthogonal projection operators, which project state vectors onto subspaces associated with measurement outcomes.
+
+This structure provides the foundation for the mathematical description of quantum systems.

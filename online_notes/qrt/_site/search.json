@@ -1,0 +1,208 @@
+[
+  {
+    "objectID": "theory/Quantum_theory/Hilbert_Space.html",
+    "href": "theory/Quantum_theory/Hilbert_Space.html",
+    "title": "Hilbert Space",
+    "section": "",
+    "text": "A Hilbert Space is a complex vector space equipped with an inner product operation.\nMathematically, a Hilbert space \\(\\mathcal{H}\\) satisfies the following properties:\n\nVector Space: \\(\\mathcal{H}\\) is a vector space over the complex numbers \\(\\mathbb{C}\\).\nInner Product: There exists an inner product \\(\\langle \\cdot, \\cdot \\rangle : \\mathcal{H} \\times \\mathcal{H} \\to \\mathbb{C}\\) that is linear in its first argument, conjugate symmetric, and positive-definite.\nCompleteness: \\(\\mathcal{H}\\) is complete with respect to the norm induced by the inner product, i.e., every Cauchy sequence in \\(\\mathcal{H}\\) converges to an element in \\(\\mathcal{H}\\). This means that there are no “points missing” in an Hilbert Space.\n\nThe inner product generalizes the notion of the dot product to complex vector spaces and is fundamental in quantum theory and functional analysis. A Hilbert space generalizes the notion of Euclidean space to infinite dimensions.\nIn quantum mechanics, the mathematical framework is built upon Hilbert spaces:\n\nStates: The possible states of a quantum system are represented by (normalized) vectors in a Hilbert space \\(\\mathcal{H}\\).\nObservables: Physical quantities (observables) correspond to Hermitian (self-adjoint) operators acting on \\(\\mathcal{H}\\).\nSymmetries: Symmetry transformations are represented by unitary operators on \\(\\mathcal{H}\\), preserving inner products and probabilities.\nMeasurements: The act of measurement is mathematically described by orthogonal projection operators, which project state vectors onto subspaces associated with measurement outcomes.\n\nThis structure provides the foundation for the mathematical description of quantum systems.",
+    "crumbs": [
+      "Theory",
+      "Quantum Theory",
+      "Hilbert Space"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI2.html",
+    "href": "theory/Plasma_physics/NBI2.html",
+    "title": "Luigi Persico - Ph.D.",
+    "section": "",
+    "text": "\\[\n\\text{DCD} = (r_d, Z_d, \\phi_d, \\theta_d, tv_d) = (5.2123, -0.0025, 212,6947 \\cdot \\pi/180, 0, -8.4896 \\cdot \\pi/180)\n\\]",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector 2"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI2.html#neutral-beam-injector-2",
+    "href": "theory/Plasma_physics/NBI2.html#neutral-beam-injector-2",
+    "title": "Luigi Persico - Ph.D.",
+    "section": "",
+    "text": "\\[\n\\text{DCD} = (r_d, Z_d, \\phi_d, \\theta_d, tv_d) = (5.2123, -0.0025, 212,6947 \\cdot \\pi/180, 0, -8.4896 \\cdot \\pi/180)\n\\]",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector 2"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/BES.html",
+    "href": "theory/Plasma_physics/BES.html",
+    "title": "Beam Emission Spectroscopy (BES)",
+    "section": "",
+    "text": "When neutral particles enter in a plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, \\(E_{2}\\) and, when they decay to a lower energy state \\(E_{1}\\), they emit a photon with energy \\(E_{\\gamma} = E_2 - E_1\\), and wavelength \\(\\lambda = \\frac{hc}{E_{\\gamma}}\\).\nIn particular, of specific interest is the Balmer-\\(\\alpha\\) emission of the deuterium atom \\(D_{\\alpha}\\), which corresponds to the transition between \\(n=3\\) and \\(n=2\\), and is characterized by an energy \\(E_{D_{\\alpha}} = 1.89\\) eV and a wavelength \\(\\lambda_{D_{\\alpha}} = 656.279\\) nm.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Beam Emission Spectroscopy (BES)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/BES.html#physical-principles",
+    "href": "theory/Plasma_physics/BES.html#physical-principles",
+    "title": "Beam Emission Spectroscopy (BES)",
+    "section": "",
+    "text": "When neutral particles enter in a plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, \\(E_{2}\\) and, when they decay to a lower energy state \\(E_{1}\\), they emit a photon with energy \\(E_{\\gamma} = E_2 - E_1\\), and wavelength \\(\\lambda = \\frac{hc}{E_{\\gamma}}\\).\nIn particular, of specific interest is the Balmer-\\(\\alpha\\) emission of the deuterium atom \\(D_{\\alpha}\\), which corresponds to the transition between \\(n=3\\) and \\(n=2\\), and is characterized by an energy \\(E_{D_{\\alpha}} = 1.89\\) eV and a wavelength \\(\\lambda_{D_{\\alpha}} = 656.279\\) nm.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Beam Emission Spectroscopy (BES)"
+    ]
+  },
+  {
+    "objectID": "reports/2025-09.html",
+    "href": "reports/2025-09.html",
+    "title": "September 2025",
+    "section": "",
+    "text": "Getting started with the Ph.D.\nStarting reading papers on BES\nPlasma instabilities course",
+    "crumbs": [
+      "Reports",
+      "September 2025"
+    ]
+  },
+  {
+    "objectID": "reports/2025-09.html#project-status",
+    "href": "reports/2025-09.html#project-status",
+    "title": "September 2025",
+    "section": "",
+    "text": "Getting started with the Ph.D.\nStarting reading papers on BES\nPlasma instabilities course",
+    "crumbs": [
+      "Reports",
+      "September 2025"
+    ]
+  },
+  {
+    "objectID": "man/index.html",
+    "href": "man/index.html",
+    "title": "About the author",
+    "section": "",
+    "text": "Hi!\nMy name is Luigi Persico, I am 25 and I am from Italy. Currently I am doing a Ph.D in Plasma Physics at EPFL, and here you can have a look at what I am working on.\nEnjoy ;)",
+    "crumbs": [
+      "About the author"
+    ]
+  },
+  {
+    "objectID": "project-roadmap.html",
+    "href": "project-roadmap.html",
+    "title": "Ph.D. roadmap",
+    "section": "",
+    "text": "This Ph.D. is conducted at the Swiss Plasma Center (SPC) under the supervision of Stefano Coda and Dmytry Mykytchuk.\nThe focus of this first part will be the development of a Beam Emission Spectroscpy (BES) diagnostic on TCV, in order to measure the density fluctuations during tokamak operation.\nSecondly, the work will move on the calibration of the Motional-Stark Effect (MSE) diagnostic, already implemented on TCV.",
+    "crumbs": [
+      "Ph.D. roadmap"
+    ]
+  },
+  {
+    "objectID": "project-roadmap.html#overview",
+    "href": "project-roadmap.html#overview",
+    "title": "Ph.D. roadmap",
+    "section": "",
+    "text": "This Ph.D. is conducted at the Swiss Plasma Center (SPC) under the supervision of Stefano Coda and Dmytry Mykytchuk.\nThe focus of this first part will be the development of a Beam Emission Spectroscpy (BES) diagnostic on TCV, in order to measure the density fluctuations during tokamak operation.\nSecondly, the work will move on the calibration of the Motional-Stark Effect (MSE) diagnostic, already implemented on TCV.",
+    "crumbs": [
+      "Ph.D. roadmap"
+    ]
+  },
+  {
+    "objectID": "project-roadmap.html#currently-to-do",
+    "href": "project-roadmap.html#currently-to-do",
+    "title": "Ph.D. roadmap",
+    "section": "Currently to do",
+    "text": "Currently to do\n\nAdding BES, MSE, and NBI2 characteristics to the SPC wiki.\nGetting used with the matlab code for MSE.\nParametric description of the neutral beam.\nHaving a look at plasma instabilities.",
+    "crumbs": [
+      "Ph.D. roadmap"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematics/covariant_contravariant.html",
+    "href": "theory/Mathematics/covariant_contravariant.html",
+    "title": "Covariant and Contravariant",
+    "section": "",
+    "text": "When describing a vector \\(\\mathbf{\\vec{V}}\\) through its components, we have two possible choices:\n\nCovariant components: These transform in the same way as the basis vectors under a change of coordinates.\nContravariant components: These transform in the opposite way to the basis vectors under a change of coordinates.\n\nThe distinction is important in tensor analysis and differential geometry, where the transformation properties of objects under coordinate changes determine their classification as covariant or contravariant.\n\n\n\n\n\nContravariant (left) and covariant (right) components of \\(\\vec{V}\\).",
+    "crumbs": [
+      "Theory",
+      "Mathematics",
+      "Covariant and Contravariant"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/MSE.html",
+    "href": "theory/Plasma_physics/MSE.html",
+    "title": "Motional-Stark Effect (MSE)",
+    "section": "",
+    "text": "The Stark Effect is the shifting and splitting of the electronic energy levels due to an external electric field. The Motional-Stark Effect (MSE), instead, is the specific case in which the electric field is the Lorentz electric field felt by an atom moving in a magnetic field \\(\\mathbf{\\vec{B}}\\) at a velocity \\(\\mathbf{\\vec{v}}\\), in its rest frame: \\(\\mathbf{\\vec{E}} = \\mathbf{\\vec{v}} \\times \\mathbf{\\vec{B}}\\).",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Motional-Stark Effect (MSE)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/MSE.html#introduction",
+    "href": "theory/Plasma_physics/MSE.html#introduction",
+    "title": "Motional-Stark Effect (MSE)",
+    "section": "",
+    "text": "The Stark Effect is the shifting and splitting of the electronic energy levels due to an external electric field. The Motional-Stark Effect (MSE), instead, is the specific case in which the electric field is the Lorentz electric field felt by an atom moving in a magnetic field \\(\\mathbf{\\vec{B}}\\) at a velocity \\(\\mathbf{\\vec{v}}\\), in its rest frame: \\(\\mathbf{\\vec{E}} = \\mathbf{\\vec{v}} \\times \\mathbf{\\vec{B}}\\).",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Motional-Stark Effect (MSE)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/MSE.html#a-bit-of-history",
+    "href": "theory/Plasma_physics/MSE.html#a-bit-of-history",
+    "title": "Motional-Stark Effect (MSE)",
+    "section": "A bit of history",
+    "text": "A bit of history\nThe Stark effect was discovered by the German physicist Johannes Stark in 1913, for which he was awarded the nobel price in 1919. During the same year the effect was independently discovered by the Italian physicit Antonio Lo Surdo1.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Motional-Stark Effect (MSE)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/MSE.html#physical-principles",
+    "href": "theory/Plasma_physics/MSE.html#physical-principles",
+    "title": "Motional-Stark Effect (MSE)",
+    "section": "Physical principles",
+    "text": "Physical principles\nWhen neutral particles enter in a plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, \\(E_{2}\\) and, when they decay to a lower energy state \\(E_{1}\\), they emit a photon with energy \\(E_{\\gamma} = E_2 - E_1\\), and wavelength \\(\\lambda = \\frac{hc}{E_{\\gamma}}\\).\nIn particular, of specific interest is the Balmer-\\(\\alpha\\) emission of the deuterium atom \\(D_{\\alpha}\\), which corresponds to the transition between \\(n=3\\) and \\(n=2\\), and is characterized by an energy \\(E_{D_{\\alpha}} = 1.89\\) eV and a wavelength \\(\\lambda_{D_{\\alpha}} = 656.279\\) nm.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Motional-Stark Effect (MSE)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/MSE.html#on-tcv",
+    "href": "theory/Plasma_physics/MSE.html#on-tcv",
+    "title": "Motional-Stark Effect (MSE)",
+    "section": "On TCV",
+    "text": "On TCV",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Motional-Stark Effect (MSE)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Safety_factor.html",
+    "href": "theory/Plasma_physics/Safety_factor.html",
+    "title": "Safety Factor q",
+    "section": "",
+    "text": "The safety factor \\(q\\) expresses the number of toroidal turns a magnetic field line makes for each poloidal turn in a toroidal confinement device, such as a tokamak.\nIt corresponds to the flux-surface averaged local pitch:\n\\[\nq(\\psi) \\equiv \\langle q_l \\rangle_{\\theta} = \\left\\langle \\frac{r B_{\\varphi}}{R B_{\\theta}}  \\right\\rangle_{\\theta}\n\\]\nwhere \\(r\\) is the minor radius coordinate, \\(B_{\\varphi}\\) is the toroidal magnetic field component, \\(R\\) is the major radius, and \\(B_{\\theta}\\) is the poloidal magnetic field component. A higher safety factor generally indicates greater stability against certain plasma instabilities.\n\n\n\nExample of safety factor behaviour in a TCV shot\n\n\nWith some assumptions it is possible to estimate the safety factor behavior in a tokamak: \\[\nB_{\\varphi} \\approx \\frac{\\mu_0}{2\\pi R} I_{coils};\n\\] \\[\nB_{\\theta} \\approx \\frac{\\mu_0}{2\\pi r} I_p = \\frac{\\mu_0}{2} J_p r;\n\\]\n\\[\n\\rightarrow q(\\psi) = \\left\\langle\\frac{I_{coils}}{\\pi R^2J_p }\\right\\rangle_{\\varphi, \\theta}.\n\\]\n\n\n\n\n\nTop: ⟨Q⟩_θ as a function of r. Bottom: surface Q(r, θ) for the chosen R0 and minor radius a.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Safety Factor q"
+    ]
+  }
+]

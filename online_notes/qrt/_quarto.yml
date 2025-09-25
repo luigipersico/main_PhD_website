@@ -1,0 +1,22 @@
+project:
+  type: confluence
+  title: "Luigi Persico - Ph.D."
+
+author: Luigi Persico
+
+format:
+  html:
+    mathjax:
+      macros:
+        vect: ["\\boldsymbol{#1}", 1]   # use as \vect{x}
+  pdf:
+    include-in-header:
+      text: |
+        \usepackage{amsmath}
+        \newcommand{\vect}[1]{\boldsymbol{#1}}
+
+execute:
+  freeze: false
+
+bibliography: references.bib
+csl: nature-physics.csl

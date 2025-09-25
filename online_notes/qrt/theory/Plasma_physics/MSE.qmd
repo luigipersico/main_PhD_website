@@ -1,0 +1,29 @@
+---
+title: "Motional-Stark Effect (MSE)"
+---
+
+
+## Introduction
+
+The *Stark Effect* is the shifting and splitting of the electronic energy levels due to an external electric field. The Motional-Stark Effect (MSE), instead, is the specific case in which the electric field is the Lorentz electric field felt by an atom moving in a magnetic field $\mathbf{\vec{B}}$ at a velocity $\mathbf{\vec{v}}$, in its rest frame: $\mathbf{\vec{E}} = \mathbf{\vec{v}} \times \mathbf{\vec{B}}$.
+
+
+
+## A bit of history
+
+The Stark effect was discovered by the German physicist Johannes Stark in 1913, for which he was awarded the nobel price in 1919. During the same year the effect was independently discovered by the Italian physicit Antonio Lo Surdo @stark_wikipedia.
+
+## Physical principles
+
+
+When neutral particles enter in a plasma, they are subject to inelastic collisions with plasma's ions and electrons. The neutrals' electrons, which initially are in their ground state, can reach a higher energy level, $E_{2}$ and, when they decay to a lower energy state $E_{1}$, they emit a photon with energy $E_{\gamma} = E_2 - E_1$, and wavelength $\lambda = \frac{hc}{E_{\gamma}}$. 
+
+In particular, of specific interest is the Balmer-$\alpha$ emission of the deuterium atom $D_{\alpha}$, which corresponds to the transition between $n=3$ and $n=2$, and is characterized by an energy $E_{D_{\alpha}} = 1.89$ eV and a wavelength $\lambda_{D_{\alpha}} = 656.279$ nm.
+
+
+## On TCV
+
+
+## References
+
+```{bibliography}
