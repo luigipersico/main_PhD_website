@@ -1,0 +1,1 @@
+It is also denoted as $\mathbf{A^{\dagger}}$, especially when used in conjunction with the [bra-ket notation](../bra_ket_notation.qmd). 

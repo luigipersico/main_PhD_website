@@ -8,7 +8,7 @@
 
 <meta name="author" content="Luigi Persico">
 
-<title>Covariant and Contravariant – Luigi Persico - Ph.D.</title>
+<title>Hermitian adjoint – Luigi Persico - Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -102,7 +102,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar docked fullcontent quarto-light">
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Mathematics/covariant_contravariant.html">Mathematics</a></li><li class="breadcrumb-item"><a href="../../theory/Mathematics/covariant_contravariant.html">Covariant and Contravariant</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Mathematic_tools/Bra-ket_notation.html">Mathematic Tools</a></li><li class="breadcrumb-item"><a href="../../theory/Mathematic_tools/Hermitian_adjoint.html">Hermitian adjoint</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -198,7 +198,7 @@ window.Quarto = {
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Mathematics</span></a>
+ <span class="menu-text">Mathematic Tools</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -206,8 +206,26 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Mathematics/covariant_contravariant.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../theory/Mathematic_tools/Bra-ket_notation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bra-ket notation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/covariant_contravariant.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Covariant and Contravariant</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/Hermitian_adjoint.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hermitian adjoint</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/Hilbert_Space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hilbert Space</span></a>
   </div>
 </li>
       </ul>
@@ -247,23 +265,6 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
- <span class="menu-text">Quantum Theory</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../theory/Quantum_theory/Hilbert_Space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hilbert Space</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
       </ul>
   </li>
     </ul>
@@ -271,13 +272,15 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Hermitian_adjoint.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Mathematics/covariant_contravariant.html">Mathematics</a></li><li class="breadcrumb-item"><a href="../../theory/Mathematics/covariant_contravariant.html">Covariant and Contravariant</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Mathematic_tools/Bra-ket_notation.html">Mathematic Tools</a></li><li class="breadcrumb-item"><a href="../../theory/Mathematic_tools/Hermitian_adjoint.html">Hermitian adjoint</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Covariant and Contravariant</h1>
+<h1 class="title">Hermitian adjoint</h1>
 </div>
 
 
@@ -300,22 +303,10 @@ window.Quarto = {
 </header>
 
 
-<p>When describing a vector <span class="math inline">\(\mathbf{\vec{V}}\)</span> through its components, we have two possible choices:</p>
-<ol type="1">
-<li><strong>Covariant components</strong>: These transform in the same way as the basis vectors under a change of coordinates.</li>
-<li><strong>Contravariant components</strong>: These transform in the opposite way to the basis vectors under a change of coordinates.</li>
-</ol>
-<p>The distinction is important in tensor analysis and differential geometry, where the transformation properties of objects under coordinate changes determine their classification as covariant or contravariant.</p>
-<div id="447b66d8" class="cell" data-fig-height="6" data-fig-width="10" data-execution_count="1">
-<div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="covariant_contravariant_files/figure-html/cell-2-output-1.png" width="834" height="424" class="figure-img"></p>
-<figcaption>Contravariant (left) and covariant (right) components of <span class="math inline">\(\vec{V}\)</span>.</figcaption>
-</figure>
-</div>
-</div>
-</div>
+<p>In mathematics, for every linear operator <span class="math inline">\(\mathbf{A}\)</span> it is possible to define an <strong>Hermitian adjoint</strong> (or adjoint) operator <span class="math inline">\(\mathbf{A^*}\)</span> such that</p>
+<p><span class="math display">\[
+\langle \mathbf{A}x,y\rangle = \langle x,\mathbf{A^*}y\rangle
+\]</span></p>
 
 
 

@@ -1,5 +1,6 @@
 project:
   type: confluence
+  output-dir: docs
   title: "Luigi Persico - Ph.D."
 
 author: Luigi Persico

@@ -113,7 +113,7 @@
     "href": "project-roadmap.html#currently-to-do",
     "title": "Ph.D. roadmap",
     "section": "Currently to do",
-    "text": "Currently to do\n\nAdding BES, MSE, and NBI2 characteristics to the SPC wiki.\nGetting used with the matlab code for MSE.\nParametric description of the neutral beam.\nHaving a look at plasma instabilities.",
+    "text": "Currently to do\n\nAdding BES, MSE to the SPC wiki.\nGetting used with the matlab code for MSE.\nParametric description of the neutral beam.\nHaving a look at plasma instabilities.",
     "crumbs": [
       "Ph.D. roadmap"
     ]
@@ -200,6 +200,139 @@
       "Theory",
       "Plasma Physics",
       "Safety Factor q"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematics/Bra-ket_notation.html",
+    "href": "theory/Mathematics/Bra-ket_notation.html",
+    "title": "Bra-ket notation",
+    "section": "",
+    "text": "The bra-ket notation, also called Dirac notation, is designed to make some operations of quantum mechanics easier. The notation uses angle brackets to denote vectors in a complex Hilbert space.\nA ket is written as \\(|\\psi\\rangle\\) and represents a column vector (state vector), while a bra, written as \\(\\langle\\phi|\\) represents the conjugate transpose (row vector) of a ket.\nThe inner product (overlap) between two states is written as \\[\n\\langle\\phi|\\psi\\rangle,\n\\]\nand in quantum mechanics this expression is interpreted as the probability amplitude for a state \\(\\phi\\) to collapse onto \\(\\psi\\) (the state \\(\\phi\\) is projected onto the state \\(\\psi\\)).\nThe outer product, which forms an operator, is written as: \\[\n|\\psi\\rangle\\langle\\phi|\n\\]",
+    "crumbs": [
+      "Theory",
+      "Mathematics",
+      "Bra-ket notation"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematics/Hilbert_Space.html",
+    "href": "theory/Mathematics/Hilbert_Space.html",
+    "title": "Hilbert Space",
+    "section": "",
+    "text": "A Hilbert Space is a complex vector space equipped with an inner product operation.\nMathematically, a Hilbert space \\(\\mathcal{H}\\) satisfies the following properties:\n\nVector Space: \\(\\mathcal{H}\\) is a vector space over the complex numbers \\(\\mathbb{C}\\).\nInner Product: There exists an inner product \\(\\langle \\cdot, \\cdot \\rangle : \\mathcal{H} \\times \\mathcal{H} \\to \\mathbb{C}\\) that is linear in its first argument, conjugate symmetric, and positive-definite.\nCompleteness: \\(\\mathcal{H}\\) is complete with respect to the norm induced by the inner product, i.e., every Cauchy sequence in \\(\\mathcal{H}\\) converges to an element in \\(\\mathcal{H}\\). This means that there are no “points missing” in an Hilbert Space.\n\nThe inner product generalizes the notion of the dot product to complex vector spaces and is fundamental in quantum theory and functional analysis. A Hilbert space generalizes the notion of Euclidean space to infinite dimensions.\nIn quantum mechanics, the mathematical framework is built upon Hilbert spaces:\n\nStates: The possible states of a quantum system are represented by (normalized) vectors in a Hilbert space \\(\\mathcal{H}\\).\nObservables: Physical quantities (observables) correspond to Hermitian (self-adjoint) operators acting on \\(\\mathcal{H}\\).\nSymmetries: Symmetry transformations are represented by unitary operators on \\(\\mathcal{H}\\), preserving inner products and probabilities.\nMeasurements: The act of measurement is mathematically described by orthogonal projection operators, which project state vectors onto subspaces associated with measurement outcomes.\n\nThis structure provides the foundation for the mathematical description of quantum systems.",
+    "crumbs": [
+      "Theory",
+      "Mathematics",
+      "Hilbert Space"
+    ]
+  },
+  {
+    "objectID": "theory/Quantum_theory/Hilbert_Space_files/Hilbert_Space.html",
+    "href": "theory/Quantum_theory/Hilbert_Space_files/Hilbert_Space.html",
+    "title": "Hilbert Space",
+    "section": "",
+    "text": "A Hilbert Space is a complex vector space equipped with an inner product operation.\nMathematically, a Hilbert space \\(\\mathcal{H}\\) satisfies the following properties:\n\nVector Space: \\(\\mathcal{H}\\) is a vector space over the complex numbers \\(\\mathbb{C}\\).\nInner Product: There exists an inner product \\(\\langle \\cdot, \\cdot \\rangle : \\mathcal{H} \\times \\mathcal{H} \\to \\mathbb{C}\\) that is linear in its first argument, conjugate symmetric, and positive-definite.\nCompleteness: \\(\\mathcal{H}\\) is complete with respect to the norm induced by the inner product, i.e., every Cauchy sequence in \\(\\mathcal{H}\\) converges to an element in \\(\\mathcal{H}\\). This means that there are no “points missing” in an Hilbert Space.\n\nThe inner product generalizes the notion of the dot product to complex vector spaces and is fundamental in quantum theory and functional analysis. A Hilbert space generalizes the notion of Euclidean space to infinite dimensions.\nIn quantum mechanics, the mathematical framework is built upon Hilbert spaces:\n\nStates: The possible states of a quantum system are represented by (normalized) vectors in a Hilbert space \\(\\mathcal{H}\\).\nObservables: Physical quantities (observables) correspond to Hermitian (self-adjoint) operators acting on \\(\\mathcal{H}\\).\nSymmetries: Symmetry transformations are represented by unitary operators on \\(\\mathcal{H}\\), preserving inner products and probabilities.\nMeasurements: The act of measurement is mathematically described by orthogonal projection operators, which project state vectors onto subspaces associated with measurement outcomes.\n\nThis structure provides the foundation for the mathematical description of quantum systems.",
+    "crumbs": [
+      "Theory",
+      "Quantum Theory",
+      "Hilbert Space Files",
+      "Hilbert Space"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic tools/Hermitian_adjoint.html",
+    "href": "theory/Mathematic tools/Hermitian_adjoint.html",
+    "title": "Hermitian adjoint",
+    "section": "",
+    "text": "In mathematics, for every linear operator \\(\\mathbf{A}\\) it is possible to define an Hermitian adjoint (or adjoint) operator \\(\\mathbf{A^*}\\) such that\n\\[\n\\langle \\mathbf{A}x,y\\rangle = \\langle x,\\mathbf{A^*}y\\rangle\n\\]",
+    "crumbs": [
+      "Theory",
+      "Mathematic tools",
+      "Hermitian adjoint"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic tools/Hilbert_Space.html",
+    "href": "theory/Mathematic tools/Hilbert_Space.html",
+    "title": "Hilbert Space",
+    "section": "",
+    "text": "A Hilbert Space is a complex vector space equipped with an inner product operation.\nMathematically, a Hilbert space \\(\\mathcal{H}\\) satisfies the following properties:\n\nVector Space: \\(\\mathcal{H}\\) is a vector space over the complex numbers \\(\\mathbb{C}\\).\nInner Product: There exists an inner product \\(\\langle \\cdot, \\cdot \\rangle : \\mathcal{H} \\times \\mathcal{H} \\to \\mathbb{C}\\) that is linear in its first argument, conjugate symmetric, and positive-definite.\nCompleteness: \\(\\mathcal{H}\\) is complete with respect to the norm induced by the inner product, i.e., every Cauchy sequence in \\(\\mathcal{H}\\) converges to an element in \\(\\mathcal{H}\\). This means that there are no “points missing” in an Hilbert Space.\n\nThe inner product generalizes the notion of the dot product to complex vector spaces and is fundamental in quantum theory and functional analysis. A Hilbert space generalizes the notion of Euclidean space to infinite dimensions.\nIn quantum mechanics, the mathematical framework is built upon Hilbert spaces:\n\nStates: The possible states of a quantum system are represented by (normalized) vectors in a Hilbert space \\(\\mathcal{H}\\).\nObservables: Physical quantities (observables) correspond to Hermitian (self-adjoint) operators acting on \\(\\mathcal{H}\\).\nSymmetries: Symmetry transformations are represented by unitary operators on \\(\\mathcal{H}\\), preserving inner products and probabilities.\nMeasurements: The act of measurement is mathematically described by orthogonal projection operators, which project state vectors onto subspaces associated with measurement outcomes.\n\nThis structure provides the foundation for the mathematical description of quantum systems.",
+    "crumbs": [
+      "Theory",
+      "Mathematic tools",
+      "Hilbert Space"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic tools/Bra-ket_notation.html",
+    "href": "theory/Mathematic tools/Bra-ket_notation.html",
+    "title": "Bra-ket notation",
+    "section": "",
+    "text": "The bra-ket notation, also called Dirac notation, is designed to make some operations of quantum mechanics easier. The notation uses angle brackets to denote vectors in a complex Hilbert space.\nA ket is written as \\(|\\psi\\rangle\\) and represents a column vector (state vector), while a bra, written as \\(\\langle\\phi|\\) represents the conjugate transpose (row vector) of a ket.\nThe inner product (overlap) between two states is written as \\[\n\\langle\\phi|\\psi\\rangle,\n\\]\nand in quantum mechanics this expression is interpreted as the probability amplitude for a state \\(\\phi\\) to collapse onto \\(\\psi\\) (the state \\(\\phi\\) is projected onto the state \\(\\psi\\)).\nThe outer product, which forms an operator, is written as: \\[\n|\\psi\\rangle\\langle\\phi|\n\\]",
+    "crumbs": [
+      "Theory",
+      "Mathematic tools",
+      "Bra-ket notation"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic tools/covariant_contravariant.html",
+    "href": "theory/Mathematic tools/covariant_contravariant.html",
+    "title": "Covariant and Contravariant",
+    "section": "",
+    "text": "When describing a vector \\(\\mathbf{\\vec{V}}\\) through its components, we have two possible choices:\n\nCovariant components: These transform in the same way as the basis vectors under a change of coordinates.\nContravariant components: These transform in the opposite way to the basis vectors under a change of coordinates.\n\nThe distinction is important in tensor analysis and differential geometry, where the transformation properties of objects under coordinate changes determine their classification as covariant or contravariant.\n\n\n\n\n\nContravariant (left) and covariant (right) components of \\(\\vec{V}\\).",
+    "crumbs": [
+      "Theory",
+      "Mathematic tools",
+      "Covariant and Contravariant"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic_tools/Hermitian_adjoint.html",
+    "href": "theory/Mathematic_tools/Hermitian_adjoint.html",
+    "title": "Hermitian adjoint",
+    "section": "",
+    "text": "In mathematics, for every linear operator \\(\\mathbf{A}\\) it is possible to define an Hermitian adjoint (or adjoint) operator \\(\\mathbf{A^*}\\) such that\n\\[\n\\langle \\mathbf{A}x,y\\rangle = \\langle x,\\mathbf{A^*}y\\rangle\n\\]",
+    "crumbs": [
+      "Theory",
+      "Mathematic Tools",
+      "Hermitian adjoint"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic_tools/Hilbert_Space.html",
+    "href": "theory/Mathematic_tools/Hilbert_Space.html",
+    "title": "Hilbert Space",
+    "section": "",
+    "text": "A Hilbert Space is a complex vector space equipped with an inner product operation.\nMathematically, a Hilbert space \\(\\mathcal{H}\\) satisfies the following properties:\n\nVector Space: \\(\\mathcal{H}\\) is a vector space over the complex numbers \\(\\mathbb{C}\\).\nInner Product: There exists an inner product \\(\\langle \\cdot, \\cdot \\rangle : \\mathcal{H} \\times \\mathcal{H} \\to \\mathbb{C}\\) that is linear in its first argument, conjugate symmetric, and positive-definite.\nCompleteness: \\(\\mathcal{H}\\) is complete with respect to the norm induced by the inner product, i.e., every Cauchy sequence in \\(\\mathcal{H}\\) converges to an element in \\(\\mathcal{H}\\). This means that there are no “points missing” in an Hilbert Space.\n\nThe inner product generalizes the notion of the dot product to complex vector spaces and is fundamental in quantum theory and functional analysis. A Hilbert space generalizes the notion of Euclidean space to infinite dimensions.\nIn quantum mechanics, the mathematical framework is built upon Hilbert spaces:\n\nStates: The possible states of a quantum system are represented by (normalized) vectors in a Hilbert space \\(\\mathcal{H}\\).\nObservables: Physical quantities (observables) correspond to Hermitian (self-adjoint) operators acting on \\(\\mathcal{H}\\).\nSymmetries: Symmetry transformations are represented by unitary operators on \\(\\mathcal{H}\\), preserving inner products and probabilities.\nMeasurements: The act of measurement is mathematically described by orthogonal projection operators, which project state vectors onto subspaces associated with measurement outcomes.\n\nThis structure provides the foundation for the mathematical description of quantum systems.",
+    "crumbs": [
+      "Theory",
+      "Mathematic Tools",
+      "Hilbert Space"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic_tools/Bra-ket_notation.html",
+    "href": "theory/Mathematic_tools/Bra-ket_notation.html",
+    "title": "Bra-ket notation",
+    "section": "",
+    "text": "The bra-ket notation, also called Dirac notation, is designed to make some operations of quantum mechanics easier. The notation uses angle brackets to denote vectors in a complex Hilbert space.\nA ket is written as \\(|\\psi\\rangle\\) and represents a column vector (state vector), while a bra, written as \\(\\langle\\phi|\\) represents the conjugate transpose (row vector) of a ket.\nThe inner product (overlap) between two states is written as \\[\n\\langle\\phi|\\psi\\rangle,\n\\]\nand in quantum mechanics this expression is interpreted as the probability amplitude for a state \\(\\phi\\) to collapse onto \\(\\psi\\) (the state \\(\\phi\\) is projected onto the state \\(\\psi\\)).\nThe outer product, which forms an operator, is written as: \\[\n|\\psi\\rangle\\langle\\phi|\n\\]",
+    "crumbs": [
+      "Theory",
+      "Mathematic Tools",
+      "Bra-ket notation"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic_tools/covariant_contravariant.html",
+    "href": "theory/Mathematic_tools/covariant_contravariant.html",
+    "title": "Covariant and Contravariant",
+    "section": "",
+    "text": "When describing a vector \\(\\mathbf{\\vec{V}}\\) through its components, we have two possible choices:\n\nCovariant components: These transform in the same way as the basis vectors under a change of coordinates.\nContravariant components: These transform in the opposite way to the basis vectors under a change of coordinates.\n\nThe distinction is important in tensor analysis and differential geometry, where the transformation properties of objects under coordinate changes determine their classification as covariant or contravariant.\n\n\n\n\n\nContravariant (left) and covariant (right) components of \\(\\vec{V}\\).",
+    "crumbs": [
+      "Theory",
+      "Mathematic Tools",
+      "Covariant and Contravariant"
     ]
   }
 ]

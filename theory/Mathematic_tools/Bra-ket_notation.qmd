@@ -1,0 +1,19 @@
+---
+title: "Bra-ket notation"
+---
+
+The bra-ket notation, also called Dirac notation, is designed to make some operations of quantum mechanics easier. The notation uses angle brackets to denote vectors in a complex Hilbert space.
+
+A **ket** is written as $|\psi\rangle$ and represents a column vector (state vector), while a **bra**, written as $\langle\phi|$ represents the conjugate transpose (row vector) of a ket.
+
+The inner product (overlap) between two states is written as
+$$
+\langle\phi|\psi\rangle,
+$$
+
+and in quantum mechanics this expression is interpreted as the probability amplitude for a state $\phi$ to collapse onto $\psi$ (the state $\phi$ is projected onto the state $\psi$).
+
+The outer product, which forms an operator, is written as:
+$$
+|\psi\rangle\langle\phi|
+$$
