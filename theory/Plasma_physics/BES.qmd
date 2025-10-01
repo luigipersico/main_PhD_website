@@ -1,7 +1,5 @@
 ---
 title: "Beam Emission Spectroscopy (BES)"
-author: Luigi Persico
-institution: EPFL
 ---
 
 ## Physical principles
