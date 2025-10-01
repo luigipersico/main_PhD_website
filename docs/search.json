@@ -52,7 +52,7 @@
     "href": "theory/Plasma_physics/MSE.html#physical-principles",
     "title": "Motional-Stark Effect (MSE)",
     "section": "Physical principles",
-    "text": "Physical principles\nWhen neutral particles enter in a plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, \\(E_{2}\\) and, when they decay to a lower energy state \\(E_{1}\\), they emit a photon with energy \\(E_{\\gamma} = E_2 - E_1\\), and wavelength \\(\\lambda = \\frac{hc}{E_{\\gamma}}\\).\nIn particular, of specific interest is the Balmer-\\(\\alpha\\) emission of the deuterium atom \\(D_{\\alpha}\\), which corresponds to the transition between \\(n=3\\) and \\(n=2\\), and is characterized by an energy \\(E_{D_{\\alpha}} = 1.89\\) eV and a wavelength \\(\\lambda_{D_{\\alpha}} = 656.279\\) nm.",
+    "text": "Physical principles\nThe MSE diagnostic is based on the external injection of neutral beam deuterium atoms and, when entering the plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, \\(E_{2}\\) and, when they decay to a lower energy state \\(E_{1}\\), they emit a photon with energy \\(E_{\\gamma} = E_2 - E_1\\), and wavelength \\(\\lambda = \\frac{hc}{E_{\\gamma}}\\).\nIn particular, of specific interest is the Balmer-\\(\\alpha\\) emission of the deuterium atom \\(D_{\\alpha}\\), which corresponds to the transition between \\(n=3\\) and \\(n=2\\), and is characterized by an energy \\(E_{D_{\\alpha}} = 1.89\\) eV and a wavelength \\(\\lambda_{D_{\\alpha}} = 656.279\\) nm. This is because the \\(D_{\\alpha}\\) emission has a high emission intensity in the visible spectrum (red light), and it is highly Doppler-shifted with respect to the plasma \\(D_{\\alpha}\\) emission. Moreover, since the neutral’s velocity across the magnetic field is high compared to the thermal velocity of the plasma ions, the resulting Lorentz electric field \\(\\mathbf{E_L} = \\mathbf{v} \\times \\mathbf{B}\\) is significant. This leads to a measurable splitting and polarization of the \\(D_{\\alpha}\\) spectral line, which can be used to infer the local magnetic field direction and magnitude inside the plasma.",
     "crumbs": [
       "Theory",
       "Plasma Physics",
@@ -224,6 +224,18 @@
       "Theory",
       "Plasma Physics",
       "Neutral Beam Injector 2"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Grad_Shafranov.html",
+    "href": "theory/Plasma_physics/Grad_Shafranov.html",
+    "title": "Grad Shafranov equation",
+    "section": "",
+    "text": "\\[\n\\Delta^{*}\\psi = -R^2 \\frac{dP(\\psi)}{d\\psi} - F(\\psi)\\frac{dF(\\psi)}{d\\psi}\n\\]\nwhere\n\\[\n\\Delta^{*}= R^2\\mathbb{\\nabla}\\cdot (\\frac{1}{R^2}\\mathbb{\\nabla}),\n\\]\n\\[\nF(\\psi)= RB_{\\varphi},\n\\]\nand \\(P\\) is the plasma pressure.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Grad Shafranov equation"
     ]
   }
 ]
