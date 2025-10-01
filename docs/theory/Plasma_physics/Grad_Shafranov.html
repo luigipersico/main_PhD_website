@@ -8,7 +8,7 @@
 
 <meta name="author" content="Luigi Persico">
 
-<title>Motional-Stark Effect (MSE) – Luigi Persico - Ph.D.</title>
+<title>grad_shafranov – Luigi Persico - Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,27 +21,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -90,35 +70,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -131,7 +82,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/MSE.html">Motional-Stark Effect (MSE)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/Grad_Shafranov.html">Grad Shafranov</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -267,13 +218,13 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/Grad_Shafranov.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Grad_Shafranov.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Grad Shafranov</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motional-Stark Effect (MSE)</span></a>
   </div>
 </li>
@@ -300,13 +251,12 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="MSE.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Grad_Shafranov.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/MSE.html">Motional-Stark Effect (MSE)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/Grad_Shafranov.html">Grad Shafranov</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Motional-Stark Effect (MSE)</h1>
 </div>
 
 
@@ -329,39 +279,10 @@ window.Quarto = {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The <em>Stark Effect</em> is the shifting and splitting of the electronic energy levels due to an external electric field. The Motional-Stark Effect (MSE), instead, is the specific case in which the electric field is the Lorentz electric field felt by an atom moving in a magnetic field <span class="math inline">\(\mathbf{B}\)</span> at a velocity <span class="math inline">\(\mathbf{v}\)</span>, in its rest frame: <span class="math inline">\(\mathbf{E} = \mathbf{v} \times \mathbf{B}\)</span>.</p>
-<p>In plasma physics, the Motional-Stark Effect (MSE) serves as a crucial diagnostic tool for determining the poloidal magnetic field <span class="math inline">\(\mathbf{B_P}\)</span> within the plasma. Accurate knowledge of the poloidal magnetic field is essential for understanding plasma stability and the formation of Internal Transport Barriers (ITBs). Additionally, MSE measurements enable inference of the plasma current distribution, since the current density <span class="math inline">\(\mathbf{J}\)</span> is related to the magnetic field <span class="math inline">\(\mathbf{B}\)</span> through Ampère’s law:</p>
-<p><span class="math display">\[
-\nabla \times \mathbf{B} = \mu_0 \mathbf{J}.
-\]</span></p>
-<p>In TCV, the poloidal magnetic field is determined by the LIUQE (from “EQUIL” spelt backwards) code, which is an equilibrium code based on the resolution of the <a href="../Grad_Shafranov.qmd">Grad-Shafranov equation</a>, and on magnetic probes measurements outside of the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is not negligible anymore, and the magnetic field is locally influenced. This explains the need for the Motional-Stark Effect diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.</p>
-</section>
-<section id="a-bit-of-history" class="level2">
-<h2 class="anchored" data-anchor-id="a-bit-of-history">A bit of history</h2>
-<p>The Stark effect was discovered by the German physicist Johannes Stark in 1913, for which he was awarded the nobel price in 1919. During the same year the effect was independently discovered by the Italian physicit Antonio Lo Surdo<span class="citation" data-cites="stark_wikipedia"><sup><a href="#ref-stark_wikipedia" role="doc-biblioref">1</a></sup></span>.</p>
-</section>
-<section id="physical-principles" class="level2">
-<h2 class="anchored" data-anchor-id="physical-principles">Physical principles</h2>
-<p>When neutral particles enter in a plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, <span class="math inline">\(E_{2}\)</span> and, when they decay to a lower energy state <span class="math inline">\(E_{1}\)</span>, they emit a photon with energy <span class="math inline">\(E_{\gamma} = E_2 - E_1\)</span>, and wavelength <span class="math inline">\(\lambda = \frac{hc}{E_{\gamma}}\)</span>.</p>
-<p>In particular, of specific interest is the Balmer-<span class="math inline">\(\alpha\)</span> emission of the deuterium atom <span class="math inline">\(D_{\alpha}\)</span>, which corresponds to the transition between <span class="math inline">\(n=3\)</span> and <span class="math inline">\(n=2\)</span>, and is characterized by an energy <span class="math inline">\(E_{D_{\alpha}} = 1.89\)</span> eV and a wavelength <span class="math inline">\(\lambda_{D_{\alpha}} = 656.279\)</span> nm.</p>
-</section>
-<section id="on-tcv" class="level2">
-<h2 class="anchored" data-anchor-id="on-tcv">On TCV</h2>
-</section>
-<section id="references" class="level2">
 
 
 
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-stark_wikipedia" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Wikipedia. <a href="https://en.wikipedia.org/wiki/Stark_effect">Stark effect</a>.</div>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
