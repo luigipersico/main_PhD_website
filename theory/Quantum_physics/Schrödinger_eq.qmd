@@ -1,0 +1,10 @@
+---
+title : "Schrödinger Equation"
+---
+
+
+$$
+i\hbar\frac{d}{dt}|\psi(t)\rangle = \hat{H}|\psi(t)\rangle
+$$
+
+where $|\psi(t)\rangle$ is the state vector of the quantum system, $\hat{H}$ is the Hamiltonian operator, and $\hbar$ is the reduced Planck constant.

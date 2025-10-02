@@ -52,7 +52,7 @@
     "href": "theory/Plasma_physics/MSE.html#physical-principles",
     "title": "Motional-Stark Effect (MSE)",
     "section": "Physical principles",
-    "text": "Physical principles\nThe MSE diagnostic is based on the external injection of neutral beam deuterium atoms and, when entering the plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, \\(E_{2}\\) and, when they decay to a lower energy state \\(E_{1}\\), they emit a photon with energy \\(E_{\\gamma} = E_2 - E_1\\), and wavelength \\(\\lambda = \\frac{hc}{E_{\\gamma}}\\).\nIn particular, of specific interest is the Balmer-\\(\\alpha\\) emission of the deuterium atom \\(D_{\\alpha}\\), which corresponds to the transition between \\(n=3\\) and \\(n=2\\), and is characterized by an energy \\(E_{D_{\\alpha}} = 1.89\\) eV and a wavelength \\(\\lambda_{D_{\\alpha}} = 656.279\\) nm. This is because the \\(D_{\\alpha}\\) emission has a high emission intensity in the visible spectrum (red light), and it is highly Doppler-shifted with respect to the plasma \\(D_{\\alpha}\\) emission. Moreover, since the neutral’s velocity across the magnetic field is high compared to the thermal velocity of the plasma ions, the resulting Lorentz electric field \\(\\mathbf{E_L} = \\mathbf{v} \\times \\mathbf{B}\\) is significant. This leads to a measurable splitting and polarization of the \\(D_{\\alpha}\\) spectral line, which can be used to infer the local magnetic field direction and magnitude inside the plasma.",
+    "text": "Physical principles\nThe MSE diagnostic is based on the external injection of neutral beam deuterium atoms and, when entering the plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, \\(E_{2}\\) and, when they decay to a lower energy state \\(E_{1}\\), they emit a photon with energy \\(E_{\\gamma} = E_2 - E_1\\), and wavelength \\(\\lambda = \\frac{hc}{E_{\\gamma}}\\).\nIn particular, of specific interest is the Balmer-\\(\\alpha\\) emission of the deuterium atom \\(D_{\\alpha}\\), which corresponds to the transition between \\(n=3\\) and \\(n=2\\), and is characterized by an energy \\(E_{D_{\\alpha}} = 1.89\\) eV and a wavelength \\(\\lambda_{D_{\\alpha}} = 656.279\\) nm. This is because the \\(D_{\\alpha}\\) emission has a high emission intensity in the visible spectrum (red light), and it is highly Doppler-shifted with respect to the plasma \\(D_{\\alpha}\\) emission. Moreover, since the neutral’s velocity across the magnetic field is high compared to the thermal velocity of the plasma ions, the resulting Lorentz electric field \\(\\mathbf{E_L} = \\mathbf{v} \\times \\mathbf{B}\\) is significant. This leads to a measurable splitting and polarization of the \\(D_{\\alpha}\\), spectral line, which can be used to infer the local magnetic field direction and magnitude inside the plasma.\nTo analyze the Stark effect in the deuterium atom, it is convenient to solve the non-relativistic Schrödinger Equation using parabolic coordinates. In this framework, the atomic states are described by four quantum numbers \\(|n, n_1, n_2, m\\rangle\\): \\(n\\) is the principal quantum number, \\(n_1\\) and \\(n_2\\) are parabolic quantum numbers, and \\(m\\) is the magnetic quantum number. The energy splitting caused by the Stark effect, calculated using first-order perturbation theory, is given by2:\n\\[\n\\Delta E^{(1)} = \\frac{3}{2} ea_0 n(n_1-n_2)|\\mathbf{E_L}|,\n\\]\nwhere \\(e\\) is the elementary charge, and \\(a_0\\) is the Bohr radius.\n\n\n\n\n\n\nFigure 1: \\(D_{\\alpha}\\) splitting due to MSE3.\n\n\n\nIn Figure 1 the lines splitting of the energy levels with principal quantum numbers \\(n=2\\) and \\(n=3\\) is shown. For clarity the fine structure splitting is not shown.\n\n\n\n\n\n\nFigure 2: Spectral lines separation of the \\(D_{\\alpha}\\) radiation due to MSE3.\n\n\n\nThe separation of the spectral lines, as shown in Figure 2, is directly proportional to the strength of the electric field3:\n\\[\n\\Delta \\lambda \\approx \\frac{3ea_0|\\mathbf{E_L}|\\lambda_0^2}{2hc},\n\\]\nwhere \\(\\lambda_0\\) is the unshifted Balmer-\\(\\alpha\\) wavelength, \\(h\\) is Planck’s constant, and \\(c\\) is the speed of light.",
     "crumbs": [
       "Theory",
       "Plasma Physics",
@@ -236,6 +236,18 @@
       "Theory",
       "Plasma Physics",
       "Grad Shafranov equation"
+    ]
+  },
+  {
+    "objectID": "theory/Quantum_physics/Schrödinger_eq.html",
+    "href": "theory/Quantum_physics/Schrödinger_eq.html",
+    "title": "Schrödinger Equation",
+    "section": "",
+    "text": "\\[\ni\\hbar\\frac{d}{dt}|\\psi(t)\\rangle = \\hat{H}|\\psi(t)\\rangle\n\\]\nwhere \\(|\\psi(t)\\rangle\\) is the state vector of the quantum system, \\(\\hat{H}\\) is the Hamiltonian operator, and \\(\\hbar\\) is the reduced Planck constant.",
+    "crumbs": [
+      "Theory",
+      "Quantum Physics",
+      "Schrödinger Equation"
     ]
   }
 ]

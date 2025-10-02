@@ -13,7 +13,7 @@ $$
 \nabla \times \mathbf{B} = \mu_0 \mathbf{J}.
 $$
 
-In TCV, the poloidal magnetic field is determined by the LIUQE (from "EQUIL" spelt backwards) code, which is an equilibrium code based on the resolution of the [Grad-Shafranov equation](../Grad_Shafranov.qmd), and on magnetic probes measurements outside of the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is not negligible anymore, and the magnetic field is locally influenced. This explains the need for the Motional-Stark Effect diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.
+In TCV, the poloidal magnetic field is determined by the LIUQE (from "EQUIL" spelt backwards) code, which is an equilibrium code based on the resolution of the [Grad-Shafranov equation](Grad_Shafranov.qmd), and on magnetic probes measurements outside of the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is not negligible anymore, and the magnetic field is locally influenced. This explains the need for the Motional-Stark Effect diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.
 
 ## A bit of history
 
@@ -23,10 +23,30 @@ The Stark effect was discovered by the German physicist Johannes Stark in 1913, 
 
 The MSE diagnostic is based on the external injection of neutral beam deuterium atoms and, when entering the plasma, they are subject to inelastic collisions with plasma's ions and electrons. The neutrals' electrons, which initially are in their ground state, can reach a higher energy level, $E_{2}$ and, when they decay to a lower energy state $E_{1}$, they emit a photon with energy $E_{\gamma} = E_2 - E_1$, and wavelength $\lambda = \frac{hc}{E_{\gamma}}$. 
 
-In particular, of specific interest is the Balmer-$\alpha$ emission of the deuterium atom $D_{\alpha}$, which corresponds to the transition between $n=3$ and $n=2$, and is characterized by an energy $E_{D_{\alpha}} = 1.89$ eV and a wavelength $\lambda_{D_{\alpha}} = 656.279$ nm. This is because the $D_{\alpha}$ emission has a high emission intensity in the visible spectrum (red light), and it is highly Doppler-shifted with respect to the plasma $D_{\alpha}$ emission. Moreover, since the neutral's velocity across the magnetic field is high compared to the thermal velocity of the plasma ions, the resulting Lorentz electric field $\mathbf{E_L} = \mathbf{v} \times \mathbf{B}$ is significant. This leads to a measurable splitting and polarization of the $D_{\alpha}$ spectral line, which can be used to infer the local magnetic field direction and magnitude inside the plasma.
+In particular, of specific interest is the Balmer-$\alpha$ emission of the deuterium atom $D_{\alpha}$, which corresponds to the transition between $n=3$ and $n=2$, and is characterized by an energy $E_{D_{\alpha}} = 1.89$ eV and a wavelength $\lambda_{D_{\alpha}} = 656.279$ nm. This is because the $D_{\alpha}$ emission has a high emission intensity in the visible spectrum (red light), and it is highly Doppler-shifted with respect to the plasma $D_{\alpha}$ emission. Moreover, since the neutral's velocity across the magnetic field is high compared to the thermal velocity of the plasma ions, the resulting Lorentz electric field $\mathbf{E_L} = \mathbf{v} \times \mathbf{B}$ is significant. This leads to a measurable splitting and polarization of the $D_{\alpha}$, spectral line, which can be used to infer the local magnetic field direction and magnitude inside the plasma. 
 
-![$D_{\alpha}$ splitting due to MSE](Figures/D_alpha_splitting1.png)
-![$D_{\alpha}$ splitting due to MSE](Figures/D_alpha_splitting2.png)
+To analyze the Stark effect in the deuterium atom, it is convenient to solve the non-relativistic [Schrödinger Equation](../Quantum_physics/Schr%C3%B6dinger_eq.qmd) using parabolic coordinates. In this framework, the atomic states are described by four quantum numbers $|n, n_1, n_2, m\rangle$: $n$ is the principal quantum number, $n_1$ and $n_2$ are parabolic quantum numbers, and $m$ is the magnetic quantum number. The energy splitting caused by the Stark effect, calculated using first-order perturbation theory, is given by @anhtai2024revisithydrogenatominduced:
+
+$$
+\Delta E^{(1)} = \frac{3}{2} ea_0 n(n_1-n_2)|\mathbf{E_L}|,
+$$
+
+where $e$ is the elementary charge, and $a_0$ is the Bohr radius.
+
+![$D_{\alpha}$ splitting due to MSE @sacha2025thesis.](Figures/D_alpha_splitting1.png){#fig-D_alpha1 width=80%}
+
+In @fig-D_alpha1 the lines splitting of the energy levels with principal quantum numbers $n=2$ and $n=3$ is shown. For clarity the fine structure splitting is not shown. 
+
+![Spectral lines separation of the $D_{\alpha}$ radiation due to MSE @sacha2025thesis.](Figures/D_alpha_splitting2.png){#fig-D_alpha2 width=80%}
+
+The separation of the spectral lines, as shown in @fig-D_alpha2, is directly proportional to the strength of the electric field @sacha2025thesis:
+
+$$
+\Delta \lambda \approx \frac{3ea_0|\mathbf{E_L}|\lambda_0^2}{2hc},
+$$
+
+where $\lambda_0$ is the unshifted Balmer-$\alpha$ wavelength, $h$ is Planck's constant, and $c$ is the speed of light.
+
 
 ## On TCV
 
