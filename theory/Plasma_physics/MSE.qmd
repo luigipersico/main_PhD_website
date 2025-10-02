@@ -33,7 +33,7 @@ $$
 
 where $e$ is the elementary charge, and $a_0$ is the Bohr radius.
 
-![$D_{\alpha}$ splitting due to MSE @sacha2025thesis.](Figures/D_alpha_splitting1.png){#fig-D_alpha1 width=80%}
+![$D_{\alpha}$ splitting due to MSE @sacha2025thesis.](Figures/D_alpha_splitting1.png){#fig-D_alpha1 width=70%}
 
 In @fig-D_alpha1 the lines splitting of the energy levels with principal quantum numbers $n=2$ and $n=3$ is shown. For clarity the fine structure splitting is not shown. 
 
@@ -67,11 +67,80 @@ by the [NBI-1 of TCV](NBI.qmd). Along the beam 20 LOS are defined, originating f
 setup at the bottom of TCV, as shown in @fig-LOS_TCV.
 
 ::: {#fig-LOS_TCV layout-ncol="2"}
-![Intersection of LOS (in grey) with the NBI (in orange) @sacha2025thesis.](Figures/LOS_TCV1.jpg){#fig-LOS_TCV1 width=70%}
+![Intersection of LOS (in grey) with the NBI (in orange) @sacha2025thesis.](Figures/LOS_TCV1.jpg){#fig-LOS_TCV1 width=80%}
 
-![Poloidal cross section of TCV with an example of magnetic equilibrium. In red the LOS and in green the NBI @sacha2025thesis.](Figures/LOS_TCV2.png){#fig-LOS_TCV2 width=30%}
+![Poloidal cross section of TCV with an example of magnetic equilibrium. In red the LOS and in green the NBI @sacha2025thesis.](Figures/LOS_TCV2.png){#fig-LOS_TCV2 width=40%}
 
 :::
+
+To detect the Doppler-shifted radiation emitted by the neutral beam, each line-of-sight (LOS) must be oriented at an angle other than $90^\circ$ relative to the beam direction. 
+This arrangement ensures that the neutral beam has a velocity component along the LOS, making the Doppler-shifted emission distinguishable from the background plasma radiation.
+
+![D$_{\mathrm{\alpha}}$ radiation](Figures/D_alpha_fromplasma.png){#fig-Dalpha_emission}
+
+As shown in @fig-Dalpha_emission, the D$_{\mathrm{\alpha}}$ spectrum exhibits several distinct peaks:
+
+- The full-energy peak corresponds to emission from D$^+$ ions;
+- The half-energy peak arises from D$^+_2$ ions;
+- The third-energy peak is due to D$^+_3$ ions;
+- The remaining portion of the spectrum is non-shifted radiation emitted by the plasma.
+
+These energy shifts result from the different velocities of the ion species, which are determined by their respective masses.
+
+
+
+| LOS | R$_\mathrm{inter}$ [m] | α [deg] | Doppler shift ∆λ [Å] | resolution ∆R [cm⁻¹] |
+|:---:|:----------:|:-------:|:---------------------:|:----------------------:|
+|  1  | 1.1062     | 138.61  | -27.1349              | 6.4                    |
+|  2  | 1.0920     | 138.04  | -26.8964              | 6.5                    |
+|  3  | 1.0783     | 137.48  | -26.6568              | 6.4                    |
+|  4  | 1.0651     | 136.91  | -26.4158              | 6.1                    |
+|  5  | 1.0524     | 136.35  | -26.1734              | 5.8                    |
+|  6  | 1.0402     | 135.80  | -25.9294              | 5.6                    |
+|  7  | 1.0278     | 135.24  | -25.6837              | 5.5                    |
+|  8  | 1.0163     | 134.69  | -25.4361              | 5.2                    |
+|  9  | 1.0053     | 134.13  | -25.1867              | 5.0                    |
+| 10  | 0.9952     | 133.58  | -24.9351              | 4.8                    |
+| 11  | 0.9849     | 133.03  | -24.6813              | 4.6                    |
+| 12  | 0.9748     | 132.48  | -24.4251              | 4.4                    |
+| 13  | 0.9651     | 131.92  | -24.1664              | 4.2                    |
+| 14  | 0.9556     | 131.37  | -23.9049              | 4.1                    |
+| 15  | 0.9464     | 130.81  | -23.6407              | 3.9                    |
+| 16  | 0.9374     | 130.26  | -23.3733              | 3.7                    |
+| 17  | 0.9283     | 129.70  | -23.1028              | 3.5                    |
+| 18  | 0.9198     | 129.14  | -22.8288              | 3.4                    |
+| 19  | 0.9116     | 128.57  | -22.5512              | 3.2                    |
+| 20  | 0.9035     | 128.00  | -22.2697              | 3.0                    |
+
+: Parameters of each LOS. R$_\mathrm{inter}$ is the radial position of the 
+intersection between LOS and NBI-1, α is the angle between LOS and NBI-1,
+∆λ is the doppler shift, and ∆R is the radial resolution @sacha2025thesis. {#tbl-measurement}
+
+In @tbl-measurement all the parameters relative to the intersection
+between the LOSs and the NBI-1 are listed.
+
+![Optical setup of the MSE diagnostic @sacha2025thesis](Figures/optical_setup.png){#fig-optical_setup}
+
+| **Parameter**              | **Spectrometer**           | **Camera**             | **Fibers**               |
+|----------------------------|----------------------------|------------------------|--------------------------|
+| Focal length               | 500 mm                     |                        |                          |
+| F#                          | 4                          |                        |                          |
+| Grating                     | 2400 grooves/mm            |                        |                          |
+| Resolution                  | ~ 0.5 Å                    |                        |                          |
+| Range                       | 3800-8000 Å                |                        |                          |
+| Model                       |                            | Andor EMCCD            |                          |
+| Pixel size                  |                            | 13 µm                  |                          |
+| Array size                  |                            | 1024x1024              |                          |
+| Time resolution             |                            | 20 ms                  |                          |
+| Camera range                |                            | 3800-9000 Å            |                          |
+| Length of each fiber        |                            |                        | 30 m                     |
+| Core diameter               |                            |                        | 295 µm                   |
+| #fibers per branch          |                            |                        | 20                       |
+| #branches                   |                            |                        | 2                        |
+| Fiber range                 |                            |                        | 3800-8500 Å              |
+
+
+: Parameters of the optical components @sacha2025thesis. {#tbl-optical_components}
 
 
 

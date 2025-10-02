@@ -364,7 +364,7 @@ window.Quarto = {
 <div id="fig-D_alpha1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-D_alpha1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figures/D_alpha_splitting1.png" class="img-fluid figure-img" style="width:80.0%">
+<img src="Figures/D_alpha_splitting1.png" class="img-fluid figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-D_alpha1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: <span class="math inline">\(D_{\alpha}\)</span> splitting due to MSE<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>.
@@ -397,7 +397,7 @@ I_{\pi} \propto \sin^2\Psi.
 </section>
 <section id="mse-diagnostic-on-tcv" class="level2">
 <h2 class="anchored" data-anchor-id="mse-diagnostic-on-tcv">MSE diagnostic on TCV</h2>
-<p>The MSE diagnostic on TCV relies on the deuterium neutrals injected by the <a href="TCV_NBI.qmd">NBI-1 of TCV</a>. Along the beam 20 LOS are defined, originating from the optical setup at the bottom of TCV, as shown in <a href="#fig-LOS_TCV" class="quarto-xref">Figure&nbsp;3</a>.</p>
+<p>The MSE diagnostic on TCV relies on the deuterium neutrals injected by the <a href="../../theory/Plasma_physics/NBI.html">NBI-1 of TCV</a>. Along the beam 20 LOS are defined, originating from the optical setup at the bottom of TCV, as shown in <a href="#fig-LOS_TCV" class="quarto-xref">Figure&nbsp;3</a>.</p>
 <div id="fig-LOS_TCV" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-LOS_TCV-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -406,7 +406,7 @@ I_{\pi} \propto \sin^2\Psi.
 <div id="fig-LOS_TCV1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-LOS_TCV1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figures/LOS_TCV1.jpg" class="img-fluid figure-img" style="width:70.0%" data-ref-parent="fig-LOS_TCV">
+<img src="Figures/LOS_TCV1.jpg" class="img-fluid figure-img" style="width:80.0%" data-ref-parent="fig-LOS_TCV">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-LOS_TCV1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Intersection of LOS (in grey) with the NBI (in orange)<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>.
@@ -418,7 +418,7 @@ I_{\pi} \propto \sin^2\Psi.
 <div id="fig-LOS_TCV2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-LOS_TCV2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figures/LOS_TCV2.png" class="img-fluid figure-img" style="width:30.0%" data-ref-parent="fig-LOS_TCV">
+<img src="Figures/LOS_TCV2.png" class="img-fluid figure-img" style="width:40.0%" data-ref-parent="fig-LOS_TCV">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-LOS_TCV2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Poloidal cross section of TCV with an example of magnetic equilibrium. In red the LOS and in green the NBI<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>.
@@ -431,6 +431,322 @@ I_{\pi} \propto \sin^2\Psi.
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-LOS_TCV-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;3
 </figcaption>
+</figure>
+</div>
+<p>To detect the Doppler-shifted radiation emitted by the neutral beam, each line-of-sight (LOS) must be oriented at an angle other than <span class="math inline">\(90^\circ\)</span> relative to the beam direction. This arrangement ensures that the neutral beam has a velocity component along the LOS, making the Doppler-shifted emission distinguishable from the background plasma radiation.</p>
+<div id="fig-Dalpha_emission" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Dalpha_emission-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figures/D_alpha_fromplasma.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Dalpha_emission-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: D<span class="math inline">\(_{\mathrm{\alpha}}\)</span> radiation
+</figcaption>
+</figure>
+</div>
+<p>As shown in <a href="#fig-Dalpha_emission" class="quarto-xref">Figure&nbsp;4</a>, the D<span class="math inline">\(_{\mathrm{\alpha}}\)</span> spectrum exhibits several distinct peaks:</p>
+<ul>
+<li>The full-energy peak corresponds to emission from D<span class="math inline">\(^+\)</span> ions;</li>
+<li>The half-energy peak arises from D<span class="math inline">\(^+_2\)</span> ions;</li>
+<li>The third-energy peak is due to D<span class="math inline">\(^+_3\)</span> ions;</li>
+<li>The remaining portion of the spectrum is non-shifted radiation emitted by the plasma.</li>
+</ul>
+<p>These energy shifts result from the different velocities of the ion species, which are determined by their respective masses.</p>
+<div id="tbl-measurement" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Parameters of each LOS. R<span class="math inline">\(_\mathrm{inter}\)</span> is the radial position of the intersection between LOS and NBI-1, α is the angle between LOS and NBI-1, ∆λ is the doppler shift, and ∆R is the radial resolution<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>.
+</figcaption>
+<div aria-describedby="tbl-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 31%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">LOS</th>
+<th style="text-align: center;">R<span class="math inline">\(_\mathrm{inter}\)</span> [m]</th>
+<th style="text-align: center;">α [deg]</th>
+<th style="text-align: center;">Doppler shift ∆λ [Å]</th>
+<th style="text-align: center;">resolution ∆R [cm⁻¹]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.1062</td>
+<td style="text-align: center;">138.61</td>
+<td style="text-align: center;">-27.1349</td>
+<td style="text-align: center;">6.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1.0920</td>
+<td style="text-align: center;">138.04</td>
+<td style="text-align: center;">-26.8964</td>
+<td style="text-align: center;">6.5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1.0783</td>
+<td style="text-align: center;">137.48</td>
+<td style="text-align: center;">-26.6568</td>
+<td style="text-align: center;">6.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1.0651</td>
+<td style="text-align: center;">136.91</td>
+<td style="text-align: center;">-26.4158</td>
+<td style="text-align: center;">6.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1.0524</td>
+<td style="text-align: center;">136.35</td>
+<td style="text-align: center;">-26.1734</td>
+<td style="text-align: center;">5.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">1.0402</td>
+<td style="text-align: center;">135.80</td>
+<td style="text-align: center;">-25.9294</td>
+<td style="text-align: center;">5.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">1.0278</td>
+<td style="text-align: center;">135.24</td>
+<td style="text-align: center;">-25.6837</td>
+<td style="text-align: center;">5.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">1.0163</td>
+<td style="text-align: center;">134.69</td>
+<td style="text-align: center;">-25.4361</td>
+<td style="text-align: center;">5.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1.0053</td>
+<td style="text-align: center;">134.13</td>
+<td style="text-align: center;">-25.1867</td>
+<td style="text-align: center;">5.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.9952</td>
+<td style="text-align: center;">133.58</td>
+<td style="text-align: center;">-24.9351</td>
+<td style="text-align: center;">4.8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">0.9849</td>
+<td style="text-align: center;">133.03</td>
+<td style="text-align: center;">-24.6813</td>
+<td style="text-align: center;">4.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0.9748</td>
+<td style="text-align: center;">132.48</td>
+<td style="text-align: center;">-24.4251</td>
+<td style="text-align: center;">4.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">0.9651</td>
+<td style="text-align: center;">131.92</td>
+<td style="text-align: center;">-24.1664</td>
+<td style="text-align: center;">4.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">0.9556</td>
+<td style="text-align: center;">131.37</td>
+<td style="text-align: center;">-23.9049</td>
+<td style="text-align: center;">4.1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">0.9464</td>
+<td style="text-align: center;">130.81</td>
+<td style="text-align: center;">-23.6407</td>
+<td style="text-align: center;">3.9</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">0.9374</td>
+<td style="text-align: center;">130.26</td>
+<td style="text-align: center;">-23.3733</td>
+<td style="text-align: center;">3.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">0.9283</td>
+<td style="text-align: center;">129.70</td>
+<td style="text-align: center;">-23.1028</td>
+<td style="text-align: center;">3.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0.9198</td>
+<td style="text-align: center;">129.14</td>
+<td style="text-align: center;">-22.8288</td>
+<td style="text-align: center;">3.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">0.9116</td>
+<td style="text-align: center;">128.57</td>
+<td style="text-align: center;">-22.5512</td>
+<td style="text-align: center;">3.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">0.9035</td>
+<td style="text-align: center;">128.00</td>
+<td style="text-align: center;">-22.2697</td>
+<td style="text-align: center;">3.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>In <a href="#tbl-measurement" class="quarto-xref">Table&nbsp;1</a> all the parameters relative to the intersection between the LOSs and the NBI-1 are listed.</p>
+<div id="fig-optical_setup" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-optical_setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figures/optical_setup.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-optical_setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Optical setup of the MSE diagnostic<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>
+</figcaption>
+</figure>
+</div>
+<div id="tbl-optical_components" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-optical_components-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Parameters of the optical components<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>.
+</figcaption>
+<div aria-describedby="tbl-optical_components-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 26%">
+<col style="width: 22%">
+<col style="width: 24%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Parameter</strong></th>
+<th><strong>Spectrometer</strong></th>
+<th><strong>Camera</strong></th>
+<th><strong>Fibers</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Focal length</td>
+<td>500 mm</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>F#</td>
+<td>4</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Grating</td>
+<td>2400 grooves/mm</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Resolution</td>
+<td>~ 0.5 Å</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Range</td>
+<td>3800-8000 Å</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Model</td>
+<td></td>
+<td>Andor EMCCD</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Pixel size</td>
+<td></td>
+<td>13 µm</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Array size</td>
+<td></td>
+<td>1024x1024</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Time resolution</td>
+<td></td>
+<td>20 ms</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Camera range</td>
+<td></td>
+<td>3800-9000 Å</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Length of each fiber</td>
+<td></td>
+<td></td>
+<td>30 m</td>
+</tr>
+<tr class="even">
+<td>Core diameter</td>
+<td></td>
+<td></td>
+<td>295 µm</td>
+</tr>
+<tr class="odd">
+<td>#fibers per branch</td>
+<td></td>
+<td></td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>#branches</td>
+<td></td>
+<td></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Fiber range</td>
+<td></td>
+<td></td>
+<td>3800-8500 Å</td>
+</tr>
+</tbody>
+</table>
+</div>
 </figure>
 </div>
 </section>
