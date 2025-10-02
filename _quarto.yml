@@ -3,8 +3,6 @@ project:
   output-dir: docs
   title: "Luigi Persico - Ph.D."
 
-author: Luigi Persico
-
 format:
   html:
     mathjax:

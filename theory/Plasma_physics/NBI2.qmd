@@ -1,6 +1,0 @@
-## Neutral Beam Injector 2
-
-$$
-\text{DCD} = (r_d, Z_d, \phi_d, \theta_d, tv_d) = (5.2123, -0.0025, 212,6947 \cdot \pi/180, 0, -8.4896 \cdot \pi/180)
-$$
-

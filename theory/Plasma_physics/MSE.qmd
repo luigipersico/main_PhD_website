@@ -47,8 +47,32 @@ $$
 
 where $\lambda_0$ is the unshifted Balmer-$\alpha$ wavelength, $h$ is Planck's constant, and $c$ is the speed of light.
 
+The π and $\mathrm{\sigma}$ components are resepectively polarized parallel and perpendicular to the electric field. 
+This means that when trying to catch the radiation, the instensity of the components depend on the direction of the 
+line-of-sight (LOS) respect to $\mathbf{E_L}$. 
+Defining with $\Psi$ the angle between the LOS and $\mathbf{E_L}$, the observed intensities scale as:
 
-## On TCV
+$$
+I_{\sigma} \propto 1 + \cos^2\Psi,
+$$
+
+$$
+I_{\pi} \propto \sin^2\Psi.
+$$
+
+## MSE diagnostic on TCV
+
+The MSE diagnostic on TCV relies on the deuterium neutrals injected 
+by the [NBI-1 of TCV](TCV_NBI.qmd). Along the beam 20 LOS are defined, originating from the optical
+setup at the bottom of TCV, as shown in @fig-LOS_TCV.
+
+::: {#fig-LOS_TCV layout-ncol="2"}
+![Intersection of LOS (in grey) with the NBI (in orange) @sacha2025thesis.](Figures/LOS_TCV1.jpg){#fig-LOS_TCV1 width=70%}
+
+![Poloidal cross section of TCV with an example of magnetic equilibrium. In red the LOS and in green the NBI @sacha2025thesis.](Figures/LOS_TCV2.png){#fig-LOS_TCV2 width=30%}
+
+:::
+
 
 
 ## References
