@@ -130,15 +130,26 @@
     ]
   },
   {
-    "objectID": "theory/Plasma_physics/BES.html#physical-principles",
-    "href": "theory/Plasma_physics/BES.html#physical-principles",
+    "objectID": "theory/Plasma_physics/BES.html#introduction",
+    "href": "theory/Plasma_physics/BES.html#introduction",
     "title": "Beam Emission Spectroscopy (BES)",
     "section": "",
-    "text": "When neutral particles enter in a plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, \\(E_{2}\\) and, when they decay to a lower energy state \\(E_{1}\\), they emit a photon with energy \\(E_{\\gamma} = E_2 - E_1\\), and wavelength \\(\\lambda = \\frac{hc}{E_{\\gamma}}\\).\nIn particular, of specific interest is the Balmer-\\(\\alpha\\) emission of the deuterium atom \\(D_{\\alpha}\\), which corresponds to the transition between \\(n=3\\) and \\(n=2\\), and is characterized by an energy \\(E_{D_{\\alpha}} = 1.89\\) eV and a wavelength \\(\\lambda_{D_{\\alpha}} = 656.279\\) nm.",
+    "text": "Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.",
     "crumbs": [
       "Theory",
       "Plasma Physics",
       "Beam Emission Spectroscopy (BES)"
+    ]
+  },
+  {
+    "objectID": "papers/Paper1.html",
+    "href": "papers/Paper1.html",
+    "title": "Luigi Persico - Ph.D.",
+    "section": "",
+    "text": "Still too soon for me, come back in a few years :P",
+    "crumbs": [
+      "Papers",
+      "Paper1"
     ]
   },
   {
@@ -194,7 +205,7 @@
     "href": "theory/Plasma_physics/Safety_factor.html",
     "title": "Safety Factor q",
     "section": "",
-    "text": "The safety factor \\(q\\) expresses the number of toroidal turns a magnetic field line makes for each poloidal turn in a toroidal confinement device, such as a tokamak.\nIt corresponds to the flux-surface averaged local pitch:\n\\[\nq(\\psi) \\equiv \\langle q_l \\rangle_{\\theta} = \\left\\langle \\frac{r B_{\\varphi}}{R B_{\\theta}}  \\right\\rangle_{\\theta}\n\\]\nwhere \\(r\\) is the minor radius coordinate, \\(B_{\\varphi}\\) is the toroidal magnetic field component, \\(R\\) is the major radius, and \\(B_{\\theta}\\) is the poloidal magnetic field component. A higher safety factor generally indicates greater stability against certain plasma instabilities.\nWith some assumptions it is possible to estimate the safety factor behavior in a tokamak: \\[\nB_{\\varphi} \\approx \\frac{\\mu_0}{2\\pi R} I_{coils};\n\\] \\[\nB_{\\theta} \\approx \\frac{\\mu_0}{2\\pi r} I_p = \\frac{\\mu_0}{2} J_p r;\n\\]\n\\[\n\\rightarrow q(\\psi) = \\left\\langle\\frac{I_{coils}}{\\pi R^2J_p }\\right\\rangle_{\\theta} = \\frac{I_{coils}}{I_p}r^2\\left\\langle\\frac{1}{R^2}\\right\\rangle_{\\theta} .\n\\]\nThe interactive plot below allows you to explore how the safety factor \\(q\\) depends on key tokamak parameters. You can adjust:\n\n\\(\\epsilon\\): The inverse aspect ratio (\\(a/R_0\\)), where \\(a\\) is the minor radius and \\(R_0\\) is the major radius.\n\\(I_p\\): The plasma current (in Mega Amperes).\n\\(I_{coils}\\): The toroidal field coil current (in Mega Amperes).\n\nUse the sliders to see how changes in these parameters affect the safety factor profile.\n\n\n\n\n\n&lt;function __main__.safety_factor_plot(eps=0.2841, Ip=1, I_coils=1)&gt;",
+    "text": "The safety factor \\(q\\) expresses the number of toroidal turns a magnetic field line makes for each poloidal turn in a toroidal confinement device, such as a tokamak.\nIt corresponds to the flux-surface averaged local pitch:\n\\[\nq(\\psi) \\equiv \\langle q_l \\rangle_{\\theta} = \\left\\langle \\frac{r B_{\\varphi}}{R B_{\\theta}}  \\right\\rangle_{\\theta}\n\\]\nwhere \\(r\\) is the minor radius coordinate, \\(B_{\\varphi}\\) is the toroidal magnetic field component, \\(R\\) is the major radius, and \\(B_{\\theta}\\) is the poloidal magnetic field component. A higher safety factor generally indicates greater stability against certain plasma instabilities.\nWith some assumptions it is possible to estimate the safety factor behavior in a tokamak: \\[\nB_{\\varphi} \\approx \\frac{\\mu_0}{2\\pi R} I_{coils};\n\\] \\[\nB_{\\theta} \\approx \\frac{\\mu_0}{2\\pi r} I_p = \\frac{\\mu_0}{2} J_p r;\n\\]\n\\[\n\\rightarrow q(\\psi) = \\left\\langle\\frac{I_{coils}}{\\pi R^2J_p }\\right\\rangle_{\\theta} = \\frac{I_{coils}}{I_p}r^2\\left\\langle\\frac{1}{R^2}\\right\\rangle_{\\theta} .\n\\]\nThe interactive plot below allows you to explore how this first estimation of the safety factor \\(q\\) depends on key tokamak parameters. You can adjust:\n\n\\(\\epsilon\\): The inverse aspect ratio (\\(a/R_0\\)), where \\(a\\) is the minor radius and \\(R_0\\) is the major radius.\n\\(I_p\\): The plasma current (in Mega Amperes).\n\\(I_{coils}\\): The toroidal field coil current (in Mega Amperes).\n\nUse the sliders to see how changes in these parameters affect the safety factor profile.\n\n\n\n\n\n&lt;function __main__.safety_factor_plot(eps=0.2841, Ip=1, I_coils=1)&gt;",
     "crumbs": [
       "Theory",
       "Plasma Physics",
@@ -260,40 +271,6 @@
     "text": "Currently to do\n\nAdding BES, MSE to the SPC wiki.\nGetting used with the matlab code for MSE.\nParametric description of the neutral beam.\nHaving a look at plasma instabilities.",
     "crumbs": [
       "Ph.D. roadmap"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/BES.html#introduction",
-    "href": "theory/Plasma_physics/BES.html#introduction",
-    "title": "Beam Emission Spectroscopy (BES)",
-    "section": "",
-    "text": "Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Beam Emission Spectroscopy (BES)"
-    ]
-  },
-  {
-    "objectID": "papers/no_paper.html",
-    "href": "papers/no_paper.html",
-    "title": "Luigi Persico - Ph.D.",
-    "section": "",
-    "text": "Still too soon for me, come back in a few years :P",
-    "crumbs": [
-      "Papers",
-      "No Paper"
-    ]
-  },
-  {
-    "objectID": "papers/Paper1.html",
-    "href": "papers/Paper1.html",
-    "title": "Luigi Persico - Ph.D.",
-    "section": "",
-    "text": "Still too soon for me, come back in a few years :P",
-    "crumbs": [
-      "Papers",
-      "Paper1"
     ]
   }
 ]
