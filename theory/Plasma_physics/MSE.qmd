@@ -63,7 +63,7 @@ $$
 ## MSE diagnostic on TCV
 
 The MSE diagnostic on TCV relies on the deuterium neutrals injected 
-by the [NBI-1 of TCV](TCV_NBI.qmd). Along the beam 20 LOS are defined, originating from the optical
+by the [NBI-1 of TCV](NBI.qmd). Along the beam 20 LOS are defined, originating from the optical
 setup at the bottom of TCV, as shown in @fig-LOS_TCV.
 
 ::: {#fig-LOS_TCV layout-ncol="2"}
