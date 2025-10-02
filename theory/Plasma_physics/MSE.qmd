@@ -5,7 +5,7 @@ title: "Motional-Stark Effect (MSE)"
 
 ## Introduction
 
-The *Stark Effect* is the shifting and splitting of the electronic energy levels due to an external electric field. The Motional-Stark Effect (MSE), instead, is the specific case in which the electric field is the Lorentz electric field felt by an atom moving in a magnetic field $\mathbf{B}$ at a velocity $\mathbf{v}$, in its rest frame: $\mathbf{E} = \mathbf{v} \times \mathbf{B}$.
+The *Stark Effect* is the shifting and splitting of the electronic energy levels due to an external electric field. The *Motional-Stark Effect (MSE)*, instead, is the specific case in which the electric field is the Lorentz electric field felt by an atom moving in a magnetic field $\mathbf{B}$ at a velocity $\mathbf{v}$, in its rest frame: $\mathbf{E} = \mathbf{v} \times \mathbf{B}$.
 
 In plasma physics, the Motional-Stark Effect (MSE) serves as a crucial diagnostic tool for determining the poloidal magnetic field $\mathbf{B_P}$ within the plasma. Accurate knowledge of the poloidal magnetic field is essential for understanding plasma stability and the formation of Internal Transport Barriers (ITBs). Additionally, MSE measurements enable inference of the plasma current distribution, since the current density $\mathbf{J}$ is related to the magnetic field $\mathbf{B}$ through Ampère's law:
 

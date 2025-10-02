@@ -1,1 +1,21 @@
-It is also denoted as $\mathbf{A^{\dagger}}$, especially when used in conjunction with the [bra-ket notation](../bra_ket_notation.qmd). 
+---
+title: "Hermitian adjoint"
+---
+
+
+The Hermitian adjoint of a matrix or operator $\mathbf{A}$, often written as $\mathbf{A}^\dagger$, especially when used in conjunction with the [bra-ket notation](Bra-ket_notation.qmd), is defined as the complex conjugate transpose of $\mathbf{A}$. Mathematically, if $\mathbf{A}$ is an $m \times n$ matrix, then
+
+$$
+\mathbf{A}^\dagger = (\mathbf{A}^*)^T
+$$
+
+where $\mathbf{A}^*$ denotes the element-wise complex conjugate and $T$ denotes the transpose.
+
+In quantum mechanics, the Hermitian adjoint plays a crucial role in defining observables and ensuring that physical quantities are real-valued. An operator $\mathbf{A}$ is called Hermitian if $\mathbf{A} = \mathbf{A}^\dagger$. Hermitian operators have real eigenvalues and orthogonal eigenvectors, which are essential properties for representing measurable quantities.
+
+For example, if $\mathbf{A}$ acts on a vector space with basis vectors $|i\rangle$, the matrix elements of the Hermitian adjoint are given by:
+$$
+\langle i | \mathbf{A}^\dagger | j \rangle = \langle j | \mathbf{A} | i \rangle^*
+$$
+
+This property is widely used in the manipulation of quantum states and operators.

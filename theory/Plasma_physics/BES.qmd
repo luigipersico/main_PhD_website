@@ -2,8 +2,6 @@
 title: "Beam Emission Spectroscopy (BES)"
 ---
 
-## Physical principles
+## Introduction
 
-When neutral particles enter in a plasma, they are subject to inelastic collisions with plasma's ions and electrons. The neutrals' electrons, which initially are in their ground state, can reach a higher energy level, $E_{2}$ and, when they decay to a lower energy state $E_{1}$, they emit a photon with energy $E_{\gamma} = E_2 - E_1$, and wavelength $\lambda = \frac{hc}{E_{\gamma}}$.
-
-In particular, of specific interest is the Balmer-$\alpha$ emission of the deuterium atom $D_{\alpha}$, which corresponds to the transition between $n=3$ and $n=2$, and is characterized by an energy $E_{D_{\alpha}} = 1.89$ eV and a wavelength $\lambda_{D_{\alpha}} = 656.279$ nm.
+Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.

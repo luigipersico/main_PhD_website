@@ -1,11 +1,10 @@
 ---
-author: Luigi Persico
-institution: EPFL
 title: "September 2025"
 ---
 
 ## Project Status
 
 - Getting started with the Ph.D.
-- Starting reading papers on BES 
-- Plasma instabilities course 
+- Starting reading papers on BES and MES
+- Studying factibility of installing BES on TCV
+- Plasma instabilities and Quantum II courses 

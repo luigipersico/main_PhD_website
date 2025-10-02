@@ -15,7 +15,7 @@ The inner product generalizes the notion of the dot product to complex vector sp
 In quantum mechanics, the mathematical framework is built upon Hilbert spaces:
 
 - **States:** The possible states of a quantum system are represented by (normalized) vectors in a Hilbert space $\mathcal{H}$.
-- **Observables:** Physical quantities (observables) correspond to Hermitian (self-adjoint) operators acting on $\mathcal{H}$.
+- **Observables:** Physical quantities (observables) correspond to [Hermitian](Hermitian_adjoint.qmd) (self-adjoint) operators acting on $\mathcal{H}$.
 - **Symmetries:** Symmetry transformations are represented by unitary operators on $\mathcal{H}$, preserving inner products and probabilities.
 - **Measurements:** The act of measurement is mathematically described by orthogonal projection operators, which project state vectors onto subspaces associated with measurement outcomes.
 

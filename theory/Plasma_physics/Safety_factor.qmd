@@ -30,7 +30,7 @@ $$
 \rightarrow q(\psi) = \left\langle\frac{I_{coils}}{\pi R^2J_p }\right\rangle_{\theta} = \frac{I_{coils}}{I_p}r^2\left\langle\frac{1}{R^2}\right\rangle_{\theta} .
 $$
 
-The interactive plot below allows you to explore how the safety factor $q$ depends on key tokamak parameters. You can adjust:
+The interactive plot below allows you to explore how this first estimation of the safety factor $q$ depends on key tokamak parameters. You can adjust:
 
 - **$\epsilon$**: The inverse aspect ratio ($a/R_0$), where $a$ is the minor radius and $R_0$ is the major radius.
 - **$I_p$**: The plasma current (in Mega Amperes).
