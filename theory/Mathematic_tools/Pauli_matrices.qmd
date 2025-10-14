@@ -1,0 +1,28 @@
+---
+title: "Pauli matrices"
+---
+
+
+The Pauli matrices are a set of three $2 \times 2$ complex matrices that are treceless, [Hermitian](Hermitian_adjoint.qmd), involutory and unitary:
+
+$$
+X= \sigma_x = \sigma_1 = 
+\begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix},
+$$
+$$
+Y= \sigma_y = \sigma_2 = 
+\begin{pmatrix}
+0 & -i \\
+i & 0
+\end{pmatrix},
+$$
+$$
+Z= \sigma_z = \sigma_3 = 
+\begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}.
+$$

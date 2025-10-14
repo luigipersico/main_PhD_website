@@ -110,7 +110,7 @@
     "href": "theory/Plasma_physics/MSE.html#mse-diagnostic-on-tcv",
     "title": "Motional-Stark Effect (MSE)",
     "section": "MSE diagnostic on TCV",
-    "text": "MSE diagnostic on TCV\nThe MSE diagnostic on TCV relies on the deuterium neutrals injected by the NBI-1 of TCV. Along the beam 20 LOS are defined, originating from the optical setup at the bottom of TCV, as shown in Figure 3.\n\n\n\n\n\n\n\n\n\n\n\n(a) Intersection of LOS (in grey) with the NBI (in orange)3.\n\n\n\n\n\n\n\n\n\n\n\n(b) Poloidal cross section of TCV with an example of magnetic equilibrium. In red the LOS and in green the NBI3.\n\n\n\n\n\n\n\nFigure 3\n\n\n\nTo detect the Doppler-shifted radiation emitted by the neutral beam, each line-of-sight (LOS) must be oriented at an angle other than \\(90^\\circ\\) relative to the beam direction. This arrangement ensures that the neutral beam has a velocity component along the LOS, making the Doppler-shifted emission distinguishable from the background plasma radiation.\n\n\n\n\n\n\nFigure 4: D\\(_{\\mathrm{\\alpha}}\\) radiation\n\n\n\nAs shown in Figure 4, the D\\(_{\\mathrm{\\alpha}}\\) spectrum exhibits several distinct peaks:\n\nThe full-energy peak corresponds to emission from D\\(^+\\) ions;\nThe half-energy peak arises from D\\(^+_2\\) ions;\nThe third-energy peak is due to D\\(^+_3\\) ions;\nThe remaining portion of the spectrum is non-shifted radiation emitted by the plasma.\n\nThese energy shifts result from the different velocities of the ion species, which are determined by their respective masses.\n\n\n\nTable 1: Parameters of each LOS. R\\(_\\mathrm{inter}\\) is the radial position of the intersection between LOS and NBI-1, α is the angle between LOS and NBI-1, ∆λ is the doppler shift, and ∆R is the radial resolution3.\n\n\n\n\n\n\n\n\n\n\n\n\nLOS\nR\\(_\\mathrm{inter}\\) [m]\nα [deg]\nDoppler shift ∆λ [Å]\nresolution ∆R [cm⁻¹]\n\n\n\n\n1\n1.1062\n138.61\n-27.1349\n6.4\n\n\n2\n1.0920\n138.04\n-26.8964\n6.5\n\n\n3\n1.0783\n137.48\n-26.6568\n6.4\n\n\n4\n1.0651\n136.91\n-26.4158\n6.1\n\n\n5\n1.0524\n136.35\n-26.1734\n5.8\n\n\n6\n1.0402\n135.80\n-25.9294\n5.6\n\n\n7\n1.0278\n135.24\n-25.6837\n5.5\n\n\n8\n1.0163\n134.69\n-25.4361\n5.2\n\n\n9\n1.0053\n134.13\n-25.1867\n5.0\n\n\n10\n0.9952\n133.58\n-24.9351\n4.8\n\n\n11\n0.9849\n133.03\n-24.6813\n4.6\n\n\n12\n0.9748\n132.48\n-24.4251\n4.4\n\n\n13\n0.9651\n131.92\n-24.1664\n4.2\n\n\n14\n0.9556\n131.37\n-23.9049\n4.1\n\n\n15\n0.9464\n130.81\n-23.6407\n3.9\n\n\n16\n0.9374\n130.26\n-23.3733\n3.7\n\n\n17\n0.9283\n129.70\n-23.1028\n3.5\n\n\n18\n0.9198\n129.14\n-22.8288\n3.4\n\n\n19\n0.9116\n128.57\n-22.5512\n3.2\n\n\n20\n0.9035\n128.00\n-22.2697\n3.0\n\n\n\n\n\n\nIn Table 1 all the parameters relative to the intersection between the LOSs and the NBI-1 are listed.\n\n\n\n\n\n\nFigure 5: Optical setup of the MSE diagnostic3\n\n\n\n\n\n\nTable 2: Parameters of the optical components3.\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSpectrometer\nCamera\nFibers\n\n\n\n\nFocal length\n500 mm\n\n\n\n\nF#\n4\n\n\n\n\nGrating\n2400 grooves/mm\n\n\n\n\nResolution\n~ 0.5 Å\n\n\n\n\nRange\n3800-8000 Å\n\n\n\n\nModel\n\nAndor EMCCD\n\n\n\nPixel size\n\n13 µm\n\n\n\nArray size\n\n1024x1024\n\n\n\nTime resolution\n\n20 ms\n\n\n\nCamera range\n\n3800-9000 Å\n\n\n\nLength of each fiber\n\n\n30 m\n\n\nCore diameter\n\n\n295 µm\n\n\n#fibers per branch\n\n\n20\n\n\n#branches\n\n\n2\n\n\nFiber range\n\n\n3800-8500 Å",
+    "text": "MSE diagnostic on TCV\nThe MSE diagnostic on TCV relies on the deuterium neutrals injected by the NBI-1 of TCV. Along the beam 20 LOS are defined, originating from the optical setup at the bottom of TCV, as shown in Figure 3.\n\n\n\n\n\n\n\n\n\n\n\n(a) Intersection of LOS (in grey) with the NBI (in orange)3.\n\n\n\n\n\n\n\n\n\n\n\n(b) Poloidal cross section of TCV with an example of magnetic equilibrium. In red the LOS and in green the NBI3.\n\n\n\n\n\n\n\nFigure 3\n\n\n\nTo detect the Doppler-shifted radiation emitted by the neutral beam, each line-of-sight (LOS) must be oriented at an angle other than \\(90^\\circ\\) relative to the beam direction. This arrangement ensures that the neutral beam has a velocity component along the LOS, making the Doppler-shifted emission distinguishable from the background plasma radiation.\n\n\n\n\n\n\nFigure 4: D\\(_{\\mathrm{\\alpha}}\\) radiation\n\n\n\nAs shown in Figure 4, the D\\(_{\\mathrm{\\alpha}}\\) spectrum exhibits several distinct peaks:\n\nThe full-energy peak corresponds to emission from D\\(^+\\) ions;\nThe half-energy peak arises from D\\(^+_2\\) ions;\nThe third-energy peak is due to D\\(^+_3\\) ions;\nThe remaining portion of the spectrum is non-shifted radiation emitted by the plasma.\n\nThese energy shifts result from the different velocities of the ion species, which are determined by their respective masses.\n\n\n\nTable 1: Parameters of each LOS. R\\(_\\mathrm{inter}\\) is the radial position of the intersection between LOS and NBI-1, α is the angle between LOS and NBI-1, ∆λ is the doppler shift, and ∆R is the radial resolution3.\n\n\n\n\n\n\n\n\n\n\n\n\nLOS\nR\\(_\\mathrm{inter}\\) [m]\nα [deg]\nDoppler shift ∆λ [Å]\nresolution ∆R [cm⁻¹]\n\n\n\n\n1\n1.1062\n138.61\n-27.1349\n6.4\n\n\n2\n1.0920\n138.04\n-26.8964\n6.5\n\n\n3\n1.0783\n137.48\n-26.6568\n6.4\n\n\n4\n1.0651\n136.91\n-26.4158\n6.1\n\n\n5\n1.0524\n136.35\n-26.1734\n5.8\n\n\n6\n1.0402\n135.80\n-25.9294\n5.6\n\n\n7\n1.0278\n135.24\n-25.6837\n5.5\n\n\n8\n1.0163\n134.69\n-25.4361\n5.2\n\n\n9\n1.0053\n134.13\n-25.1867\n5.0\n\n\n10\n0.9952\n133.58\n-24.9351\n4.8\n\n\n11\n0.9849\n133.03\n-24.6813\n4.6\n\n\n12\n0.9748\n132.48\n-24.4251\n4.4\n\n\n13\n0.9651\n131.92\n-24.1664\n4.2\n\n\n14\n0.9556\n131.37\n-23.9049\n4.1\n\n\n15\n0.9464\n130.81\n-23.6407\n3.9\n\n\n16\n0.9374\n130.26\n-23.3733\n3.7\n\n\n17\n0.9283\n129.70\n-23.1028\n3.5\n\n\n18\n0.9198\n129.14\n-22.8288\n3.4\n\n\n19\n0.9116\n128.57\n-22.5512\n3.2\n\n\n20\n0.9035\n128.00\n-22.2697\n3.0\n\n\n\n\n\n\nIn Table 1 all the parameters relative to the intersection between the LOSs and the NBI-1 are listed.\n\n\n\n\n\n\nFigure 5: Optical setup of the MSE diagnostic3\n\n\n\nThe optical setup, shown in Figure 5, is composed by:\n\nA beamsplitter plate used to separate two orthogonal light polarizations of the \\(D_\\alpha\\) emission into two different barches. This is done because only the Motional Stark and the Zeeman effects actually influence the line polarization. A thin plate has been chosen to minimize the rotation \\(\\beta\\) of the light polarization due to the Faraday effect. Currently, taking into account the 5 mm diagnostic window and the beamsplitter plate, the total rotation is\n\n\\[\n\\beta = \\beta_{\\mathrm{w}} + \\beta_{\\mathrm{p}} \\approx 1.2^\\circ + 0.3^\\circ = 1.5^\\circ.\n\\]\n\n2 lents, one for each branch, used to focus the light into the optical fibers.\n40 optical fibers, 20 per branch, which transmit the light to the spectrometer and the camera.\n\nMore details regarding the optical setup are listed in Table 2.\n\n\n\nTable 2: Parameters of the optical components3.\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSpectrometer\nCamera\nFibers\n\n\n\n\nFocal length\n500 mm\n\n\n\n\nF#\n4\n\n\n\n\nGrating\n2400 grooves/mm\n\n\n\n\nResolution\n~ 0.5 Å\n\n\n\n\nRange\n3800-8000 Å\n\n\n\n\nModel\n\nAndor EMCCD\n\n\n\nPixel size\n\n13 µm\n\n\n\nArray size\n\n1024x1024\n\n\n\nTime resolution\n\n20 ms\n\n\n\nCamera range\n\n3800-9000 Å\n\n\n\nLength of each fiber\n\n\n30 m\n\n\nCore diameter\n\n\n295 µm\n\n\n#fibers per branch\n\n\n20\n\n\n#branches\n\n\n2\n\n\nFiber range\n\n\n3800-8500 Å",
     "crumbs": [
       "Theory",
       "Plasma Physics",
@@ -271,6 +271,138 @@
     "text": "Currently to do\n\nAdding BES, MSE to the SPC wiki.\nGetting used with the matlab code for MSE.\nParametric description of the neutral beam.\nHaving a look at plasma instabilities.",
     "crumbs": [
       "Ph.D. roadmap"
+    ]
+  },
+  {
+    "objectID": "theory/Quantum_physics/Pauli_matrices.html",
+    "href": "theory/Quantum_physics/Pauli_matrices.html",
+    "title": "Pauli matrices",
+    "section": "",
+    "text": "The Pauli matrices are a set of three \\(2 \\times 2\\) complex matrices that are treceless, Hermitian, involutory and unitary:\n\\[\nX= \\sigma_x = \\sigma_1 =\n\\begin{pmatrix}\n0 & 1 \\\\\n1 & 0\n\\end{pmatrix},\n\\] \\[\nY= \\sigma_y = \\sigma_2 =\n\\begin{pmatrix}\n0 & -i \\\\\ni & 0\n\\end{pmatrix},\n\\] \\[\nZ= \\sigma_z = \\sigma_3 =\n\\begin{pmatrix}\n1 & 0 \\\\\n0 & -1\n\\end{pmatrix}.\n\\]",
+    "crumbs": [
+      "Theory",
+      "Quantum Physics",
+      "Pauli matrices"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic_tools/Pauli_matrices.html",
+    "href": "theory/Mathematic_tools/Pauli_matrices.html",
+    "title": "Pauli matrices",
+    "section": "",
+    "text": "The Pauli matrices are a set of three \\(2 \\times 2\\) complex matrices that are treceless, Hermitian, involutory and unitary:\n\\[\nX= \\sigma_x = \\sigma_1 =\n\\begin{pmatrix}\n0 & 1 \\\\\n1 & 0\n\\end{pmatrix},\n\\] \\[\nY= \\sigma_y = \\sigma_2 =\n\\begin{pmatrix}\n0 & -i \\\\\ni & 0\n\\end{pmatrix},\n\\] \\[\nZ= \\sigma_z = \\sigma_3 =\n\\begin{pmatrix}\n1 & 0 \\\\\n0 & -1\n\\end{pmatrix}.\n\\]",
+    "crumbs": [
+      "Theory",
+      "Mathematic Tools",
+      "Pauli matrices"
+    ]
+  },
+  {
+    "objectID": "theory/Quantum_physics/Quantum_entanglement.html",
+    "href": "theory/Quantum_physics/Quantum_entanglement.html",
+    "title": "Quatum Entanglement",
+    "section": "",
+    "text": "Quantum entanglement is a phenomenon in quantum physics where the state of each particle in a group cannot be described independently of the state of the others. Mathematically, an entangled system’s quantum state cannot be described through the states of its local constituents only.",
+    "crumbs": [
+      "Theory",
+      "Quantum Physics",
+      "Quatum Entanglement"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optical_spectrometer.html",
+    "href": "theory/Plasma_physics/Optical_spectrometer.html",
+    "title": "Optical Spectrometer",
+    "section": "",
+    "text": "An optical spectrometer (which can be either a spectrophotometer, a spectograph, or a spectroscope) is a device used to meausre properties of light over a specific portion of the electromagnetic spectrum. It is used in spectroscopy for producing spectral lines, in order to measure their wavelenghts and intensities1.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optical Spectrometer"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optics.html",
+    "href": "theory/Plasma_physics/Optics.html",
+    "title": "Optics",
+    "section": "",
+    "text": "Optics is the branch of physics which studies how the electromagnetic radiation behaves and how it can be manipulated. The most common use of optics is the geometric optics, which considers the light as travelling in straight lines, and bending when passing through or reflect from surfaces. Physical optics instead considers light as an electromagnetic wave, and more complex effects can be explained, such as diffraction and interference, which cannot be taken into account by geometrical optics.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optics"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optics.html#introduction",
+    "href": "theory/Plasma_physics/Optics.html#introduction",
+    "title": "Optics",
+    "section": "",
+    "text": "Optics is the branch of physics which studies how the electromagnetic radiation behaves and how it can be manipulated. The most common use of optics is the geometric optics, which considers the light as travelling in straight lines, and bending when passing through or reflect from surfaces. Physical optics instead considers light as an electromagnetic wave, and more complex effects can be explained, such as diffraction and interference, which cannot be taken into account by geometrical optics.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optics"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optics.html#refraction-and-reflection",
+    "href": "theory/Plasma_physics/Optics.html#refraction-and-reflection",
+    "title": "Optics",
+    "section": "Refraction and reflection",
+    "text": "Refraction and reflection\nWhen a ray hits the boundary between two materials which are transparent, it is dived into a reflected and refracted ray.\nBoth the reflected and refracted rays stay on the plane of incidence but, while the former is reflected with the same incidence angle (respect to the normal to the interface) \\(\\theta_1\\), the latter is refracted with an angle \\(\\theta_2\\) according to Snell’s Law:\n\\[\n\\frac{\\sin\\theta_1}{\\sin\\theta_2} = \\frac{n_2}{n_1},\n\\]\nwhere \\(n_2\\) and \\(n_1\\) are respectively the refractive index of the second and the first material. The index of refraction is strictly connected to the ligth speed in the medium \\(v\\):\n\\[\nn = \\frac{c}{v},\n\\]\nwhere \\(c\\) is the speed of light in vacuum.\nWhen \\(\\theta_1\\) is large enough, the light is fully reflected and no transmission occurs. This phenomenon is the one used by the optical fibers to transmit optical signals over long distances.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optics"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optics.html#interference",
+    "href": "theory/Plasma_physics/Optics.html#interference",
+    "title": "Optics",
+    "section": "Interference",
+    "text": "Interference\nInterference happens when different waves interact and generate a patterns which depends on the waves wavelengths and frequencies and wether they are in phase or not. In the former case the outcome is called a constructive interference, and the resulting wave has a higher amplitude (brighter light); if instead the two waves are out of phase, the resulting amplitude is smaller than the original one, and the phenomenon is called distructive interference.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optics"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optics.html#diffraction",
+    "href": "theory/Plasma_physics/Optics.html#diffraction",
+    "title": "Optics",
+    "section": "Diffraction",
+    "text": "Diffraction\nDiffraction happens when light, after passing through a number of slits, interferes with its own wavefronts. The diffraction grating contains a large number of slits at equal spacing.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optics"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optical_spectrometer.html#introduction",
+    "href": "theory/Plasma_physics/Optical_spectrometer.html#introduction",
+    "title": "Optical Spectrometer",
+    "section": "",
+    "text": "An optical spectrometer (which can be either a spectrophotometer, a spectograph, or a spectroscope) is a device used to meausre properties of light over a specific portion of the electromagnetic spectrum. It is used in spectroscopy for producing spectral lines, in order to measure their wavelenghts and intensities1.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optical Spectrometer"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optical_spectrometer.html#working-principle",
+    "href": "theory/Plasma_physics/Optical_spectrometer.html#working-principle",
+    "title": "Optical Spectrometer",
+    "section": "Working principle",
+    "text": "Working principle\n\n\n\n\n\n\nFigure 1: Optical spectrometer scheme1.\n\n\n\nAs illustrated in ?@fig-Spec_scheme, a spectroscope generally uses a movable slit, some mirrors, and a diffraction grating. Through the slit it is possible to regulate the amount of light which is getting inside the device, which is then reflected by a first mirror on the diffraction grating. At this point the second mirror is adjusted such that only the radiation which the desired wavelength reaches the device.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optical Spectrometer"
     ]
   }
 ]

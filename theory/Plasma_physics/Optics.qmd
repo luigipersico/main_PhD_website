@@ -1,0 +1,34 @@
+---
+title: 'Optics'
+---
+
+## Introduction
+Optics is the branch of physics which studies how the electromagnetic radiation behaves and how it can be manipulated. The most common use of optics is the geometric optics, which considers the light as travelling in straight lines, and bending when passing through or reflect from surfaces. Physical optics instead considers light as an electromagnetic wave, and more complex effects can be explained, such as diffraction and interference, which cannot be taken into account by geometrical optics.
+
+
+## Refraction and reflection
+
+When a ray hits the boundary between two materials which are transparent, it is dived into a reflected and refracted ray.
+
+Both the reflected and refracted rays stay on the plane of incidence but, while the former is reflected with the same incidence angle (respect to the normal to the interface) $\theta_1$, the latter is refracted with an angle $\theta_2$ according to Snell's Law:
+
+$$
+\frac{\sin\theta_1}{\sin\theta_2} = \frac{n_2}{n_1},
+$$
+
+where $n_2$ and $n_1$ are respectively the refractive index of the second and the first material. The index of refraction is strictly connected to the ligth speed in the medium $v$:
+
+$$
+n = \frac{c}{v},
+$$
+
+where $c$ is the speed of light in vacuum.
+
+When $\theta_1$ is large enough, the light is fully reflected and no transmission occurs. This phenomenon is the one used by the optical fibers to transmit optical signals over long distances.
+
+## Interference 
+Interference happens when different waves interact and generate a patterns which depends on the waves wavelengths and frequencies and wether they are in phase or not. In the former case the outcome is called a constructive interference, and the resulting wave has a higher amplitude (brighter light); if instead the two waves are out of phase, the resulting amplitude is smaller than the original one, and the phenomenon is called distructive interference.
+
+## Diffraction
+
+Diffraction happens when light, after passing through a number of slits, interferes with its own wavefronts. The diffraction grating contains a large number of slits at equal spacing.

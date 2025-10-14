@@ -1,0 +1,5 @@
+---
+title: "Quatum Entanglement"
+---
+
+Quantum entanglement is a phenomenon in quantum physics where the state of each particle in a group cannot be described independently of the state of the others. Mathematically, an entangled system's quantum state cannot be described through the states of its local constituents only.  

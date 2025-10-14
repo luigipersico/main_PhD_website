@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Motional-Stark Effect (MSE) – Luigi Persico - Ph.D.</title>
+<title>Quatum Entanglement – Luigi Persico - Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-  margin-bottom: 0em;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -89,35 +69,6 @@ div.csl-indent {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -130,7 +81,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/MSE.html">Motional-Stark Effect (MSE)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Quantum_physics/Quantum_entanglement.html">Quantum Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Quantum_physics/Quantum_entanglement.html">Quatum Entanglement</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -274,13 +225,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
  <span class="menu-text">Plasma Physics</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../theory/Plasma_physics/BES.html" class="sidebar-item-text sidebar-link">
@@ -295,7 +246,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motional-Stark Effect (MSE)</span></a>
   </div>
 </li>
@@ -303,18 +254,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../theory/Plasma_physics/NBI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Neutral Beam Injector (NBI)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/Optical_spectrometer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Optical Spectrometer</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/Optics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Optics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -327,16 +266,16 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
  <span class="menu-text">Quantum Physics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Quatum Entanglement</span></a>
   </div>
 </li>
@@ -357,13 +296,13 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="MSE.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Quantum_entanglement.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/MSE.html">Motional-Stark Effect (MSE)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Quantum_physics/Quantum_entanglement.html">Quantum Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Quantum_physics/Quantum_entanglement.html">Quatum Entanglement</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Motional-Stark Effect (MSE)</h1>
+<h1 class="title">Quatum Entanglement</h1>
 </div>
 
 
@@ -380,447 +319,11 @@ window.Quarto = {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The <em>Stark Effect</em> is the shifting and splitting of the electronic energy levels due to an external electric field. The <em>Motional-Stark Effect (MSE)</em>, instead, is the specific case in which the electric field is the Lorentz electric field felt by an atom moving in a magnetic field <span class="math inline">\(\mathbf{B}\)</span> at a velocity <span class="math inline">\(\mathbf{v}\)</span>, in its rest frame: <span class="math inline">\(\mathbf{E} = \mathbf{v} \times \mathbf{B}\)</span>.</p>
-<p>In plasma physics, the Motional-Stark Effect (MSE) serves as a crucial diagnostic tool for determining the poloidal magnetic field <span class="math inline">\(\mathbf{B_P}\)</span> within the plasma. Accurate knowledge of the poloidal magnetic field is essential for understanding plasma stability and the formation of Internal Transport Barriers (ITBs). Additionally, MSE measurements enable inference of the plasma current distribution, since the current density <span class="math inline">\(\mathbf{J}\)</span> is related to the magnetic field <span class="math inline">\(\mathbf{B}\)</span> through Ampère’s law:</p>
-<p><span class="math display">\[
-\nabla \times \mathbf{B} = \mu_0 \mathbf{J}.
-\]</span></p>
-<p>In TCV, the poloidal magnetic field is determined by the LIUQE (from “EQUIL” spelt backwards) code, which is an equilibrium code based on the resolution of the <a href="../../theory/Plasma_physics/Grad_Shafranov.html">Grad-Shafranov equation</a>, and on magnetic probes measurements outside of the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is not negligible anymore, and the magnetic field is locally influenced. This explains the need for the Motional-Stark Effect diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.</p>
-</section>
-<section id="a-bit-of-history" class="level2">
-<h2 class="anchored" data-anchor-id="a-bit-of-history">A bit of history</h2>
-<p>The Stark effect was discovered by the German physicist Johannes Stark in 1913, for which he was awarded the nobel price in 1919. During the same year the effect was independently discovered by the Italian physicit Antonio Lo Surdo<span class="citation" data-cites="stark_wikipedia"><sup><a href="#ref-stark_wikipedia" role="doc-biblioref">1</a></sup></span>.</p>
-</section>
-<section id="physical-principles" class="level2">
-<h2 class="anchored" data-anchor-id="physical-principles">Physical principles</h2>
-<p>The MSE diagnostic is based on the external injection of neutral beam deuterium atoms and, when entering the plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, <span class="math inline">\(E_{2}\)</span> and, when they decay to a lower energy state <span class="math inline">\(E_{1}\)</span>, they emit a photon with energy <span class="math inline">\(E_{\gamma} = E_2 - E_1\)</span>, and wavelength <span class="math inline">\(\lambda = \frac{hc}{E_{\gamma}}\)</span>.</p>
-<p>In particular, of specific interest is the Balmer-<span class="math inline">\(\alpha\)</span> emission of the deuterium atom <span class="math inline">\(D_{\alpha}\)</span>, which corresponds to the transition between <span class="math inline">\(n=3\)</span> and <span class="math inline">\(n=2\)</span>, and is characterized by an energy <span class="math inline">\(E_{D_{\alpha}} = 1.89\)</span> eV and a wavelength <span class="math inline">\(\lambda_{D_{\alpha}} = 656.279\)</span> nm. This is because the <span class="math inline">\(D_{\alpha}\)</span> emission has a high emission intensity in the visible spectrum (red light), and it is highly Doppler-shifted with respect to the plasma <span class="math inline">\(D_{\alpha}\)</span> emission. Moreover, since the neutral’s velocity across the magnetic field is high compared to the thermal velocity of the plasma ions, the resulting Lorentz electric field <span class="math inline">\(\mathbf{E_L} = \mathbf{v} \times \mathbf{B}\)</span> is significant. This leads to a measurable splitting and polarization of the <span class="math inline">\(D_{\alpha}\)</span>, spectral line, which can be used to infer the local magnetic field direction and magnitude inside the plasma.</p>
-<p>To analyze the Stark effect in the deuterium atom, it is convenient to solve the non-relativistic <a href="../../theory/Quantum_physics/Schrödinger_eq.html">Schrödinger Equation</a> using parabolic coordinates. In this framework, the atomic states are described by four quantum numbers <span class="math inline">\(|n, n_1, n_2, m\rangle\)</span>: <span class="math inline">\(n\)</span> is the principal quantum number, <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> are parabolic quantum numbers, and <span class="math inline">\(m\)</span> is the magnetic quantum number. The energy splitting caused by the Stark effect, calculated using first-order perturbation theory, is given by<span class="citation" data-cites="anhtai2024revisithydrogenatominduced"><sup><a href="#ref-anhtai2024revisithydrogenatominduced" role="doc-biblioref">2</a></sup></span>:</p>
-<p><span class="math display">\[
-\Delta E^{(1)} = \frac{3}{2} ea_0 n(n_1-n_2)|\mathbf{E_L}|,
-\]</span></p>
-<p>where <span class="math inline">\(e\)</span> is the elementary charge, and <span class="math inline">\(a_0\)</span> is the Bohr radius.</p>
-<div id="fig-D_alpha1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-D_alpha1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figures/D_alpha_splitting1.png" class="img-fluid figure-img" style="width:70.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-D_alpha1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: <span class="math inline">\(D_{\alpha}\)</span> splitting due to MSE<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>.
-</figcaption>
-</figure>
-</div>
-<p>In <a href="#fig-D_alpha1" class="quarto-xref">Figure&nbsp;1</a> the lines splitting of the energy levels with principal quantum numbers <span class="math inline">\(n=2\)</span> and <span class="math inline">\(n=3\)</span> is shown. For clarity the fine structure splitting is not shown.</p>
-<div id="fig-D_alpha2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-D_alpha2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figures/D_alpha_splitting2.png" class="img-fluid figure-img" style="width:80.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-D_alpha2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Spectral lines separation of the <span class="math inline">\(D_{\alpha}\)</span> radiation due to MSE<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>.
-</figcaption>
-</figure>
-</div>
-<p>The separation of the spectral lines, as shown in <a href="#fig-D_alpha2" class="quarto-xref">Figure&nbsp;2</a>, is directly proportional to the strength of the electric field<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>:</p>
-<p><span class="math display">\[
-\Delta \lambda \approx \frac{3ea_0|\mathbf{E_L}|\lambda_0^2}{2hc},
-\]</span></p>
-<p>where <span class="math inline">\(\lambda_0\)</span> is the unshifted Balmer-<span class="math inline">\(\alpha\)</span> wavelength, <span class="math inline">\(h\)</span> is Planck’s constant, and <span class="math inline">\(c\)</span> is the speed of light.</p>
-<p>The π and <span class="math inline">\(\mathrm{\sigma}\)</span> components are resepectively polarized parallel and perpendicular to the electric field. This means that when trying to catch the radiation, the instensity of the components depend on the direction of the line-of-sight (LOS) respect to <span class="math inline">\(\mathbf{E_L}\)</span>. Defining with <span class="math inline">\(\Psi\)</span> the angle between the LOS and <span class="math inline">\(\mathbf{E_L}\)</span>, the observed intensities scale as:</p>
-<p><span class="math display">\[
-I_{\sigma} \propto 1 + \cos^2\Psi,
-\]</span></p>
-<p><span class="math display">\[
-I_{\pi} \propto \sin^2\Psi.
-\]</span></p>
-</section>
-<section id="mse-diagnostic-on-tcv" class="level2">
-<h2 class="anchored" data-anchor-id="mse-diagnostic-on-tcv">MSE diagnostic on TCV</h2>
-<p>The MSE diagnostic on TCV relies on the deuterium neutrals injected by the <a href="../../theory/Plasma_physics/NBI.html">NBI-1 of TCV</a>. Along the beam 20 LOS are defined, originating from the optical setup at the bottom of TCV, as shown in <a href="#fig-LOS_TCV" class="quarto-xref">Figure&nbsp;3</a>.</p>
-<div id="fig-LOS_TCV" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-LOS_TCV-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-LOS_TCV" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-LOS_TCV1" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-LOS_TCV1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figures/LOS_TCV1.jpg" class="img-fluid figure-img" style="width:80.0%" data-ref-parent="fig-LOS_TCV">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-LOS_TCV1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Intersection of LOS (in grey) with the NBI (in orange)<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>.
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-LOS_TCV" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div id="fig-LOS_TCV2" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-LOS_TCV2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figures/LOS_TCV2.png" class="img-fluid figure-img" style="width:40.0%" data-ref-parent="fig-LOS_TCV">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-LOS_TCV2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) Poloidal cross section of TCV with an example of magnetic equilibrium. In red the LOS and in green the NBI<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-LOS_TCV-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3
-</figcaption>
-</figure>
-</div>
-<p>To detect the Doppler-shifted radiation emitted by the neutral beam, each line-of-sight (LOS) must be oriented at an angle other than <span class="math inline">\(90^\circ\)</span> relative to the beam direction. This arrangement ensures that the neutral beam has a velocity component along the LOS, making the Doppler-shifted emission distinguishable from the background plasma radiation.</p>
-<div id="fig-Dalpha_emission" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-Dalpha_emission-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figures/D_alpha_fromplasma.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Dalpha_emission-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: D<span class="math inline">\(_{\mathrm{\alpha}}\)</span> radiation
-</figcaption>
-</figure>
-</div>
-<p>As shown in <a href="#fig-Dalpha_emission" class="quarto-xref">Figure&nbsp;4</a>, the D<span class="math inline">\(_{\mathrm{\alpha}}\)</span> spectrum exhibits several distinct peaks:</p>
-<ul>
-<li>The full-energy peak corresponds to emission from D<span class="math inline">\(^+\)</span> ions;</li>
-<li>The half-energy peak arises from D<span class="math inline">\(^+_2\)</span> ions;</li>
-<li>The third-energy peak is due to D<span class="math inline">\(^+_3\)</span> ions;</li>
-<li>The remaining portion of the spectrum is non-shifted radiation emitted by the plasma.</li>
-</ul>
-<p>These energy shifts result from the different velocities of the ion species, which are determined by their respective masses.</p>
-<div id="tbl-measurement" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Parameters of each LOS. R<span class="math inline">\(_\mathrm{inter}\)</span> is the radial position of the intersection between LOS and NBI-1, α is the angle between LOS and NBI-1, ∆λ is the doppler shift, and ∆R is the radial resolution<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>.
-</figcaption>
-<div aria-describedby="tbl-measurement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 16%">
-<col style="width: 12%">
-<col style="width: 31%">
-<col style="width: 32%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">LOS</th>
-<th style="text-align: center;">R<span class="math inline">\(_\mathrm{inter}\)</span> [m]</th>
-<th style="text-align: center;">α [deg]</th>
-<th style="text-align: center;">Doppler shift ∆λ [Å]</th>
-<th style="text-align: center;">resolution ∆R [cm⁻¹]</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: center;">1.1062</td>
-<td style="text-align: center;">138.61</td>
-<td style="text-align: center;">-27.1349</td>
-<td style="text-align: center;">6.4</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: center;">1.0920</td>
-<td style="text-align: center;">138.04</td>
-<td style="text-align: center;">-26.8964</td>
-<td style="text-align: center;">6.5</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: center;">1.0783</td>
-<td style="text-align: center;">137.48</td>
-<td style="text-align: center;">-26.6568</td>
-<td style="text-align: center;">6.4</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: center;">1.0651</td>
-<td style="text-align: center;">136.91</td>
-<td style="text-align: center;">-26.4158</td>
-<td style="text-align: center;">6.1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: center;">1.0524</td>
-<td style="text-align: center;">136.35</td>
-<td style="text-align: center;">-26.1734</td>
-<td style="text-align: center;">5.8</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">6</td>
-<td style="text-align: center;">1.0402</td>
-<td style="text-align: center;">135.80</td>
-<td style="text-align: center;">-25.9294</td>
-<td style="text-align: center;">5.6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">1.0278</td>
-<td style="text-align: center;">135.24</td>
-<td style="text-align: center;">-25.6837</td>
-<td style="text-align: center;">5.5</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">8</td>
-<td style="text-align: center;">1.0163</td>
-<td style="text-align: center;">134.69</td>
-<td style="text-align: center;">-25.4361</td>
-<td style="text-align: center;">5.2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">9</td>
-<td style="text-align: center;">1.0053</td>
-<td style="text-align: center;">134.13</td>
-<td style="text-align: center;">-25.1867</td>
-<td style="text-align: center;">5.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">10</td>
-<td style="text-align: center;">0.9952</td>
-<td style="text-align: center;">133.58</td>
-<td style="text-align: center;">-24.9351</td>
-<td style="text-align: center;">4.8</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">11</td>
-<td style="text-align: center;">0.9849</td>
-<td style="text-align: center;">133.03</td>
-<td style="text-align: center;">-24.6813</td>
-<td style="text-align: center;">4.6</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">12</td>
-<td style="text-align: center;">0.9748</td>
-<td style="text-align: center;">132.48</td>
-<td style="text-align: center;">-24.4251</td>
-<td style="text-align: center;">4.4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">13</td>
-<td style="text-align: center;">0.9651</td>
-<td style="text-align: center;">131.92</td>
-<td style="text-align: center;">-24.1664</td>
-<td style="text-align: center;">4.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">14</td>
-<td style="text-align: center;">0.9556</td>
-<td style="text-align: center;">131.37</td>
-<td style="text-align: center;">-23.9049</td>
-<td style="text-align: center;">4.1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">15</td>
-<td style="text-align: center;">0.9464</td>
-<td style="text-align: center;">130.81</td>
-<td style="text-align: center;">-23.6407</td>
-<td style="text-align: center;">3.9</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">16</td>
-<td style="text-align: center;">0.9374</td>
-<td style="text-align: center;">130.26</td>
-<td style="text-align: center;">-23.3733</td>
-<td style="text-align: center;">3.7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">17</td>
-<td style="text-align: center;">0.9283</td>
-<td style="text-align: center;">129.70</td>
-<td style="text-align: center;">-23.1028</td>
-<td style="text-align: center;">3.5</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">18</td>
-<td style="text-align: center;">0.9198</td>
-<td style="text-align: center;">129.14</td>
-<td style="text-align: center;">-22.8288</td>
-<td style="text-align: center;">3.4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">19</td>
-<td style="text-align: center;">0.9116</td>
-<td style="text-align: center;">128.57</td>
-<td style="text-align: center;">-22.5512</td>
-<td style="text-align: center;">3.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">20</td>
-<td style="text-align: center;">0.9035</td>
-<td style="text-align: center;">128.00</td>
-<td style="text-align: center;">-22.2697</td>
-<td style="text-align: center;">3.0</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-<p>In <a href="#tbl-measurement" class="quarto-xref">Table&nbsp;1</a> all the parameters relative to the intersection between the LOSs and the NBI-1 are listed.</p>
-<div id="fig-optical_setup" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-optical_setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="Figures/optical_setup.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-optical_setup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Optical setup of the MSE diagnostic<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>
-</figcaption>
-</figure>
-</div>
-<p>The optical setup, shown in <a href="#fig-optical_setup" class="quarto-xref">Figure&nbsp;5</a>, is composed by:</p>
-<ul>
-<li>A <em>beamsplitter plate</em> used to separate two orthogonal light polarizations of the <span class="math inline">\(D_\alpha\)</span> emission into two different barches. This is done because only the Motional Stark and the Zeeman effects actually influence the line polarization. A thin plate has been chosen to minimize the rotation <span class="math inline">\(\beta\)</span> of the light polarization due to the Faraday effect. Currently, taking into account the 5 mm diagnostic window and the beamsplitter plate, the total rotation is</li>
-</ul>
-<p><span class="math display">\[
-\beta = \beta_{\mathrm{w}} + \beta_{\mathrm{p}} \approx 1.2^\circ + 0.3^\circ = 1.5^\circ.
-\]</span></p>
-<ul>
-<li><p>2 <em>lents</em>, one for each branch, used to focus the light into the optical fibers.</p></li>
-<li><p>40 <em>optical fibers</em>, 20 per branch, which transmit the light to the <a href="../../theory/Plasma_physics/Optical_spectrometer.html">spectrometer</a> and the camera.</p></li>
-</ul>
-<p>More details regarding the optical setup are listed in <a href="#tbl-optical_components" class="quarto-xref">Table&nbsp;2</a>.</p>
-<div id="tbl-optical_components" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-optical_components-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2: Parameters of the optical components<span class="citation" data-cites="sacha2025thesis"><sup><a href="#ref-sacha2025thesis" role="doc-biblioref">3</a></sup></span>.
-</figcaption>
-<div aria-describedby="tbl-optical_components-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="caption-top table">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 26%">
-<col style="width: 22%">
-<col style="width: 24%">
-</colgroup>
-<thead>
-<tr class="header">
-<th><strong>Parameter</strong></th>
-<th><strong>Spectrometer</strong></th>
-<th><strong>Camera</strong></th>
-<th><strong>Fibers</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Focal length</td>
-<td>500 mm</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>F#</td>
-<td>4</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Grating</td>
-<td>2400 grooves/mm</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Resolution</td>
-<td>~ 0.5 Å</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Range</td>
-<td>3800-8000 Å</td>
-<td></td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Model</td>
-<td></td>
-<td>Andor EMCCD</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Pixel size</td>
-<td></td>
-<td>13 µm</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Array size</td>
-<td></td>
-<td>1024x1024</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Time resolution</td>
-<td></td>
-<td>20 ms</td>
-<td></td>
-</tr>
-<tr class="even">
-<td>Camera range</td>
-<td></td>
-<td>3800-9000 Å</td>
-<td></td>
-</tr>
-<tr class="odd">
-<td>Length of each fiber</td>
-<td></td>
-<td></td>
-<td>30 m</td>
-</tr>
-<tr class="even">
-<td>Core diameter</td>
-<td></td>
-<td></td>
-<td>295 µm</td>
-</tr>
-<tr class="odd">
-<td>#fibers per branch</td>
-<td></td>
-<td></td>
-<td>20</td>
-</tr>
-<tr class="even">
-<td>#branches</td>
-<td></td>
-<td></td>
-<td>2</td>
-</tr>
-<tr class="odd">
-<td>Fiber range</td>
-<td></td>
-<td></td>
-<td>3800-8500 Å</td>
-</tr>
-</tbody>
-</table>
-</div>
-</figure>
-</div>
-</section>
-<section id="references" class="level2">
+<p>Quantum entanglement is a phenomenon in quantum physics where the state of each particle in a group cannot be described independently of the state of the others. Mathematically, an entangled system’s quantum state cannot be described through the states of its local constituents only.</p>
 
 
 
-
-</section>
-
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-stark_wikipedia" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Wikipedia. <a href="https://en.wikipedia.org/wiki/Stark_effect">Stark effect</a>.</div>
-</div>
-<div id="ref-anhtai2024revisithydrogenatominduced" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">Anh-Tai, T. D., Khang, L. M., Vy, N. D., Truong, T. D. H. &amp; Pham, V. N. T. <a href="https://arxiv.org/abs/2304.09480">A revisit on the hydrogen atom induced by a uniform static electric field</a>. (2024).</div>
-</div>
-<div id="ref-sacha2025thesis" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Müller, S. Implementation of polarization-resolved motional-stark spectroscopy on TCV. (École Polytechnique Fédérale de Lausanne (EPFL), 2025).</div>
-</div>
-</div></section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

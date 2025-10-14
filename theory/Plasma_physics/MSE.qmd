@@ -121,6 +121,21 @@ between the LOSs and the NBI-1 are listed.
 
 ![Optical setup of the MSE diagnostic @sacha2025thesis](Figures/optical_setup.png){#fig-optical_setup}
 
+The optical setup, shown in @fig-optical_setup, is composed by:
+
+- A *beamsplitter plate* used to separate two orthogonal light polarizations of the $D_\alpha$ emission into two different barches. This is done because only the Motional Stark and the Zeeman effects actually influence the line polarization. A thin plate has been chosen to minimize the rotation $\beta$ of the light polarization due to the Faraday effect. Currently, taking into account the 5 mm diagnostic window and the beamsplitter plate, the total rotation is 
+
+$$
+\beta = \beta_{\mathrm{w}} + \beta_{\mathrm{p}} \approx 1.2^\circ + 0.3^\circ = 1.5^\circ.
+$$
+
+- 2 *lents*, one for each branch, used to focus the light into the optical fibers.
+
+- 40 *optical fibers*, 20 per branch, which transmit the light to the [spectrometer](Optical_spectrometer.qmd) and the camera.
+
+More details regarding the optical setup are listed in @tbl-optical_components.
+
+
 | **Parameter**              | **Spectrometer**           | **Camera**             | **Fibers**               |
 |----------------------------|----------------------------|------------------------|--------------------------|
 | Focal length               | 500 mm                     |                        |                          |
