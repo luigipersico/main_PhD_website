@@ -79,3 +79,5 @@ interact(
 )
 
 ```
+
+## Magnetic shear

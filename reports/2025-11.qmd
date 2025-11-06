@@ -1,0 +1,9 @@
+---
+title: "November 2025"
+---
+
+- Reading papers on BES and MES.
+- Keeping working on the script for the syntetic BES, in order to study the possibility of installing it on TCV.
+- Plasma instabilities course (John is back).
+- Finished a first study of synthetic BES, 06/11 starting hardware with Dmytry.
+- 07/11 First DDJ session with Jacob.

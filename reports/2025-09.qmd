@@ -2,9 +2,8 @@
 title: "September 2025"
 ---
 
-## Project Status
-
 - Getting started with the Ph.D.
-- Starting reading papers on BES and MES
-- Studying factibility of installing BES on TCV
-- Plasma instabilities and Quantum II courses 
+- Reading papers on BES and MES.
+- Writing a frist script for the syntetic BES, in order to study the possibility of installing it on TCV.
+- Plasma instabilities and Quantum II courses.
+- Writing about MES on the website.

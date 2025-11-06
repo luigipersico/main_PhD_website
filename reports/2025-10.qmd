@@ -1,0 +1,10 @@
+---
+title: "October 2025"
+---
+
+- Organising Welcome Apero.
+- Reading papers on BES and MES.
+- Keeping working on the script for the syntetic BES, in order to study the possibility of installing it on TCV.
+- Stopped following Quantum II.
+- Plasma instabilities course.
+- Wrote a first part of MSE wiki.

@@ -14,8 +14,10 @@ Secondly, the work will move on the calibration of the Motional-Stark Effect (MS
 
 ## Currently to do 
 
-1. Adding BES, MSE to the SPC wiki.
+1. Adding BES, and more MSE to the SPC wiki.
 2. Getting used with the matlab code for MSE.
-3. Parametric description of the neutral beam.
+3. Studying hardware of BES.
 4. Having a look at plasma instabilities.
+5. Time correlations in the code. 
+6. Thinking about what we can see with BES
 
