@@ -7,6 +7,3 @@ The **magnetohydrodynamic (MHD) model** is used to describe plasma with a set of
 ## The ideal MHD model 
 In the ideal MHD model the plasma is considered to have **zero resistivty**, allowing the magnetic field lines to freeze in the plasma. The set of equation used is the following:
 
-$$
-\frac
-$$

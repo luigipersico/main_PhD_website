@@ -11,237 +11,15 @@
     ]
   },
   {
-    "objectID": "reports/2025-09.html#project-status",
-    "href": "reports/2025-09.html#project-status",
-    "title": "September 2025",
+    "objectID": "reports/2025-10.html",
+    "href": "reports/2025-10.html",
+    "title": "October 2025",
     "section": "",
-    "text": "Getting started with the Ph.D.\nStarting reading papers on BES and MES\nStudying factibility of installing BES on TCV\nPlasma instabilities and Quantum II courses",
+    "text": "Organising Welcome Apero.\nReading papers on BES and MES.\nKeeping working on the script for the syntetic BES, in order to study the possibility of installing it on TCV.\nStopped following Quantum II.\nPlasma instabilities course.\nWrote a first part of MSE wiki.",
     "crumbs": [
       "Reports",
-      "September 2025"
+      "October 2025"
     ]
-  },
-  {
-    "objectID": "theory/Mathematic_tools/Hilbert_Space.html",
-    "href": "theory/Mathematic_tools/Hilbert_Space.html",
-    "title": "Hilbert Space",
-    "section": "",
-    "text": "A Hilbert Space is a complex vector space equipped with an inner product operation.\nMathematically, a Hilbert space \\(\\mathcal{H}\\) satisfies the following properties:\n\nVector Space: \\(\\mathcal{H}\\) is a vector space over the complex numbers \\(\\mathbb{C}\\).\nInner Product: There exists an inner product \\(\\langle \\cdot, \\cdot \\rangle : \\mathcal{H} \\times \\mathcal{H} \\to \\mathbb{C}\\) that is linear in its first argument, conjugate symmetric, and positive-definite.\nCompleteness: \\(\\mathcal{H}\\) is complete with respect to the norm induced by the inner product, i.e., every Cauchy sequence in \\(\\mathcal{H}\\) converges to an element in \\(\\mathcal{H}\\). This means that there are no “points missing” in an Hilbert Space.\n\nThe inner product generalizes the notion of the dot product to complex vector spaces and is fundamental in quantum theory and functional analysis. A Hilbert space generalizes the notion of Euclidean space to infinite dimensions.\nIn quantum mechanics, the mathematical framework is built upon Hilbert spaces:\n\nStates: The possible states of a quantum system are represented by (normalized) vectors in a Hilbert space \\(\\mathcal{H}\\).\nObservables: Physical quantities (observables) correspond to Hermitian (self-adjoint) operators acting on \\(\\mathcal{H}\\).\nSymmetries: Symmetry transformations are represented by unitary operators on \\(\\mathcal{H}\\), preserving inner products and probabilities.\nMeasurements: The act of measurement is mathematically described by orthogonal projection operators, which project state vectors onto subspaces associated with measurement outcomes.\n\nThis structure provides the foundation for the mathematical description of quantum systems.",
-    "crumbs": [
-      "Theory",
-      "Mathematic Tools",
-      "Hilbert Space"
-    ]
-  },
-  {
-    "objectID": "theory/Mathematic_tools/covariant_contravariant.html",
-    "href": "theory/Mathematic_tools/covariant_contravariant.html",
-    "title": "Covariant and Contravariant",
-    "section": "",
-    "text": "When describing a vector \\(\\mathbf{\\vec{V}}\\) through its components, we have two possible choices:\n\nCovariant components: These transform in the same way as the basis vectors under a change of coordinates.\nContravariant components: These transform in the opposite way to the basis vectors under a change of coordinates.\n\nThe distinction is important in tensor analysis and differential geometry, where the transformation properties of objects under coordinate changes determine their classification as covariant or contravariant.\n\n\n\n\n\nContravariant (left) and covariant (right) components of \\(\\vec{V}\\).",
-    "crumbs": [
-      "Theory",
-      "Mathematic Tools",
-      "Covariant and Contravariant"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/Grad_Shafranov.html",
-    "href": "theory/Plasma_physics/Grad_Shafranov.html",
-    "title": "Grad Shafranov equation",
-    "section": "",
-    "text": "\\[\n\\Delta^{*}\\psi = -R^2 \\frac{dP(\\psi)}{d\\psi} - F(\\psi)\\frac{dF(\\psi)}{d\\psi}\n\\]\nwhere\n\\[\n\\Delta^{*}= R^2\\mathbb{\\nabla}\\cdot (\\frac{1}{R^2}\\mathbb{\\nabla}),\n\\]\n\\[\nF(\\psi)= RB_{\\varphi},\n\\]\nand \\(P\\) is the plasma pressure.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Grad Shafranov equation"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/MSE.html",
-    "href": "theory/Plasma_physics/MSE.html",
-    "title": "Motional-Stark Effect (MSE)",
-    "section": "",
-    "text": "The Stark Effect is the shifting and splitting of the electronic energy levels due to an external electric field. The Motional-Stark Effect (MSE), instead, is the specific case in which the electric field is the Lorentz electric field felt by an atom moving in a magnetic field \\(\\mathbf{B}\\) at a velocity \\(\\mathbf{v}\\), in its rest frame: \\(\\mathbf{E} = \\mathbf{v} \\times \\mathbf{B}\\).\nIn plasma physics, the Motional-Stark Effect (MSE) serves as a crucial diagnostic tool for determining the poloidal magnetic field \\(\\mathbf{B_P}\\) within the plasma. Accurate knowledge of the poloidal magnetic field is essential for understanding plasma stability and the formation of Internal Transport Barriers (ITBs). Additionally, MSE measurements enable inference of the plasma current distribution, since the current density \\(\\mathbf{J}\\) is related to the magnetic field \\(\\mathbf{B}\\) through Ampère’s law:\n\\[\n\\nabla \\times \\mathbf{B} = \\mu_0 \\mathbf{J}.\n\\]\nIn TCV, the poloidal magnetic field is determined by the LIUQE (from “EQUIL” spelt backwards) code, which is an equilibrium code based on the resolution of the Grad-Shafranov equation, and on magnetic probes measurements outside of the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is not negligible anymore, and the magnetic field is locally influenced. This explains the need for the Motional-Stark Effect diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Motional-Stark Effect (MSE)"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/MSE.html#introduction",
-    "href": "theory/Plasma_physics/MSE.html#introduction",
-    "title": "Motional-Stark Effect (MSE)",
-    "section": "",
-    "text": "The Stark Effect is the shifting and splitting of the electronic energy levels due to an external electric field. The Motional-Stark Effect (MSE), instead, is the specific case in which the electric field is the Lorentz electric field felt by an atom moving in a magnetic field \\(\\mathbf{B}\\) at a velocity \\(\\mathbf{v}\\), in its rest frame: \\(\\mathbf{E} = \\mathbf{v} \\times \\mathbf{B}\\).\nIn plasma physics, the Motional-Stark Effect (MSE) serves as a crucial diagnostic tool for determining the poloidal magnetic field \\(\\mathbf{B_P}\\) within the plasma. Accurate knowledge of the poloidal magnetic field is essential for understanding plasma stability and the formation of Internal Transport Barriers (ITBs). Additionally, MSE measurements enable inference of the plasma current distribution, since the current density \\(\\mathbf{J}\\) is related to the magnetic field \\(\\mathbf{B}\\) through Ampère’s law:\n\\[\n\\nabla \\times \\mathbf{B} = \\mu_0 \\mathbf{J}.\n\\]\nIn TCV, the poloidal magnetic field is determined by the LIUQE (from “EQUIL” spelt backwards) code, which is an equilibrium code based on the resolution of the Grad-Shafranov equation, and on magnetic probes measurements outside of the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is not negligible anymore, and the magnetic field is locally influenced. This explains the need for the Motional-Stark Effect diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Motional-Stark Effect (MSE)"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/MSE.html#a-bit-of-history",
-    "href": "theory/Plasma_physics/MSE.html#a-bit-of-history",
-    "title": "Motional-Stark Effect (MSE)",
-    "section": "A bit of history",
-    "text": "A bit of history\nThe Stark effect was discovered by the German physicist Johannes Stark in 1913, for which he was awarded the nobel price in 1919. During the same year the effect was independently discovered by the Italian physicit Antonio Lo Surdo1.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Motional-Stark Effect (MSE)"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/MSE.html#physical-principles",
-    "href": "theory/Plasma_physics/MSE.html#physical-principles",
-    "title": "Motional-Stark Effect (MSE)",
-    "section": "Physical principles",
-    "text": "Physical principles\nThe MSE diagnostic is based on the external injection of neutral beam deuterium atoms and, when entering the plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, \\(E_{2}\\) and, when they decay to a lower energy state \\(E_{1}\\), they emit a photon with energy \\(E_{\\gamma} = E_2 - E_1\\), and wavelength \\(\\lambda = \\frac{hc}{E_{\\gamma}}\\).\nIn particular, of specific interest is the Balmer-\\(\\alpha\\) emission of the deuterium atom \\(D_{\\alpha}\\), which corresponds to the transition between \\(n=3\\) and \\(n=2\\), and is characterized by an energy \\(E_{D_{\\alpha}} = 1.89\\) eV and a wavelength \\(\\lambda_{D_{\\alpha}} = 656.279\\) nm. This is because the \\(D_{\\alpha}\\) emission has a high emission intensity in the visible spectrum (red light), and it is highly Doppler-shifted with respect to the plasma \\(D_{\\alpha}\\) emission. Moreover, since the neutral’s velocity across the magnetic field is high compared to the thermal velocity of the plasma ions, the resulting Lorentz electric field \\(\\mathbf{E_L} = \\mathbf{v} \\times \\mathbf{B}\\) is significant. This leads to a measurable splitting and polarization of the \\(D_{\\alpha}\\), spectral line, which can be used to infer the local magnetic field direction and magnitude inside the plasma.\nTo analyze the Stark effect in the deuterium atom, it is convenient to solve the non-relativistic Schrödinger Equation using parabolic coordinates. In this framework, the atomic states are described by four quantum numbers \\(|n, n_1, n_2, m\\rangle\\): \\(n\\) is the principal quantum number, \\(n_1\\) and \\(n_2\\) are parabolic quantum numbers, and \\(m\\) is the magnetic quantum number. The energy splitting caused by the Stark effect, calculated using first-order perturbation theory, is given by2:\n\\[\n\\Delta E^{(1)} = \\frac{3}{2} ea_0 n(n_1-n_2)|\\mathbf{E_L}|,\n\\]\nwhere \\(e\\) is the elementary charge, and \\(a_0\\) is the Bohr radius.\n\n\n\n\n\n\nFigure 1: \\(D_{\\alpha}\\) splitting due to MSE3.\n\n\n\nIn Figure 1 the lines splitting of the energy levels with principal quantum numbers \\(n=2\\) and \\(n=3\\) is shown. For clarity the fine structure splitting is not shown.\n\n\n\n\n\n\nFigure 2: Spectral lines separation of the \\(D_{\\alpha}\\) radiation due to MSE3.\n\n\n\nThe separation of the spectral lines, as shown in Figure 2, is directly proportional to the strength of the electric field3:\n\\[\n\\Delta \\lambda \\approx \\frac{3ea_0|\\mathbf{E_L}|\\lambda_0^2}{2hc},\n\\]\nwhere \\(\\lambda_0\\) is the unshifted Balmer-\\(\\alpha\\) wavelength, \\(h\\) is Planck’s constant, and \\(c\\) is the speed of light.\nThe π and \\(\\mathrm{\\sigma}\\) components are resepectively polarized parallel and perpendicular to the electric field. This means that when trying to catch the radiation, the instensity of the components depend on the direction of the line-of-sight (LOS) respect to \\(\\mathbf{E_L}\\). Defining with \\(\\Psi\\) the angle between the LOS and \\(\\mathbf{E_L}\\), the observed intensities scale as:\n\\[\nI_{\\sigma} \\propto 1 + \\cos^2\\Psi,\n\\]\n\\[\nI_{\\pi} \\propto \\sin^2\\Psi.\n\\]",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Motional-Stark Effect (MSE)"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/MSE.html#mse-diagnostic-on-tcv",
-    "href": "theory/Plasma_physics/MSE.html#mse-diagnostic-on-tcv",
-    "title": "Motional-Stark Effect (MSE)",
-    "section": "MSE diagnostic on TCV",
-    "text": "MSE diagnostic on TCV\nThe MSE diagnostic on TCV relies on the deuterium neutrals injected by the NBI-1 of TCV. Along the beam 20 LOS are defined, originating from the optical setup at the bottom of TCV, as shown in Figure 3.\n\n\n\n\n\n\n\n\n\n\n\n(a) Intersection of LOS (in grey) with the NBI (in orange)3.\n\n\n\n\n\n\n\n\n\n\n\n(b) Poloidal cross section of TCV with an example of magnetic equilibrium. In red the LOS and in green the NBI3.\n\n\n\n\n\n\n\nFigure 3\n\n\n\nTo detect the Doppler-shifted radiation emitted by the neutral beam, each line-of-sight (LOS) must be oriented at an angle other than \\(90^\\circ\\) relative to the beam direction. This arrangement ensures that the neutral beam has a velocity component along the LOS, making the Doppler-shifted emission distinguishable from the background plasma radiation.\n\n\n\n\n\n\nFigure 4: D\\(_{\\mathrm{\\alpha}}\\) radiation\n\n\n\nAs shown in Figure 4, the D\\(_{\\mathrm{\\alpha}}\\) spectrum exhibits several distinct peaks:\n\nThe full-energy peak corresponds to emission from D\\(^+\\) ions;\nThe half-energy peak arises from D\\(^+_2\\) ions;\nThe third-energy peak is due to D\\(^+_3\\) ions;\nThe remaining portion of the spectrum is non-shifted radiation emitted by the plasma.\n\nThese energy shifts result from the different velocities of the ion species, which are determined by their respective masses.\n\n\n\nTable 1: Parameters of each LOS. R\\(_\\mathrm{inter}\\) is the radial position of the intersection between LOS and NBI-1, α is the angle between LOS and NBI-1, ∆λ is the doppler shift, and ∆R is the radial resolution3.\n\n\n\n\n\n\n\n\n\n\n\n\nLOS\nR\\(_\\mathrm{inter}\\) [m]\nα [deg]\nDoppler shift ∆λ [Å]\nresolution ∆R [cm⁻¹]\n\n\n\n\n1\n1.1062\n138.61\n-27.1349\n6.4\n\n\n2\n1.0920\n138.04\n-26.8964\n6.5\n\n\n3\n1.0783\n137.48\n-26.6568\n6.4\n\n\n4\n1.0651\n136.91\n-26.4158\n6.1\n\n\n5\n1.0524\n136.35\n-26.1734\n5.8\n\n\n6\n1.0402\n135.80\n-25.9294\n5.6\n\n\n7\n1.0278\n135.24\n-25.6837\n5.5\n\n\n8\n1.0163\n134.69\n-25.4361\n5.2\n\n\n9\n1.0053\n134.13\n-25.1867\n5.0\n\n\n10\n0.9952\n133.58\n-24.9351\n4.8\n\n\n11\n0.9849\n133.03\n-24.6813\n4.6\n\n\n12\n0.9748\n132.48\n-24.4251\n4.4\n\n\n13\n0.9651\n131.92\n-24.1664\n4.2\n\n\n14\n0.9556\n131.37\n-23.9049\n4.1\n\n\n15\n0.9464\n130.81\n-23.6407\n3.9\n\n\n16\n0.9374\n130.26\n-23.3733\n3.7\n\n\n17\n0.9283\n129.70\n-23.1028\n3.5\n\n\n18\n0.9198\n129.14\n-22.8288\n3.4\n\n\n19\n0.9116\n128.57\n-22.5512\n3.2\n\n\n20\n0.9035\n128.00\n-22.2697\n3.0\n\n\n\n\n\n\nIn Table 1 all the parameters relative to the intersection between the LOSs and the NBI-1 are listed.\n\n\n\n\n\n\nFigure 5: Optical setup of the MSE diagnostic3\n\n\n\nThe optical setup, shown in Figure 5, is composed by:\n\nA beamsplitter plate used to separate two orthogonal light polarizations of the \\(D_\\alpha\\) emission into two different barches. This is done because only the Motional Stark and the Zeeman effects actually influence the line polarization. A thin plate has been chosen to minimize the rotation \\(\\beta\\) of the light polarization due to the Faraday effect. Currently, taking into account the 5 mm diagnostic window and the beamsplitter plate, the total rotation is\n\n\\[\n\\beta = \\beta_{\\mathrm{w}} + \\beta_{\\mathrm{p}} \\approx 1.2^\\circ + 0.3^\\circ = 1.5^\\circ.\n\\]\n\n2 lents, one for each branch, used to focus the light into the optical fibers.\n40 optical fibers, 20 per branch, which transmit the light to the spectrometer and the camera.\n\nMore details regarding the optical setup are listed in Table 2.\n\n\n\nTable 2: Parameters of the optical components3.\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSpectrometer\nCamera\nFibers\n\n\n\n\nFocal length\n500 mm\n\n\n\n\nF#\n4\n\n\n\n\nGrating\n2400 grooves/mm\n\n\n\n\nResolution\n~ 0.5 Å\n\n\n\n\nRange\n3800-8000 Å\n\n\n\n\nModel\n\nAndor EMCCD\n\n\n\nPixel size\n\n13 µm\n\n\n\nArray size\n\n1024x1024\n\n\n\nTime resolution\n\n20 ms\n\n\n\nCamera range\n\n3800-9000 Å\n\n\n\nLength of each fiber\n\n\n30 m\n\n\nCore diameter\n\n\n295 µm\n\n\n#fibers per branch\n\n\n20\n\n\n#branches\n\n\n2\n\n\nFiber range\n\n\n3800-8500 Å",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Motional-Stark Effect (MSE)"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/BES.html",
-    "href": "theory/Plasma_physics/BES.html",
-    "title": "Beam Emission Spectroscopy (BES)",
-    "section": "",
-    "text": "Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.\naquistition time with fibers 32 channels, 1MHz sampling rate\nthen using photomultipliers we can get a samling rates around 100kHz\nTwo tipe of cameras:\nEM CCD:\nADV: the readout is really uniform, every pixel is going through the same readout channel (one amplifer for all pixel). Good for astrophysics\nDIS: much more expensive,\nCMOS:\nADV: Cheaper, much faster, no smearing during readout, shorter exposure time (decoupling between exposition and acquisition)\nDIS: More noise, non-uniform background, it require more image processing in analysis.\nWith 10kHz we must use CMOS\nSince our fluctuations are in the order of 100kHz, speaking about time we might not be able to see time correlation. However space correlation can still be seen!\nHow to trigger camera: Two possibilitioes: either with same cable but through trigger in the computer, or with a different cabble. Going with the first option, insterting trigger in computer…",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Beam Emission Spectroscopy (BES)"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/BES.html#introduction",
-    "href": "theory/Plasma_physics/BES.html#introduction",
-    "title": "Beam Emission Spectroscopy (BES)",
-    "section": "",
-    "text": "Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.\naquistition time with fibers 32 channels, 1MHz sampling rate\nthen using photomultipliers we can get a samling rates around 100kHz\nTwo tipe of cameras:\nEM CCD:\nADV: the readout is really uniform, every pixel is going through the same readout channel (one amplifer for all pixel). Good for astrophysics\nDIS: much more expensive,\nCMOS:\nADV: Cheaper, much faster, no smearing during readout, shorter exposure time (decoupling between exposition and acquisition)\nDIS: More noise, non-uniform background, it require more image processing in analysis.\nWith 10kHz we must use CMOS\nSince our fluctuations are in the order of 100kHz, speaking about time we might not be able to see time correlation. However space correlation can still be seen!\nHow to trigger camera: Two possibilitioes: either with same cable but through trigger in the computer, or with a different cabble. Going with the first option, insterting trigger in computer…",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Beam Emission Spectroscopy (BES)"
-    ]
-  },
-  {
-    "objectID": "papers/Paper1.html",
-    "href": "papers/Paper1.html",
-    "title": "Luigi Persico - Ph.D.",
-    "section": "",
-    "text": "Still too soon for me, come back in a few years :P",
-    "crumbs": [
-      "Papers",
-      "Paper1"
-    ]
-  },
-  {
-    "objectID": "theory/Quantum_physics/Schrödinger_eq.html",
-    "href": "theory/Quantum_physics/Schrödinger_eq.html",
-    "title": "Schrödinger Equation",
-    "section": "",
-    "text": "\\[\ni\\hbar\\frac{d}{dt}|\\psi(t)\\rangle = \\hat{H}|\\psi(t)\\rangle\n\\]\nwhere \\(|\\psi(t)\\rangle\\) is the state vector of the quantum system, \\(\\hat{H}\\) is the Hamiltonian operator, and \\(\\hbar\\) is the reduced Planck constant.",
-    "crumbs": [
-      "Theory",
-      "Quantum Physics",
-      "Schrödinger Equation"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/NBI.html",
-    "href": "theory/Plasma_physics/NBI.html",
-    "title": "Neutral Beam Injector (NBI)",
-    "section": "",
-    "text": "Neutral Beam Injection (NBI) is a key technique used in tokamak fusion devices to heat the plasma and drive current. In NBI systems, neutral atoms—typically hydrogen or deuterium—are accelerated to high energies and injected into the plasma. Because charged particles would be deflected by the magnetic fields in the tokamak, the ions are first neutralized before injection. Once inside the plasma, these fast neutrals transfer their energy to the plasma particles through collisions, increasing the plasma temperature and contributing to the overall performance of the fusion experiment. NBI is valued for its ability to deliver precise and controllable heating, making it an essential tool in plasma physics research and fusion reactor development.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Neutral Beam Injector (NBI)"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/NBI.html#introduction",
-    "href": "theory/Plasma_physics/NBI.html#introduction",
-    "title": "Neutral Beam Injector (NBI)",
-    "section": "",
-    "text": "Neutral Beam Injection (NBI) is a key technique used in tokamak fusion devices to heat the plasma and drive current. In NBI systems, neutral atoms—typically hydrogen or deuterium—are accelerated to high energies and injected into the plasma. Because charged particles would be deflected by the magnetic fields in the tokamak, the ions are first neutralized before injection. Once inside the plasma, these fast neutrals transfer their energy to the plasma particles through collisions, increasing the plasma temperature and contributing to the overall performance of the fusion experiment. NBI is valued for its ability to deliver precise and controllable heating, making it an essential tool in plasma physics research and fusion reactor development.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Neutral Beam Injector (NBI)"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/NBI.html#neutral-beam-injectors-on-tcv",
-    "href": "theory/Plasma_physics/NBI.html#neutral-beam-injectors-on-tcv",
-    "title": "Neutral Beam Injector (NBI)",
-    "section": "Neutral Beam Injectors on TCV",
-    "text": "Neutral Beam Injectors on TCV\n\n\n\n\n\n\n\n\n\n\nParameter\nNBI-1\nNBI-2\nDNBI\nComment\n\n\n\n\nBeam\n\n\n\n\n\n\nNB power range in TCV\n50…1100 kW\n250…1100 kW\n70…90 kW\n14% of losses in the beam duct excluded for NBI-1\n\n\nNB energy range\n7…28 keV\n29…51 keV\n48…50 keV\nDNBI with lower (up to 25-30 keV) possible\n\n\nNB energy stability\n±100 eV\n±100 eV\n±600 eV\n\n\n\nPower losses in beam duct\n15-20 %\n2-5 %\n&lt; 2 %\nNBI-1 size in horizontal direction mismatch specification\n\n\nBeam main species\nD\\(^O\\)\nD\\(^O\\)\nH\\(^O\\)\n\n\n\nMax. NB energy per shot\n1.1 MJ\n2 MJ\n50 kJ\n\n\n\nMax. NB pulse duration\n0.8…2.0 s\n2 s\n1.4 s\n\n\n\nNeutral beam energy fraction (in % of power)\n73:22:05 %\n59:33:8\n78.5:8.5:13.0 %\nat [1:1/2:1/3] of NB energy for nominal beam energy: 25/47/49 keV for NBI-1(D)/NBI-2(D)/DNBI(H)\n\n\nLow energy fraction (in % of power)\n&lt;0.1 %\n&lt;0.4%\n&lt;0.3%\nwith 1/(12..16) of NB energy\n\n\nModulation\n\n\n\n\n\n\nPower sweep during TCV shot\nfull power range\nfull power range\nnot available\nfew sweeps for NBIs possible\n\n\nPower sweep response dP/dt\n25/40 MW/s\n25/40 MW/s\nnot available\nslope limit of NBI power (up/down)\n\n\nFull power modulation on-time\n2.5 ms … 2 s\n3.5 ms … 2 s\n6…30 ms\nMin. DNBI modulation on-time is limited by current rise time\n\n\nMinimal modulation off-time\n5 ms\n4.5 ms\n8 ms\nlimited by delay between suppression grid modulation and beam current\n\n\nModulation rise/fall time\n1…3 ms\n1.5…3.5 ms\n1.5…2.5 ms/250 mks\nshorter DNBI time planned after upgrade of power supply\n\n\nFast modulation\n100…300 Hz\n100 Hz\n50 Hz\nNBIs at reduced power and higher divergence\n\n\nGeometry before/from August 2019\n\n\n\n\n\n\nGrids (IOS) aperture\nø250 mm\nø250 mm\nø87.2 mm\narea of grids with beamlet apertures\n\n\nBeam divergence, mrad (deg.)\n36x8 (2.06x0.46) / 23.6x9.9 (1.35x0.57)\n13.8x5.1 (0.79x0.30)\n9.25 (0.53)/9.20(0.53)\nNBIs (horizontal) x (vertical) according to measurement\n\n\nFocal length\n3.20 m / 3.76(h)/3.98(v) m\n4.20(h)/4.25(v) m\n4.00 / 1.80 m\naccording to measurement\n\n\nDistance from IOS to port exit in TCV\n4.05 m\n4.28 m\n3.81 m\nalong beam axis\n\n\nTCV port size (horizontal x vertical)\n220x170 mm\\(^2\\)\n210x160 mm\\(^2\\)\nø160 mm\nNBIs: rectangular, DNBI: circular\n\n\nNB tangency radius\n736.0 mm\n736.0 mm\n235.3 mm\ndistance from NB axis to TCV machine vertical axis\n\n\nBeam diameter in TCV (hor. x vert.)\n24.37x10.22 cm / 21.6x9.4 cm\n13.2x5.2 cm\n8.02 / 12.1 cm\n(1/e) level, NBIs in horizontal cutted by port size\n\n\n\n\\[\n\\text{DCD}_{\\text{NBI-2}} = (r_d, Z_d, \\phi_d, \\theta_d, tv_d) = (5.2123, -0.0025, 212,6947 \\cdot \\pi/180, 0, -8.4896 \\cdot \\pi/180)\n\\]",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Neutral Beam Injector (NBI)"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/Safety_factor.html",
-    "href": "theory/Plasma_physics/Safety_factor.html",
-    "title": "Safety Factor q",
-    "section": "",
-    "text": "The safety factor \\(q\\) expresses the number of toroidal turns a magnetic field line makes for each poloidal turn in a toroidal confinement device, such as a tokamak.\nIt corresponds to the flux-surface averaged local pitch:\n\\[\nq(\\psi) \\equiv \\langle q_l \\rangle_{\\theta} = \\left\\langle \\frac{r B_{\\varphi}}{R B_{\\theta}}  \\right\\rangle_{\\theta}\n\\]\nwhere \\(r\\) is the minor radius coordinate, \\(B_{\\varphi}\\) is the toroidal magnetic field component, \\(R\\) is the major radius, and \\(B_{\\theta}\\) is the poloidal magnetic field component. A higher safety factor generally indicates greater stability against certain plasma instabilities.\nWith some assumptions it is possible to estimate the safety factor behavior in a tokamak: \\[\nB_{\\varphi} \\approx \\frac{\\mu_0}{2\\pi R} I_{coils};\n\\] \\[\nB_{\\theta} \\approx \\frac{\\mu_0}{2\\pi r} I_p = \\frac{\\mu_0}{2} J_p r;\n\\]\n\\[\n\\rightarrow q(\\psi) = \\left\\langle\\frac{I_{coils}}{\\pi R^2J_p }\\right\\rangle_{\\theta} = \\frac{I_{coils}}{I_p}r^2\\left\\langle\\frac{1}{R^2}\\right\\rangle_{\\theta} .\n\\]\nThe interactive plot below allows you to explore how this first estimation of the safety factor \\(q\\) depends on key tokamak parameters. You can adjust:\nUse the sliders to see how changes in these parameters affect the safety factor profile.\n&lt;function __main__.safety_factor_plot(eps=0.2841, Ip=1, I_coils=1)&gt;",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Safety Factor q"
-    ]
-  },
-  {
-    "objectID": "theory/Mathematic_tools/Hermitian_adjoint.html",
-    "href": "theory/Mathematic_tools/Hermitian_adjoint.html",
-    "title": "Hermitian adjoint",
-    "section": "",
-    "text": "The Hermitian adjoint of a matrix or operator \\(\\mathbf{A}\\), often written as \\(\\mathbf{A}^\\dagger\\), especially when used in conjunction with the bra-ket notation, is defined as the complex conjugate transpose of \\(\\mathbf{A}\\). Mathematically, if \\(\\mathbf{A}\\) is an \\(m \\times n\\) matrix, then\n\\[\n\\mathbf{A}^\\dagger = (\\mathbf{A}^*)^T\n\\]\nwhere \\(\\mathbf{A}^*\\) denotes the element-wise complex conjugate and \\(T\\) denotes the transpose.\nIn quantum mechanics, the Hermitian adjoint plays a crucial role in defining observables and ensuring that physical quantities are real-valued. An operator \\(\\mathbf{A}\\) is called Hermitian if \\(\\mathbf{A} = \\mathbf{A}^\\dagger\\). Hermitian operators have real eigenvalues and orthogonal eigenvectors, which are essential properties for representing measurable quantities.\nFor example, if \\(\\mathbf{A}\\) acts on a vector space with basis vectors \\(|i\\rangle\\), the matrix elements of the Hermitian adjoint are given by: \\[\n\\langle i | \\mathbf{A}^\\dagger | j \\rangle = \\langle j | \\mathbf{A} | i \\rangle^*\n\\]\nThis property is widely used in the manipulation of quantum states and operators.",
-    "crumbs": [
-      "Theory",
-      "Mathematic Tools",
-      "Hermitian adjoint"
-    ]
-  },
-  {
-    "objectID": "theory/Mathematic_tools/Bra-ket_notation.html",
-    "href": "theory/Mathematic_tools/Bra-ket_notation.html",
-    "title": "Bra-ket notation",
-    "section": "",
-    "text": "The bra-ket notation, also called Dirac notation, is designed to make some operations of quantum mechanics easier. The notation uses angle brackets to denote vectors in a complex Hilbert space.\nA ket is written as \\(|\\psi\\rangle\\) and represents a column vector (state vector), while a bra, written as \\(\\langle\\phi|\\) represents the conjugate transpose (row vector) of a ket.\nThe inner product (overlap) between two states is written as \\[\n\\langle\\phi|\\psi\\rangle,\n\\]\nand in quantum mechanics this expression is interpreted as the probability amplitude for a state \\(\\phi\\) to collapse onto \\(\\psi\\) (the state \\(\\phi\\) is projected onto the state \\(\\psi\\)).\nThe outer product, which forms an operator, is written as: \\[\n|\\psi\\rangle\\langle\\phi|.\n\\]",
-    "crumbs": [
-      "Theory",
-      "Mathematic Tools",
-      "Bra-ket notation"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About the author",
-    "section": "",
-    "text": "Hi!\nMy name is Luigi Persico, I am 25 and I am from Italy. Currently I am doing a Ph.D in Plasma Physics at EPFL, and here you can have a look at what I am working on.\nEnjoy ;)"
   },
   {
     "objectID": "project-roadmap.html",
@@ -274,138 +52,6 @@
     ]
   },
   {
-    "objectID": "theory/Quantum_physics/Pauli_matrices.html",
-    "href": "theory/Quantum_physics/Pauli_matrices.html",
-    "title": "Pauli matrices",
-    "section": "",
-    "text": "The Pauli matrices are a set of three \\(2 \\times 2\\) complex matrices that are treceless, Hermitian, involutory and unitary:\n\\[\nX= \\sigma_x = \\sigma_1 =\n\\begin{pmatrix}\n0 & 1 \\\\\n1 & 0\n\\end{pmatrix},\n\\] \\[\nY= \\sigma_y = \\sigma_2 =\n\\begin{pmatrix}\n0 & -i \\\\\ni & 0\n\\end{pmatrix},\n\\] \\[\nZ= \\sigma_z = \\sigma_3 =\n\\begin{pmatrix}\n1 & 0 \\\\\n0 & -1\n\\end{pmatrix}.\n\\]",
-    "crumbs": [
-      "Theory",
-      "Quantum Physics",
-      "Pauli matrices"
-    ]
-  },
-  {
-    "objectID": "theory/Mathematic_tools/Pauli_matrices.html",
-    "href": "theory/Mathematic_tools/Pauli_matrices.html",
-    "title": "Pauli matrices",
-    "section": "",
-    "text": "The Pauli matrices are a set of three \\(2 \\times 2\\) complex matrices that are treceless, Hermitian, involutory and unitary:\n\\[\nX= \\sigma_x = \\sigma_1 =\n\\begin{pmatrix}\n0 & 1 \\\\\n1 & 0\n\\end{pmatrix},\n\\] \\[\nY= \\sigma_y = \\sigma_2 =\n\\begin{pmatrix}\n0 & -i \\\\\ni & 0\n\\end{pmatrix},\n\\] \\[\nZ= \\sigma_z = \\sigma_3 =\n\\begin{pmatrix}\n1 & 0 \\\\\n0 & -1\n\\end{pmatrix}.\n\\]",
-    "crumbs": [
-      "Theory",
-      "Mathematic Tools",
-      "Pauli matrices"
-    ]
-  },
-  {
-    "objectID": "theory/Quantum_physics/Quantum_entanglement.html",
-    "href": "theory/Quantum_physics/Quantum_entanglement.html",
-    "title": "Quatum Entanglement",
-    "section": "",
-    "text": "Quantum entanglement is a phenomenon in quantum physics where the state of each particle in a group cannot be described independently of the state of the others. Mathematically, an entangled system’s quantum state cannot be described through the states of its local constituents only.",
-    "crumbs": [
-      "Theory",
-      "Quantum Physics",
-      "Quatum Entanglement"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/Optical_spectrometer.html",
-    "href": "theory/Plasma_physics/Optical_spectrometer.html",
-    "title": "Optical Spectrometer",
-    "section": "",
-    "text": "An optical spectrometer (which can be either a spectrophotometer, a spectograph, or a spectroscope) is a device used to meausre properties of light over a specific portion of the electromagnetic spectrum. It is used in spectroscopy for producing spectral lines, in order to measure their wavelenghts and intensities1.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Optical Spectrometer"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/Optics.html",
-    "href": "theory/Plasma_physics/Optics.html",
-    "title": "Optics",
-    "section": "",
-    "text": "Optics is the branch of physics which studies how the electromagnetic radiation behaves and how it can be manipulated. The most common use of optics is the geometric optics, which considers the light as travelling in straight lines, and bending when passing through or reflect from surfaces. Physical optics instead considers light as an electromagnetic wave, and more complex effects can be explained, such as diffraction and interference, which cannot be taken into account by geometrical optics.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Optics"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/Optics.html#introduction",
-    "href": "theory/Plasma_physics/Optics.html#introduction",
-    "title": "Optics",
-    "section": "",
-    "text": "Optics is the branch of physics which studies how the electromagnetic radiation behaves and how it can be manipulated. The most common use of optics is the geometric optics, which considers the light as travelling in straight lines, and bending when passing through or reflect from surfaces. Physical optics instead considers light as an electromagnetic wave, and more complex effects can be explained, such as diffraction and interference, which cannot be taken into account by geometrical optics.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Optics"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/Optics.html#refraction-and-reflection",
-    "href": "theory/Plasma_physics/Optics.html#refraction-and-reflection",
-    "title": "Optics",
-    "section": "Refraction and reflection",
-    "text": "Refraction and reflection\nWhen a ray hits the boundary between two materials which are transparent, it is dived into a reflected and refracted ray.\nBoth the reflected and refracted rays stay on the plane of incidence but, while the former is reflected with the same incidence angle (respect to the normal to the interface) \\(\\theta_1\\), the latter is refracted with an angle \\(\\theta_2\\) according to Snell’s Law:\n\\[\n\\frac{\\sin\\theta_1}{\\sin\\theta_2} = \\frac{n_2}{n_1},\n\\]\nwhere \\(n_2\\) and \\(n_1\\) are respectively the refractive index of the second and the first material. The index of refraction is strictly connected to the ligth speed in the medium \\(v\\):\n\\[\nn = \\frac{c}{v},\n\\]\nwhere \\(c\\) is the speed of light in vacuum.\nWhen \\(\\theta_1\\) is large enough, the light is fully reflected and no transmission occurs. This phenomenon is the one used by the optical fibers to transmit optical signals over long distances.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Optics"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/Optics.html#interference",
-    "href": "theory/Plasma_physics/Optics.html#interference",
-    "title": "Optics",
-    "section": "Interference",
-    "text": "Interference\nInterference happens when different waves interact and generate a patterns which depends on the waves wavelengths and frequencies and wether they are in phase or not. In the former case the outcome is called a constructive interference, and the resulting wave has a higher amplitude (brighter light); if instead the two waves are out of phase, the resulting amplitude is smaller than the original one, and the phenomenon is called distructive interference.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Optics"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/Optics.html#diffraction",
-    "href": "theory/Plasma_physics/Optics.html#diffraction",
-    "title": "Optics",
-    "section": "Diffraction",
-    "text": "Diffraction\nDiffraction happens when light, after passing through a number of slits, interferes with its own wavefronts. The diffraction grating contains a large number of slits at equal spacing.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Optics"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/Optical_spectrometer.html#introduction",
-    "href": "theory/Plasma_physics/Optical_spectrometer.html#introduction",
-    "title": "Optical Spectrometer",
-    "section": "",
-    "text": "An optical spectrometer (which can be either a spectrophotometer, a spectograph, or a spectroscope) is a device used to meausre properties of light over a specific portion of the electromagnetic spectrum. It is used in spectroscopy for producing spectral lines, in order to measure their wavelenghts and intensities1.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Optical Spectrometer"
-    ]
-  },
-  {
-    "objectID": "theory/Plasma_physics/Optical_spectrometer.html#working-principle",
-    "href": "theory/Plasma_physics/Optical_spectrometer.html#working-principle",
-    "title": "Optical Spectrometer",
-    "section": "Working principle",
-    "text": "Working principle\n\n\n\n\n\n\nFigure 1: Optical spectrometer scheme1.\n\n\n\nAs illustrated in ?@fig-Spec_scheme, a spectroscope generally uses a movable slit, some mirrors, and a diffraction grating. Through the slit it is possible to regulate the amount of light which is getting inside the device, which is then reflected by a first mirror on the diffraction grating. At this point the second mirror is adjusted such that only the radiation which the desired wavelength reaches the device.",
-    "crumbs": [
-      "Theory",
-      "Plasma Physics",
-      "Optical Spectrometer"
-    ]
-  },
-  {
     "objectID": "Courses/Plasma Instabilities/01_MHD_model.html",
     "href": "Courses/Plasma Instabilities/01_MHD_model.html",
     "title": "The MHD model",
@@ -418,51 +64,51 @@
     ]
   },
   {
-    "objectID": "reports/2025-10.html",
-    "href": "reports/2025-10.html",
-    "title": "October 2025",
-    "section": "",
-    "text": "Organising Welcome Apero.\nReading papers on BES and MES.\nKeeping working on the script for the syntetic BES, in order to study the possibility of installing it on TCV.\nStopped following Quantum II.\nPlasma instabilities course.\nWrote a first part of MSE wiki.",
-    "crumbs": [
-      "Reports",
-      "October 2025"
-    ]
-  },
-  {
-    "objectID": "Courses/Plasma Instabilities/02_Grad_Shafranov.html",
-    "href": "Courses/Plasma Instabilities/02_Grad_Shafranov.html",
-    "title": "Grad Shafranov equation",
-    "section": "",
-    "text": "\\[\n\\Delta^{*}\\psi = -R^2 \\frac{dP(\\psi)}{d\\psi} - F(\\psi)\\frac{dF(\\psi)}{d\\psi}\n\\]\nwhere\n\\[\n\\Delta^{*}= R^2\\mathbb{\\nabla}\\cdot (\\frac{1}{R^2}\\mathbb{\\nabla}),\n\\]\n\\[\nF(\\psi)= RB_{\\varphi},\n\\]\nand \\(P\\) is the plasma pressure.",
+    "objectID": "Courses/Plasma Instabilities/01_MHD_model.html#the-ideal-mhd-model",
+    "href": "Courses/Plasma Instabilities/01_MHD_model.html#the-ideal-mhd-model",
+    "title": "The MHD model",
+    "section": "The ideal MHD model",
+    "text": "The ideal MHD model\nIn the ideal MHD model the plasma is considered to have zero resistivty, allowing the magnetic field lines to freeze in the plasma. The set of equation used is the following:",
     "crumbs": [
       "Courses",
       "Plasma Instabilities",
-      "Grad Shafranov equation"
+      "The MHD model"
     ]
   },
   {
-    "objectID": "theory/Plasma_physics/Diagnostics/thomson.html",
-    "href": "theory/Plasma_physics/Diagnostics/thomson.html",
-    "title": "Thomson scattering system",
+    "objectID": "theory/Mathematic_tools/Hilbert_Space.html",
+    "href": "theory/Mathematic_tools/Hilbert_Space.html",
+    "title": "Hilbert Space",
     "section": "",
-    "text": "The Thomson scattering system measures the spatial profiles of temperature and density on TCV. It is base on the incoherent scattering from electrons",
+    "text": "A Hilbert Space is a complex vector space equipped with an inner product operation.\nMathematically, a Hilbert space \\(\\mathcal{H}\\) satisfies the following properties:\n\nVector Space: \\(\\mathcal{H}\\) is a vector space over the complex numbers \\(\\mathbb{C}\\).\nInner Product: There exists an inner product \\(\\langle \\cdot, \\cdot \\rangle : \\mathcal{H} \\times \\mathcal{H} \\to \\mathbb{C}\\) that is linear in its first argument, conjugate symmetric, and positive-definite.\nCompleteness: \\(\\mathcal{H}\\) is complete with respect to the norm induced by the inner product, i.e., every Cauchy sequence in \\(\\mathcal{H}\\) converges to an element in \\(\\mathcal{H}\\). This means that there are no “points missing” in an Hilbert Space.\n\nThe inner product generalizes the notion of the dot product to complex vector spaces and is fundamental in quantum theory and functional analysis. A Hilbert space generalizes the notion of Euclidean space to infinite dimensions.\nIn quantum mechanics, the mathematical framework is built upon Hilbert spaces:\n\nStates: The possible states of a quantum system are represented by (normalized) vectors in a Hilbert space \\(\\mathcal{H}\\).\nObservables: Physical quantities (observables) correspond to Hermitian (self-adjoint) operators acting on \\(\\mathcal{H}\\).\nSymmetries: Symmetry transformations are represented by unitary operators on \\(\\mathcal{H}\\), preserving inner products and probabilities.\nMeasurements: The act of measurement is mathematically described by orthogonal projection operators, which project state vectors onto subspaces associated with measurement outcomes.\n\nThis structure provides the foundation for the mathematical description of quantum systems.",
     "crumbs": [
       "Theory",
-      "Plasma Physics",
-      "Diagnostics",
-      "Thomson scattering system"
+      "Mathematic Tools",
+      "Hilbert Space"
     ]
   },
   {
-    "objectID": "theory/Plasma_physics/Safety_factor.html#magnetic-shear",
-    "href": "theory/Plasma_physics/Safety_factor.html#magnetic-shear",
-    "title": "Safety Factor q",
-    "section": "Magnetic shear",
-    "text": "Magnetic shear",
+    "objectID": "theory/Mathematic_tools/covariant_contravariant.html",
+    "href": "theory/Mathematic_tools/covariant_contravariant.html",
+    "title": "Covariant and Contravariant",
+    "section": "",
+    "text": "When describing a vector \\(\\mathbf{\\vec{V}}\\) through its components, we have two possible choices:\n\nCovariant components: These transform in the same way as the basis vectors under a change of coordinates.\nContravariant components: These transform in the opposite way to the basis vectors under a change of coordinates.\n\nThe distinction is important in tensor analysis and differential geometry, where the transformation properties of objects under coordinate changes determine their classification as covariant or contravariant.\n\n\n\n\n\nContravariant (left) and covariant (right) components of \\(\\vec{V}\\).",
     "crumbs": [
       "Theory",
-      "Plasma Physics",
-      "Safety Factor q"
+      "Mathematic Tools",
+      "Covariant and Contravariant"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic_tools/Pauli_matrices.html",
+    "href": "theory/Mathematic_tools/Pauli_matrices.html",
+    "title": "Pauli matrices",
+    "section": "",
+    "text": "The Pauli matrices are a set of three \\(2 \\times 2\\) complex matrices that are treceless, Hermitian, involutory and unitary:\n\\[\nX= \\sigma_x = \\sigma_1 =\n\\begin{pmatrix}\n0 & 1 \\\\\n1 & 0\n\\end{pmatrix},\n\\] \\[\nY= \\sigma_y = \\sigma_2 =\n\\begin{pmatrix}\n0 & -i \\\\\ni & 0\n\\end{pmatrix},\n\\] \\[\nZ= \\sigma_z = \\sigma_3 =\n\\begin{pmatrix}\n1 & 0 \\\\\n0 & -1\n\\end{pmatrix}.\n\\]",
+    "crumbs": [
+      "Theory",
+      "Mathematic Tools",
+      "Pauli matrices"
     ]
   },
   {
@@ -479,50 +125,51 @@
     ]
   },
   {
-    "objectID": "reports/2025-11.html",
-    "href": "reports/2025-11.html",
-    "title": "November 2025",
+    "objectID": "theory/Plasma_physics/Safety_factor.html",
+    "href": "theory/Plasma_physics/Safety_factor.html",
+    "title": "Safety Factor q",
     "section": "",
-    "text": "Reading papers on BES and MES.\nKeeping working on the script for the syntetic BES, in order to study the possibility of installing it on TCV.\nPlasma instabilities course (John is back).\nFinished a first study of synthetic BES, 06/11 starting hardware with Dmytry.\n07/11 First DDJ session with Jacob.\nStarting better modelling of NBI and connection to TCV shots.",
-    "crumbs": [
-      "Reports",
-      "November 2025"
-    ]
-  },
-  {
-    "objectID": "Courses/Plasma Instabilities/01_MHD_model.html#the-ideal-mhd-model",
-    "href": "Courses/Plasma Instabilities/01_MHD_model.html#the-ideal-mhd-model",
-    "title": "The MHD model",
-    "section": "The ideal MHD model",
-    "text": "The ideal MHD model\nIn the ideal MHD model the plasma is considered to have zero resistivty, allowing the magnetic field lines to freeze in the plasma. The set of equation used is the following:\n\\[\n\\frac\n\\]",
-    "crumbs": [
-      "Courses",
-      "Plasma Instabilities",
-      "The MHD model"
-    ]
-  },
-  {
-    "objectID": "theory/Useful_guides/Controlling_MSS.html",
-    "href": "theory/Useful_guides/Controlling_MSS.html",
-    "title": "How to control MSS",
-    "section": "",
-    "text": "Here the steps needed to connect to MSS system and to control it are described:\n\nConnect to lac913 server\nConnect to MSS system using SSH\nssh -X cxrs@tmpnuc\nPassword: 529.1nm\nOpen Matlab, go to /home/cxrs/MSS/Functions and run the control scripts\nSpecControl_MSS(13)\nwhere 13 is the number of the spectrometer to be controlled. All the necessary functions will automatically run.\nTo control the camera parameters run\ngeneralSettingsUpdate.m\ngo to the generated file Sys13 and change the parameters as needed. Save the file and run\nIf something as to be calibrated go to the folder /home/cxrs/MSS/Calibration and run the calibration scripts as needed.",
+    "text": "The safety factor \\(q\\) expresses the number of toroidal turns a magnetic field line makes for each poloidal turn in a toroidal confinement device, such as a tokamak.\nIt corresponds to the flux-surface averaged local pitch:\n\\[\nq(\\psi) \\equiv \\langle q_l \\rangle_{\\theta} = \\left\\langle \\frac{r B_{\\varphi}}{R B_{\\theta}}  \\right\\rangle_{\\theta}\n\\]\nwhere \\(r\\) is the minor radius coordinate, \\(B_{\\varphi}\\) is the toroidal magnetic field component, \\(R\\) is the major radius, and \\(B_{\\theta}\\) is the poloidal magnetic field component. A higher safety factor generally indicates greater stability against certain plasma instabilities.\nWith some assumptions it is possible to estimate the safety factor behavior in a tokamak: \\[\nB_{\\varphi} \\approx \\frac{\\mu_0}{2\\pi R} I_{coils};\n\\] \\[\nB_{\\theta} \\approx \\frac{\\mu_0}{2\\pi r} I_p = \\frac{\\mu_0}{2} J_p r;\n\\]\n\\[\n\\rightarrow q(\\psi) = \\left\\langle\\frac{I_{coils}}{\\pi R^2J_p }\\right\\rangle_{\\theta} = \\frac{I_{coils}}{I_p}r^2\\left\\langle\\frac{1}{R^2}\\right\\rangle_{\\theta} .\n\\]\nThe interactive plot below allows you to explore how this first estimation of the safety factor \\(q\\) depends on key tokamak parameters. You can adjust:\nUse the sliders to see how changes in these parameters affect the safety factor profile.\n&lt;function __main__.safety_factor_plot(eps=0.2841, Ip=1, I_coils=1)&gt;",
     "crumbs": [
       "Theory",
-      "Useful Guides",
-      "How to control MSS"
+      "Plasma Physics",
+      "Safety Factor q"
     ]
   },
   {
-    "objectID": "theory/Useful_guides/Controlling_CMOS_cameras.html",
-    "href": "theory/Useful_guides/Controlling_CMOS_cameras.html",
-    "title": "How to control CMOS cameras",
-    "section": "",
-    "text": "Here the steps needed to connect to MSS system and to control it are described:\n\nConnect the camera to the computer in the spectroscopy room.\nConnect to the computer with\nssh -X kaya@kayactrl02\nPassword: kayatest\nRun the command spyder to open the python compiler, or spyder --new-instance if it is already opened somewhere else.\nTo connect the cameras run\n/home/kaya/PythonPrograms/Connect_FGandCamera.py\nTo change camera parameters and acquire run\n/home/kaya/PythonPrograms/CameraAcquisition.py",
+    "objectID": "theory/Plasma_physics/Safety_factor.html#magnetic-shear",
+    "href": "theory/Plasma_physics/Safety_factor.html#magnetic-shear",
+    "title": "Safety Factor q",
+    "section": "Magnetic shear",
+    "text": "Magnetic shear",
     "crumbs": [
       "Theory",
-      "Useful Guides",
-      "How to control CMOS cameras"
+      "Plasma Physics",
+      "Safety Factor q"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI.html",
+    "href": "theory/Plasma_physics/NBI.html",
+    "title": "Neutral Beam Injector (NBI)",
+    "section": "",
+    "text": "Neutral Beam Injection (NBI) is a key technique used in tokamak fusion devices to heat the plasma and drive current. In NBI systems, neutral atoms—typically hydrogen or deuterium—are accelerated to high energies and injected into the plasma. Because charged particles would be deflected by the magnetic fields in the tokamak, the ions are first neutralized before injection. Once inside the plasma, these fast neutrals transfer their energy to the plasma particles through collisions, increasing the plasma temperature and contributing to the overall performance of the fusion experiment. NBI is valued for its ability to deliver precise and controllable heating, making it an essential tool in plasma physics research and fusion reactor development.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector (NBI)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI.html#introduction",
+    "href": "theory/Plasma_physics/NBI.html#introduction",
+    "title": "Neutral Beam Injector (NBI)",
+    "section": "",
+    "text": "Neutral Beam Injection (NBI) is a key technique used in tokamak fusion devices to heat the plasma and drive current. In NBI systems, neutral atoms—typically hydrogen or deuterium—are accelerated to high energies and injected into the plasma. Because charged particles would be deflected by the magnetic fields in the tokamak, the ions are first neutralized before injection. Once inside the plasma, these fast neutrals transfer their energy to the plasma particles through collisions, increasing the plasma temperature and contributing to the overall performance of the fusion experiment. NBI is valued for its ability to deliver precise and controllable heating, making it an essential tool in plasma physics research and fusion reactor development.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector (NBI)"
     ]
   },
   {
@@ -550,14 +197,170 @@
     ]
   },
   {
-    "objectID": "reports/2025-12.html",
-    "href": "reports/2025-12.html",
-    "title": "December 2025",
-    "section": "",
-    "text": "Modelling of NBI,connection with TCV shots successful.\nLearning more on MSE.\nIn the process of installing BES camera to test behaviour in magnetic field.\nQuickly presented BES ideas at fluctuations meeting on 08/12.\nPlasma Instabilities course.",
+    "objectID": "theory/Plasma_physics/NBI.html#numerical-implementation",
+    "href": "theory/Plasma_physics/NBI.html#numerical-implementation",
+    "title": "Neutral Beam Injector (NBI)",
+    "section": "Numerical Implementation",
+    "text": "Numerical Implementation\nTo evaluate the generalized current density integral efficiently in MATLAB, we utilize a semi-analytical approach. The double integral over the circular source shown above is computationally expensive if solved via 2D quadrature for every voxel.\nHowever, the Gaussian nature of the beamlet profiles allows us to solve the inner integral analytically. The code function beam_propagation implements this by decomposing the integration into a numerical outer loop and an analytical inner step.\n\n1. Decomposition of the Integral\nThe double integral over the circular aperture \\(x'^2 + y'^2 \\le a^2\\) can be separated. If we fix \\(x'\\) (the loop variable x0 in the code), the limits for \\(y'\\) are \\(\\pm \\sqrt{a^2 - x'^2}\\).\nThe term dependent on \\(y'\\) in the integrand is essentially a Gaussian. The integral of a Gaussian over finite limits is given by the Error Function (\\(\\text{erf}\\)).\n\\[\\int_{-Y_{lim}}^{+Y_{lim}} e^{-c_1 y'^2 + c_2 y'} dy' \\propto \\left[ \\text{erf}\\left( \\dots \\right) \\right]_{-Y_{lim}}^{+Y_{lim}}\\]\n\n\n2. The beam_propagation Algorithm\nThe code approximates the generalized current density formula using this optimization:\n\nDiscretization: The source radius \\(a\\) (source_radius) is discretized into \\(N\\) strips (steps) along the \\(x'\\)-axis (variable x0).\n[cite_start]Vectorization: Geometric factors dependent on \\(z\\) (beam coordinate \\(s\\)) and \\(R\\) (focal length) are pre-calculated outside the loop[cite: 76, 79].\nSemi-Analytical Integration: * The outer loop sums the contribution of each \\(x'\\) strip.\n\nThe inner integration over \\(y'\\) is replaced by the difference of error functions: erf(arg_A) - erf(arg_B).\n\n\nThis reduces the complexity from \\(O(N^2)\\) to \\(O(N)\\), allowing the simulator to compute millions of voxels in seconds. [cite_start]This method is consistent with the approach of summing elementary beam contributions described in the reference model[cite: 42, 86].",
     "crumbs": [
-      "Reports",
-      "December 2025"
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector (NBI)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI.html#beam-attenuation-model",
+    "href": "theory/Plasma_physics/NBI.html#beam-attenuation-model",
+    "title": "Neutral Beam Injector (NBI)",
+    "section": "Beam Attenuation Model",
+    "text": "Beam Attenuation Model\nWhile the geometric focusing determines the beam’s shape, the plasma interaction determines its intensity decay. The simulator models this attenuation using the Beer-Lambert law along the beam path.\n\n1. Optical Depth Calculation\nThe local attenuation coefficient \\(\\alpha\\) is defined as the product of the electron density and the effective stopping cross-section:\n\\[\\alpha(s) = n_e(s) \\cdot \\sigma_{\\text{eff}}(E, n_e, T_e)\\]\nThe total attenuation (Optical Depth \\(\\tau\\)) at a distance \\(s\\) is the cumulative integral of \\(\\alpha\\) along the path:\n\\[\\tau(s) = \\int_{0}^{s} \\alpha(s') \\, ds'\\]\n\n\n2. Fast Integration Scheme\nIn the NBI_simulator code, this physics is implemented using a vectorized “Fast Integration” scheme:\n\nGrid Generation: A 2D planar grid (S_grid, T_grid) is generated along the beam axis.\nVectorized Mapping: Plasma profiles (\\(n_e, T_e\\)) are mapped onto this 2D sheet.\ncumtrapz Acceleration: Instead of using an iterative solver (like integral), the code uses MATLAB’s cumulative trapezoidal integration cumtrapz. This computes the attenuation for the entire beam cross-section simultaneously.\n\n\n\n3. Wall Interaction\nThe model includes a geometric “hard stop” condition for the inner wall of the tokamak. \\[\\text{If } R_{\\text{major}} &lt; (R_0 - a) \\implies \\alpha \\to \\infty\\] This ensures that any portion of the beam striking the high-field side protection tiles is fully absorbed and does not artificially reappear on the other side of the vessel.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector (NBI)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI.html#particle-density-scaling",
+    "href": "theory/Plasma_physics/NBI.html#particle-density-scaling",
+    "title": "Neutral Beam Injector (NBI)",
+    "section": "Particle Density Scaling",
+    "text": "Particle Density Scaling\nThe simulator resolves the beam into three energy components: Full (\\(E\\)), Half (\\(E/2\\)), and Third (\\(E/3\\)). A critical physical scaling used in the code is that lower energy components often have higher particle densities, even if their power fraction is lower.\nThe particle density \\(n\\) is derived from the power \\(P\\) and particle velocity \\(v\\):\n\\[I_{\\text{beam}} = \\frac{P}{E} \\quad \\text{(Particle Flux)}\\] \\[n = \\frac{I_{\\text{beam}}}{v} = \\frac{P}{E \\cdot v}\\]\nSince \\(v \\propto \\sqrt{E}\\), the density scales as:\n\\[n \\propto \\frac{P}{E^{3/2}}\\]\nThis \\(E^{-3/2}\\) dependence means that the Half-Energy component travels significantly slower than the Full-Energy component, causing particles to “pile up” and resulting in a higher local density for the same power flux.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector (NBI)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI.html#neutral-beam-injectors-on-tcv",
+    "href": "theory/Plasma_physics/NBI.html#neutral-beam-injectors-on-tcv",
+    "title": "Neutral Beam Injector (NBI)",
+    "section": "Neutral Beam Injectors on TCV",
+    "text": "Neutral Beam Injectors on TCV\n\n\n\n\n\n\n\n\n\n\nParameter\nNBI-1\nNBI-2\nDNBI\nComment\n\n\n\n\nBeam\n\n\n\n\n\n\nNB power range in TCV\n50…1100 kW\n250…1100 kW\n70…90 kW\n14% of losses in the beam duct excluded for NBI-1\n\n\nNB energy range\n7…28 keV\n29…51 keV\n48…50 keV\nDNBI with lower (up to 25-30 keV) possible\n\n\nNB energy stability\n±100 eV\n±100 eV\n±600 eV\n\n\n\nPower losses in beam duct\n15-20 %\n2-5 %\n&lt; 2 %\nNBI-1 size in horizontal direction mismatch specification\n\n\nBeam main species\nD\\(^O\\)\nD\\(^O\\)\nH\\(^O\\)\n\n\n\nMax. NB energy per shot\n1.1 MJ\n2 MJ\n50 kJ\n\n\n\nMax. NB pulse duration\n0.8…2.0 s\n2 s\n1.4 s\n\n\n\nNeutral beam energy fraction (in % of power)\n73:22:05 %\n59:33:8\n78.5:8.5:13.0 %\nat [1:1/2:1/3] of NB energy for nominal beam energy: 25/47/49 keV for NBI-1(D)/NBI-2(D)/DNBI(H)\n\n\nLow energy fraction (in % of power)\n&lt;0.1 %\n&lt;0.4%\n&lt;0.3%\nwith 1/(12..16) of NB energy\n\n\nModulation\n\n\n\n\n\n\nPower sweep during TCV shot\nfull power range\nfull power range\nnot available\nfew sweeps for NBIs possible\n\n\nPower sweep response dP/dt\n25/40 MW/s\n25/40 MW/s\nnot available\nslope limit of NBI power (up/down)\n\n\nFull power modulation on-time\n2.5 ms … 2 s\n3.5 ms … 2 s\n6…30 ms\nMin. DNBI modulation on-time is limited by current rise time\n\n\nMinimal modulation off-time\n5 ms\n4.5 ms\n8 ms\nlimited by delay between suppression grid modulation and beam current\n\n\nModulation rise/fall time\n1…3 ms\n1.5…3.5 ms\n1.5…2.5 ms/250 mks\nshorter DNBI time planned after upgrade of power supply\n\n\nFast modulation\n100…300 Hz\n100 Hz\n50 Hz\nNBIs at reduced power and higher divergence\n\n\nGeometry before/from August 2019\n\n\n\n\n\n\nGrids (IOS) aperture\nø250 mm\nø250 mm\nø87.2 mm\narea of grids with beamlet apertures\n\n\nBeam divergence, mrad (deg.)\n36x8 (2.06x0.46) / 23.6x9.9 (1.35x0.57)\n13.8x5.1 (0.79x0.30)\n9.25 (0.53)/9.20(0.53)\nNBIs (horizontal) x (vertical) according to measurement\n\n\nFocal length\n3.20 m / 3.76(h)/3.98(v) m\n4.20(h)/4.25(v) m\n4.00 / 1.80 m\naccording to measurement\n\n\nDistance from IOS to port exit in TCV\n4.05 m\n4.28 m\n3.81 m\nalong beam axis\n\n\nTCV port size (horizontal x vertical)\n220x170 mm\\(^2\\)\n210x160 mm\\(^2\\)\nø160 mm\nNBIs: rectangular, DNBI: circular\n\n\nNB tangency radius\n736.0 mm\n736.0 mm\n235.3 mm\ndistance from NB axis to TCV machine vertical axis\n\n\nBeam diameter in TCV (hor. x vert.)\n24.37x10.22 cm / 21.6x9.4 cm\n13.2x5.2 cm\n8.02 / 12.1 cm\n(1/e) level, NBIs in horizontal cutted by port size\n\n\n\n\\[\n\\text{DCD}_{\\text{NBI-2}} = (r_d, Z_d, \\phi_d, \\theta_d, tv_d) = (5.2123, -0.0025, 212,6947 \\cdot \\pi/180, 0, -8.4896 \\cdot \\pi/180)\n\\]",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector (NBI)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/BES.html",
+    "href": "theory/Plasma_physics/BES.html",
+    "title": "Beam Emission Spectroscopy (BES)",
+    "section": "",
+    "text": "Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.\naquistition time with fibers 32 channels, 1MHz sampling rate\nthen using photomultipliers we can get a samling rates around 100kHz\nTwo tipe of cameras:\nEM CCD:\nADV: the readout is really uniform, every pixel is going through the same readout channel (one amplifer for all pixel). Good for astrophysics\nDIS: much more expensive,\nCMOS:\nADV: Cheaper, much faster, no smearing during readout, shorter exposure time (decoupling between exposition and acquisition)\nDIS: More noise, non-uniform background, it require more image processing in analysis.\nWith 10kHz we must use CMOS\nSince our fluctuations are in the order of 100kHz, speaking about time we might not be able to see time correlation. However space correlation can still be seen!\nHow to trigger camera: Two possibilitioes: either with same cable but through trigger in the computer, or with a different cabble. Going with the first option, insterting trigger in computer…",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Beam Emission Spectroscopy (BES)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/BES.html#introduction",
+    "href": "theory/Plasma_physics/BES.html#introduction",
+    "title": "Beam Emission Spectroscopy (BES)",
+    "section": "",
+    "text": "Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.\naquistition time with fibers 32 channels, 1MHz sampling rate\nthen using photomultipliers we can get a samling rates around 100kHz\nTwo tipe of cameras:\nEM CCD:\nADV: the readout is really uniform, every pixel is going through the same readout channel (one amplifer for all pixel). Good for astrophysics\nDIS: much more expensive,\nCMOS:\nADV: Cheaper, much faster, no smearing during readout, shorter exposure time (decoupling between exposition and acquisition)\nDIS: More noise, non-uniform background, it require more image processing in analysis.\nWith 10kHz we must use CMOS\nSince our fluctuations are in the order of 100kHz, speaking about time we might not be able to see time correlation. However space correlation can still be seen!\nHow to trigger camera: Two possibilitioes: either with same cable but through trigger in the computer, or with a different cabble. Going with the first option, insterting trigger in computer…",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Beam Emission Spectroscopy (BES)"
+    ]
+  },
+  {
+    "objectID": "theory/Quantum_physics/Schrödinger_eq.html",
+    "href": "theory/Quantum_physics/Schrödinger_eq.html",
+    "title": "Schrödinger Equation",
+    "section": "",
+    "text": "\\[\ni\\hbar\\frac{d}{dt}|\\psi(t)\\rangle = \\hat{H}|\\psi(t)\\rangle\n\\]\nwhere \\(|\\psi(t)\\rangle\\) is the state vector of the quantum system, \\(\\hat{H}\\) is the Hamiltonian operator, and \\(\\hbar\\) is the reduced Planck constant.",
+    "crumbs": [
+      "Theory",
+      "Quantum Physics",
+      "Schrödinger Equation"
+    ]
+  },
+  {
+    "objectID": "theory/Useful_guides/Controlling_CMOS_cameras.html",
+    "href": "theory/Useful_guides/Controlling_CMOS_cameras.html",
+    "title": "How to control CMOS cameras",
+    "section": "",
+    "text": "Here the steps needed to connect to MSS system and to control it are described:\n\nConnect the camera to the computer in the spectroscopy room.\nConnect to the computer with\nssh -X kaya@kayactrl02\nPassword: kayatest\nRun the command spyder to open the python compiler, or spyder --new-instance if it is already opened somewhere else.\nTo connect the cameras run\n/home/kaya/PythonPrograms/Connect_FGandCamera.py\nTo change camera parameters and acquire run\n/home/kaya/PythonPrograms/CameraAcquisition.py",
+    "crumbs": [
+      "Theory",
+      "Useful Guides",
+      "How to control CMOS cameras"
+    ]
+  },
+  {
+    "objectID": "papers/Paper1.html",
+    "href": "papers/Paper1.html",
+    "title": "Luigi Persico - Ph.D.",
+    "section": "",
+    "text": "Still too soon for me, come back in a few years :P",
+    "crumbs": [
+      "Papers",
+      "Paper1"
+    ]
+  },
+  {
+    "objectID": "theory/Useful_guides/Controlling_MSS.html",
+    "href": "theory/Useful_guides/Controlling_MSS.html",
+    "title": "How to control MSS",
+    "section": "",
+    "text": "Here the steps needed to connect to MSS system and to control it are described:\n\nConnect to lac913 server\nConnect to MSS system using SSH\nssh -X cxrs@tmpnuc\nPassword: 529.1nm\nOpen Matlab, go to /home/cxrs/MSS/Functions and run the control scripts\nSpecControl_MSS(13)\nwhere 13 is the number of the spectrometer to be controlled. All the necessary functions will automatically run.\nTo control the camera parameters run\ngeneralSettingsUpdate.m\ngo to the generated file Sys13 and change the parameters as needed. Save the file and run\nIf something as to be calibrated go to the folder /home/cxrs/MSS/Calibration and run the calibration scripts as needed.",
+    "crumbs": [
+      "Theory",
+      "Useful Guides",
+      "How to control MSS"
+    ]
+  },
+  {
+    "objectID": "theory/Quantum_physics/Quantum_entanglement.html",
+    "href": "theory/Quantum_physics/Quantum_entanglement.html",
+    "title": "Quatum Entanglement",
+    "section": "",
+    "text": "Quantum entanglement is a phenomenon in quantum physics where the state of each particle in a group cannot be described independently of the state of the others. Mathematically, an entangled system’s quantum state cannot be described through the states of its local constituents only.",
+    "crumbs": [
+      "Theory",
+      "Quantum Physics",
+      "Quatum Entanglement"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optical_spectrometer.html",
+    "href": "theory/Plasma_physics/Optical_spectrometer.html",
+    "title": "Optical Spectrometer",
+    "section": "",
+    "text": "An optical spectrometer (which can be either a spectrophotometer, a spectograph, or a spectroscope) is a device used to meausre properties of light over a specific portion of the electromagnetic spectrum. It is used in spectroscopy for producing spectral lines, in order to measure their wavelenghts and intensities1.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optical Spectrometer"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optical_spectrometer.html#introduction",
+    "href": "theory/Plasma_physics/Optical_spectrometer.html#introduction",
+    "title": "Optical Spectrometer",
+    "section": "",
+    "text": "An optical spectrometer (which can be either a spectrophotometer, a spectograph, or a spectroscope) is a device used to meausre properties of light over a specific portion of the electromagnetic spectrum. It is used in spectroscopy for producing spectral lines, in order to measure their wavelenghts and intensities1.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optical Spectrometer"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optical_spectrometer.html#working-principle",
+    "href": "theory/Plasma_physics/Optical_spectrometer.html#working-principle",
+    "title": "Optical Spectrometer",
+    "section": "Working principle",
+    "text": "Working principle\n\n\n\n\n\n\nFigure 1: Optical spectrometer scheme1.\n\n\n\nAs illustrated in Figure 1, a spectroscope generally uses a movable slit, some mirrors, and a diffraction grating. Through the slit it is possible to regulate the amount of light which is getting inside the device, which is then reflected by a first mirror on the diffraction grating. At this point the second mirror is adjusted such that only the radiation which the desired wavelength reaches the device.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optical Spectrometer"
     ]
   },
   {
@@ -633,39 +436,201 @@
     ]
   },
   {
-    "objectID": "theory/Plasma_physics/NBI.html#numerical-implementation",
-    "href": "theory/Plasma_physics/NBI.html#numerical-implementation",
-    "title": "Neutral Beam Injector (NBI)",
-    "section": "Numerical Implementation",
-    "text": "Numerical Implementation\nTo evaluate the generalized current density integral efficiently in MATLAB, we utilize a semi-analytical approach. The double integral over the circular source shown above is computationally expensive if solved via 2D quadrature for every voxel.\nHowever, the Gaussian nature of the beamlet profiles allows us to solve the inner integral analytically. The code function beam_propagation implements this by decomposing the integration into a numerical outer loop and an analytical inner step.\n\n1. Decomposition of the Integral\nThe double integral over the circular aperture \\(x'^2 + y'^2 \\le a^2\\) can be separated. If we fix \\(x'\\) (the loop variable x0 in the code), the limits for \\(y'\\) are \\(\\pm \\sqrt{a^2 - x'^2}\\).\nThe term dependent on \\(y'\\) in the integrand is essentially a Gaussian. The integral of a Gaussian over finite limits is given by the Error Function (\\(\\text{erf}\\)).\n\\[\\int_{-Y_{lim}}^{+Y_{lim}} e^{-c_1 y'^2 + c_2 y'} dy' \\propto \\left[ \\text{erf}\\left( \\dots \\right) \\right]_{-Y_{lim}}^{+Y_{lim}}\\]\n\n\n2. The beam_propagation Algorithm\nThe code approximates the generalized current density formula using this optimization:\n\nDiscretization: The source radius \\(a\\) (source_radius) is discretized into \\(N\\) strips (steps) along the \\(x'\\)-axis (variable x0).\n[cite_start]Vectorization: Geometric factors dependent on \\(z\\) (beam coordinate \\(s\\)) and \\(R\\) (focal length) are pre-calculated outside the loop[cite: 76, 79].\nSemi-Analytical Integration: * The outer loop sums the contribution of each \\(x'\\) strip.\n\nThe inner integration over \\(y'\\) is replaced by the difference of error functions: erf(arg_A) - erf(arg_B).\n\n\nThis reduces the complexity from \\(O(N^2)\\) to \\(O(N)\\), allowing the simulator to compute millions of voxels in seconds. [cite_start]This method is consistent with the approach of summing elementary beam contributions described in the reference model[cite: 42, 86].",
+    "objectID": "theory/Plasma_physics/MSE.html",
+    "href": "theory/Plasma_physics/MSE.html",
+    "title": "Motional-Stark Effect (MSE)",
+    "section": "",
+    "text": "The Stark Effect is the shifting and splitting of the electronic energy levels due to an external electric field. The Motional-Stark Effect (MSE), instead, is the specific case in which the electric field is the Lorentz electric field felt by an atom moving in a magnetic field \\(\\mathbf{B}\\) at a velocity \\(\\mathbf{v}\\), in its rest frame: \\(\\mathbf{E} = \\mathbf{v} \\times \\mathbf{B}\\).\nIn plasma physics, the Motional-Stark Effect (MSE) serves as a crucial diagnostic tool for determining the poloidal magnetic field \\(\\mathbf{B_P}\\) within the plasma. Accurate knowledge of the poloidal magnetic field is essential for understanding plasma stability and the formation of Internal Transport Barriers (ITBs). Additionally, MSE measurements enable inference of the plasma current distribution, since the current density \\(\\mathbf{J}\\) is related to the magnetic field \\(\\mathbf{B}\\) through Ampère’s law:\n\\[\n\\nabla \\times \\mathbf{B} = \\mu_0 \\mathbf{J}.\n\\]\nIn TCV, the poloidal magnetic field is determined by the LIUQE (from “EQUIL” spelt backwards) code, which is an equilibrium code based on the resolution of the Grad-Shafranov equation, and on magnetic probes measurements outside of the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is not negligible anymore, and the magnetic field is locally influenced. This explains the need for the Motional-Stark Effect diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.",
     "crumbs": [
       "Theory",
       "Plasma Physics",
-      "Neutral Beam Injector (NBI)"
+      "Motional-Stark Effect (MSE)"
     ]
   },
   {
-    "objectID": "theory/Plasma_physics/NBI.html#beam-attenuation-model",
-    "href": "theory/Plasma_physics/NBI.html#beam-attenuation-model",
-    "title": "Neutral Beam Injector (NBI)",
-    "section": "Beam Attenuation Model",
-    "text": "Beam Attenuation Model\nWhile the geometric focusing determines the beam’s shape, the plasma interaction determines its intensity decay. The simulator models this attenuation using the Beer-Lambert law along the beam path.\n\n1. Optical Depth Calculation\nThe local attenuation coefficient \\(\\alpha\\) is defined as the product of the electron density and the effective stopping cross-section:\n\\[\\alpha(s) = n_e(s) \\cdot \\sigma_{\\text{eff}}(E, n_e, T_e)\\]\nThe total attenuation (Optical Depth \\(\\tau\\)) at a distance \\(s\\) is the cumulative integral of \\(\\alpha\\) along the path:\n\\[\\tau(s) = \\int_{0}^{s} \\alpha(s') \\, ds'\\]\n\n\n2. Fast Integration Scheme\nIn the NBI_simulator code, this physics is implemented using a vectorized “Fast Integration” scheme:\n\nGrid Generation: A 2D planar grid (S_grid, T_grid) is generated along the beam axis.\nVectorized Mapping: Plasma profiles (\\(n_e, T_e\\)) are mapped onto this 2D sheet.\ncumtrapz Acceleration: Instead of using an iterative solver (like integral), the code uses MATLAB’s cumulative trapezoidal integration cumtrapz. This computes the attenuation for the entire beam cross-section simultaneously.\n\n\n\n3. Wall Interaction\nThe model includes a geometric “hard stop” condition for the inner wall of the tokamak. \\[\\text{If } R_{\\text{major}} &lt; (R_0 - a) \\implies \\alpha \\to \\infty\\] This ensures that any portion of the beam striking the high-field side protection tiles is fully absorbed and does not artificially reappear on the other side of the vessel.",
+    "objectID": "theory/Plasma_physics/MSE.html#introduction",
+    "href": "theory/Plasma_physics/MSE.html#introduction",
+    "title": "Motional-Stark Effect (MSE)",
+    "section": "",
+    "text": "The Stark Effect is the shifting and splitting of the electronic energy levels due to an external electric field. The Motional-Stark Effect (MSE), instead, is the specific case in which the electric field is the Lorentz electric field felt by an atom moving in a magnetic field \\(\\mathbf{B}\\) at a velocity \\(\\mathbf{v}\\), in its rest frame: \\(\\mathbf{E} = \\mathbf{v} \\times \\mathbf{B}\\).\nIn plasma physics, the Motional-Stark Effect (MSE) serves as a crucial diagnostic tool for determining the poloidal magnetic field \\(\\mathbf{B_P}\\) within the plasma. Accurate knowledge of the poloidal magnetic field is essential for understanding plasma stability and the formation of Internal Transport Barriers (ITBs). Additionally, MSE measurements enable inference of the plasma current distribution, since the current density \\(\\mathbf{J}\\) is related to the magnetic field \\(\\mathbf{B}\\) through Ampère’s law:\n\\[\n\\nabla \\times \\mathbf{B} = \\mu_0 \\mathbf{J}.\n\\]\nIn TCV, the poloidal magnetic field is determined by the LIUQE (from “EQUIL” spelt backwards) code, which is an equilibrium code based on the resolution of the Grad-Shafranov equation, and on magnetic probes measurements outside of the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is not negligible anymore, and the magnetic field is locally influenced. This explains the need for the Motional-Stark Effect diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.",
     "crumbs": [
       "Theory",
       "Plasma Physics",
-      "Neutral Beam Injector (NBI)"
+      "Motional-Stark Effect (MSE)"
     ]
   },
   {
-    "objectID": "theory/Plasma_physics/NBI.html#particle-density-scaling",
-    "href": "theory/Plasma_physics/NBI.html#particle-density-scaling",
-    "title": "Neutral Beam Injector (NBI)",
-    "section": "Particle Density Scaling",
-    "text": "Particle Density Scaling\nThe simulator resolves the beam into three energy components: Full (\\(E\\)), Half (\\(E/2\\)), and Third (\\(E/3\\)). A critical physical scaling used in the code is that lower energy components often have higher particle densities, even if their power fraction is lower.\nThe particle density \\(n\\) is derived from the power \\(P\\) and particle velocity \\(v\\):\n\\[I_{\\text{beam}} = \\frac{P}{E} \\quad \\text{(Particle Flux)}\\] \\[n = \\frac{I_{\\text{beam}}}{v} = \\frac{P}{E \\cdot v}\\]\nSince \\(v \\propto \\sqrt{E}\\), the density scales as:\n\\[n \\propto \\frac{P}{E^{3/2}}\\]\nThis \\(E^{-3/2}\\) dependence means that the Half-Energy component travels significantly slower than the Full-Energy component, causing particles to “pile up” and resulting in a higher local density for the same power flux.",
+    "objectID": "theory/Plasma_physics/MSE.html#a-bit-of-history",
+    "href": "theory/Plasma_physics/MSE.html#a-bit-of-history",
+    "title": "Motional-Stark Effect (MSE)",
+    "section": "A bit of history",
+    "text": "A bit of history\nThe Stark effect was discovered by the German physicist Johannes Stark in 1913, for which he was awarded the nobel price in 1919. During the same year the effect was independently discovered by the Italian physicit Antonio Lo Surdo1.",
     "crumbs": [
       "Theory",
       "Plasma Physics",
-      "Neutral Beam Injector (NBI)"
+      "Motional-Stark Effect (MSE)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/MSE.html#physical-principles",
+    "href": "theory/Plasma_physics/MSE.html#physical-principles",
+    "title": "Motional-Stark Effect (MSE)",
+    "section": "Physical principles",
+    "text": "Physical principles\nThe MSE diagnostic is based on the external injection of neutral beam deuterium atoms and, when entering the plasma, they are subject to inelastic collisions with plasma’s ions and electrons. The neutrals’ electrons, which initially are in their ground state, can reach a higher energy level, \\(E_{2}\\) and, when they decay to a lower energy state \\(E_{1}\\), they emit a photon with energy \\(E_{\\gamma} = E_2 - E_1\\), and wavelength \\(\\lambda = \\frac{hc}{E_{\\gamma}}\\).\nIn particular, of specific interest is the Balmer-\\(\\alpha\\) emission of the deuterium atom \\(D_{\\alpha}\\), which corresponds to the transition between \\(n=3\\) and \\(n=2\\), and is characterized by an energy \\(E_{D_{\\alpha}} = 1.89\\) eV and a wavelength \\(\\lambda_{D_{\\alpha}} = 656.279\\) nm. This is because the \\(D_{\\alpha}\\) emission has a high emission intensity in the visible spectrum (red light), and it is highly Doppler-shifted with respect to the plasma \\(D_{\\alpha}\\) emission. Moreover, since the neutral’s velocity across the magnetic field is high compared to the thermal velocity of the plasma ions, the resulting Lorentz electric field \\(\\mathbf{E_L} = \\mathbf{v} \\times \\mathbf{B}\\) is significant. This leads to a measurable splitting and polarization of the \\(D_{\\alpha}\\), spectral line, which can be used to infer the local magnetic field direction and magnitude inside the plasma.\nTo analyze the Stark effect in the deuterium atom, it is convenient to solve the non-relativistic Schrödinger Equation using parabolic coordinates. In this framework, the atomic states are described by four quantum numbers \\(|n, n_1, n_2, m\\rangle\\): \\(n\\) is the principal quantum number, \\(n_1\\) and \\(n_2\\) are parabolic quantum numbers, and \\(m\\) is the magnetic quantum number. The energy splitting caused by the Stark effect, calculated using first-order perturbation theory, is given by2:\n\\[\n\\Delta E^{(1)} = \\frac{3}{2} ea_0 n(n_1-n_2)|\\mathbf{E_L}|,\n\\]\nwhere \\(e\\) is the elementary charge, and \\(a_0\\) is the Bohr radius.\n\n\n\n\n\n\nFigure 1: \\(D_{\\alpha}\\) splitting due to MSE3.\n\n\n\nIn Figure 1 the lines splitting of the energy levels with principal quantum numbers \\(n=2\\) and \\(n=3\\) is shown. For clarity the fine structure splitting is not shown.\n\n\n\n\n\n\nFigure 2: Spectral lines separation of the \\(D_{\\alpha}\\) radiation due to MSE3.\n\n\n\nThe separation of the spectral lines, as shown in Figure 2, is directly proportional to the strength of the electric field3:\n\\[\n\\Delta \\lambda \\approx \\frac{3ea_0|\\mathbf{E_L}|\\lambda_0^2}{2hc},\n\\]\nwhere \\(\\lambda_0\\) is the unshifted Balmer-\\(\\alpha\\) wavelength, \\(h\\) is Planck’s constant, and \\(c\\) is the speed of light.\nThe π and \\(\\mathrm{\\sigma}\\) components are resepectively polarized parallel and perpendicular to the electric field. This means that when trying to catch the radiation, the instensity of the components depend on the direction of the line-of-sight (LOS) respect to \\(\\mathbf{E_L}\\). Defining with \\(\\Psi\\) the angle between the LOS and \\(\\mathbf{E_L}\\), the observed intensities scale as:\n\\[\nI_{\\sigma} \\propto 1 + \\cos^2\\Psi,\n\\]\n\\[\nI_{\\pi} \\propto \\sin^2\\Psi.\n\\]",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Motional-Stark Effect (MSE)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/MSE.html#mse-diagnostic-on-tcv",
+    "href": "theory/Plasma_physics/MSE.html#mse-diagnostic-on-tcv",
+    "title": "Motional-Stark Effect (MSE)",
+    "section": "MSE diagnostic on TCV",
+    "text": "MSE diagnostic on TCV\nThe MSE diagnostic on TCV relies on the deuterium neutrals injected by the NBI-1 of TCV. Along the beam 20 LOS are defined, originating from the optical setup at the bottom of TCV, as shown in Figure 3.\n\n\n\n\n\n\n\n\n\n\n\n(a) Intersection of LOS (in grey) with the NBI (in orange)3.\n\n\n\n\n\n\n\n\n\n\n\n(b) Poloidal cross section of TCV with an example of magnetic equilibrium. In red the LOS and in green the NBI3.\n\n\n\n\n\n\n\nFigure 3\n\n\n\nTo detect the Doppler-shifted radiation emitted by the neutral beam, each line-of-sight (LOS) must be oriented at an angle other than \\(90^\\circ\\) relative to the beam direction. This arrangement ensures that the neutral beam has a velocity component along the LOS, making the Doppler-shifted emission distinguishable from the background plasma radiation.\n\n\n\n\n\n\nFigure 4: D\\(_{\\mathrm{\\alpha}}\\) radiation\n\n\n\nAs shown in Figure 4, the D\\(_{\\mathrm{\\alpha}}\\) spectrum exhibits several distinct peaks:\n\nThe full-energy peak corresponds to emission from D\\(^+\\) ions;\nThe half-energy peak arises from D\\(^+_2\\) ions;\nThe third-energy peak is due to D\\(^+_3\\) ions;\nThe remaining portion of the spectrum is non-shifted radiation emitted by the plasma.\n\nThese energy shifts result from the different velocities of the ion species, which are determined by their respective masses.\n\n\n\nTable 1: Parameters of each LOS. R\\(_\\mathrm{inter}\\) is the radial position of the intersection between LOS and NBI-1, α is the angle between LOS and NBI-1, ∆λ is the doppler shift, and ∆R is the radial resolution3.\n\n\n\n\n\n\n\n\n\n\n\n\nLOS\nR\\(_\\mathrm{inter}\\) [m]\nα [deg]\nDoppler shift ∆λ [Å]\nresolution ∆R [cm⁻¹]\n\n\n\n\n1\n1.1062\n138.61\n-27.1349\n6.4\n\n\n2\n1.0920\n138.04\n-26.8964\n6.5\n\n\n3\n1.0783\n137.48\n-26.6568\n6.4\n\n\n4\n1.0651\n136.91\n-26.4158\n6.1\n\n\n5\n1.0524\n136.35\n-26.1734\n5.8\n\n\n6\n1.0402\n135.80\n-25.9294\n5.6\n\n\n7\n1.0278\n135.24\n-25.6837\n5.5\n\n\n8\n1.0163\n134.69\n-25.4361\n5.2\n\n\n9\n1.0053\n134.13\n-25.1867\n5.0\n\n\n10\n0.9952\n133.58\n-24.9351\n4.8\n\n\n11\n0.9849\n133.03\n-24.6813\n4.6\n\n\n12\n0.9748\n132.48\n-24.4251\n4.4\n\n\n13\n0.9651\n131.92\n-24.1664\n4.2\n\n\n14\n0.9556\n131.37\n-23.9049\n4.1\n\n\n15\n0.9464\n130.81\n-23.6407\n3.9\n\n\n16\n0.9374\n130.26\n-23.3733\n3.7\n\n\n17\n0.9283\n129.70\n-23.1028\n3.5\n\n\n18\n0.9198\n129.14\n-22.8288\n3.4\n\n\n19\n0.9116\n128.57\n-22.5512\n3.2\n\n\n20\n0.9035\n128.00\n-22.2697\n3.0\n\n\n\n\n\n\nIn Table 1 all the parameters relative to the intersection between the LOSs and the NBI-1 are listed.\n\n\n\n\n\n\nFigure 5: Optical setup of the MSE diagnostic3\n\n\n\nThe optical setup, shown in Figure 5, is composed by:\n\nA beamsplitter plate used to separate two orthogonal light polarizations of the \\(D_\\alpha\\) emission into two different barches. This is done because only the Motional Stark and the Zeeman effects actually influence the line polarization. A thin plate has been chosen to minimize the rotation \\(\\beta\\) of the light polarization due to the Faraday effect. Currently, taking into account the 5 mm diagnostic window and the beamsplitter plate, the total rotation is\n\n\\[\n\\beta = \\beta_{\\mathrm{w}} + \\beta_{\\mathrm{p}} \\approx 1.2^\\circ + 0.3^\\circ = 1.5^\\circ.\n\\]\n\n2 lents, one for each branch, used to focus the light into the optical fibers.\n40 optical fibers, 20 per branch, which transmit the light to the spectrometer and the camera.\n\nMore details regarding the optical setup are listed in Table 2.\n\n\n\nTable 2: Parameters of the optical components3.\n\n\n\n\n\n\n\n\n\n\n\nParameter\nSpectrometer\nCamera\nFibers\n\n\n\n\nFocal length\n500 mm\n\n\n\n\nF#\n4\n\n\n\n\nGrating\n2400 grooves/mm\n\n\n\n\nResolution\n~ 0.5 Å\n\n\n\n\nRange\n3800-8000 Å\n\n\n\n\nModel\n\nAndor EMCCD\n\n\n\nPixel size\n\n13 µm\n\n\n\nArray size\n\n1024x1024\n\n\n\nTime resolution\n\n20 ms\n\n\n\nCamera range\n\n3800-9000 Å\n\n\n\nLength of each fiber\n\n\n30 m\n\n\nCore diameter\n\n\n295 µm\n\n\n#fibers per branch\n\n\n20\n\n\n#branches\n\n\n2\n\n\nFiber range\n\n\n3800-8500 Å",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Motional-Stark Effect (MSE)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Diagnostics/thomson.html",
+    "href": "theory/Plasma_physics/Diagnostics/thomson.html",
+    "title": "Thomson scattering system",
+    "section": "",
+    "text": "The Thomson scattering system measures the spatial profiles of temperature and density on TCV. It is base on the incoherent scattering from electrons",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Diagnostics",
+      "Thomson scattering system"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optics.html",
+    "href": "theory/Plasma_physics/Optics.html",
+    "title": "Optics",
+    "section": "",
+    "text": "Optics is the branch of physics which studies how the electromagnetic radiation behaves and how it can be manipulated. The most common use of optics is the geometric optics, which considers the light as travelling in straight lines, and bending when passing through or reflect from surfaces. Physical optics instead considers light as an electromagnetic wave, and more complex effects can be explained, such as diffraction and interference, which cannot be taken into account by geometrical optics.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optics"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optics.html#introduction",
+    "href": "theory/Plasma_physics/Optics.html#introduction",
+    "title": "Optics",
+    "section": "",
+    "text": "Optics is the branch of physics which studies how the electromagnetic radiation behaves and how it can be manipulated. The most common use of optics is the geometric optics, which considers the light as travelling in straight lines, and bending when passing through or reflect from surfaces. Physical optics instead considers light as an electromagnetic wave, and more complex effects can be explained, such as diffraction and interference, which cannot be taken into account by geometrical optics.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optics"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optics.html#refraction-and-reflection",
+    "href": "theory/Plasma_physics/Optics.html#refraction-and-reflection",
+    "title": "Optics",
+    "section": "Refraction and reflection",
+    "text": "Refraction and reflection\nWhen a ray hits the boundary between two materials which are transparent, it is dived into a reflected and refracted ray.\nBoth the reflected and refracted rays stay on the plane of incidence but, while the former is reflected with the same incidence angle (respect to the normal to the interface) \\(\\theta_1\\), the latter is refracted with an angle \\(\\theta_2\\) according to Snell’s Law:\n\\[\n\\frac{\\sin\\theta_1}{\\sin\\theta_2} = \\frac{n_2}{n_1},\n\\]\nwhere \\(n_2\\) and \\(n_1\\) are respectively the refractive index of the second and the first material. The index of refraction is strictly connected to the ligth speed in the medium \\(v\\):\n\\[\nn = \\frac{c}{v},\n\\]\nwhere \\(c\\) is the speed of light in vacuum.\nWhen \\(\\theta_1\\) is large enough, the light is fully reflected and no transmission occurs. This phenomenon is the one used by the optical fibers to transmit optical signals over long distances.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optics"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optics.html#interference",
+    "href": "theory/Plasma_physics/Optics.html#interference",
+    "title": "Optics",
+    "section": "Interference",
+    "text": "Interference\nInterference happens when different waves interact and generate a patterns which depends on the waves wavelengths and frequencies and wether they are in phase or not. In the former case the outcome is called a constructive interference, and the resulting wave has a higher amplitude (brighter light); if instead the two waves are out of phase, the resulting amplitude is smaller than the original one, and the phenomenon is called distructive interference.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optics"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Optics.html#diffraction",
+    "href": "theory/Plasma_physics/Optics.html#diffraction",
+    "title": "Optics",
+    "section": "Diffraction",
+    "text": "Diffraction\nDiffraction happens when light, after passing through a number of slits, interferes with its own wavefronts. The diffraction grating contains a large number of slits at equal spacing.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Optics"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic_tools/Hermitian_adjoint.html",
+    "href": "theory/Mathematic_tools/Hermitian_adjoint.html",
+    "title": "Hermitian adjoint",
+    "section": "",
+    "text": "The Hermitian adjoint of a matrix or operator \\(\\mathbf{A}\\), often written as \\(\\mathbf{A}^\\dagger\\), especially when used in conjunction with the bra-ket notation, is defined as the complex conjugate transpose of \\(\\mathbf{A}\\). Mathematically, if \\(\\mathbf{A}\\) is an \\(m \\times n\\) matrix, then\n\\[\n\\mathbf{A}^\\dagger = (\\mathbf{A}^*)^T\n\\]\nwhere \\(\\mathbf{A}^*\\) denotes the element-wise complex conjugate and \\(T\\) denotes the transpose.\nIn quantum mechanics, the Hermitian adjoint plays a crucial role in defining observables and ensuring that physical quantities are real-valued. An operator \\(\\mathbf{A}\\) is called Hermitian if \\(\\mathbf{A} = \\mathbf{A}^\\dagger\\). Hermitian operators have real eigenvalues and orthogonal eigenvectors, which are essential properties for representing measurable quantities.\nFor example, if \\(\\mathbf{A}\\) acts on a vector space with basis vectors \\(|i\\rangle\\), the matrix elements of the Hermitian adjoint are given by: \\[\n\\langle i | \\mathbf{A}^\\dagger | j \\rangle = \\langle j | \\mathbf{A} | i \\rangle^*\n\\]\nThis property is widely used in the manipulation of quantum states and operators.",
+    "crumbs": [
+      "Theory",
+      "Mathematic Tools",
+      "Hermitian adjoint"
+    ]
+  },
+  {
+    "objectID": "theory/Mathematic_tools/Bra-ket_notation.html",
+    "href": "theory/Mathematic_tools/Bra-ket_notation.html",
+    "title": "Bra-ket notation",
+    "section": "",
+    "text": "The bra-ket notation, also called Dirac notation, is designed to make some operations of quantum mechanics easier. The notation uses angle brackets to denote vectors in a complex Hilbert space.\nA ket is written as \\(|\\psi\\rangle\\) and represents a column vector (state vector), while a bra, written as \\(\\langle\\phi|\\) represents the conjugate transpose (row vector) of a ket.\nThe inner product (overlap) between two states is written as \\[\n\\langle\\phi|\\psi\\rangle,\n\\]\nand in quantum mechanics this expression is interpreted as the probability amplitude for a state \\(\\phi\\) to collapse onto \\(\\psi\\) (the state \\(\\phi\\) is projected onto the state \\(\\psi\\)).\nThe outer product, which forms an operator, is written as: \\[\n|\\psi\\rangle\\langle\\phi|.\n\\]",
+    "crumbs": [
+      "Theory",
+      "Mathematic Tools",
+      "Bra-ket notation"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About the author",
+    "section": "",
+    "text": "Hi!\nMy name is Luigi Persico, I am 25 and I am from Italy. Currently I am doing a Ph.D in Plasma Physics at EPFL, and here you can have a look at what I am working on.\nEnjoy ;)"
+  },
+  {
+    "objectID": "Courses/Plasma Instabilities/02_Grad_Shafranov.html",
+    "href": "Courses/Plasma Instabilities/02_Grad_Shafranov.html",
+    "title": "Grad Shafranov equation",
+    "section": "",
+    "text": "\\[\n\\Delta^{*}\\psi = -R^2 \\frac{dP(\\psi)}{d\\psi} - F(\\psi)\\frac{dF(\\psi)}{d\\psi}\n\\]\nwhere\n\\[\n\\Delta^{*}= R^2\\mathbb{\\nabla}\\cdot (\\frac{1}{R^2}\\mathbb{\\nabla}),\n\\]\n\\[\nF(\\psi)= RB_{\\varphi},\n\\]\nand \\(P\\) is the plasma pressure.",
+    "crumbs": [
+      "Courses",
+      "Plasma Instabilities",
+      "Grad Shafranov equation"
+    ]
+  },
+  {
+    "objectID": "reports/2025-12.html",
+    "href": "reports/2025-12.html",
+    "title": "December 2025",
+    "section": "",
+    "text": "Modelling of NBI,connection with TCV shots successful.\nLearning more on MSE.\nIn the process of installing BES camera to test behaviour in magnetic field.\nQuickly presented BES ideas at fluctuations meeting on 08/12.\nPlasma Instabilities course.",
+    "crumbs": [
+      "Reports",
+      "December 2025"
+    ]
+  },
+  {
+    "objectID": "reports/2025-11.html",
+    "href": "reports/2025-11.html",
+    "title": "November 2025",
+    "section": "",
+    "text": "Reading papers on BES and MES.\nKeeping working on the script for the syntetic BES, in order to study the possibility of installing it on TCV.\nPlasma instabilities course (John is back).\nFinished a first study of synthetic BES, 06/11 starting hardware with Dmytry.\n07/11 First DDJ session with Jacob.\nStarting better modelling of NBI and connection to TCV shots.",
+    "crumbs": [
+      "Reports",
+      "November 2025"
     ]
   }
 ]

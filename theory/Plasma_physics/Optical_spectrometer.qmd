@@ -8,7 +8,7 @@ An optical spectrometer (which can be either a spectrophotometer, a spectograph,
 
 ## Working principle
 
-![Optical spectrometer scheme @optical_spect.](Figures/Spectrometer.svg){#Fig-Spec_scheme}
+![Optical spectrometer scheme @optical_spect.](Figures/Spectrometer.png){#fig-Spec_scheme}
 
-As illustrated in @Fig-Spec_scheme, a spectroscope generally uses a movable slit, some mirrors, and a diffraction grating. Through the slit it is possible to regulate the amount of light which is getting inside the device, which is then reflected by a first mirror on the diffraction grating. At this point the second mirror is adjusted such that only the radiation which the desired wavelength reaches the device.
+As illustrated in @fig-Spec_scheme, a spectroscope generally uses a movable slit, some mirrors, and a diffraction grating. Through the slit it is possible to regulate the amount of light which is getting inside the device, which is then reflected by a first mirror on the diffraction grating. At this point the second mirror is adjusted such that only the radiation which the desired wavelength reaches the device.
 

@@ -69,35 +69,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -218,6 +189,12 @@ window.Quarto = {
  <span class="menu-text">November 2025</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2025-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">December 2025</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -299,6 +276,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/NBI_simulator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NBI Simulation: Mathematical Model &amp; Code Implementation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../theory/Plasma_physics/Optical_spectrometer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optical Spectrometer</span></a>
   </div>
@@ -363,6 +346,29 @@ window.Quarto = {
 </li>
       </ul>
   </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Useful Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Useful_guides/Controlling_CMOS_cameras.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to control CMOS cameras</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Useful_guides/Controlling_MSS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to control MSS</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
       </ul>
   </li>
     </ul>
@@ -399,9 +405,6 @@ window.Quarto = {
 <section id="the-ideal-mhd-model" class="level2">
 <h2 class="anchored" data-anchor-id="the-ideal-mhd-model">The ideal MHD model</h2>
 <p>In the ideal MHD model the plasma is considered to have <strong>zero resistivty</strong>, allowing the magnetic field lines to freeze in the plasma. The set of equation used is the following:</p>
-<p><span class="math display">\[
-\frac
-\]</span></p>
 
 
 </section>
