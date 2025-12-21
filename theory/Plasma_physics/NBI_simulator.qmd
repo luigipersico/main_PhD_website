@@ -1,0 +1,104 @@
+
+---
+title: "NBI Simulation: Mathematical Model & Code Implementation"
+author: "NBI Simulator Documentation"
+format:
+  html:
+    toc: true
+    number-sections: true
+    code-fold: true
+---
+
+# Introduction
+
+This document details the physical model and computational implementation of the Neutral Beam Injector (NBI) simulator for the TCV tokamak. The simulator calculates the 3D neutral density distribution of the beam, accounting for geometric focusing, Gaussian divergence, and plasma attenuation.
+
+[cite_start]The propagation model is based on the theoretical framework described by Akhmetov et al., adapted for efficient numerical computation using MATLAB.
+
+# Physical Model
+
+## 1. Beam Geometry and Focusing
+
+The NBI system is modeled as a finite **circular ion emitter** of radius $a$ (or `source_radius`). The emitter is curved to focus the beam at a specific focal length $R$ (or `s_focal`).
+
+* **Source:** A flat or curved disk of radius $a$ at $z=0$ (or $s=0$).
+* [cite_start]**Focus:** The geometric focal point located at distance $R$[cite: 48].
+* [cite_start]**Divergence:** Each point on the emitter produces an "elementary beam" (beamlet) with a Gaussian angular divergence $\theta_0$ (or `alpha_u`, `alpha_v`)[cite: 51].
+
+
+### The Elementary Beam
+Consider a point on the emitter surface with coordinates $(\rho, \varphi)$. The axis of the elementary beam emitted from this point is directed toward the focal point. [cite_start]The current density contribution $dj$ at an observation point $(r, z)$ depends on the angle $\theta$ between the observation ray and the elementary beam axis[cite: 40].
+
+The intensity follows a Gaussian distribution:
+$$dj \propto \exp\left( - \frac{\theta^2}{\theta_0^2} \right)$$
+
+[cite_start]For small angles ($\theta \ll 1$), the angle $\theta$ can be approximated as[cite: 79]:
+$$\theta^2 \approx \frac{r^2}{z^2} + \rho^2 \left( \frac{1}{z} - \frac{1}{R} \right)^2 - \frac{2\rho r}{z} \left( \frac{1}{z} - \frac{1}{R} \right) \cos\varphi$$
+
+## 2. Total Current Density
+
+[cite_start]The total current density at any point in the beam is found by integrating the elementary beamlets over the surface of the emitter[cite: 86].
+
+$$j(r, z) = \int_0^a \rho d\rho \int_0^{2\pi} d\varphi \, C(z) \exp\left( - \frac{\theta^2(r,z,\rho,\varphi)}{\theta_0^2} \right)$$
+
+where $C(z)$ is a normalization factor ensuring conservation of current.
+
+[cite_start]While Akhmetov et al. derive an analytical solution using Bessel functions for the specific case of a circular emitter[cite: 90], our code implements a **numerical integration** over the source radius. This provides greater flexibility for handling non-circular sources or complex divergence profiles in the future.
+
+## 3. Beam Attenuation
+
+As the neutral beam penetrates the plasma, it is attenuated by ionization and charge-exchange collisions. The local attenuation coefficient $\alpha$ is defined as:
+
+$$\alpha(s) = n_e(s) \cdot \sigma_{eff}(E, n_e, T_e)$$
+
+* $n_e(s)$: Electron density profile along the beam path.
+* $\sigma_{eff}$: Effective stopping cross-section (interpolated from ADAS data).
+
+The beam intensity at distance $s$ is reduced by the optical depth $\tau$:
+
+$$I(s) = I_0(s) \cdot \exp\left( - \int_0^s \alpha(s') ds' \right)$$
+
+The simulator also implements a "hard stop" condition for the inner wall. [cite_start]If the beam crosses the major radius threshold $R < (R_0 - a)$, the attenuation $\alpha$ is set to infinity (simulating wall absorption)[cite: 36, 171].
+
+---
+
+# Code Implementation
+
+The MATLAB implementation (`NBI_simulator.m`) is optimized for speed using vectorization and efficient interpolation. It avoids nested loops for pixel-by-pixel calculations.
+
+## 1. Coordinate Systems
+
+The code utilizes three distinct coordinate systems to manage the 3D geometry efficiently:
+
+1.  **Global Cartesian $(X, Y, Z)$:** The standard tokamak laboratory frame. Used for the final voxel grid and plotting.
+2.  **Beam Coordinates $(s^*, u, v)$:** A local orthonormal basis attached to the beam.
+    * $s^*$: Coordinate along the beam centerline.
+    * $u, v$: Transverse coordinates perpendicular to the beam.
+3.  **Integration Grid $(s_{grid}, t_{grid})$:** A 2D planar grid aligned with the beam axis used to pre-calculate attenuation.
+
+## 2. Key Algorithms
+
+### Optimization 1: Vectorized Attenuation (`cumtrapz`)
+Instead of solving the attenuation integral $\tau = \int \alpha ds$ individually for every voxel (which is computationally expensive), the code:
+1.  Defines a 2D slice plane along the beam centerline.
+2.  Calculates the plasma profiles ($n_e, T_e$) and cross-sections ($\sigma$) on this entire 2D plane at once.
+3.  Uses `cumtrapz` (cumulative trapezoidal integration) to integrate $\tau$ along the $s$-direction in a single operation.
+4.  Maps this 2D $\tau$ map back to the 3D grid using `griddedInterpolant`.
+
+### Optimization 2: Numerical Source Integration
+The function `beam_propagation` computes the beam intensity $j(r,z)$.
+
+* **Inputs:** Local coordinates $U, V$, distance $s$, and source radius $r_s$.
+* **Method:** It discretizes the source radius $x_0$ into $N=40$ steps.
+* **Vectorization:** It pre-calculates geometric factors (like $1/z$, $1/R$) outside the loop. Inside the loop, it accumulates the contribution of Gaussian beamlets emitted from concentric rings on the source.
+
+This effectively solves Eq. (4) from the reference paper [cite: 86] numerically:
+
+```matlab
+% Pseudocode representation of the integration loop in beam_propagation
+for ii = 1:N_steps
+    x0 = source_ring_radius(ii);
+    % Gaussian contribution from this ring (Vectorized over all pixels)
+    contribution = exp(-x0^2 * C1 + x0 * C2) .* (erf(A) - erf(B));
+    Intensity = Intensity + contribution;
+end

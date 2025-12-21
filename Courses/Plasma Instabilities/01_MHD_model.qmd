@@ -1,0 +1,12 @@
+---
+title: 'The MHD model'
+---
+
+The **magnetohydrodynamic (MHD) model** is used to describe plasma with a set of fluid equations coupled with Maxwell equations. The MHD models relies on the main assumption of **collisional plasma**, even though it is sometimes applied to dynamics of almost collisionless tokamak plasmas. The MHD model is used to describe **long-wavelength** and **low-frequency** dynamics in a macroscopic single fluid plasma, and this is usually the case for the perpendicular dynamics of macroscopic instabilities, which is quite slow compared to the dynamics along the parallel direction.
+
+## The ideal MHD model 
+In the ideal MHD model the plasma is considered to have **zero resistivty**, allowing the magnetic field lines to freeze in the plasma. The set of equation used is the following:
+
+$$
+\frac
+$$

@@ -180,8 +180,14 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Courses/Plasma Instabilities/Lecture_notes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture Notes</span></a>
+  <a href="../../Courses/Plasma Instabilities/01_MHD_model.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The MHD model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/02_Grad_Shafranov.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Grad Shafranov equation</span></a>
   </div>
 </li>
       </ul>
@@ -218,6 +224,18 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../reports/2025-09.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">September 2025</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2025-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">October 2025</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2025-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">November 2025</span></a>
   </div>
 </li>
       </ul>
@@ -289,12 +307,6 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/Grad_Shafranov.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Grad Shafranov equation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Motional-Stark Effect (MSE)</span></a>
   </div>
@@ -323,17 +335,40 @@ window.Quarto = {
  <span class="menu-text">Safety Factor q</span></a>
   </div>
 </li>
-      </ul>
-  </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
- <span class="menu-text">Quantum Physics</span></a>
+ <span class="menu-text">Diagnostics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/Diagnostics/PD.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Photodiodes (PD)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/Diagnostics/thomson.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Thomson scattering system</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+ <span class="menu-text">Quantum Physics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link">
@@ -387,7 +422,7 @@ window.Quarto = {
 <p><span class="math display">\[
 \nabla \times \mathbf{B} = \mu_0 \mathbf{J}.
 \]</span></p>
-<p>In TCV, the poloidal magnetic field is determined by the LIUQE (from “EQUIL” spelt backwards) code, which is an equilibrium code based on the resolution of the <a href="../../theory/Plasma_physics/Grad_Shafranov.html">Grad-Shafranov equation</a>, and on magnetic probes measurements outside of the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is not negligible anymore, and the magnetic field is locally influenced. This explains the need for the Motional-Stark Effect diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.</p>
+<p>In TCV, the poloidal magnetic field is determined by the LIUQE (from “EQUIL” spelt backwards) code, which is an equilibrium code based on the resolution of the <a href="Grad_Shafranov.qmd">Grad-Shafranov equation</a>, and on magnetic probes measurements outside of the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is not negligible anymore, and the magnetic field is locally influenced. This explains the need for the Motional-Stark Effect diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.</p>
 </section>
 <section id="a-bit-of-history" class="level2">
 <h2 class="anchored" data-anchor-id="a-bit-of-history">A bit of history</h2>

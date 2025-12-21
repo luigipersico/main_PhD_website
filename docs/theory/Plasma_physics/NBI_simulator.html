@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="NBI Simulator Documentation">
 
-<title>September 2025 – Luigi Persico - Ph.D.</title>
+<title>NBI Simulation: Mathematical Model &amp; Code Implementation – Luigi Persico - Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +24,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-169705d3eabda05963f3986ba613488e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-169705d3eabda05963f3986ba613488e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reports/2025-09.html">Reports</a></li><li class="breadcrumb-item"><a href="../reports/2025-09.html">September 2025</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/NBI_simulator.html">NBI Simulation: Mathematical Model &amp; Code Implementation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -95,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../index.html" class="sidebar-logo-link">
+      <a href="../../index.html" class="sidebar-logo-link">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -107,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../project-roadmap.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project-roadmap.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ph.D.&nbsp;roadmap</span></a>
   </div>
 </li>
@@ -131,13 +161,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Courses/Plasma Instabilities/01_MHD_model.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/01_MHD_model.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The MHD model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Courses/Plasma Instabilities/02_Grad_Shafranov.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/02_Grad_Shafranov.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grad Shafranov equation</span></a>
   </div>
 </li>
@@ -156,7 +186,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../papers/Paper1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../papers/Paper1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Paper1</span></a>
   </div>
 </li>
@@ -173,20 +203,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reports/2025-09.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../reports/2025-09.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">September 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reports/2025-10.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2025-10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">October 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../reports/2025-11.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2025-11.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">November 2025</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2025-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">December 2025</span></a>
   </div>
 </li>
       </ul>
@@ -211,31 +247,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Mathematic_tools/Bra-ket_notation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Mathematic_tools/Bra-ket_notation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bra-ket notation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Mathematic_tools/covariant_contravariant.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Mathematic_tools/covariant_contravariant.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Covariant and Contravariant</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Mathematic_tools/Hermitian_adjoint.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Mathematic_tools/Hermitian_adjoint.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hermitian adjoint</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Mathematic_tools/Hilbert_Space.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Mathematic_tools/Hilbert_Space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hilbert Space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Mathematic_tools/Pauli_matrices.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Mathematic_tools/Pauli_matrices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pauli matrices</span></a>
   </div>
 </li>
@@ -243,46 +279,52 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Plasma Physics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Plasma_physics/BES.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/BES.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beam Emission Spectroscopy (BES)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motional-Stark Effect (MSE)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Plasma_physics/NBI.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/NBI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Neutral Beam Injector (NBI)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Plasma_physics/Optical_spectrometer.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/NBI_simulator.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">NBI Simulation: Mathematical Model &amp; Code Implementation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/Optical_spectrometer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optical Spectrometer</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Plasma_physics/Optics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Optics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Plasma_physics/Safety_factor.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Safety_factor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Safety Factor q</span></a>
   </div>
 </li>
@@ -297,13 +339,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Plasma_physics/Diagnostics/PD.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Diagnostics/PD.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Photodiodes (PD)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Plasma_physics/Diagnostics/thomson.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Diagnostics/thomson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Thomson scattering system</span></a>
   </div>
 </li>
@@ -322,14 +364,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quatum Entanglement</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../theory/Quantum_physics/Schrödinger_eq.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Quantum_physics/Schrödinger_eq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schrödinger Equation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Useful Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Useful_guides/Controlling_CMOS_cameras.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to control CMOS cameras</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Useful_guides/Controlling_MSS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to control MSS</span></a>
   </div>
 </li>
       </ul>
@@ -342,20 +407,50 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="2025-09.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#physical-model" id="toc-physical-model" class="nav-link" data-scroll-target="#physical-model"><span class="header-section-number">2</span> Physical Model</a>
+  <ul class="collapse">
+  <li><a href="#beam-geometry-and-focusing" id="toc-beam-geometry-and-focusing" class="nav-link" data-scroll-target="#beam-geometry-and-focusing"><span class="header-section-number">2.1</span> 1. Beam Geometry and Focusing</a>
+  <ul class="collapse">
+  <li><a href="#the-elementary-beam" id="toc-the-elementary-beam" class="nav-link" data-scroll-target="#the-elementary-beam"><span class="header-section-number">2.1.1</span> The Elementary Beam</a></li>
+  </ul></li>
+  <li><a href="#total-current-density" id="toc-total-current-density" class="nav-link" data-scroll-target="#total-current-density"><span class="header-section-number">2.2</span> 2. Total Current Density</a></li>
+  <li><a href="#beam-attenuation" id="toc-beam-attenuation" class="nav-link" data-scroll-target="#beam-attenuation"><span class="header-section-number">2.3</span> 3. Beam Attenuation</a></li>
+  </ul></li>
+  <li><a href="#code-implementation" id="toc-code-implementation" class="nav-link" data-scroll-target="#code-implementation"><span class="header-section-number">3</span> Code Implementation</a>
+  <ul class="collapse">
+  <li><a href="#coordinate-systems" id="toc-coordinate-systems" class="nav-link" data-scroll-target="#coordinate-systems"><span class="header-section-number">3.1</span> 1. Coordinate Systems</a></li>
+  <li><a href="#key-algorithms" id="toc-key-algorithms" class="nav-link" data-scroll-target="#key-algorithms"><span class="header-section-number">3.2</span> 2. Key Algorithms</a>
+  <ul class="collapse">
+  <li><a href="#optimization-1-vectorized-attenuation-cumtrapz" id="toc-optimization-1-vectorized-attenuation-cumtrapz" class="nav-link" data-scroll-target="#optimization-1-vectorized-attenuation-cumtrapz"><span class="header-section-number">3.2.1</span> Optimization 1: Vectorized Attenuation (<code>cumtrapz</code>)</a></li>
+  <li><a href="#optimization-2-numerical-source-integration" id="toc-optimization-2-numerical-source-integration" class="nav-link" data-scroll-target="#optimization-2-numerical-source-integration"><span class="header-section-number">3.2.2</span> Optimization 2: Numerical Source Integration</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../reports/2025-09.html">Reports</a></li><li class="breadcrumb-item"><a href="../reports/2025-09.html">September 2025</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/NBI_simulator.html">NBI Simulation: Mathematical Model &amp; Code Implementation</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">September 2025</h1>
+<h1 class="title">NBI Simulation: Mathematical Model &amp; Code Implementation</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>NBI Simulator Documentation </p>
+          </div>
+  </div>
     
   
     
@@ -366,15 +461,86 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
+<p>This document details the physical model and computational implementation of the Neutral Beam Injector (NBI) simulator for the TCV tokamak. The simulator calculates the 3D neutral density distribution of the beam, accounting for geometric focusing, Gaussian divergence, and plasma attenuation.</p>
+<p>[cite_start]The propagation model is based on the theoretical framework described by Akhmetov et al., adapted for efficient numerical computation using MATLAB.</p>
+</section>
+<section id="physical-model" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Physical Model</h1>
+<section id="beam-geometry-and-focusing" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="beam-geometry-and-focusing"><span class="header-section-number">2.1</span> 1. Beam Geometry and Focusing</h2>
+<p>The NBI system is modeled as a finite <strong>circular ion emitter</strong> of radius <span class="math inline">\(a\)</span> (or <code>source_radius</code>). The emitter is curved to focus the beam at a specific focal length <span class="math inline">\(R\)</span> (or <code>s_focal</code>).</p>
 <ul>
-<li>Getting started with the Ph.D.</li>
-<li>Reading papers on BES and MES.</li>
-<li>Writing a frist script for the syntetic BES, in order to study the possibility of installing it on TCV.</li>
-<li>Plasma instabilities and Quantum II courses.</li>
-<li>Writing about MES on the website.</li>
+<li><strong>Source:</strong> A flat or curved disk of radius <span class="math inline">\(a\)</span> at <span class="math inline">\(z=0\)</span> (or <span class="math inline">\(s=0\)</span>).</li>
+<li>[cite_start]<strong>Focus:</strong> The geometric focal point located at distance <span class="math inline">\(R\)</span>[cite: 48].</li>
+<li>[cite_start]<strong>Divergence:</strong> Each point on the emitter produces an “elementary beam” (beamlet) with a Gaussian angular divergence <span class="math inline">\(\theta_0\)</span> (or <code>alpha_u</code>, <code>alpha_v</code>)[cite: 51].</li>
 </ul>
+<section id="the-elementary-beam" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="the-elementary-beam"><span class="header-section-number">2.1.1</span> The Elementary Beam</h3>
+<p>Consider a point on the emitter surface with coordinates <span class="math inline">\((\rho, \varphi)\)</span>. The axis of the elementary beam emitted from this point is directed toward the focal point. [cite_start]The current density contribution <span class="math inline">\(dj\)</span> at an observation point <span class="math inline">\((r, z)\)</span> depends on the angle <span class="math inline">\(\theta\)</span> between the observation ray and the elementary beam axis[cite: 40].</p>
+<p>The intensity follows a Gaussian distribution: <span class="math display">\[dj \propto \exp\left( - \frac{\theta^2}{\theta_0^2} \right)\]</span></p>
+<p>[cite_start]For small angles (<span class="math inline">\(\theta \ll 1\)</span>), the angle <span class="math inline">\(\theta\)</span> can be approximated as[cite: 79]: <span class="math display">\[\theta^2 \approx \frac{r^2}{z^2} + \rho^2 \left( \frac{1}{z} - \frac{1}{R} \right)^2 - \frac{2\rho r}{z} \left( \frac{1}{z} - \frac{1}{R} \right) \cos\varphi\]</span></p>
+</section>
+</section>
+<section id="total-current-density" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="total-current-density"><span class="header-section-number">2.2</span> 2. Total Current Density</h2>
+<p>[cite_start]The total current density at any point in the beam is found by integrating the elementary beamlets over the surface of the emitter[cite: 86].</p>
+<p><span class="math display">\[j(r, z) = \int_0^a \rho d\rho \int_0^{2\pi} d\varphi \, C(z) \exp\left( - \frac{\theta^2(r,z,\rho,\varphi)}{\theta_0^2} \right)\]</span></p>
+<p>where <span class="math inline">\(C(z)\)</span> is a normalization factor ensuring conservation of current.</p>
+<p>[cite_start]While Akhmetov et al.&nbsp;derive an analytical solution using Bessel functions for the specific case of a circular emitter[cite: 90], our code implements a <strong>numerical integration</strong> over the source radius. This provides greater flexibility for handling non-circular sources or complex divergence profiles in the future.</p>
+</section>
+<section id="beam-attenuation" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="beam-attenuation"><span class="header-section-number">2.3</span> 3. Beam Attenuation</h2>
+<p>As the neutral beam penetrates the plasma, it is attenuated by ionization and charge-exchange collisions. The local attenuation coefficient <span class="math inline">\(\alpha\)</span> is defined as:</p>
+<p><span class="math display">\[\alpha(s) = n_e(s) \cdot \sigma_{eff}(E, n_e, T_e)\]</span></p>
+<ul>
+<li><span class="math inline">\(n_e(s)\)</span>: Electron density profile along the beam path.</li>
+<li><span class="math inline">\(\sigma_{eff}\)</span>: Effective stopping cross-section (interpolated from ADAS data).</li>
+</ul>
+<p>The beam intensity at distance <span class="math inline">\(s\)</span> is reduced by the optical depth <span class="math inline">\(\tau\)</span>:</p>
+<p><span class="math display">\[I(s) = I_0(s) \cdot \exp\left( - \int_0^s \alpha(s') ds' \right)\]</span></p>
+<p>The simulator also implements a “hard stop” condition for the inner wall. [cite_start]If the beam crosses the major radius threshold <span class="math inline">\(R &lt; (R_0 - a)\)</span>, the attenuation <span class="math inline">\(\alpha\)</span> is set to infinity (simulating wall absorption)[cite: 36, 171].</p>
+<hr>
+</section>
+</section>
+<section id="code-implementation" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Code Implementation</h1>
+<p>The MATLAB implementation (<code>NBI_simulator.m</code>) is optimized for speed using vectorization and efficient interpolation. It avoids nested loops for pixel-by-pixel calculations.</p>
+<section id="coordinate-systems" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="coordinate-systems"><span class="header-section-number">3.1</span> 1. Coordinate Systems</h2>
+<p>The code utilizes three distinct coordinate systems to manage the 3D geometry efficiently:</p>
+<ol type="1">
+<li><strong>Global Cartesian <span class="math inline">\((X, Y, Z)\)</span>:</strong> The standard tokamak laboratory frame. Used for the final voxel grid and plotting.</li>
+<li><strong>Beam Coordinates <span class="math inline">\((s^*, u, v)\)</span>:</strong> A local orthonormal basis attached to the beam.
+<ul>
+<li><span class="math inline">\(s^*\)</span>: Coordinate along the beam centerline.</li>
+<li><span class="math inline">\(u, v\)</span>: Transverse coordinates perpendicular to the beam.</li>
+</ul></li>
+<li><strong>Integration Grid <span class="math inline">\((s_{grid}, t_{grid})\)</span>:</strong> A 2D planar grid aligned with the beam axis used to pre-calculate attenuation.</li>
+</ol>
+</section>
+<section id="key-algorithms" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="key-algorithms"><span class="header-section-number">3.2</span> 2. Key Algorithms</h2>
+<section id="optimization-1-vectorized-attenuation-cumtrapz" class="level3" data-number="3.2.1">
+<h3 data-number="3.2.1" class="anchored" data-anchor-id="optimization-1-vectorized-attenuation-cumtrapz"><span class="header-section-number">3.2.1</span> Optimization 1: Vectorized Attenuation (<code>cumtrapz</code>)</h3>
+<p>Instead of solving the attenuation integral <span class="math inline">\(\tau = \int \alpha ds\)</span> individually for every voxel (which is computationally expensive), the code: 1. Defines a 2D slice plane along the beam centerline. 2. Calculates the plasma profiles (<span class="math inline">\(n_e, T_e\)</span>) and cross-sections (<span class="math inline">\(\sigma\)</span>) on this entire 2D plane at once. 3. Uses <code>cumtrapz</code> (cumulative trapezoidal integration) to integrate <span class="math inline">\(\tau\)</span> along the <span class="math inline">\(s\)</span>-direction in a single operation. 4. Maps this 2D <span class="math inline">\(\tau\)</span> map back to the 3D grid using <code>griddedInterpolant</code>.</p>
+</section>
+<section id="optimization-2-numerical-source-integration" class="level3" data-number="3.2.2">
+<h3 data-number="3.2.2" class="anchored" data-anchor-id="optimization-2-numerical-source-integration"><span class="header-section-number">3.2.2</span> Optimization 2: Numerical Source Integration</h3>
+<p>The function <code>beam_propagation</code> computes the beam intensity <span class="math inline">\(j(r,z)\)</span>.</p>
+<ul>
+<li><strong>Inputs:</strong> Local coordinates <span class="math inline">\(U, V\)</span>, distance <span class="math inline">\(s\)</span>, and source radius <span class="math inline">\(r_s\)</span>.</li>
+<li><strong>Method:</strong> It discretizes the source radius <span class="math inline">\(x_0\)</span> into <span class="math inline">\(N=40\)</span> steps.</li>
+<li><strong>Vectorization:</strong> It pre-calculates geometric factors (like <span class="math inline">\(1/z\)</span>, <span class="math inline">\(1/R\)</span>) outside the loop. Inside the loop, it accumulates the contribution of Gaussian beamlets emitted from concentric rings on the source.</li>
+</ul>
+<p>This effectively solves Eq. (4) from the reference paper [cite: 86] numerically:</p>
+<p>```matlab % Pseudocode representation of the integration loop in beam_propagation for ii = 1:N_steps x0 = source_ring_radius(ii); % Gaussian contribution from this ring (Vectorized over all pixels) contribution = exp(-x0^2 * C1 + x0 * C2) .* (erf(A) - erf(B)); Intensity = Intensity + contribution; end</p>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

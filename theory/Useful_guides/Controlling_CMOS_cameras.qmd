@@ -1,0 +1,32 @@
+---
+title: 'How to control CMOS cameras'
+---
+
+Here the steps needed to connect to MSS system and to control it are described:
+
+1. Connect the camera to the computer in the spectroscopy room.
+
+2. Connect to the computer with
+   ```
+   ssh -X kaya@kayactrl02
+    ```
+    Password: kayatest
+3. Run the command 
+    ```
+    spyder 
+    ```
+to open the python compiler, or
+    ```
+    spyder --new-instance 
+    ```
+if it is already opened somewhere else.
+
+4. To connect the cameras run
+   ```
+   /home/kaya/PythonPrograms/Connect_FGandCamera.py
+   ```
+    
+5. To change camera parameters and acquire run
+   ```
+   /home/kaya/PythonPrograms/CameraAcquisition.py
+   ```

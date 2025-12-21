@@ -1,0 +1,6 @@
+---
+title: "Thomson scattering system"
+---
+
+The Thomson scattering system measures the spatial profiles of temperature and density on TCV. It is base on the incoherent scattering from electrons
+

@@ -5,6 +5,92 @@ title: "Neutral Beam Injector (NBI)"
 ## Introduction
 Neutral Beam Injection (NBI) is a key technique used in tokamak fusion devices to heat the plasma and drive current. In NBI systems, neutral atoms—typically hydrogen or deuterium—are accelerated to high energies and injected into the plasma. Because charged particles would be deflected by the magnetic fields in the tokamak, the ions are first neutralized before injection. Once inside the plasma, these fast neutrals transfer their energy to the plasma particles through collisions, increasing the plasma temperature and contributing to the overall performance of the fusion experiment. NBI is valued for its ability to deliver precise and controllable heating, making it an essential tool in plasma physics research and fusion reactor development.
 
+## NBI modelling 
+
+## Generalization to Astigmatic Beam Optics
+
+The standard analytical model for the beam current density (Eq. 5) relies on the Modified Bessel function of the first kind, $I_0$, which assumes perfect cylindrical symmetry. However, the neutral beam injector exhibits astigmatism, characterized by distinct divergence angles ($\theta_{0x}, \theta_{0y}$) and focal lengths ($R_x, R_y$) for the horizontal and vertical axes.
+
+To account for this asymmetry, we cannot perform the angular integration analytically. Instead, we revert to the Cartesian representation. While the physics of the beam is separable into $x$ and $y$ components, the geometric constraints of the grid require integrating over a circular aperture of radius $a$.
+
+The generalized current density $j_{\text{beam}}(x, y, z)$ is therefore expressed as a double integral where the integration limits are coupled to represent the circular source, but the kernel allows for independent focusing parameters:
+
+$$
+\begin{aligned}
+j_{\text{beam}}(x, y, z) &= B \underbrace{\exp \left[ -\left( \frac{x^2}{z^2 \theta_{0x}^2} + \frac{y^2}{z^2 \theta_{0y}^2} \right) \right]}_{\text{Observation Plane Profile}} \\
+&\quad \times \int_{-a}^{a} dx' \int_{-\sqrt{a^2 - x'^2}}^{+\sqrt{a^2 - x'^2}} dy' \\
+&\quad \times \underbrace{\exp \left[ - \frac{x'^2}{\theta_{0x}^2} \left( \frac{1}{z} - \frac{1}{R_x} \right)^2 + \frac{2 x x'}{z \theta_{0x}^2} \left( \frac{1}{z} - \frac{1}{R_x} \right) \right]}_{\text{Source-Target Interaction (x-axis)}} \\
+&\quad \times \underbrace{\exp \left[ - \frac{y'^2}{\theta_{0y}^2} \left( \frac{1}{z} - \frac{1}{R_y} \right)^2 + \frac{2 y y'}{z \theta_{0y}^2} \left( \frac{1}{z} - \frac{1}{R_y} \right) \right]}_{\text{Source-Target Interaction (y-axis)}}
+\end{aligned}
+$$
+
+In this formulation:
+
+1.  **Integration Domain:** The outer integral over $x'$ combined with the inner integral limits $\pm\sqrt{a^2 - x'^2}$ strictly defines the circular aperture of the grid.
+2.  **Beam Steering:** The cross-terms (e.g., $2xx'$)—which previously collapsed into the Bessel function—are now explicit, preserving the phase information required to model different focal lengths $R_x$ and $R_y$.
+
+## Numerical Implementation
+
+To evaluate the generalized current density integral efficiently in MATLAB, we utilize a semi-analytical approach. The double integral over the circular source shown above is computationally expensive if solved via 2D quadrature for every voxel. 
+
+However, the Gaussian nature of the beamlet profiles allows us to solve the inner integral analytically. The code function `beam_propagation` implements this by decomposing the integration into a numerical outer loop and an analytical inner step.
+
+### 1. Decomposition of the Integral
+The double integral over the circular aperture $x'^2 + y'^2 \le a^2$ can be separated. If we fix $x'$ (the loop variable `x0` in the code), the limits for $y'$ are $\pm \sqrt{a^2 - x'^2}$.
+
+The term dependent on $y'$ in the integrand is essentially a Gaussian. The integral of a Gaussian over finite limits is given by the Error Function ($\text{erf}$).
+
+$$\int_{-Y_{lim}}^{+Y_{lim}} e^{-c_1 y'^2 + c_2 y'} dy' \propto \left[ \text{erf}\left( \dots \right) \right]_{-Y_{lim}}^{+Y_{lim}}$$
+
+### 2. The `beam_propagation` Algorithm
+The code approximates the generalized current density formula using this optimization:
+
+1.  **Discretization:** The source radius $a$ (`source_radius`) is discretized into $N$ strips (steps) along the $x'$-axis (variable `x0`).
+2.  [cite_start]**Vectorization:** Geometric factors dependent on $z$ (beam coordinate $s$) and $R$ (focal length) are pre-calculated outside the loop[cite: 76, 79].
+3.  **Semi-Analytical Integration:** * The **outer loop** sums the contribution of each $x'$ strip.
+    * The **inner integration** over $y'$ is replaced by the difference of error functions: `erf(arg_A) - erf(arg_B)`. 
+    
+This reduces the complexity from $O(N^2)$ to $O(N)$, allowing the simulator to compute millions of voxels in seconds. [cite_start]This method is consistent with the approach of summing elementary beam contributions described in the reference model[cite: 42, 86].
+
+## Beam Attenuation Model
+
+While the geometric focusing determines the beam's shape, the plasma interaction determines its intensity decay. The simulator models this attenuation using the Beer-Lambert law along the beam path.
+
+### 1. Optical Depth Calculation
+The local attenuation coefficient $\alpha$ is defined as the product of the electron density and the effective stopping cross-section:
+
+$$\alpha(s) = n_e(s) \cdot \sigma_{\text{eff}}(E, n_e, T_e)$$
+
+The total attenuation (Optical Depth $\tau$) at a distance $s$ is the cumulative integral of $\alpha$ along the path:
+
+$$\tau(s) = \int_{0}^{s} \alpha(s') \, ds'$$
+
+### 2. Fast Integration Scheme
+In the `NBI_simulator` code, this physics is implemented using a vectorized "Fast Integration" scheme:
+
+* **Grid Generation:** A 2D planar grid (`S_grid`, `T_grid`) is generated along the beam axis.
+* **Vectorized Mapping:** Plasma profiles ($n_e, T_e$) are mapped onto this 2D sheet.
+* **`cumtrapz` Acceleration:** Instead of using an iterative solver (like `integral`), the code uses MATLAB's cumulative trapezoidal integration `cumtrapz`. This computes the attenuation for the entire beam cross-section simultaneously.
+
+### 3. Wall Interaction
+The model includes a geometric "hard stop" condition for the inner wall of the tokamak. 
+$$\text{If } R_{\text{major}} < (R_0 - a) \implies \alpha \to \infty$$
+This ensures that any portion of the beam striking the high-field side protection tiles is fully absorbed and does not artificially reappear on the other side of the vessel.
+
+## Particle Density Scaling
+
+The simulator resolves the beam into three energy components: Full ($E$), Half ($E/2$), and Third ($E/3$). A critical physical scaling used in the code is that **lower energy components often have higher particle densities**, even if their power fraction is lower.
+
+The particle density $n$ is derived from the power $P$ and particle velocity $v$:
+
+$$I_{\text{beam}} = \frac{P}{E} \quad \text{(Particle Flux)}$$
+$$n = \frac{I_{\text{beam}}}{v} = \frac{P}{E \cdot v}$$
+
+Since $v \propto \sqrt{E}$, the density scales as:
+
+$$n \propto \frac{P}{E^{3/2}}$$
+
+This $E^{-3/2}$ dependence means that the Half-Energy component travels significantly slower than the Full-Energy component, causing particles to "pile up" and resulting in a higher local density for the same power flux.
 
 ## Neutral Beam Injectors on TCV
 
@@ -42,3 +128,4 @@ Neutral Beam Injection (NBI) is a key technique used in tokamak fusion devices t
 $$
 \text{DCD}_{\text{NBI-2}} = (r_d, Z_d, \phi_d, \theta_d, tv_d) = (5.2123, -0.0025, 212,6947 \cdot \pi/180, 0, -8.4896 \cdot \pi/180)
 $$
+

@@ -4,7 +4,7 @@
     "href": "reports/2025-09.html",
     "title": "September 2025",
     "section": "",
-    "text": "Getting started with the Ph.D.\nStarting reading papers on BES and MES\nStudying factibility of installing BES on TCV\nPlasma instabilities and Quantum II courses",
+    "text": "Getting started with the Ph.D.\nReading papers on BES and MES.\nWriting a frist script for the syntetic BES, in order to study the possibility of installing it on TCV.\nPlasma instabilities and Quantum II courses.\nWriting about MES on the website.",
     "crumbs": [
       "Reports",
       "September 2025"
@@ -122,7 +122,7 @@
     "href": "theory/Plasma_physics/BES.html",
     "title": "Beam Emission Spectroscopy (BES)",
     "section": "",
-    "text": "Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.",
+    "text": "Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.\naquistition time with fibers 32 channels, 1MHz sampling rate\nthen using photomultipliers we can get a samling rates around 100kHz\nTwo tipe of cameras:\nEM CCD:\nADV: the readout is really uniform, every pixel is going through the same readout channel (one amplifer for all pixel). Good for astrophysics\nDIS: much more expensive,\nCMOS:\nADV: Cheaper, much faster, no smearing during readout, shorter exposure time (decoupling between exposition and acquisition)\nDIS: More noise, non-uniform background, it require more image processing in analysis.\nWith 10kHz we must use CMOS\nSince our fluctuations are in the order of 100kHz, speaking about time we might not be able to see time correlation. However space correlation can still be seen!\nHow to trigger camera: Two possibilitioes: either with same cable but through trigger in the computer, or with a different cabble. Going with the first option, insterting trigger in computer…",
     "crumbs": [
       "Theory",
       "Plasma Physics",
@@ -134,7 +134,7 @@
     "href": "theory/Plasma_physics/BES.html#introduction",
     "title": "Beam Emission Spectroscopy (BES)",
     "section": "",
-    "text": "Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.",
+    "text": "Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.\naquistition time with fibers 32 channels, 1MHz sampling rate\nthen using photomultipliers we can get a samling rates around 100kHz\nTwo tipe of cameras:\nEM CCD:\nADV: the readout is really uniform, every pixel is going through the same readout channel (one amplifer for all pixel). Good for astrophysics\nDIS: much more expensive,\nCMOS:\nADV: Cheaper, much faster, no smearing during readout, shorter exposure time (decoupling between exposition and acquisition)\nDIS: More noise, non-uniform background, it require more image processing in analysis.\nWith 10kHz we must use CMOS\nSince our fluctuations are in the order of 100kHz, speaking about time we might not be able to see time correlation. However space correlation can still be seen!\nHow to trigger camera: Two possibilitioes: either with same cable but through trigger in the computer, or with a different cabble. Going with the first option, insterting trigger in computer…",
     "crumbs": [
       "Theory",
       "Plasma Physics",
@@ -205,7 +205,7 @@
     "href": "theory/Plasma_physics/Safety_factor.html",
     "title": "Safety Factor q",
     "section": "",
-    "text": "The safety factor \\(q\\) expresses the number of toroidal turns a magnetic field line makes for each poloidal turn in a toroidal confinement device, such as a tokamak.\nIt corresponds to the flux-surface averaged local pitch:\n\\[\nq(\\psi) \\equiv \\langle q_l \\rangle_{\\theta} = \\left\\langle \\frac{r B_{\\varphi}}{R B_{\\theta}}  \\right\\rangle_{\\theta}\n\\]\nwhere \\(r\\) is the minor radius coordinate, \\(B_{\\varphi}\\) is the toroidal magnetic field component, \\(R\\) is the major radius, and \\(B_{\\theta}\\) is the poloidal magnetic field component. A higher safety factor generally indicates greater stability against certain plasma instabilities.\nWith some assumptions it is possible to estimate the safety factor behavior in a tokamak: \\[\nB_{\\varphi} \\approx \\frac{\\mu_0}{2\\pi R} I_{coils};\n\\] \\[\nB_{\\theta} \\approx \\frac{\\mu_0}{2\\pi r} I_p = \\frac{\\mu_0}{2} J_p r;\n\\]\n\\[\n\\rightarrow q(\\psi) = \\left\\langle\\frac{I_{coils}}{\\pi R^2J_p }\\right\\rangle_{\\theta} = \\frac{I_{coils}}{I_p}r^2\\left\\langle\\frac{1}{R^2}\\right\\rangle_{\\theta} .\n\\]\nThe interactive plot below allows you to explore how this first estimation of the safety factor \\(q\\) depends on key tokamak parameters. You can adjust:\n\n\\(\\epsilon\\): The inverse aspect ratio (\\(a/R_0\\)), where \\(a\\) is the minor radius and \\(R_0\\) is the major radius.\n\\(I_p\\): The plasma current (in Mega Amperes).\n\\(I_{coils}\\): The toroidal field coil current (in Mega Amperes).\n\nUse the sliders to see how changes in these parameters affect the safety factor profile.\n\n\n\n\n\n&lt;function __main__.safety_factor_plot(eps=0.2841, Ip=1, I_coils=1)&gt;",
+    "text": "The safety factor \\(q\\) expresses the number of toroidal turns a magnetic field line makes for each poloidal turn in a toroidal confinement device, such as a tokamak.\nIt corresponds to the flux-surface averaged local pitch:\n\\[\nq(\\psi) \\equiv \\langle q_l \\rangle_{\\theta} = \\left\\langle \\frac{r B_{\\varphi}}{R B_{\\theta}}  \\right\\rangle_{\\theta}\n\\]\nwhere \\(r\\) is the minor radius coordinate, \\(B_{\\varphi}\\) is the toroidal magnetic field component, \\(R\\) is the major radius, and \\(B_{\\theta}\\) is the poloidal magnetic field component. A higher safety factor generally indicates greater stability against certain plasma instabilities.\nWith some assumptions it is possible to estimate the safety factor behavior in a tokamak: \\[\nB_{\\varphi} \\approx \\frac{\\mu_0}{2\\pi R} I_{coils};\n\\] \\[\nB_{\\theta} \\approx \\frac{\\mu_0}{2\\pi r} I_p = \\frac{\\mu_0}{2} J_p r;\n\\]\n\\[\n\\rightarrow q(\\psi) = \\left\\langle\\frac{I_{coils}}{\\pi R^2J_p }\\right\\rangle_{\\theta} = \\frac{I_{coils}}{I_p}r^2\\left\\langle\\frac{1}{R^2}\\right\\rangle_{\\theta} .\n\\]\nThe interactive plot below allows you to explore how this first estimation of the safety factor \\(q\\) depends on key tokamak parameters. You can adjust:\nUse the sliders to see how changes in these parameters affect the safety factor profile.\n&lt;function __main__.safety_factor_plot(eps=0.2841, Ip=1, I_coils=1)&gt;",
     "crumbs": [
       "Theory",
       "Plasma Physics",
@@ -268,7 +268,7 @@
     "href": "project-roadmap.html#currently-to-do",
     "title": "Ph.D. roadmap",
     "section": "Currently to do",
-    "text": "Currently to do\n\nAdding BES, MSE to the SPC wiki.\nGetting used with the matlab code for MSE.\nParametric description of the neutral beam.\nHaving a look at plasma instabilities.",
+    "text": "Currently to do\n\nAdding BES, and more MSE to the SPC wiki.\nGetting used with the matlab code for MSE.\nStudying hardware of BES.\nHaving a look at plasma instabilities.\nTime correlations in the code.\nThinking about what we can see with BES.\nCommon mode rejection.\nDynamic beam power.",
     "crumbs": [
       "Ph.D. roadmap"
     ]
@@ -403,6 +403,269 @@
       "Theory",
       "Plasma Physics",
       "Optical Spectrometer"
+    ]
+  },
+  {
+    "objectID": "Courses/Plasma Instabilities/01_MHD_model.html",
+    "href": "Courses/Plasma Instabilities/01_MHD_model.html",
+    "title": "The MHD model",
+    "section": "",
+    "text": "The magnetohydrodynamic (MHD) model is used to describe plasma with a set of fluid equations coupled with Maxwell equations. The MHD models relies on the main assumption of collisional plasma, even though it is sometimes applied to dynamics of almost collisionless tokamak plasmas. The MHD model is used to describe long-wavelength and low-frequency dynamics in a macroscopic single fluid plasma, and this is usually the case for the perpendicular dynamics of macroscopic instabilities, which is quite slow compared to the dynamics along the parallel direction.",
+    "crumbs": [
+      "Courses",
+      "Plasma Instabilities",
+      "The MHD model"
+    ]
+  },
+  {
+    "objectID": "reports/2025-10.html",
+    "href": "reports/2025-10.html",
+    "title": "October 2025",
+    "section": "",
+    "text": "Organising Welcome Apero.\nReading papers on BES and MES.\nKeeping working on the script for the syntetic BES, in order to study the possibility of installing it on TCV.\nStopped following Quantum II.\nPlasma instabilities course.\nWrote a first part of MSE wiki.",
+    "crumbs": [
+      "Reports",
+      "October 2025"
+    ]
+  },
+  {
+    "objectID": "Courses/Plasma Instabilities/02_Grad_Shafranov.html",
+    "href": "Courses/Plasma Instabilities/02_Grad_Shafranov.html",
+    "title": "Grad Shafranov equation",
+    "section": "",
+    "text": "\\[\n\\Delta^{*}\\psi = -R^2 \\frac{dP(\\psi)}{d\\psi} - F(\\psi)\\frac{dF(\\psi)}{d\\psi}\n\\]\nwhere\n\\[\n\\Delta^{*}= R^2\\mathbb{\\nabla}\\cdot (\\frac{1}{R^2}\\mathbb{\\nabla}),\n\\]\n\\[\nF(\\psi)= RB_{\\varphi},\n\\]\nand \\(P\\) is the plasma pressure.",
+    "crumbs": [
+      "Courses",
+      "Plasma Instabilities",
+      "Grad Shafranov equation"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Diagnostics/thomson.html",
+    "href": "theory/Plasma_physics/Diagnostics/thomson.html",
+    "title": "Thomson scattering system",
+    "section": "",
+    "text": "The Thomson scattering system measures the spatial profiles of temperature and density on TCV. It is base on the incoherent scattering from electrons",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Diagnostics",
+      "Thomson scattering system"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Safety_factor.html#magnetic-shear",
+    "href": "theory/Plasma_physics/Safety_factor.html#magnetic-shear",
+    "title": "Safety Factor q",
+    "section": "Magnetic shear",
+    "text": "Magnetic shear",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Safety Factor q"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/Diagnostics/PD.html",
+    "href": "theory/Plasma_physics/Diagnostics/PD.html",
+    "title": "Photodiodes (PD)",
+    "section": "",
+    "text": "They capture radiation in the visible part of the spectra. Filters are installed in front of them to acquire different lines of the spectrum.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Diagnostics",
+      "Photodiodes (PD)"
+    ]
+  },
+  {
+    "objectID": "reports/2025-11.html",
+    "href": "reports/2025-11.html",
+    "title": "November 2025",
+    "section": "",
+    "text": "Reading papers on BES and MES.\nKeeping working on the script for the syntetic BES, in order to study the possibility of installing it on TCV.\nPlasma instabilities course (John is back).\nFinished a first study of synthetic BES, 06/11 starting hardware with Dmytry.\n07/11 First DDJ session with Jacob.\nStarting better modelling of NBI and connection to TCV shots.",
+    "crumbs": [
+      "Reports",
+      "November 2025"
+    ]
+  },
+  {
+    "objectID": "Courses/Plasma Instabilities/01_MHD_model.html#the-ideal-mhd-model",
+    "href": "Courses/Plasma Instabilities/01_MHD_model.html#the-ideal-mhd-model",
+    "title": "The MHD model",
+    "section": "The ideal MHD model",
+    "text": "The ideal MHD model\nIn the ideal MHD model the plasma is considered to have zero resistivty, allowing the magnetic field lines to freeze in the plasma. The set of equation used is the following:\n\\[\n\\frac\n\\]",
+    "crumbs": [
+      "Courses",
+      "Plasma Instabilities",
+      "The MHD model"
+    ]
+  },
+  {
+    "objectID": "theory/Useful_guides/Controlling_MSS.html",
+    "href": "theory/Useful_guides/Controlling_MSS.html",
+    "title": "How to control MSS",
+    "section": "",
+    "text": "Here the steps needed to connect to MSS system and to control it are described:\n\nConnect to lac913 server\nConnect to MSS system using SSH\nssh -X cxrs@tmpnuc\nPassword: 529.1nm\nOpen Matlab, go to /home/cxrs/MSS/Functions and run the control scripts\nSpecControl_MSS(13)\nwhere 13 is the number of the spectrometer to be controlled. All the necessary functions will automatically run.\nTo control the camera parameters run\ngeneralSettingsUpdate.m\ngo to the generated file Sys13 and change the parameters as needed. Save the file and run\nIf something as to be calibrated go to the folder /home/cxrs/MSS/Calibration and run the calibration scripts as needed.",
+    "crumbs": [
+      "Theory",
+      "Useful Guides",
+      "How to control MSS"
+    ]
+  },
+  {
+    "objectID": "theory/Useful_guides/Controlling_CMOS_cameras.html",
+    "href": "theory/Useful_guides/Controlling_CMOS_cameras.html",
+    "title": "How to control CMOS cameras",
+    "section": "",
+    "text": "Here the steps needed to connect to MSS system and to control it are described:\n\nConnect the camera to the computer in the spectroscopy room.\nConnect to the computer with\nssh -X kaya@kayactrl02\nPassword: kayatest\nRun the command spyder to open the python compiler, or spyder --new-instance if it is already opened somewhere else.\nTo connect the cameras run\n/home/kaya/PythonPrograms/Connect_FGandCamera.py\nTo change camera parameters and acquire run\n/home/kaya/PythonPrograms/CameraAcquisition.py",
+    "crumbs": [
+      "Theory",
+      "Useful Guides",
+      "How to control CMOS cameras"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI.html#nbi-modelling",
+    "href": "theory/Plasma_physics/NBI.html#nbi-modelling",
+    "title": "Neutral Beam Injector (NBI)",
+    "section": "NBI modelling",
+    "text": "NBI modelling",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector (NBI)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI.html#generalization-to-astigmatic-beam-optics",
+    "href": "theory/Plasma_physics/NBI.html#generalization-to-astigmatic-beam-optics",
+    "title": "Neutral Beam Injector (NBI)",
+    "section": "Generalization to Astigmatic Beam Optics",
+    "text": "Generalization to Astigmatic Beam Optics\nThe standard analytical model for the beam current density (Eq. 5) relies on the Modified Bessel function of the first kind, \\(I_0\\), which assumes perfect cylindrical symmetry. However, the neutral beam injector exhibits astigmatism, characterized by distinct divergence angles (\\(\\theta_{0x}, \\theta_{0y}\\)) and focal lengths (\\(R_x, R_y\\)) for the horizontal and vertical axes.\nTo account for this asymmetry, we cannot perform the angular integration analytically. Instead, we revert to the Cartesian representation. While the physics of the beam is separable into \\(x\\) and \\(y\\) components, the geometric constraints of the grid require integrating over a circular aperture of radius \\(a\\).\nThe generalized current density \\(j_{\\text{beam}}(x, y, z)\\) is therefore expressed as a double integral where the integration limits are coupled to represent the circular source, but the kernel allows for independent focusing parameters:\n\\[\n\\begin{aligned}\nj_{\\text{beam}}(x, y, z) &= B \\underbrace{\\exp \\left[ -\\left( \\frac{x^2}{z^2 \\theta_{0x}^2} + \\frac{y^2}{z^2 \\theta_{0y}^2} \\right) \\right]}_{\\text{Observation Plane Profile}} \\\\\n&\\quad \\times \\int_{-a}^{a} dx' \\int_{-\\sqrt{a^2 - x'^2}}^{+\\sqrt{a^2 - x'^2}} dy' \\\\\n&\\quad \\times \\underbrace{\\exp \\left[ - \\frac{x'^2}{\\theta_{0x}^2} \\left( \\frac{1}{z} - \\frac{1}{R_x} \\right)^2 + \\frac{2 x x'}{z \\theta_{0x}^2} \\left( \\frac{1}{z} - \\frac{1}{R_x} \\right) \\right]}_{\\text{Source-Target Interaction (x-axis)}} \\\\\n&\\quad \\times \\underbrace{\\exp \\left[ - \\frac{y'^2}{\\theta_{0y}^2} \\left( \\frac{1}{z} - \\frac{1}{R_y} \\right)^2 + \\frac{2 y y'}{z \\theta_{0y}^2} \\left( \\frac{1}{z} - \\frac{1}{R_y} \\right) \\right]}_{\\text{Source-Target Interaction (y-axis)}}\n\\end{aligned}\n\\]\nIn this formulation:\n\nIntegration Domain: The outer integral over \\(x'\\) combined with the inner integral limits \\(\\pm\\sqrt{a^2 - x'^2}\\) strictly defines the circular aperture of the grid.\nBeam Steering: The cross-terms (e.g., \\(2xx'\\))—which previously collapsed into the Bessel function—are now explicit, preserving the phase information required to model different focal lengths \\(R_x\\) and \\(R_y\\).",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector (NBI)"
+    ]
+  },
+  {
+    "objectID": "reports/2025-12.html",
+    "href": "reports/2025-12.html",
+    "title": "December 2025",
+    "section": "",
+    "text": "Modelling of NBI,connection with TCV shots successful.\nLearning more on MSE.\nIn the process of installing BES camera to test behaviour in magnetic field.\nQuickly presented BES ideas at fluctuations meeting on 08/12.\nPlasma Instabilities course.",
+    "crumbs": [
+      "Reports",
+      "December 2025"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI_simulator.html",
+    "href": "theory/Plasma_physics/NBI_simulator.html",
+    "title": "NBI Simulation: Mathematical Model & Code Implementation",
+    "section": "",
+    "text": "This document details the physical model and computational implementation of the Neutral Beam Injector (NBI) simulator for the TCV tokamak. The simulator calculates the 3D neutral density distribution of the beam, accounting for geometric focusing, Gaussian divergence, and plasma attenuation.\n[cite_start]The propagation model is based on the theoretical framework described by Akhmetov et al., adapted for efficient numerical computation using MATLAB.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "NBI Simulation: Mathematical Model & Code Implementation"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI_simulator.html#beam-geometry-and-focusing",
+    "href": "theory/Plasma_physics/NBI_simulator.html#beam-geometry-and-focusing",
+    "title": "NBI Simulation: Mathematical Model & Code Implementation",
+    "section": "2.1 1. Beam Geometry and Focusing",
+    "text": "2.1 1. Beam Geometry and Focusing\nThe NBI system is modeled as a finite circular ion emitter of radius \\(a\\) (or source_radius). The emitter is curved to focus the beam at a specific focal length \\(R\\) (or s_focal).\n\nSource: A flat or curved disk of radius \\(a\\) at \\(z=0\\) (or \\(s=0\\)).\n[cite_start]Focus: The geometric focal point located at distance \\(R\\)[cite: 48].\n[cite_start]Divergence: Each point on the emitter produces an “elementary beam” (beamlet) with a Gaussian angular divergence \\(\\theta_0\\) (or alpha_u, alpha_v)[cite: 51].\n\n\n2.1.1 The Elementary Beam\nConsider a point on the emitter surface with coordinates \\((\\rho, \\varphi)\\). The axis of the elementary beam emitted from this point is directed toward the focal point. [cite_start]The current density contribution \\(dj\\) at an observation point \\((r, z)\\) depends on the angle \\(\\theta\\) between the observation ray and the elementary beam axis[cite: 40].\nThe intensity follows a Gaussian distribution: \\[dj \\propto \\exp\\left( - \\frac{\\theta^2}{\\theta_0^2} \\right)\\]\n[cite_start]For small angles (\\(\\theta \\ll 1\\)), the angle \\(\\theta\\) can be approximated as[cite: 79]: \\[\\theta^2 \\approx \\frac{r^2}{z^2} + \\rho^2 \\left( \\frac{1}{z} - \\frac{1}{R} \\right)^2 - \\frac{2\\rho r}{z} \\left( \\frac{1}{z} - \\frac{1}{R} \\right) \\cos\\varphi\\]",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "NBI Simulation: Mathematical Model & Code Implementation"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI_simulator.html#total-current-density",
+    "href": "theory/Plasma_physics/NBI_simulator.html#total-current-density",
+    "title": "NBI Simulation: Mathematical Model & Code Implementation",
+    "section": "2.2 2. Total Current Density",
+    "text": "2.2 2. Total Current Density\n[cite_start]The total current density at any point in the beam is found by integrating the elementary beamlets over the surface of the emitter[cite: 86].\n\\[j(r, z) = \\int_0^a \\rho d\\rho \\int_0^{2\\pi} d\\varphi \\, C(z) \\exp\\left( - \\frac{\\theta^2(r,z,\\rho,\\varphi)}{\\theta_0^2} \\right)\\]\nwhere \\(C(z)\\) is a normalization factor ensuring conservation of current.\n[cite_start]While Akhmetov et al. derive an analytical solution using Bessel functions for the specific case of a circular emitter[cite: 90], our code implements a numerical integration over the source radius. This provides greater flexibility for handling non-circular sources or complex divergence profiles in the future.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "NBI Simulation: Mathematical Model & Code Implementation"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI_simulator.html#beam-attenuation",
+    "href": "theory/Plasma_physics/NBI_simulator.html#beam-attenuation",
+    "title": "NBI Simulation: Mathematical Model & Code Implementation",
+    "section": "2.3 3. Beam Attenuation",
+    "text": "2.3 3. Beam Attenuation\nAs the neutral beam penetrates the plasma, it is attenuated by ionization and charge-exchange collisions. The local attenuation coefficient \\(\\alpha\\) is defined as:\n\\[\\alpha(s) = n_e(s) \\cdot \\sigma_{eff}(E, n_e, T_e)\\]\n\n\\(n_e(s)\\): Electron density profile along the beam path.\n\\(\\sigma_{eff}\\): Effective stopping cross-section (interpolated from ADAS data).\n\nThe beam intensity at distance \\(s\\) is reduced by the optical depth \\(\\tau\\):\n\\[I(s) = I_0(s) \\cdot \\exp\\left( - \\int_0^s \\alpha(s') ds' \\right)\\]\nThe simulator also implements a “hard stop” condition for the inner wall. [cite_start]If the beam crosses the major radius threshold \\(R &lt; (R_0 - a)\\), the attenuation \\(\\alpha\\) is set to infinity (simulating wall absorption)[cite: 36, 171].",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "NBI Simulation: Mathematical Model & Code Implementation"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI_simulator.html#coordinate-systems",
+    "href": "theory/Plasma_physics/NBI_simulator.html#coordinate-systems",
+    "title": "NBI Simulation: Mathematical Model & Code Implementation",
+    "section": "3.1 1. Coordinate Systems",
+    "text": "3.1 1. Coordinate Systems\nThe code utilizes three distinct coordinate systems to manage the 3D geometry efficiently:\n\nGlobal Cartesian \\((X, Y, Z)\\): The standard tokamak laboratory frame. Used for the final voxel grid and plotting.\nBeam Coordinates \\((s^*, u, v)\\): A local orthonormal basis attached to the beam.\n\n\\(s^*\\): Coordinate along the beam centerline.\n\\(u, v\\): Transverse coordinates perpendicular to the beam.\n\nIntegration Grid \\((s_{grid}, t_{grid})\\): A 2D planar grid aligned with the beam axis used to pre-calculate attenuation.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "NBI Simulation: Mathematical Model & Code Implementation"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI_simulator.html#key-algorithms",
+    "href": "theory/Plasma_physics/NBI_simulator.html#key-algorithms",
+    "title": "NBI Simulation: Mathematical Model & Code Implementation",
+    "section": "3.2 2. Key Algorithms",
+    "text": "3.2 2. Key Algorithms\n\n3.2.1 Optimization 1: Vectorized Attenuation (cumtrapz)\nInstead of solving the attenuation integral \\(\\tau = \\int \\alpha ds\\) individually for every voxel (which is computationally expensive), the code: 1. Defines a 2D slice plane along the beam centerline. 2. Calculates the plasma profiles (\\(n_e, T_e\\)) and cross-sections (\\(\\sigma\\)) on this entire 2D plane at once. 3. Uses cumtrapz (cumulative trapezoidal integration) to integrate \\(\\tau\\) along the \\(s\\)-direction in a single operation. 4. Maps this 2D \\(\\tau\\) map back to the 3D grid using griddedInterpolant.\n\n\n3.2.2 Optimization 2: Numerical Source Integration\nThe function beam_propagation computes the beam intensity \\(j(r,z)\\).\n\nInputs: Local coordinates \\(U, V\\), distance \\(s\\), and source radius \\(r_s\\).\nMethod: It discretizes the source radius \\(x_0\\) into \\(N=40\\) steps.\nVectorization: It pre-calculates geometric factors (like \\(1/z\\), \\(1/R\\)) outside the loop. Inside the loop, it accumulates the contribution of Gaussian beamlets emitted from concentric rings on the source.\n\nThis effectively solves Eq. (4) from the reference paper [cite: 86] numerically:\n```matlab % Pseudocode representation of the integration loop in beam_propagation for ii = 1:N_steps x0 = source_ring_radius(ii); % Gaussian contribution from this ring (Vectorized over all pixels) contribution = exp(-x0^2 * C1 + x0 * C2) .* (erf(A) - erf(B)); Intensity = Intensity + contribution; end",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "NBI Simulation: Mathematical Model & Code Implementation"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI.html#numerical-implementation",
+    "href": "theory/Plasma_physics/NBI.html#numerical-implementation",
+    "title": "Neutral Beam Injector (NBI)",
+    "section": "Numerical Implementation",
+    "text": "Numerical Implementation\nTo evaluate the generalized current density integral efficiently in MATLAB, we utilize a semi-analytical approach. The double integral over the circular source shown above is computationally expensive if solved via 2D quadrature for every voxel.\nHowever, the Gaussian nature of the beamlet profiles allows us to solve the inner integral analytically. The code function beam_propagation implements this by decomposing the integration into a numerical outer loop and an analytical inner step.\n\n1. Decomposition of the Integral\nThe double integral over the circular aperture \\(x'^2 + y'^2 \\le a^2\\) can be separated. If we fix \\(x'\\) (the loop variable x0 in the code), the limits for \\(y'\\) are \\(\\pm \\sqrt{a^2 - x'^2}\\).\nThe term dependent on \\(y'\\) in the integrand is essentially a Gaussian. The integral of a Gaussian over finite limits is given by the Error Function (\\(\\text{erf}\\)).\n\\[\\int_{-Y_{lim}}^{+Y_{lim}} e^{-c_1 y'^2 + c_2 y'} dy' \\propto \\left[ \\text{erf}\\left( \\dots \\right) \\right]_{-Y_{lim}}^{+Y_{lim}}\\]\n\n\n2. The beam_propagation Algorithm\nThe code approximates the generalized current density formula using this optimization:\n\nDiscretization: The source radius \\(a\\) (source_radius) is discretized into \\(N\\) strips (steps) along the \\(x'\\)-axis (variable x0).\n[cite_start]Vectorization: Geometric factors dependent on \\(z\\) (beam coordinate \\(s\\)) and \\(R\\) (focal length) are pre-calculated outside the loop[cite: 76, 79].\nSemi-Analytical Integration: * The outer loop sums the contribution of each \\(x'\\) strip.\n\nThe inner integration over \\(y'\\) is replaced by the difference of error functions: erf(arg_A) - erf(arg_B).\n\n\nThis reduces the complexity from \\(O(N^2)\\) to \\(O(N)\\), allowing the simulator to compute millions of voxels in seconds. [cite_start]This method is consistent with the approach of summing elementary beam contributions described in the reference model[cite: 42, 86].",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector (NBI)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI.html#beam-attenuation-model",
+    "href": "theory/Plasma_physics/NBI.html#beam-attenuation-model",
+    "title": "Neutral Beam Injector (NBI)",
+    "section": "Beam Attenuation Model",
+    "text": "Beam Attenuation Model\nWhile the geometric focusing determines the beam’s shape, the plasma interaction determines its intensity decay. The simulator models this attenuation using the Beer-Lambert law along the beam path.\n\n1. Optical Depth Calculation\nThe local attenuation coefficient \\(\\alpha\\) is defined as the product of the electron density and the effective stopping cross-section:\n\\[\\alpha(s) = n_e(s) \\cdot \\sigma_{\\text{eff}}(E, n_e, T_e)\\]\nThe total attenuation (Optical Depth \\(\\tau\\)) at a distance \\(s\\) is the cumulative integral of \\(\\alpha\\) along the path:\n\\[\\tau(s) = \\int_{0}^{s} \\alpha(s') \\, ds'\\]\n\n\n2. Fast Integration Scheme\nIn the NBI_simulator code, this physics is implemented using a vectorized “Fast Integration” scheme:\n\nGrid Generation: A 2D planar grid (S_grid, T_grid) is generated along the beam axis.\nVectorized Mapping: Plasma profiles (\\(n_e, T_e\\)) are mapped onto this 2D sheet.\ncumtrapz Acceleration: Instead of using an iterative solver (like integral), the code uses MATLAB’s cumulative trapezoidal integration cumtrapz. This computes the attenuation for the entire beam cross-section simultaneously.\n\n\n\n3. Wall Interaction\nThe model includes a geometric “hard stop” condition for the inner wall of the tokamak. \\[\\text{If } R_{\\text{major}} &lt; (R_0 - a) \\implies \\alpha \\to \\infty\\] This ensures that any portion of the beam striking the high-field side protection tiles is fully absorbed and does not artificially reappear on the other side of the vessel.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector (NBI)"
+    ]
+  },
+  {
+    "objectID": "theory/Plasma_physics/NBI.html#particle-density-scaling",
+    "href": "theory/Plasma_physics/NBI.html#particle-density-scaling",
+    "title": "Neutral Beam Injector (NBI)",
+    "section": "Particle Density Scaling",
+    "text": "Particle Density Scaling\nThe simulator resolves the beam into three energy components: Full (\\(E\\)), Half (\\(E/2\\)), and Third (\\(E/3\\)). A critical physical scaling used in the code is that lower energy components often have higher particle densities, even if their power fraction is lower.\nThe particle density \\(n\\) is derived from the power \\(P\\) and particle velocity \\(v\\):\n\\[I_{\\text{beam}} = \\frac{P}{E} \\quad \\text{(Particle Flux)}\\] \\[n = \\frac{I_{\\text{beam}}}{v} = \\frac{P}{E \\cdot v}\\]\nSince \\(v \\propto \\sqrt{E}\\), the density scales as:\n\\[n \\propto \\frac{P}{E^{3/2}}\\]\nThis \\(E^{-3/2}\\) dependence means that the Half-Energy component travels significantly slower than the Full-Energy component, causing particles to “pile up” and resulting in a higher local density for the same power flux.",
+    "crumbs": [
+      "Theory",
+      "Plasma Physics",
+      "Neutral Beam Injector (NBI)"
     ]
   }
 ]

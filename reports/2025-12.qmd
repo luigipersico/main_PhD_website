@@ -1,0 +1,9 @@
+---
+title: "December 2025"
+---
+
+- Modelling of NBI,connection with TCV shots successful.
+- Learning more on MSE.
+- In the process of installing BES camera to test behaviour in magnetic field.
+- Quickly presented BES ideas at fluctuations meeting on 08/12.
+- Plasma Instabilities course.

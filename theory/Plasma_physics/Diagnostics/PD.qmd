@@ -1,0 +1,5 @@
+---
+title: "Photodiodes (PD)"
+---
+
+They capture radiation in the visible part of the spectra. Filters are installed in front of them to acquire different lines of the spectrum.

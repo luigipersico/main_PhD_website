@@ -7,3 +7,4 @@ title: "November 2025"
 - Plasma instabilities course (John is back).
 - Finished a first study of synthetic BES, 06/11 starting hardware with Dmytry.
 - 07/11 First DDJ session with Jacob.
+- Starting better modelling of NBI and connection to TCV shots.

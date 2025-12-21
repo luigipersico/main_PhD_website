@@ -5,3 +5,34 @@ title: "Beam Emission Spectroscopy (BES)"
 ## Introduction
 
 Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.
+
+
+aquistition time with fibers 
+32 channels, 1MHz sampling rate  
+
+then using photomultipliers we can get a samling rates around 100kHz
+
+
+Two tipe of cameras:
+
+EM CCD:  
+
+ADV: the readout is really uniform, every pixel is going through the same readout channel (one amplifer for all pixel). Good for astrophysics
+
+DIS: much more expensive,
+
+
+CMOS: 
+
+ADV: Cheaper, much faster, no smearing during readout, shorter exposure time (decoupling between exposition and acquisition)
+
+DIS: More noise, non-uniform background, it require more image processing in analysis.
+
+With 10kHz we must use CMOS 
+
+Since our fluctuations are in the order of 100kHz, speaking about time we might not be able to see time correlation. However space correlation can still be seen!
+
+
+How to trigger camera: 
+Two possibilitioes: either with same cable but through trigger in the computer, or with a different cabble. 
+Going with the first option, insterting trigger in computer... 

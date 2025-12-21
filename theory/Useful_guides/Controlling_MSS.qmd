@@ -1,0 +1,24 @@
+---
+title: 'How to control MSS'
+---
+
+Here the steps needed to connect to MSS system and to control it are described:
+
+1. Connect to lac913 server 
+
+2. Connect to MSS system using SSH 
+   ```
+   ssh -X cxrs@tmpnuc
+    ```
+    Password: 529.1nm
+3. Open Matlab, go to /home/cxrs/MSS/Functions and run the control scripts 
+   ```
+   SpecControl_MSS(13)
+   ```
+    where 13 is the number of the spectrometer to be controlled. All the necessary functions will automatically run.
+4. To control the camera parameters run
+   ```
+   generalSettingsUpdate.m
+   ```
+    go to the generated file Sys13 and change the parameters as needed. Save the file and run
+5. If something as to be calibrated go to the folder /home/cxrs/MSS/Calibration and run the calibration scripts as needed.

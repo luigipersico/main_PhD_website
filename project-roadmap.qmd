@@ -19,5 +19,7 @@ Secondly, the work will move on the calibration of the Motional-Stark Effect (MS
 3. Studying hardware of BES.
 4. Having a look at plasma instabilities.
 5. Time correlations in the code. 
-6. Thinking about what we can see with BES
+6. Thinking about what we can see with BES.
+7. Common mode rejection.
+8. Dynamic beam power.
 
