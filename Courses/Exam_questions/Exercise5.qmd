@@ -1,0 +1,163 @@
+---
+title: "Tearing Mode Instability"
+format: html
+editor: visual
+---
+
+## Exercise Statement
+
+5.  The following equations respectively describe the resistive layer width $\delta$ and growth rate for a tearing mode in a cylinder:
+    $$
+    \frac{\delta}{r_s} = \left[ \frac{\gamma}{\omega_A n^2 s^2 S} \right]^{1/4}
+    $$
+    $$
+    \frac{\gamma}{\omega_A} = \left[ \frac{\Gamma(1/4) r_s \Delta'}{2\pi \Gamma(3/4)} \right]^{4/5} S^{-3/5} (ns)^{2/5}
+    $$
+    providing that the constant-psi condition holds:
+    $$
+    \delta \Delta' \ll 1. \tag{15}
+    $$
+
+**(a) Show that,**
+$$
+\frac{\delta}{r_s} = S^{-2/5} (ns)^{-2/5} \left( \frac{r_s \Delta'}{2.12} \right)^{1/5}
+$$
+and **consider** whether inequality (15) is valid for a typical case where $r_s \Delta' \sim 1$, $S \sim 10^8$ and $ns \sim 1$.
+
+**(b) Describe** what inequality (15) requires; in particular the length scale of the radial displacement relative to the length scale of the perturbed magnetic flux in the resistive layer region $-\delta < r < \delta$. **Define** $\Delta'$ in terms of the asymptotes of the perturbed flux in the layer region assuming that (15) is valid.
+
+**(c) Explain** how $\Delta'$ can be calculated in order to obtain the growth rate for a tearing mode. For this start with the general equations in the cylinder,
+$$
+\left( \frac{\gamma}{\omega_A} \right)^2 \left[ \frac{d}{dr} \left( r^3 \frac{d\xi_0^r}{dr} \right) + r\xi_0^r (1-m^2) \right] = - m^2 \frac{R_0}{B_0} \left\{ \left( \frac{n}{m} - \frac{1}{q} \right) \left( r \frac{d}{dr} \left[ r \frac{d}{dr} \delta \psi \right] - m^2 \delta \psi \right) + r \delta \psi \frac{R_0}{B_0} \frac{dJ_{\phi}}{dr} \right\} \quad \text{with} \tag{16}
+$$
+$$
+\xi_0^r = \frac{R_0}{B_0 r} \left( \frac{n}{m} - \frac{1}{q} \right)^{-1} \left[ \delta \psi - \frac{r\eta}{\gamma \mu_0} \nabla^2 \left( \frac{\delta \psi}{r} \right) \right], \tag{17}
+$$
+and **obtain** a simplified differential equation where inertia and resistivity can be neglected. Consider suitable boundary conditions, and matching across the boundaries of the resistive region and ideal regions (where inertia and resistivity can be neglected). **What** determines whether tearing modes are stable or unstable; for example, the degree of non-zero resistivity or the $q$ profile (or equivalently toroidal current profile)?
+
+---
+
+## Solutions
+
+### Solution (a): Resistive Layer Width
+
+**1. Substitute the Growth Rate Expression**
+We start with the expression for the resistive layer width:
+$$
+\frac{\delta}{r_s} = \left[ \frac{1}{n^2 s^2 S} \cdot \frac{\gamma}{\omega_A} \right]^{1/4}
+$$
+Now substitute the given expression for $\gamma / \omega_A$:
+$$
+\frac{\gamma}{\omega_A} = \left[ \frac{\Gamma(1/4) r_s \Delta'}{2\pi \Gamma(3/4)} \right]^{4/5} S^{-3/5} (ns)^{2/5}
+$$
+Numerical factor calculation:
+Using $\Gamma(1/4) \approx 3.6256$ and $\Gamma(3/4) \approx 1.2254$:
+$$
+C = \frac{\Gamma(1/4)}{2\pi \Gamma(3/4)} \approx \frac{3.6256}{2\pi (1.2254)} \approx \frac{3.6256}{7.699} \approx 0.47
+$$
+Wait, let's look at the target result. The target has a factor $1/2.12$ inside the bracket. Note that $1/0.47 \approx 2.12$. So the term inside the bracket is indeed $(r_s \Delta' / 2.12)$.
+
+Let's proceed with the algebraic substitution:
+$$
+\frac{\delta}{r_s} = \left[ \frac{1}{n^2 s^2 S} \cdot \left( \frac{r_s \Delta'}{2.12} \right)^{4/5} S^{-3/5} (ns)^{2/5} \right]^{1/4}
+$$
+
+**2. Group the Powers**
+* **Powers of S:**
+    $$S^{-1} \cdot S^{-3/5} = S^{-8/5}$$
+    Taking the 1/4 root: $(S^{-8/5})^{1/4} = S^{-2/5}$.
+* **Powers of ns:**
+    We have $n^2 s^2 = (ns)^2$ in the denominator, so $(ns)^{-2}$.
+    Combined with numerator: $(ns)^{-2} \cdot (ns)^{2/5} = (ns)^{-10/5 + 2/5} = (ns)^{-8/5}$.
+    Taking the 1/4 root: $((ns)^{-8/5})^{1/4} = (ns)^{-2/5}$.
+* **Powers of $(r_s \Delta' / 2.12)$:**
+    Inside we have the term raised to the power $4/5$.
+    Taking the 1/4 root: $(( \dots )^{4/5})^{1/4} = (\dots)^{1/5}$.
+
+**3. Final Result**
+Combining these components:
+$$
+\frac{\delta}{r_s} = S^{-2/5} (ns)^{-2/5} \left( \frac{r_s \Delta'}{2.12} \right)^{1/5}
+$$
+
+**4. Validity Check for Typical Parameters**
+Given: $r_s \Delta' \sim 1$, $S \sim 10^8$, $ns \sim 1$.
+Calculate $\delta/r_s$:
+$$
+\frac{\delta}{r_s} \sim (10^8)^{-0.4} (1)^{-0.4} (1/2.12)^{0.2}
+$$
+$$(10^8)^{-0.4} = 10^{-3.2} \approx 6 \times 10^{-4}$$
+The term $(1/2.12)^{0.2}$ is of order unity ($\approx 0.86$).
+So, $\delta / r_s \sim 5 \times 10^{-4}$.
+
+Now check the condition $\delta \Delta' \ll 1$.
+Multiply by $r_s$ on both sides to make it dimensionless using $r_s \Delta'$:
+$$(\delta/r_s) \cdot (r_s \Delta') \ll 1$$
+$$5 \times 10^{-4} \cdot 1 = 0.0005 \ll 1$$
+**Conclusion:** Yes, the inequality is valid for these typical parameters. The resistive layer is extremely thin compared to the plasma radius.
+
+---
+
+### Solution (b): Constant-Psi Condition
+
+**1. Requirement of Inequality (15)**
+The inequality $\delta \Delta' \ll 1$ (or equivalently $\Delta' \delta \ll 1$) is the **Constant-Psi Approximation**.
+* **Physical Meaning:** It implies that the perturbed magnetic flux $\delta \psi$ is approximately constant across the narrow resistive layer width ($-\delta < x < \delta$, where $x = r - r_s$).
+* **Length Scales:**
+    * From ideal MHD (Eq. 17), outside the layer where $\eta \to 0$, the radial displacement $\xi_r$ is singular at the resonance.
+    * Inside the layer, $\xi_r$ varies rapidly (from a large value to zero or flipping sign).
+    * $\delta \psi$ varies slowly. The condition $\delta \Delta' \ll 1$ implies that the change in $\psi$ across the layer ($\Delta \psi \sim \delta \cdot \psi'$) is much smaller than $\psi$ itself.
+    * Therefore, the **length scale of the flux variation** is much larger than the **resistive layer width** $\delta$.
+
+**2. Definition of $\Delta'$**
+$\Delta'$ is the **stability index** or discontinuity parameter. It is defined as the jump in the logarithmic derivative of the perturbed flux across the singular surface $r_s$:
+
+$$
+\Delta' = \lim_{\epsilon \to 0} \left[ \frac{1}{\delta \psi(r_s)} \left( \frac{d(\delta \psi)}{dr} \Big|_{r_s + \epsilon} - \frac{d(\delta \psi)}{dr} \Big|_{r_s - \epsilon} \right) \right]
+$$
+This assumes $\delta \psi(r_s)$ is constant (continuous and non-zero) across the layer.
+
+---
+
+### Solution (c): Calculating $\Delta'$ and Stability
+
+**1. Simplifying the Equation**
+We want to calculate $\Delta'$ to find the growth rate. We do this by solving for $\delta \psi$ in the "outer" (ideal) regions where we can neglect inertia ($\gamma \to 0$) and resistivity ($\eta \to 0$).
+
+In the ideal region (away from $r_s$):
+* $\gamma \approx 0$ means the Left Hand Side (Inertia) of Eq. (16) $\to 0$.
+* $\eta \approx 0$ in Eq. (17) simplifies the relation between $\xi$ and $\psi$.
+
+Setting LHS of (16) to zero:
+$$
+0 = - m^2 \frac{R_0}{B_0} \left\{ \left( \frac{n}{m} - \frac{1}{q} \right) \left( \nabla_\perp^2 \delta \psi \right) + r \delta \psi \frac{R_0}{B_0} \frac{dJ_{\phi}}{dr} \right\}
+$$
+Note: The term $r \frac{d}{dr} [ r \frac{d}{dr} \delta \psi ] - m^2 \delta \psi$ is the radial part of the Laplacian $\nabla^2 \delta \psi$ (multiplied by $r$).
+
+Rearranging, we obtain the **Newcomb Equation** (or the exterior tearing mode equation):
+$$
+\frac{d}{dr} \left( r \frac{d \delta \psi}{dr} \right) - m^2 \delta \psi - \frac{q R_0 \frac{dJ_{\phi}}{dr}}{B_0 (1 - nq/m)} \delta \psi = 0
+$$
+*(Note: Using the approximation $(n/m - 1/q) \approx (nq - m)/mq$, the current gradient term simplifies to the form containing the standard tearing drive).*
+
+**2. Boundary Conditions and Matching**
+* **Boundary Conditions:**
+    * $r=0$: $\delta \psi \propto r^m$ (regularity at core).
+    * $r=a$: $\delta \psi(a)$ matches the vacuum solution (or $\psi(a)=0$ if a wall is on the plasma surface).
+* **Matching:**
+    We integrate this differential equation numerically or analytically from the center ($r=0$) out to the singular surface ($r_s^-$), and from the edge ($r=a$) in to the singular surface ($r_s^+$).
+    Since the equation is singular at $r_s$ (where $nq=m$), the slope $d\psi/dr$ diverges, but we can calculate the slopes as we approach the limit.
+    We compute the jump in the slope:
+    $$
+    \Delta' = \frac{\psi'(r_s^+) - \psi'(r_s^-)}{\psi(r_s)}
+    $$
+
+**3. Stability Determinant**
+* **What determines stability?**
+    The growth rate $\gamma$ scales with $\Delta'$ (specifically $\gamma \propto (\Delta')^{4/5}$).
+    * If **$\Delta' > 0$**: The mode is **Unstable** ($\gamma > 0$).
+    * If **$\Delta' < 0$**: The mode is **Stable**.
+* **Role of Resistivity vs. Profile:**
+    * **Resistivity:** It is a *necessary* condition for the mode to exist (it allows the reconnection at $r_s$). However, the *sign* of the stability (stable vs unstable) is NOT determined by the resistivity value. It is determined purely by $\Delta'$.
+    * **q-profile / Current Profile:** $\Delta'$ is determined entirely by the geometry of the equilibrium fields, specifically the **Current Gradient term** ($dJ_{\phi}/dr$) and the $q$-profile in the ideal equation derived above. Therefore, the stability is determined by the macroscopic **toroidal current profile**.
+    * *Analogy:* Resistivity opens the door (allows breaking field lines), but the current profile pushes the door open (provides the free energy $\Delta'$).

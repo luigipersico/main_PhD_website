@@ -1,0 +1,160 @@
+---
+title: "Grad-Shafranov Expansion and Shaping"
+format: html
+editor: visual
+---
+
+## Exercise Statement
+
+The lecture notes adopt the coordinate system $(r, \omega, \phi)$ for an inverse aspect ratio expansion and Fourier representation of the cylindrical coordinates $(R, Z, \phi)$:
+
+$$
+R(r, \omega) = R_0 \left( 1 + \textcolor{red}{\varepsilon} \epsilon \cos \omega - \textcolor{red}{\varepsilon^2} \frac{\Delta(r)}{R_0} + \textcolor{red}{\varepsilon^2} \sum_{m=2}^{\infty} \frac{S_m(r)}{R_0} \cos(m-1)\omega + \textcolor{red}{\varepsilon^3} \frac{\mathcal{P}(r)}{R_0} \cos \omega + O(\textcolor{red}{\varepsilon^4}) \right)
+$$
+
+$$
+Z(r, \omega) = R_0 \left( \textcolor{red}{\varepsilon} \epsilon \sin \omega - \textcolor{red}{\varepsilon^2} \sum_{m=2}^{\infty} \frac{S_m(r)}{R_0} \sin(m-1)\omega + \textcolor{red}{\varepsilon^3} \frac{\mathcal{P}(r)}{R_0} \sin \omega + O(\textcolor{red}{\varepsilon^4}) \right)
+$$
+
+where the red epsilon $\textcolor{red}{\varepsilon}$ is an artificial tag indicating the ordering of each term. The Fourier coefficients of the Grad-Shafranov equation are:
+
+**$\cos(0\omega)$ mode:**
+$$
+\left[ \frac{1}{2r^2} (r^2 \psi'^2)' + R_0^2 P' + FF' \right] [1 + O(\textcolor{red}{\varepsilon})] = 0 \tag{3}
+$$
+
+**$\cos(\omega)$ mode:**
+$$
+\left[ \Delta'' + \left( 2\frac{\psi''}{\psi'} + \frac{1}{r} \right)\Delta' - \frac{1}{R_0} + 2 \frac{rR_0P'}{(\psi')^2} \right] [1 + O(\textcolor{red}{\varepsilon})] = 0 \tag{4}
+$$
+
+**$\cos(m\omega)$ mode:**
+$$
+\left[ S_m'' + \left( 2\frac{\psi''}{\psi'} + \frac{1}{r} \right)S_m' + \frac{1-m^2}{r^2} S_m \right] [1 + O(\textcolor{red}{\varepsilon})] = 0 \tag{5}
+$$
+
+### Part (a)
+**Show** (e.g. by substitution) that on setting $\psi' = rF(r)/(R_0 q(r))$, $P/B^2 \sim \textcolor{red}{\varepsilon^2}$, $s \sim 1$ the solution to Eq. (3) is:
+
+$$
+F = R_0 B_0 (1 + \textcolor{red}{\varepsilon^2} F_2(r)), \quad F_2(r) = - \textcolor{red}{\varepsilon^{-2}} \frac{P}{B_0^2} - \textcolor{red}{\varepsilon^{-2}} \int_0^r \frac{dr \ r}{R_0^2} \left( \frac{2-s}{q^2} \right) + O(\textcolor{red}{\varepsilon^4}) \tag{6}
+$$
+
+**Explain** from this result how the plasma can cause a well in the magnetic field strength (compared to the field strength in a vacuum).
+
+### Part (b)
+Integrate Eq. (4) once, adopt again $\psi' = rF(r)/(R_0 q(r))$, **to show** that to leading order:
+
+$$
+\Delta' = \frac{r}{R_0} \left[ \beta_p(r) + \frac{l_i(r)}{2} \right]
+$$
+
+with:
+$$
+\beta_p(r) = -2 \frac{R_0^2 q^2}{B_0^2 r^4} \int_0^r \hat{r}^2 P' d\hat{r}, \quad l_i(r) = \frac{2q^2}{r^4} \int_0^r d\hat{r} \frac{\hat{r}^3}{q^2}
+$$
+
+**Explain** that $\Delta(r)$ describes the compression of the poloidal magnetic flux in the $\nabla R$ direction, and describe briefly the two forces related to $\beta_p$ and $l_i$ that cause this compression.
+
+### Part (c)
+For a shearless plasma, for which $q$ is constant, **write down** the simple relation for $\psi''/\psi'$, substitute this into Eq. (5) **and solve** the resulting differential equation for $S_m(r)$ assuming boundary conditions $S_m(0) = 0$, and $S_m(r=a) = S_m(a)$ (constants), where $a$ is the edge of the plasma.
+
+**Comment on** the radial dependence (from the plasma edge going inwards) of elongation $\kappa(r)$ and triangularity $\delta(r)$, where these are respectively:
+
+$$
+\kappa = \frac{r - S_2}{r + S_2}, \quad \delta = \frac{4S_3}{r}
+$$
+
+**How** would positive shear affect this penetration?
+
+---
+
+## Solutions
+
+### Solution (a): Magnetic Well
+
+**1. Expansion of Terms**
+We start with the equilibrium equation for the $m=0$ mode (Eq. 3):
+$$\frac{1}{2r^2} (r^2 \psi'^2)' + R_0^2 P' + FF' = 0$$
+
+Using the definition $\psi' \approx r B_0 / q$ (leading order approximation where $F \approx R_0 B_0$), we expand the first term:
+$$\psi'^2 \approx \frac{r^2 B_0^2}{q^2}$$
+$$\frac{1}{2r^2} (r^2 \psi'^2)' = \frac{B_0^2}{2r^2} \frac{d}{dr} \left( \frac{r^4}{q^2} \right)$$
+Using the definition of magnetic shear $s = (r/q) q'$, the derivative becomes:
+$$\frac{d}{dr} \left( \frac{r^4}{q^2} \right) = \frac{4r^3 q^2 - 2r^4 q q'}{q^4} = \frac{r^3}{q^2} (4 - 2s)$$
+Thus, the first term is:
+$$\text{Term 1} = \frac{B_0^2 r}{q^2} (2 - s)$$
+
+Next, we expand the $FF'$ term using $F = R_0 B_0 (1 + \textcolor{red}{\varepsilon^2} F_2)$:
+$$FF' = \frac{1}{2} (F^2)' \approx \frac{1}{2} (R_0^2 B_0^2 (1 + 2\textcolor{red}{\varepsilon^2} F_2))' = R_0^2 B_0^2 \textcolor{red}{\varepsilon^2} F_2'$$
+
+**2. Solving for $F_2$**
+Substituting these back into Eq. (3):
+$$\frac{B_0^2 r}{q^2} (2 - s) + R_0^2 P' + R_0^2 B_0^2 \textcolor{red}{\varepsilon^2} F_2' = 0$$
+
+Isolating $F_2'$:
+$$F_2' = - \frac{P'}{\textcolor{red}{\varepsilon^2} B_0^2} - \frac{r (2-s)}{R_0^2 \textcolor{red}{\varepsilon^2} q^2}$$
+
+Integrating from $0$ to $r$:
+$$F_2(r) = - \textcolor{red}{\varepsilon^{-2}} \frac{P(r)}{B_0^2} - \textcolor{red}{\varepsilon^{-2}} \int_0^r \frac{r' dr'}{R_0^2} \left( \frac{2-s(r')}{q(r')^2} \right)$$
+This matches Eq. (6).
+
+**3. Physical Explanation**
+The magnetic field strength is dominated by the toroidal field $B_\phi \propto F(r)$. In a vacuum, $F$ is constant. In a plasma, $F$ is modified by $\textcolor{red}{\varepsilon^2} F_2$.
+Both terms in $F_2$ are typically negative:
+1.  **Pressure term:** $-P/B_0^2$ is negative because plasma is diamagnetic (resisting the external field).
+2.  **Shear term:** The integral of $(2-s)$ is generally positive (for moderate shear), making the term negative.
+
+Since $F_{plasma} < F_{vacuum}$, the magnetic field strength is reduced in the center, creating a **magnetic well**. This configuration is favorable for stability.
+
+---
+
+### Solution (b): Shafranov Shift
+
+**1. Integration**
+We rewrite Eq. (4) by multiplying by an integrating factor $r(\psi')^2$:
+$$\frac{d}{dr} \left( r(\psi')^2 \Delta' \right) = \frac{r(\psi')^2}{R_0} - 2r^2 R_0 P'$$
+
+Integrating from $0$ to $r$:
+$$r(\psi')^2 \Delta' = \frac{1}{R_0} \int_0^r \hat{r} (\psi')^2 d\hat{r} - 2R_0 \int_0^r \hat{r}^2 P' d\hat{r}$$
+
+**2. Substitution**
+Using the approximation $\psi' \approx r B_0 / q$:
+$$\Delta' = \frac{1}{r (r^2 B_0^2 / q^2) R_0} \int_0^r \hat{r} \frac{\hat{r}^2 B_0^2}{q^2} d\hat{r} - \frac{2R_0}{r (r^2 B_0^2 / q^2)} \int_0^r \hat{r}^2 P' d\hat{r}$$
+
+Simplifying the terms:
+* **Term 1:** $\frac{q^2}{r^3 R_0} \int_0^r \frac{\hat{r}^3}{q^2} d\hat{r} = \frac{r}{R_0} \left[ \frac{q^2}{r^4} \int \frac{\hat{r}^3}{q^2} d\hat{r} \right] = \frac{r}{R_0} \frac{l_i(r)}{2}$
+* **Term 2:** $- \frac{2 R_0 q^2}{r^3 B_0^2} \int_0^r \hat{r}^2 P' d\hat{r} = \frac{r}{R_0} \left[ - \frac{2 R_0^2 q^2}{B_0^2 r^4} \int \hat{r}^2 P' d\hat{r} \right] = \frac{r}{R_0} \beta_p(r)$
+
+Resulting in:
+$$\Delta' = \frac{r}{R_0} \left( \beta_p(r) + \frac{l_i(r)}{2} \right)$$
+
+**3. Physical Explanation**
+$\Delta(r)$ represents the **Shafranov Shift**, an outward displacement of magnetic flux surfaces. This shift compresses flux surfaces on the outboard ($\nabla R$) side.
+The two forces driving this are:
+1.  **$\beta_p$ (Kinetic Pressure):** The "tire-tube" force where plasma pressure tries to expand the torus volume.
+2.  **$l_i$ (Internal Inductance):** The "hoop force" where the current loop tries to expand radially due to self-repulsion.
+
+---
+
+### Solution (c): Shearless Plasma
+
+**1. Differential Equation**
+For shearless plasma ($q = \text{const}$), $\psi' \propto r$, so $\psi''/\psi' = 1/r$.
+Substituting into Eq. (5):
+$$S_m'' + \frac{3}{r} S_m' + \frac{1-m^2}{r^2} S_m = 0$$
+Using the trial solution $S_m \sim r^k$, we solve the characteristic equation $k^2 + 2k + (1-m^2) = 0$, yielding roots $k = -1 \pm m$.
+Discarding the divergent root ($r^{-(m+1)}$), we get:
+$$S_m(r) = S_m(a) \left( \frac{r}{a} \right)^{m-1}$$
+
+**2. Shaping Penetration**
+* **Elongation ($m=2$):** $S_2 \propto r$.
+    $$\kappa(r) = \frac{r - Cr}{r + Cr} = \text{constant}$$
+    Elongation is constant from edge to core.
+* **Triangularity ($m=3$):** $S_3 \propto r^2$.
+    $$\delta(r) = \frac{4 C r^2}{r} \propto r$$
+    Triangularity vanishes linearly towards the core.
+
+**3. Effect of Positive Shear**
+With positive shear ($s > 0$), the damping term in the differential equation decreases ($\frac{3-2s}{r}$). This leads to a larger characteristic exponent $k$. A larger $k$ means faster radial decay as $r \to 0$.
+Thus, **positive shear inhibits the penetration** of shaping into the core; the core becomes circular faster than in the shearless case.

@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<head>
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
 
-<meta charset="utf-8" />
-<meta name="generator" content="quarto-1.8.25" />
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>The MHD model – Luigi Persico - Ph.D.</title>
+<title>External Kink Mode Stability – Luigi Persico - Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,7 +22,25 @@ ul.task-list li input[type="checkbox"] {
 }
 </style>
 
-<!-- htmldependencies:E3FAD763 -->
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-169705d3eabda05963f3986ba613488e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -85,22 +101,17 @@ window.Quarto = {
 
 </head>
 
-<body>
+<body class="nav-sidebar docked fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn"
-      data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" 
-      aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-      onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <h1 class="quarto-secondary-nav-title no-breadcrumbs"></h1>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" role="link"
-        aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation"
-        onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item"><a href="../../Courses/Exam_questions/Exercise2.html">Exam Questions</a></li><li class="breadcrumb-item"><a href="../../Courses/Exam_questions/Exercise4.html">External Kink Mode Stability</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
@@ -113,7 +124,7 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="/index.html" class="sidebar-logo-link">
+      <a href="../../index.html" class="sidebar-logo-link">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -125,13 +136,13 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/project-roadmap.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ph.D. roadmap</span></a>
+  <a href="../../project-roadmap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ph.D.&nbsp;roadmap</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1"  role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Courses</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -140,8 +151,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2"  role="navigation" aria-expanded="true">
- <span class="menu-text">Plasma Instabilities</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Exam Questions</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -149,13 +160,42 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Courses/Plasma Instabilities/01_MHD_model.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../Courses/Exam_questions/Exercise2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Grad-Shafranov Expansion and Shaping</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Exam_questions/Exercise3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Linear Ideal MHD and Field Line Bending</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Exam_questions/Exercise4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">External Kink Mode Stability</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Plasma Instabilities</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/01_MHD_model.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">The MHD model</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/Courses/Plasma Instabilities/02_Grad_Shafranov.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/02_Grad_Shafranov.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Grad Shafranov equation</span></a>
   </div>
 </li>
@@ -165,25 +205,8 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3"  role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
  <span class="menu-text">Papers</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/papers/Paper1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Paper1</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4"  role="navigation" aria-expanded="true">
- <span class="menu-text">Reports</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -191,25 +214,42 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/reports/2025-09.html" class="sidebar-item-text sidebar-link">
+  <a href="../../papers/Paper1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Paper1</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+ <span class="menu-text">Reports</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2025-09.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">September 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/reports/2025-10.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2025-10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">October 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/reports/2025-11.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2025-11.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">November 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/reports/2025-12.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2025-12.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">December 2025</span></a>
   </div>
 </li>
@@ -217,58 +257,17 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5"  role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
  <span class="menu-text">Theory</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6"  role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
  <span class="menu-text">Mathematic Tools</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/theory/Mathematic_tools/Bra-ket_notation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bra-ket notation</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/theory/Mathematic_tools/covariant_contravariant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Covariant and Contravariant</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/theory/Mathematic_tools/Hermitian_adjoint.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hermitian adjoint</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/theory/Mathematic_tools/Hilbert_Space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hilbert Space</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/theory/Mathematic_tools/Pauli_matrices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pauli matrices</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7"  role="navigation" aria-expanded="false">
- <span class="menu-text">Plasma Physics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -276,64 +275,105 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/theory/Plasma_physics/BES.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Mathematic_tools/Bra-ket_notation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bra-ket notation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/covariant_contravariant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Covariant and Contravariant</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/Hermitian_adjoint.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hermitian adjoint</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/Hilbert_Space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hilbert Space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/Pauli_matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pauli matrices</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+ <span class="menu-text">Plasma Physics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/BES.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beam Emission Spectroscopy (BES)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motional-Stark Effect (MSE)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/theory/Plasma_physics/NBI.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/NBI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Neutral Beam Injector (NBI)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/theory/Plasma_physics/NBI_simulator.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">NBI Simulation: Mathematical Model & Code Implementation</span></a>
+  <a href="../../theory/Plasma_physics/NBI_simulator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NBI Simulation: Mathematical Model &amp; Code Implementation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/theory/Plasma_physics/Optical_spectrometer.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Optical_spectrometer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optical Spectrometer</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/theory/Plasma_physics/Optics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Optics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/theory/Plasma_physics/Safety_factor.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Safety_factor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Safety Factor q</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8"  role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
  <span class="menu-text">Diagnostics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/theory/Plasma_physics/Diagnostics/PD.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Diagnostics/PD.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Photodiodes (PD)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/theory/Plasma_physics/Diagnostics/thomson.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Diagnostics/thomson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Thomson scattering system</span></a>
   </div>
 </li>
@@ -343,31 +383,8 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9"  role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
  <span class="menu-text">Quantum Physics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quatum Entanglement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="/theory/Quantum_physics/Schrödinger_eq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Schrödinger Equation</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10"  role="navigation" aria-expanded="false">
- <span class="menu-text">Useful Guides</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -375,13 +392,36 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/theory/Useful_guides/Controlling_CMOS_cameras.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quatum Entanglement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Quantum_physics/Schrödinger_eq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schrödinger Equation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">Useful Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Useful_guides/Controlling_CMOS_cameras.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to control CMOS cameras</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="/theory/Useful_guides/Controlling_MSS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Useful_guides/Controlling_MSS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to control MSS</span></a>
   </div>
 </li>
@@ -392,17 +432,15 @@ window.Quarto = {
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" ></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <div id="quarto-toc-target"></div>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item"><a href="../../Courses/Exam_questions/Exercise2.html">Exam Questions</a></li><li class="breadcrumb-item"><a href="../../Courses/Exam_questions/Exercise4.html">External Kink Mode Stability</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">The MHD model</h1>
+<h1 class="title">External Kink Mode Stability</h1>
 </div>
 
 
@@ -419,23 +457,59 @@ window.Quarto = {
 </header>
 
 
-<p>The <strong>magnetohydrodynamic (MHD) model</strong> is used to describe plasma with a set of fluid equations coupled with Maxwell equations. The MHD models relies on the main assumption of <strong>collisional plasma</strong>, even though it is sometimes applied to dynamics of almost collisionless tokamak plasmas. The MHD model is used to describe <strong>long-wavelength</strong> and <strong>low-frequency</strong> dynamics in a macroscopic single fluid plasma, and this is usually the case for the perpendicular dynamics of macroscopic instabilities, which is quite slow compared to the dynamics along the parallel direction.</p>
-<section id="the-ideal-mhd-model" class="level2">
-<h2>The ideal MHD model</h2>
-<p>In the ideal MHD model the plasma is considered to have <strong>zero resistivty</strong>, allowing the magnetic field lines to freeze in the plasma. The set of equation used is the following:</p>
-<p><span class="math display">\[
-\frac
+<section id="exercise-statement" class="level2">
+<h2 class="anchored" data-anchor-id="exercise-statement">Exercise Statement</h2>
+<ol start="4" type="1">
+<li>The external kink mode has the total potential energy <span class="math inline">\(\delta W = \delta W_P + \delta W_V\)</span>, where <span class="math display">\[
+\delta W_P = \frac{2\pi^2 B_0^2}{R_0} \left\{ \int_0^a dr \ r \left[ \left( r \frac{d\xi_0^r}{dr} \right)^2 + (m^2 - 1) (\xi_0^r)^2 \right] \left( \frac{n}{m} - \frac{1}{q} \right)^2 + a^2 (\xi_0^r(a))^2 \left[ \frac{2}{q_a} \left( \frac{n}{m} - \frac{1}{q_a} \right) + \left( \frac{n}{m} - \frac{1}{q_a} \right)^2 \right] \right\} \tag{10}
+\]</span> with <span class="math inline">\(q_a = q(a)\)</span>, and <span class="math display">\[
+\delta W_V \approx 2\pi^2 R_0 \left[ r \delta \psi \frac{d\delta \psi}{dr} \right]_a^b \tag{11}
+\]</span></li>
+</ol>
+<p><strong>(a)</strong> The perturbed flux in the vacuum region has the form, <span class="math display">\[
+\delta \psi = \alpha r^m + \beta r^{-m} \tag{12}
+\]</span> where <span class="math inline">\(\delta B^r = i m \delta \psi / r\)</span>. Apply the boundary conditions at the plasma boundary <span class="math inline">\(r=a\)</span> and the radius of the perfectly conducting wall <span class="math inline">\(r=b\)</span> <strong>to obtain</strong>, <span class="math display">\[
+\delta \psi = \frac{B_0}{R_0} \left( \frac{n}{m} - \frac{1}{q_a} \right) \frac{(\frac{r}{b})^m - (\frac{b}{r})^m}{(\frac{a}{b})^m - (\frac{b}{a})^m} a \xi_a \tag{13}
 \]</span></p>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyLXRpdGxl">Luigi Persico - Ph.D.</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uYXZiYXItdGl0bGU=">Luigi Persico - Ph.D.</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1uZXh0">Grad Shafranov equation</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1wcmV2">Ph.D. roadmap</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wcm9qZWN0LXJvYWRtYXAuaHRtbFBoLkQuLXJvYWRtYXA=">Ph.D. roadmap</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMQ==">Courses</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMg==">Plasma Instabilities</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9Db3Vyc2VzL1BsYXNtYSBJbnN0YWJpbGl0aWVzLzAxX01IRF9tb2RlbC5odG1sVGhlLU1IRC1tb2RlbA==">The MHD model</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9Db3Vyc2VzL1BsYXNtYSBJbnN0YWJpbGl0aWVzLzAyX0dyYWRfU2hhZnJhbm92Lmh0bWxHcmFkLVNoYWZyYW5vdi1lcXVhdGlvbg==">Grad Shafranov equation</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMw==">Papers</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9wYXBlcnMvUGFwZXIxLmh0bWxQYXBlcjE=">Paper1</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNA==">Reports</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9yZXBvcnRzLzIwMjUtMDkuaHRtbFNlcHRlbWJlci0yMDI1">September 2025</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9yZXBvcnRzLzIwMjUtMTAuaHRtbE9jdG9iZXItMjAyNQ==">October 2025</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9yZXBvcnRzLzIwMjUtMTEuaHRtbE5vdmVtYmVyLTIwMjU=">November 2025</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi9yZXBvcnRzLzIwMjUtMTIuaHRtbERlY2VtYmVyLTIwMjU=">December 2025</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNQ==">Theory</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNg==">Mathematic Tools</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvTWF0aGVtYXRpY190b29scy9CcmEta2V0X25vdGF0aW9uLmh0bWxCcmEta2V0LW5vdGF0aW9u">Bra-ket notation</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvTWF0aGVtYXRpY190b29scy9jb3ZhcmlhbnRfY29udHJhdmFyaWFudC5odG1sQ292YXJpYW50LWFuZC1Db250cmF2YXJpYW50">Covariant and Contravariant</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvTWF0aGVtYXRpY190b29scy9IZXJtaXRpYW5fYWRqb2ludC5odG1sSGVybWl0aWFuLWFkam9pbnQ=">Hermitian adjoint</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvTWF0aGVtYXRpY190b29scy9IaWxiZXJ0X1NwYWNlLmh0bWxIaWxiZXJ0LVNwYWNl">Hilbert Space</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvTWF0aGVtYXRpY190b29scy9QYXVsaV9tYXRyaWNlcy5odG1sUGF1bGktbWF0cmljZXM=">Pauli matrices</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tNw==">Plasma Physics</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvUGxhc21hX3BoeXNpY3MvQkVTLmh0bWxCZWFtLUVtaXNzaW9uLVNwZWN0cm9zY29weS0oQkVTKQ==">Beam Emission Spectroscopy (BES)</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvUGxhc21hX3BoeXNpY3MvTVNFLmh0bWxNb3Rpb25hbC1TdGFyay1FZmZlY3QtKE1TRSk=">Motional-Stark Effect (MSE)</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvUGxhc21hX3BoeXNpY3MvTkJJLmh0bWxOZXV0cmFsLUJlYW0tSW5qZWN0b3ItKE5CSSk=">Neutral Beam Injector (NBI)</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvUGxhc21hX3BoeXNpY3MvTkJJX3NpbXVsYXRvci5odG1sTkJJLVNpbXVsYXRpb246LU1hdGhlbWF0aWNhbC1Nb2RlbC0mLUNvZGUtSW1wbGVtZW50YXRpb24=">NBI Simulation: Mathematical Model &amp; Code Implementation</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvUGxhc21hX3BoeXNpY3MvT3B0aWNhbF9zcGVjdHJvbWV0ZXIuaHRtbE9wdGljYWwtU3BlY3Ryb21ldGVy">Optical Spectrometer</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvUGxhc21hX3BoeXNpY3MvT3B0aWNzLmh0bWxPcHRpY3M=">Optics</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvUGxhc21hX3BoeXNpY3MvU2FmZXR5X2ZhY3Rvci5odG1sU2FmZXR5LUZhY3Rvci1x">Safety Factor q</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tOA==">Diagnostics</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvUGxhc21hX3BoeXNpY3MvRGlhZ25vc3RpY3MvUEQuaHRtbFBob3RvZGlvZGVzLShQRCk=">Photodiodes (PD)</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvUGxhc21hX3BoeXNpY3MvRGlhZ25vc3RpY3MvdGhvbXNvbi5odG1sVGhvbXNvbi1zY2F0dGVyaW5nLXN5c3RlbQ==">Thomson scattering system</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tOQ==">Quantum Physics</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvUXVhbnR1bV9waHlzaWNzL1F1YW50dW1fZW50YW5nbGVtZW50Lmh0bWxRdWF0dW0tRW50YW5nbGVtZW50">Quatum Entanglement</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvUXVhbnR1bV9waHlzaWNzL1NjaHLDtmRpbmdlcl9lcS5odG1sU2NocsO2ZGluZ2VyLUVxdWF0aW9u">Schrödinger Equation</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOnF1YXJ0by1zaWRlYmFyLXNlY3Rpb24tMTA=">Useful Guides</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvVXNlZnVsX2d1aWRlcy9Db250cm9sbGluZ19DTU9TX2NhbWVyYXMuaHRtbEhvdy10by1jb250cm9sLUNNT1MtY2FtZXJhcw==">How to control CMOS cameras</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWludC1zaWRlYmFyOi90aGVvcnkvVXNlZnVsX2d1aWRlcy9Db250cm9sbGluZ19NU1MuaHRtbEhvdy10by1jb250cm9sLU1TUw==">How to control MSS</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLUNvdXJzZXM=">Courses</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLVBsYXNtYS1JbnN0YWJpbGl0aWVz">Plasma Instabilities</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLWJyZWFkY3J1bWJzLVRoZS1NSEQtbW9kZWw=">The MHD model</span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGF0aXRsZQ==">The MHD model – Luigi Persico - Ph.D.</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkdGl0bGU=">The MHD model – Luigi Persico - Ph.D.</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZHRpdGxl">The MHD model – Luigi Persico - Ph.D.</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW1ldGFzaXRlbmFtZQ==">Luigi Persico - Ph.D.</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLXR3aXR0ZXJjYXJkZGVzYw=="></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="cXVhcnRvLW9nY2FyZGRkZXNj"></span></p>
-</div>
+<p><strong>(b) Show that</strong>, <span class="math display">\[
+\delta W = \frac{2\pi^2 B_0^2}{R_0} \left\{ \int_0^a dr \ r \left[ \left( r \frac{d\xi_0^r}{dr} \right)^2 + (m^2 - 1)^2 (\xi_0^r)^2 \right] \left( \frac{n}{m} - \frac{1}{q} \right)^2 + a^2 \xi_0^r(a)^2 \left[ \frac{2}{q_a} \left( \frac{n}{m} - \frac{1}{q_a} \right) + (1 + m\lambda) \left( \frac{n}{m} - \frac{1}{q_a} \right)^2 \right] \right\} \tag{14}
+\]</span> where <span class="math display">\[
+\lambda = \frac{1 + (a/b)^{2m}}{1 - (a/b)^{2m}}
+\]</span></p>
+<p><strong>Which</strong> term in <span class="math inline">\(\delta W\)</span> can be destabilising? <strong>What</strong> is the condition for <span class="math inline">\(q_a\)</span> in order for that term to be destabilising? <strong>What</strong> are the effects of and physical meanings of the limits <span class="math inline">\(b/a \to \infty\)</span> and <span class="math inline">\(b/a \to 1\)</span>? <strong>How</strong> does one establish (from <span class="math inline">\(\delta W\)</span> in Eq. (14)) whether the plasma is unstable to external kink modes? <strong>What</strong> is the main stabilising effect that can be determined with this procedure, and <strong>how</strong> can the plasma be made more stable even if <span class="math inline">\(q_a\)</span> can’t be adjusted?</p>
+<hr>
+</section>
+<section id="solutions" class="level2">
+<h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
+<section id="solution-a-vacuum-flux-solution" class="level3">
+<h3 class="anchored" data-anchor-id="solution-a-vacuum-flux-solution">Solution (a): Vacuum Flux Solution</h3>
+<p><strong>1. Apply Boundary Condition at the Wall (<span class="math inline">\(r=b\)</span>)</strong> The conducting wall at <span class="math inline">\(r=b\)</span> requires the normal component of the perturbed magnetic field to vanish: <span class="math inline">\(\delta B^r(b) = 0\)</span>. Given <span class="math inline">\(\delta B^r = im \delta \psi / r\)</span>, this implies <span class="math inline">\(\delta \psi(b) = 0\)</span>. Substituting this into the general form (Eq. 12): <span class="math display">\[\alpha b^m + \beta b^{-m} = 0 \implies \beta = - \alpha b^{2m}\]</span> Substituting <span class="math inline">\(\beta\)</span> back into Eq. (12): <span class="math display">\[\delta \psi(r) = \alpha (r^m - b^{2m} r^{-m}) = \alpha r^m \left[ 1 - \left( \frac{b}{r} \right)^{2m} \right]\]</span></p>
+<p><strong>2. Apply Boundary Condition at the Plasma Surface (<span class="math inline">\(r=a\)</span>)</strong> At the plasma interface, the radial magnetic field perturbation must be continuous. From the plasma side (internal solution), using the result from the previous exercise: <span class="math display">\[\delta B^r(a) = \frac{i B_0}{R_0 q_a} [n q_a - m] \xi_a = \frac{i B_0}{R_0} \left( n - \frac{m}{q_a} \right) \xi_a\]</span> From the vacuum side: <span class="math display">\[\delta B^r(a) = \frac{i m \delta \psi(a)}{a}\]</span> Equating the two expressions: <span class="math display">\[\frac{i m \delta \psi(a)}{a} = \frac{i B_0}{R_0} m \left( \frac{n}{m} - \frac{1}{q_a} \right) \xi_a\]</span> Solving for <span class="math inline">\(\delta \psi(a)\)</span>: <span class="math display">\[\delta \psi(a) = \frac{a B_0}{R_0} \left( \frac{n}{m} - \frac{1}{q_a} \right) \xi_a\]</span></p>
+<p><strong>3. Construct the Final Solution</strong> We express the radial dependence using the form derived in step 1, normalized to the value at <span class="math inline">\(a\)</span>: <span class="math display">\[\delta \psi(r) = \delta \psi(a) \frac{r^m - b^{2m}r^{-m}}{a^m - b^{2m}a^{-m}}\]</span> To match Eq. (13), we multiply the numerator and denominator by <span class="math inline">\(b^{-m}\)</span>: <span class="math display">\[\frac{b^{-m}(r^m - b^{2m}r^{-m})}{b^{-m}(a^m - b^{2m}a^{-m})} = \frac{(r/b)^m - (b/r)^m}{(a/b)^m - (b/a)^m}\]</span> Substituting <span class="math inline">\(\delta \psi(a)\)</span>: <span class="math display">\[\delta \psi(r) = \frac{B_0}{R_0} \left( \frac{n}{m} - \frac{1}{q_a} \right) a \xi_a \left[ \frac{(\frac{r}{b})^m - (\frac{b}{r})^m}{(\frac{a}{b})^m - (\frac{b}{a})^m} \right]\]</span></p>
+</section>
+<section id="solution-b-total-potential-energy" class="level3">
+<h3 class="anchored" data-anchor-id="solution-b-total-potential-energy">Solution (b): Total Potential Energy</h3>
+<p><strong>1. Calculate Vacuum Energy <span class="math inline">\(\delta W_V\)</span></strong> We evaluate the integral in Eq. (11): <span class="math display">\[\delta W_V \approx 2\pi^2 R_0 \left[ r \delta \psi \frac{d\delta \psi}{dr} \right]_a^b\]</span> Since <span class="math inline">\(\delta \psi(b) = 0\)</span>, the upper limit vanishes. <span class="math display">\[\delta W_V = - 2\pi^2 R_0 \left( a \delta \psi(a) \delta \psi'(a) \right)\]</span></p>
+<p>First, find the logarithmic derivative <span class="math inline">\(\frac{\delta \psi'(a)}{\delta \psi(a)}\)</span>. Let <span class="math inline">\(f(r) = (r/b)^m - (b/r)^m\)</span>. Then <span class="math inline">\(\delta \psi(r) \propto f(r)\)</span>. <span class="math display">\[f'(r) = \frac{m}{b} (r/b)^{m-1} + \frac{m}{r} (b/r)^m = \frac{m}{r} \left[ (r/b)^m + (b/r)^m \right]\]</span> <span class="math display">\[\frac{\delta \psi'(a)}{\delta \psi(a)} = \frac{f'(a)}{f(a)} = \frac{m}{a} \frac{(a/b)^m + (b/a)^m}{(a/b)^m - (b/a)^m}\]</span> Multiply numerator and denominator by <span class="math inline">\((a/b)^m\)</span>: <span class="math display">\[\frac{(a/b)^{2m} + 1}{(a/b)^{2m} - 1} = - \frac{1 + (a/b)^{2m}}{1 - (a/b)^{2m}} = - \lambda\]</span> Thus, <span class="math inline">\(\delta \psi'(a) = - \frac{m}{a} \lambda \delta \psi(a)\)</span>.</p>
+<p>Substitute back into the energy equation: <span class="math display">\[\delta W_V = - 2\pi^2 R_0 a \delta \psi(a) \left( - \frac{m}{a} \lambda \delta \psi(a) \right) = 2\pi^2 R_0 m \lambda (\delta \psi(a))^2\]</span></p>
+<p>Now substitute the expression for <span class="math inline">\(\delta \psi(a)\)</span> derived in Part (a): <span class="math display">\[\delta W_V = 2\pi^2 R_0 m \lambda \left[ \frac{a^2 B_0^2}{R_0^2} \left( \frac{n}{m} - \frac{1}{q_a} \right)^2 \xi_a^2 \right]\]</span> <span class="math display">\[\delta W_V = \frac{2\pi^2 B_0^2}{R_0} a^2 \xi_a^2 \left[ m \lambda \left( \frac{n}{m} - \frac{1}{q_a} \right)^2 \right]\]</span></p>
+<p><strong>2. Combine with Plasma Energy <span class="math inline">\(\delta W_P\)</span></strong> Add the <span class="math inline">\(\delta W_V\)</span> term to the surface terms (coefficients of <span class="math inline">\(a^2 \xi_a^2\)</span>) in Eq. (10). Existing surface term: <span class="math display">\[\left[ \frac{2}{q_a} \left( \frac{n}{m} - \frac{1}{q_a} \right) + \left( \frac{n}{m} - \frac{1}{q_a} \right)^2 \right]\]</span> Adding vacuum term <span class="math inline">\(m \lambda (\dots)^2\)</span>: <span class="math display">\[\frac{2}{q_a} \left( \frac{n}{m} - \frac{1}{q_a} \right) + (1 + m \lambda) \left( \frac{n}{m} - \frac{1}{q_a} \right)^2\]</span> This matches Eq. (14) exactly.</p>
+<hr>
+</section>
+<section id="analysis-and-interpretation" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-and-interpretation">Analysis and Interpretation</h3>
+<p><strong>1. Destabilizing Term</strong> The only term in Eq. (14) that can be negative (destabilizing) is the linear term in the boundary bracket: <span class="math display">\[\frac{2}{q_a} \left( \frac{n}{m} - \frac{1}{q_a} \right)\]</span> The integral term is always positive (stabilizing), and the quadratic term <span class="math inline">\((1+m\lambda)(\dots)^2\)</span> is always positive.</p>
+<p><strong>2. Condition for Destabilization</strong> For the term to be negative, we require: <span class="math display">\[\frac{n}{m} - \frac{1}{q_a} &lt; 0 \implies \frac{n}{m} &lt; \frac{1}{q_a} \implies n q_a &lt; m\]</span> Instability generally requires the edge safety factor <span class="math inline">\(q_a\)</span> to be <strong>less than the rational surface value</strong> <span class="math inline">\(m/n\)</span>.</p>
+<p><strong>3. Effect of Wall Position (<span class="math inline">\(b/a\)</span>)</strong> * <strong><span class="math inline">\(b/a \to \infty\)</span> (Wall at infinity):</strong> <span class="math display">\[\lambda \to \frac{1+0}{1-0} = 1\]</span> The vacuum energy is minimized, providing the least amount of stabilization. * <strong><span class="math inline">\(b/a \to 1\)</span> (Wall touching plasma):</strong> <span class="math display">\[\lambda \to \frac{2}{0} \to \infty\]</span> The stabilizing term <span class="math inline">\((1+m\lambda)(\dots)^2\)</span> becomes infinite. This forces <span class="math inline">\(\delta W\)</span> to be positive (stable) unless <span class="math inline">\(\xi_a = 0\)</span>. This is the phenomenon of <strong>wall stabilization</strong>.</p>
+<p><strong>4. Establishing Instability</strong> To prove instability, one must find a trial displacement function <span class="math inline">\(\xi(r)\)</span> that makes the total potential energy <span class="math inline">\(\delta W &lt; 0\)</span>. If <span class="math inline">\(\delta W\)</span> can be made negative, the system is unstable.</p>
+<p><strong>5. Stabilizing Effects</strong> * <strong>Main Effect:</strong> The presence of the conducting wall (represented by <span class="math inline">\(\lambda\)</span>) is a major stabilizing factor for the external kink mode. * <strong>Stabilization Strategy:</strong> If <span class="math inline">\(q_a\)</span> cannot be adjusted (e.g., to satisfy <span class="math inline">\(q_a &gt; m/n\)</span>), the plasma can be made more stable by <strong>bringing the conducting wall closer to the plasma surface</strong> (decreasing <span class="math inline">\(b/a\)</span>). This increases <span class="math inline">\(\lambda\)</span> and consequently increases the vacuum magnetic energy penalty for kinking.</p>
+
+
+</section>
 </section>
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -837,6 +911,7 @@ window.Quarto = {
   </script>
 </div> <!-- /content -->
 
-</body>
 
-</html>
+
+
+</body></html>

@@ -1,0 +1,129 @@
+---
+title: "External Kink Mode Stability"
+format: html
+editor: visual
+---
+
+## Exercise Statement
+
+4.  The external kink mode has the total potential energy $\delta W = \delta W_P + \delta W_V$, where
+    $$
+    \delta W_P = \frac{2\pi^2 B_0^2}{R_0} \left\{ \int_0^a dr \ r \left[ \left( r \frac{d\xi_0^r}{dr} \right)^2 + (m^2 - 1) (\xi_0^r)^2 \right] \left( \frac{n}{m} - \frac{1}{q} \right)^2 + a^2 (\xi_0^r(a))^2 \left[ \frac{2}{q_a} \left( \frac{n}{m} - \frac{1}{q_a} \right) + \left( \frac{n}{m} - \frac{1}{q_a} \right)^2 \right] \right\} \tag{10}
+    $$
+    with $q_a = q(a)$, and
+    $$
+    \delta W_V \approx 2\pi^2 R_0 \left[ r \delta \psi \frac{d\delta \psi}{dr} \right]_a^b \tag{11}
+    $$
+
+**(a)** The perturbed flux in the vacuum region has the form,
+$$
+\delta \psi = \alpha r^m + \beta r^{-m} \tag{12}
+$$
+where $\delta B^r = i m \delta \psi / r$. Apply the boundary conditions at the plasma boundary $r=a$ and the radius of the perfectly conducting wall $r=b$ **to obtain**,
+$$
+\delta \psi = \frac{B_0}{R_0} \left( \frac{n}{m} - \frac{1}{q_a} \right) \frac{(\frac{r}{b})^m - (\frac{b}{r})^m}{(\frac{a}{b})^m - (\frac{b}{a})^m} a \xi_a \tag{13}
+$$
+
+**(b) Show that**,
+$$
+\delta W = \frac{2\pi^2 B_0^2}{R_0} \left\{ \int_0^a dr \ r \left[ \left( r \frac{d\xi_0^r}{dr} \right)^2 + (m^2 - 1)^2 (\xi_0^r)^2 \right] \left( \frac{n}{m} - \frac{1}{q} \right)^2 + a^2 \xi_0^r(a)^2 \left[ \frac{2}{q_a} \left( \frac{n}{m} - \frac{1}{q_a} \right) + (1 + m\lambda) \left( \frac{n}{m} - \frac{1}{q_a} \right)^2 \right] \right\} \tag{14}
+$$
+where
+$$
+\lambda = \frac{1 + (a/b)^{2m}}{1 - (a/b)^{2m}}
+$$
+
+**Which** term in $\delta W$ can be destabilising? **What** is the condition for $q_a$ in order for that term to be destabilising? **What** are the effects of and physical meanings of the limits $b/a \to \infty$ and $b/a \to 1$? **How** does one establish (from $\delta W$ in Eq. (14)) whether the plasma is unstable to external kink modes? **What** is the main stabilising effect that can be determined with this procedure, and **how** can the plasma be made more stable even if $q_a$ can't be adjusted?
+
+---
+
+## Solutions
+
+### Solution (a): Vacuum Flux Solution
+
+**1. Apply Boundary Condition at the Wall ($r=b$)**
+The conducting wall at $r=b$ requires the normal component of the perturbed magnetic field to vanish: $\delta B^r(b) = 0$.
+Given $\delta B^r = im \delta \psi / r$, this implies $\delta \psi(b) = 0$.
+Substituting this into the general form (Eq. 12):
+$$\alpha b^m + \beta b^{-m} = 0 \implies \beta = - \alpha b^{2m}$$
+Substituting $\beta$ back into Eq. (12):
+$$\delta \psi(r) = \alpha (r^m - b^{2m} r^{-m}) = \alpha r^m \left[ 1 - \left( \frac{b}{r} \right)^{2m} \right]$$
+
+**2. Apply Boundary Condition at the Plasma Surface ($r=a$)**
+At the plasma interface, the radial magnetic field perturbation must be continuous.
+From the plasma side (internal solution), using the result from the previous exercise:
+$$\delta B^r(a) = \frac{i B_0}{R_0 q_a} [n q_a - m] \xi_a = \frac{i B_0}{R_0} \left( n - \frac{m}{q_a} \right) \xi_a$$
+From the vacuum side:
+$$\delta B^r(a) = \frac{i m \delta \psi(a)}{a}$$
+Equating the two expressions:
+$$\frac{i m \delta \psi(a)}{a} = \frac{i B_0}{R_0} m \left( \frac{n}{m} - \frac{1}{q_a} \right) \xi_a$$
+Solving for $\delta \psi(a)$:
+$$\delta \psi(a) = \frac{a B_0}{R_0} \left( \frac{n}{m} - \frac{1}{q_a} \right) \xi_a$$
+
+**3. Construct the Final Solution**
+We express the radial dependence using the form derived in step 1, normalized to the value at $a$:
+$$\delta \psi(r) = \delta \psi(a) \frac{r^m - b^{2m}r^{-m}}{a^m - b^{2m}a^{-m}}$$
+To match Eq. (13), we multiply the numerator and denominator by $b^{-m}$:
+$$\frac{b^{-m}(r^m - b^{2m}r^{-m})}{b^{-m}(a^m - b^{2m}a^{-m})} = \frac{(r/b)^m - (b/r)^m}{(a/b)^m - (b/a)^m}$$
+Substituting $\delta \psi(a)$:
+$$\delta \psi(r) = \frac{B_0}{R_0} \left( \frac{n}{m} - \frac{1}{q_a} \right) a \xi_a \left[ \frac{(\frac{r}{b})^m - (\frac{b}{r})^m}{(\frac{a}{b})^m - (\frac{b}{a})^m} \right]$$
+
+### Solution (b): Total Potential Energy
+
+**1. Calculate Vacuum Energy $\delta W_V$**
+We evaluate the integral in Eq. (11):
+$$\delta W_V \approx 2\pi^2 R_0 \left[ r \delta \psi \frac{d\delta \psi}{dr} \right]_a^b$$
+Since $\delta \psi(b) = 0$, the upper limit vanishes.
+$$\delta W_V = - 2\pi^2 R_0 \left( a \delta \psi(a) \delta \psi'(a) \right)$$
+
+First, find the logarithmic derivative $\frac{\delta \psi'(a)}{\delta \psi(a)}$.
+Let $f(r) = (r/b)^m - (b/r)^m$. Then $\delta \psi(r) \propto f(r)$.
+$$f'(r) = \frac{m}{b} (r/b)^{m-1} + \frac{m}{r} (b/r)^m = \frac{m}{r} \left[ (r/b)^m + (b/r)^m \right]$$
+$$\frac{\delta \psi'(a)}{\delta \psi(a)} = \frac{f'(a)}{f(a)} = \frac{m}{a} \frac{(a/b)^m + (b/a)^m}{(a/b)^m - (b/a)^m}$$
+Multiply numerator and denominator by $(a/b)^m$:
+$$\frac{(a/b)^{2m} + 1}{(a/b)^{2m} - 1} = - \frac{1 + (a/b)^{2m}}{1 - (a/b)^{2m}} = - \lambda$$
+Thus, $\delta \psi'(a) = - \frac{m}{a} \lambda \delta \psi(a)$.
+
+Substitute back into the energy equation:
+$$\delta W_V = - 2\pi^2 R_0 a \delta \psi(a) \left( - \frac{m}{a} \lambda \delta \psi(a) \right) = 2\pi^2 R_0 m \lambda (\delta \psi(a))^2$$
+
+Now substitute the expression for $\delta \psi(a)$ derived in Part (a):
+$$\delta W_V = 2\pi^2 R_0 m \lambda \left[ \frac{a^2 B_0^2}{R_0^2} \left( \frac{n}{m} - \frac{1}{q_a} \right)^2 \xi_a^2 \right]$$
+$$\delta W_V = \frac{2\pi^2 B_0^2}{R_0} a^2 \xi_a^2 \left[ m \lambda \left( \frac{n}{m} - \frac{1}{q_a} \right)^2 \right]$$
+
+**2. Combine with Plasma Energy $\delta W_P$**
+Add the $\delta W_V$ term to the surface terms (coefficients of $a^2 \xi_a^2$) in Eq. (10).
+Existing surface term:
+$$\left[ \frac{2}{q_a} \left( \frac{n}{m} - \frac{1}{q_a} \right) + \left( \frac{n}{m} - \frac{1}{q_a} \right)^2 \right]$$
+Adding vacuum term $m \lambda (\dots)^2$:
+$$\frac{2}{q_a} \left( \frac{n}{m} - \frac{1}{q_a} \right) + (1 + m \lambda) \left( \frac{n}{m} - \frac{1}{q_a} \right)^2$$
+This matches Eq. (14) exactly.
+
+---
+
+### Analysis and Interpretation
+
+**1. Destabilizing Term**
+The only term in Eq. (14) that can be negative (destabilizing) is the linear term in the boundary bracket:
+$$\frac{2}{q_a} \left( \frac{n}{m} - \frac{1}{q_a} \right)$$
+The integral term is always positive (stabilizing), and the quadratic term $(1+m\lambda)(\dots)^2$ is always positive.
+
+**2. Condition for Destabilization**
+For the term to be negative, we require:
+$$\frac{n}{m} - \frac{1}{q_a} < 0 \implies \frac{n}{m} < \frac{1}{q_a} \implies n q_a < m$$
+Instability generally requires the edge safety factor $q_a$ to be **less than the rational surface value** $m/n$.
+
+**3. Effect of Wall Position ($b/a$)**
+* **$b/a \to \infty$ (Wall at infinity):**
+    $$\lambda \to \frac{1+0}{1-0} = 1$$
+    The vacuum energy is minimized, providing the least amount of stabilization.
+* **$b/a \to 1$ (Wall touching plasma):**
+    $$\lambda \to \frac{2}{0} \to \infty$$
+    The stabilizing term $(1+m\lambda)(\dots)^2$ becomes infinite. This forces $\delta W$ to be positive (stable) unless $\xi_a = 0$. This is the phenomenon of **wall stabilization**.
+
+**4. Establishing Instability**
+To prove instability, one must find a trial displacement function $\xi(r)$ that makes the total potential energy $\delta W < 0$. If $\delta W$ can be made negative, the system is unstable.
+
+**5. Stabilizing Effects**
+* **Main Effect:** The presence of the conducting wall (represented by $\lambda$) is a major stabilizing factor for the external kink mode.
+* **Stabilization Strategy:** If $q_a$ cannot be adjusted (e.g., to satisfy $q_a > m/n$), the plasma can be made more stable by **bringing the conducting wall closer to the plasma surface** (decreasing $b/a$). This increases $\lambda$ and consequently increases the vacuum magnetic energy penalty for kinking.
