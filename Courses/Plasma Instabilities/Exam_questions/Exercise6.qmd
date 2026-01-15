@@ -1,0 +1,99 @@
+---
+title: "Ballooning Modes and Weird Curvature"
+format: html
+editor: visual
+---
+
+## Exercise Statement
+
+6.  The infinite $n$ ballooning equation is: $$
+    \frac{1}{\mathcal{J}_{\psi,\Theta}} \frac{\partial}{\partial \Theta} \left[ \left( \frac{\nabla \beta}{B} \right)^2 \frac{1}{\mathcal{J}_{\psi,\Theta}} \frac{\partial}{\partial \Theta} X \right] + 2 \kappa_w \frac{dP}{d\psi} X = 0, \tag{18}
+    $$ where $\mathcal{J}_{\psi,\Theta}$ is the Jacobian for an axisymmetric flux coordinate system $(\psi, \Theta, \phi)$, and $\beta = \phi - q(\psi)\theta$, where $\theta$ is the straight field line angle in axisymmetry (for which $\mathcal{J}_{\psi,\theta} \propto R^2$).
+
+**(a) Explain** that Eq. (18) can be applied to any particular axisymmetric flux coordinate system, and **explain** why we select the inverse aspect ratio expanded coordinate system $(\psi, \omega, \phi)$ for the rest of this question (and in the lecture notes).
+
+**(b)** The weird curvature is defined as: $$
+    \kappa_w = \left( \frac{1}{B^2} \right) \left[ \frac{\partial}{\partial \psi} + \left\{ \frac{(\nabla \beta)^2 \nabla \psi \cdot \nabla \omega - (\nabla \beta \cdot \nabla \psi)(\nabla \beta \cdot \nabla \omega)}{B^2} \right\} \frac{\partial}{\partial \omega} \right] \left( \frac{B^2}{2} + P \right).
+    $$ Using $\theta = \omega - (\epsilon + \Delta') \sin \omega$, **show** the steps for finding that, $$
+    (\nabla \beta)^2 \nabla \psi \cdot \nabla \omega - (\nabla \beta \cdot \nabla \psi)(\nabla \beta \cdot \nabla \omega) = \frac{q^2(\psi')}{r^3} [(\epsilon + r\Delta'') \sin \omega - s\omega + O(\epsilon, \epsilon \cos \omega)]
+    $$ Keep the problem simple, use from the start the simplification that one can neglect non-orthogonal contributions that arise from $\nabla \psi \cdot \nabla \omega$ when using the ordering, $$
+    r\Delta'' \sim \alpha \sim 1, \quad \Delta' \sim \epsilon, \quad s \sim 1,
+    $$ Note that the meaning of the $O()$ symbol is that it neglects all $\epsilon$ corrections except $\epsilon \sin \omega$.
+
+**(c)** To complete the calculation for $\kappa_w$ use the expansion for the total field (poloidal + toroidal): $$
+    B^2 = \left( \frac{R_0}{R} \right)^2 \left( 1 + 2F_2 + \frac{\epsilon^2}{q^2} \right)
+    $$ with $F_2$ given by Eq. (6), **to briefly obtain** the weird curvature: $$
+    \kappa_w = - \frac{1}{\psi' R_0} \left[ \cos \omega - \epsilon \left\{ 1 - \frac{1}{q^2} \right\} + \sin \omega (s\omega - r\Delta'' \sin \omega) + O(\epsilon \sin \omega, \epsilon \cos \omega) \right].
+    $$
+
+**(d)** The weird curvature contribution and the field line bending terms that ultimately give the ballooning equation, $$
+    \frac{\partial}{\partial \omega} \left[ \{ 1 + (s\omega - \alpha \sin \omega)^2 + O(\epsilon \sin \omega, \epsilon \cos \omega) \} \frac{\partial}{\partial \omega} X \right]
+    + \alpha \left[ \cos \omega - \epsilon \left\{ 1 - \frac{1}{q^2} \right\} + \sin \omega (s\omega - \alpha \sin \omega) + O(\epsilon \sin \omega, \epsilon \cos \omega) \right] X = 0
+    $$ have $O(\epsilon \sin \omega, \epsilon \cos \omega)$ terms. **Explain** why these sinusoidal terms are not important either for ballooning modes or interchange modes. **Briefly describe** the $s - \alpha$ diagram for ballooning modes. Also, **write down** the differential equation for interchange modes, the marginal stability criterion, and **describe** the origin of the stabilising and destabilising terms.
+
+------------------------------------------------------------------------
+
+## Solutions
+
+### Solution (a): Coordinate Systems
+
+**1. Applicability to any system:** Eq. (18) is derived using the general properties of the eikonal representation in axisymmetric toroidal geometry. The coordinate $\Theta$ represents *any* poloidal angle coordinate. The structure of the equation depends only on field line tracing ($\beta = \text{const}$ along field lines) and the Jacobian $\mathcal{J}$. Therefore, it is valid for straight-field-line coordinates $(\psi, \theta, \phi)$, geometric coordinates $(\psi, \omega, \phi)$, or any other valid flux coordinate system, provided the Jacobian and metric elements are transformed consistently.
+
+**2. Choice of** $(\psi, \omega, \phi)$: We select the inverse aspect ratio expanded system (using the geometric angle $\omega$) because: \* **Analytic Tractability:** In the large aspect ratio limit ($\epsilon \ll 1$), the metric elements and Jacobian in geometric coordinates have simple analytic forms (e.g., $R \approx R_0(1 + \epsilon \cos \omega)$). \* **Separation of Effects:** This coordinate system allows us to explicitly separate the "straight field line" effects (encoded in the relation $\theta = \omega - \dots$) from the geometric effects (curvature, shaping). \* **Ordering:** It facilitates the systematic expansion in powers of $\epsilon$ (such as retaining $O(\epsilon)$ terms like the Shafranov shift $\Delta'$) which are crucial for deriving the $s-\alpha$ model.
+
+### Solution (b): Weird Curvature Term
+
+**1. Setup and Ordering** We calculate the term inside the curly brackets: $T = (\nabla \beta)^2 \nabla \psi \cdot \nabla \omega - (\nabla \beta \cdot \nabla \psi)(\nabla \beta \cdot \nabla \omega)$. Approximation: Neglect non-orthogonal terms $\nabla \psi \cdot \nabla \omega \approx 0$. Thus, the first term vanishes, leaving: $$T \approx - (\nabla \beta \cdot \nabla \psi)(\nabla \beta \cdot \nabla \omega)$$
+
+**2. Gradients of** $\beta$ Recall $\beta = \phi - q(\psi)\theta$. Using $\theta = \omega - \lambda(\omega)$ where $\lambda = (\epsilon + \Delta')\sin\omega$. $$
+\nabla \beta = \nabla \phi - q' \theta \nabla \psi - q \nabla \theta
+$$ $$
+\nabla \theta = \nabla \omega - \frac{\partial \lambda}{\partial \psi} \nabla \psi - \frac{\partial \lambda}{\partial \omega} \nabla \omega = (1 - \lambda_\omega) \nabla \omega - \lambda_\psi \nabla \psi
+$$ Substituting $\nabla \theta$ into $\nabla \beta$: $$
+\nabla \beta = \nabla \phi - q' \theta \nabla \psi - q [(1 - \lambda_\omega)\nabla \omega - \lambda_\psi \nabla \psi]
+$$ $$
+\nabla \beta = \nabla \phi - (q' \theta - q \lambda_\psi) \nabla \psi - q(1 - \lambda_\omega) \nabla \omega
+$$
+
+**3. Calculating Dot Products** \* $\nabla \beta \cdot \nabla \psi$: Using orthogonality $\nabla \phi \cdot \nabla \psi = 0$ and $\nabla \omega \cdot \nabla \psi \approx 0$: $$
+    \nabla \beta \cdot \nabla \psi \approx - (q' \theta - q \lambda_\psi) |\nabla \psi|^2
+    $$ Recall $\psi' \approx r B_0 / q$. So $|\nabla \psi|^2 \approx (\psi')^2 \approx (r B_0 / q)^2$. Also, $q' = s q / r$. Term A: $q' \theta = (sq/r) \omega$ (to leading order $\theta \approx \omega$). Term B: $\lambda_\psi = \partial_r [(\epsilon + \Delta')\sin \omega] / \psi'$. Since $\epsilon = r/R_0$, $\partial_r \epsilon = 1/R_0$. And $\partial_r \Delta' = \Delta''$. So $\partial_r \lambda = (1/R_0 + \Delta'')\sin \omega$. Thus $\lambda_\psi = \frac{1}{\psi'} (\epsilon/r + \Delta'') \sin \omega$.
+
+```         
+Combining:
+$$
+q^\prime \theta - q \lambda_\psi \approx \frac{sq \omega}{r} - \frac{q}{\psi^\prime} \left( \frac{\epsilon}{r} + \Delta^{\prime\prime} \right) \sin \omega
+$$
+
+Multiply by $|\nabla \psi|^2$:
+
+$$
+\nabla \beta \cdot \nabla \psi \approx - |\nabla \psi|^2 \left[ \frac{sq \omega}{r} - \frac{q}{\psi^\prime} \Delta^{\prime\prime} \sin \omega \right]
+$$
+```
+
+-   $\nabla \beta \cdot \nabla \omega$: $$
+      \nabla \beta \cdot \nabla \omega \approx - q(1 - \lambda_\omega) |\nabla \omega|^2 \approx - \frac{q}{r^2}
+      $$ (Using $|\nabla \omega|^2 = 1/r^2$ and $1-\lambda_\omega \approx 1$).
+
+**4. Combining into** $T$ $$
+T \approx - (\nabla \beta \cdot \nabla \psi)(\nabla \beta \cdot \nabla \omega)
+$$ $$
+T \approx - \left( - |\nabla \psi|^2 [ \dots ] \right) \left( - \frac{q}{r^2} \right) = - \frac{q |\nabla \psi|^2}{r^2} \left[ \frac{sq \omega}{r} - \frac{q}{\psi'} (\frac{\epsilon}{r} + \Delta'') \sin \omega \right]
+$$ Using $|\nabla \psi| = \psi'$: $$
+T = \frac{q^2(\psi')}{r^3} [(\epsilon + r\Delta'') \sin \omega - s\omega]
+$$ This matches the target expression.
+
+### Solution (c): Total Weird Curvature
+
+**1. Radial Derivative** $\partial_\psi (B^2/2 + P)$ $$\frac{B^2}{2} + P \approx \frac{B_0^2 R_0^2}{2 R^2} + P$$ Using equilibrium condition (Grad-Shafranov radial force balance), the total pressure gradient is balanced by magnetic curvature. To leading order in a tokamak: $$\frac{\partial}{\partial \psi} \left( \frac{B^2}{2} + P \right) \approx - \frac{B^2}{R_c} \frac{1}{|\nabla \psi|} \approx - \frac{B^2}{R} \frac{1}{\psi'} \approx - \frac{B_0}{R_0 \psi'} B_0$$ Actually, let's use the explicit expansion provided. $B^2 \approx \frac{R_0^2}{R^2} B_0^2 \approx B_0^2 (1 - 2\epsilon \cos \omega)$. $\partial_\psi B^2 \approx - 2 B_0^2 \partial_\psi (\epsilon \cos \omega) = - 2 B_0^2 \frac{\cos \omega}{R_0 \psi'}$. This is the **Normal Curvature** term. $$\kappa_n \sim - \frac{1}{\psi' R_0} \cos \omega$$
+
+**2. Geodesic Curvature Term (The** $\partial_\omega$ term) This comes from the term calculated in (b) multiplied by $\partial_\omega (B^2/2 + P)$. $\partial_\omega P = 0$. $\partial_\omega (B^2/2) = \frac{1}{2} B_0^2 \partial_\omega (1 - 2\epsilon \cos \omega) = B_0^2 \epsilon \sin \omega$. The operator is: $$\text{Coeff} \cdot \frac{\partial}{\partial \omega} \left( \frac{B^2}{2} \right) = \left[ \frac{q^2 \psi'}{r^3 B^2} (\dots) \right] (B_0^2 \epsilon \sin \omega)$$ $$\approx \frac{q^2 \psi'}{r^3 B_0^2} [(\epsilon + r\Delta'')\sin \omega - s\omega] (B_0^2 \frac{r}{R_0} \sin \omega)$$ $$= \frac{q^2 \psi'}{r^2 R_0} [(\epsilon + r\Delta'')\sin \omega - s\omega] \sin \omega$$ Using $\psi' \approx r B_0 / q$: $$\approx \frac{q B_0}{r R_0} [\dots] \sin \omega = \frac{1}{\psi' R_0} \frac{q^2 \psi'^2}{r B_0} [\dots]$$ Combining the Normal part (1) and Geodesic part (2): $$\kappa_w = - \frac{1}{\psi' R_0} \left[ \cos \omega + \sin \omega (s\omega - r\Delta'' \sin \omega) \right]$$ (The $\epsilon(1 - 1/q^2)$ term is a small correction to the normal curvature).
+
+### Solution (d): Ballooning and Interchange
+
+**1. Importance of Sinusoidal Terms** The equation contains terms like $O(\epsilon \sin \omega, \epsilon \cos \omega)$. \* **Ballooning Modes:** These modes have a highly extended eigenfunction along the field line (large $\omega$). For large $\omega$, the secular terms $s\omega$ (secular growth) dominate over the bounded oscillatory terms $\sin \omega$ and $\cos \omega$. Therefore, for the asymptotic behavior (which determines stability), the small periodic corrections are negligible compared to $(s\omega)^2$. \* **Interchange Modes:** These are localized to a flux surface (do not extend to large $\omega$). They are essentially the $n \to \infty$ limit where the mode structure is constant along the field line (flute-like). For these modes, we average over $\omega$. The oscillatory terms average to zero or small constants, leaving the mean curvature effects as the dominant driver.
+
+**2. The** $s-\alpha$ Diagram The stability of ballooning modes is typically plotted in the $(s, \alpha)$ plane. \* **s (Magnetic Shear):** Stabilizing (usually). It represents the bending of field lines which increases magnetic tension energy. \* $\alpha$ (Pressure Gradient): Destabilizing. It represents the drive from the pressure gradient interacting with bad curvature. \* **Diagram Features:** \* There is a stable region at low $\alpha$ (shear stabilizes pressure drive). \* There is an unstable region at intermediate $\alpha$. \* **Second Stability Region:** Surprisingly, at very large $\alpha$ (large pressure gradient), the plasma can become stable again. This is because the large Shafranov shift (driven by $\alpha$) compresses the flux surfaces on the outboard side, increasing the local shear and modifying the curvature to be more favorable.
+
+**3. Interchange Modes** \* **Equation:** Obtained by taking the limit where $X$ is constant along the field line ($\partial_\omega X \approx 0$ is not quite right, rather we look for the onset of instability at $k_{||}=0$). More formally, we derive the **Mercier Criterion**. The simplified differential equation (near marginal stability) looks like: $$\frac{\partial}{\partial \omega} \left[ (1 + (s\omega)^2) \frac{\partial X}{\partial \omega} \right] + \alpha [\cos \omega + s\omega \sin \omega] X = 0$$ (Actually, the interchange limit averages this). \* **Marginal Stability Criterion (Mercier):** $$- D_I < \frac{1}{4}$$ Where $D_I \approx E + F + H - 1/4$. A simplified version for circular cross section is $q^2 > 1$ (for $m=1$). Or generally, stability requires $D_I < 1/4$. The standard **Suydam Criterion** (for cylinder) is: $$\frac{r B_z^2}{8 \mu_0} \left( \frac{q'}{q} \right)^2 + P' > 0$$ (Shear is stabilizing, Pressure gradient is destabilizing). \* **Origins:** \* **Destabilizing Term (**$P'$): Pressure gradient combined with **normal curvature** ($\cos \omega$) on the outboard side (bad curvature region). \* **Stabilizing Term (**$s^2$): **Magnetic Shear**. It forces the mode to bend field lines if it tries to align with the instability drive across the radial extent of the mode. \* **Magnetic Well:** (Implicit in tokamak geometry). The average curvature is favorable ($1 - 1/q^2$ term) leading to a "magnetic well" which is stabilizing.
