@@ -1,0 +1,69 @@
+---
+title: "Derivation of Wave Energy Density"
+format: html
+editor: visual
+---
+
+## Derivation of Brillouin's Formula
+
+**Goal:** Derive the expression for the time-averaged energy density of a monochromatic wave in a dispersive medium:
+$$
+\langle W \rangle = \frac{1}{4} \left[ \vec{E}_0^* \cdot \frac{\partial(\omega \hat{\epsilon})}{\partial \omega} \cdot \vec{E}_0 + \vec{H}_0^* \cdot \frac{\partial(\omega \hat{\mu})}{\partial \omega} \cdot \vec{H}_0 \right]
+$$
+
+### 1. Poynting's Theorem
+We start with the conservation of energy for electromagnetic fields (Poynting's Theorem). The rate of work done by the fields on the current density $\vec{J}$ is:
+$$
+\vec{J} \cdot \vec{E} = - \nabla \cdot (\vec{E} \times \vec{H}) - \vec{E} \cdot \frac{\partial \vec{D}}{\partial t} - \vec{H} \cdot \frac{\partial \vec{B}}{\partial t}
+$$
+The term $\vec{J} \cdot \vec{E}$ represents the power absorbed by the medium. We are interested in the energy stored in a lossless wave packet, so we look at the time rate of change of energy density $\frac{\partial W}{\partial t}$.
+
+For a dispersive medium, we cannot simply write $W = \frac{1}{2}(\vec{E}\cdot\vec{D} + \vec{B}\cdot\vec{H})$. Instead, we must analyze a wave packet that grows slowly in time to accumulate energy.
+
+### 2. Slowly Varying Envelope Approximation
+Consider a quasi-monochromatic wave with a slowly varying amplitude $\vec{E}_0(t)$ (slow compared to the frequency $\omega$). The electric field is:
+$$
+\vec{E}(t) = \text{Re} \left[ \vec{E}_0(t) e^{-i\omega t} \right]
+$$
+The displacement field $\vec{D}$ is related to $\vec{E}$ by the permittivity $\hat{\epsilon}(\omega)$. Since the amplitude is time-dependent, we expand $\hat{\epsilon}$ around the carrier frequency $\omega$ using a Taylor series for the time derivative operator $\frac{\partial}{\partial t} \to -i\omega + \frac{\partial}{\partial t}$ acting on the envelope.
+
+However, a cleaner approach is to work in the frequency domain. The displacement field is:
+$$
+\vec{D}(t) = \text{Re} \left[ \hat{\epsilon}(\omega) \vec{E}_0(t) e^{-i\omega t} + i \frac{\partial \hat{\epsilon}}{\partial \omega} \frac{d\vec{E}_0}{dt} e^{-i\omega t} + \dots \right]
+$$
+(The second term arises because the frequency spectrum of a varying pulse is not a delta function; the derivative $\partial \epsilon / \partial \omega$ accounts for the "spread" of frequencies).
+
+### 3. Calculating the Power Density
+We calculate the electric contribution to the power density term $\vec{E} \cdot \frac{\partial \vec{D}}{\partial t}$.
+Using the complex notation $A(t) = \frac{1}{2}(A_0 e^{-i\omega t} + A_0^* e^{i\omega t})$:
+$$
+\langle \vec{E} \cdot \frac{\partial \vec{D}}{\partial t} \rangle = \frac{1}{4} \left( \vec{E}_0^* \cdot \frac{\partial \vec{D}_0}{\partial t} + \vec{E}_0 \cdot \frac{\partial \vec{D}_0^*}{\partial t} \right)
+$$
+where $\vec{D}_0 \approx \epsilon(\omega) \vec{E}_0$.
+However, explicitly keeping the slow time variation allows us to identify the stored energy. The dominant term for energy accumulation involves the time derivative of the amplitude.
+
+Let's evaluate $\frac{\partial \vec{D}}{\partial t}$ keeping the first order correction:
+$$
+\frac{\partial \vec{D}}{\partial t} \approx \text{Re} \left[ -i\omega \epsilon \vec{E}_0 e^{-i\omega t} + \frac{\partial (\omega \epsilon)}{\partial \omega} \frac{d\vec{E}_0}{dt} e^{-i\omega t} \right]
+$$
+Now, take the dot product with $\vec{E}(t)$ and time average over one period $T = 2\pi/\omega$. Fast oscillating terms like $e^{-2i\omega t}$ average to zero. We are left with cross terms involving $\vec{E}_0^* \cdot \frac{d\vec{E}_0}{dt}$.
+
+The time-averaged rate of change of energy is:
+$$
+\left\langle \vec{E} \cdot \frac{\partial \vec{D}}{\partial t} \right\rangle = \frac{1}{4} \vec{E}_0^* \cdot \frac{\partial (\omega \epsilon)}{\partial \omega} \cdot \frac{d\vec{E}_0}{dt} + \text{c.c.}
+$$
+Assuming the medium is lossless (Hermitian $\epsilon$), this can be rewritten as a total time derivative:
+$$
+\left\langle \vec{E} \cdot \frac{\partial \vec{D}}{\partial t} \right\rangle = \frac{\partial}{\partial t} \left( \frac{1}{4} \vec{E}_0^* \cdot \frac{\partial (\omega \epsilon)}{\partial \omega} \cdot \vec{E}_0 \right)
+$$
+
+### 4. Final Energy Density Expression
+The quantity inside the time derivative is the stored electric energy density.
+$$
+\langle W_E \rangle = \frac{1}{4} \vec{E}_0^* \cdot \frac{\partial (\omega \epsilon)}{\partial \omega} \cdot \vec{E}_0
+$$
+An identical derivation applies to the magnetic term $\vec{H} \cdot \frac{\partial \vec{B}}{\partial t}$, yielding:
+$$
+\langle W_M \rangle = \frac{1}{4} \vec{H}_0^* \cdot \frac{\partial (\omega \mu)}{\partial \omega} \cdot \vec{H}_0
+$$
+Summing these gives the total wave energy density (Eq 12.1).

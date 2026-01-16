@@ -1,0 +1,96 @@
+---
+title: "Three-Wave Coupling and Matching Conditions"
+format: html
+editor: visual
+---
+
+## Exercise Statement
+
+**Matching conditions:** Discuss the geometrical solution to the set of equations formed by the matching conditions and dispersion relations. Consider some particular cases, e.g. SRS, Stimulated Brillouin Scattering (SBS), and/or Langmuir Decay Instability (LDI).
+
+**Why** does resonant three wave coupling in a plasma often involve waves of different nature?
+
+---
+
+## Solutions
+
+### 1. Geometrical Solution to Matching Conditions
+
+In a plasma, a large amplitude "pump" wave can decay into two daughter waves if they satisfy the resonance conditions (also known as the Manley-Rowe relations). These conditions represent the conservation of energy and momentum for the wave quanta (quasiparticles):
+
+$$
+\begin{align}
+\omega_0 &= \omega_1 + \omega_2 \quad (\text{Frequency Matching}) \\
+\vec{k}_0 &= \vec{k}_1 + \vec{k}_2 \quad (\text{Wavenumber Matching})
+\end{align}
+$$
+
+where $(\omega_0, \vec{k}_0)$ characterizes the pump wave, and indices 1 and 2 denote the daughter waves.
+
+In addition to these matching conditions, each wave must satisfy its own **dispersion relation**, which describes the allowed modes of propagation in the plasma medium:
+$$
+\omega_i = \Omega_i(\vec{k}_i) \quad \text{for } i = 0, 1, 2
+$$
+
+**Geometrical Construction:**
+The problem is to find the intersection of the constraints. Geometrically, this can be visualized in $\vec{k}$-space:
+
+1.  **Fixed Pump:** The pump wave vector $\vec{k}_0$ is fixed.
+2.  **Triangle Construction:** The matching condition $\vec{k}_0 = \vec{k}_1 + \vec{k}_2$ implies that the three wave vectors form a closed triangle.
+3.  **Dispersion Surfaces:** Since $\omega$ is a function of $\vec{k}$, the frequency matching condition $\omega_0 = \Omega_1(\vec{k}_1) + \Omega_2(\vec{k}_0 - \vec{k}_1)$ defines a specific surface (or locus of points) in $\vec{k}$-space.
+
+The solutions lie on the curve where the dispersion surface of wave 1 and the shifted dispersion surface of wave 2 intersect such that their frequencies sum to $\omega_0$.
+
+### 2. Particular Cases
+
+#### Stimulated Brillouin Scattering (SBS)
+**Process:** An incident Electromagnetic (EM) wave decays into a scattered EM wave and an Ion Acoustic (IA) wave.
+* **Pump:** EM wave ($\omega_0, \vec{k}_0$).
+* **Daughter 1:** Scattered EM wave ($\omega_s, \vec{k}_s$).
+* **Daughter 2:** Ion Acoustic wave ($\omega_{ia}, \vec{k}_{ia}$).
+
+**Geometrical Solution:**
+The ion acoustic wave has a very low frequency ($\omega_{ia} \approx c_s k_{ia} \ll \omega_0$) because the ion sound speed $c_s$ is much slower than the speed of light $c$.
+* **Frequency:** $\omega_s = \omega_0 - \omega_{ia} \approx \omega_0$. The scattered light has almost the same frequency as the pump.
+* **Momentum:** Because $\omega_s \approx \omega_0$, the magnitude of the wave vectors is similar $|\vec{k}_s| \approx |\vec{k}_0|$. To satisfy the triangle vector condition $\vec{k}_{ia} = \vec{k}_0 - \vec{k}_s$, the ion acoustic wave vector is maximized when $\vec{k}_s$ is anti-parallel to $\vec{k}_0$.
+* **Result:** SBS is most efficient in the **backscattering** geometry where $\vec{k}_{ia} \approx 2\vec{k}_0$.
+
+#### Stimulated Raman Scattering (SRS)
+**Process:** An incident EM wave decays into a scattered EM wave and an Electron Plasma (EP) / Langmuir wave.
+* **Pump:** EM wave ($\omega_0, \vec{k}_0$).
+* **Daughter 1:** Scattered EM wave ($\omega_s, \vec{k}_s$).
+* **Daughter 2:** Langmuir wave ($\omega_{pe}, \vec{k}_{ep}$).
+
+**Geometrical Solution:**
+The Langmuir wave has a frequency close to the plasma frequency $\omega_{ep} \approx \omega_{pe}$.
+* **Frequency:** $\omega_s = \omega_0 - \omega_{pe}$. The scattered light is significantly downshifted in frequency (Stokes line).
+* **Momentum:** The dispersion relation for EM waves is $\omega^2 = \omega_{pe}^2 + c^2k^2$. The matching conditions define a specific locus of scattering angles. Unlike SBS, the frequency shift is large, so $|\vec{k}_s|$ is noticeably smaller than $|\vec{k}_0|$.
+
+#### Langmuir Decay Instability (LDI)
+**Process:** A Langmuir wave decays into another Langmuir wave and an Ion Acoustic wave.
+* **Pump:** Langmuir wave.
+* **Daughters:** Langmuir wave + Ion Acoustic wave.
+
+**Geometrical Solution:**
+Similar to SBS, the ion acoustic wave takes up very little frequency but significant momentum. The product Langmuir wave travels in the opposite direction with slightly lower frequency. This often leads to a "cascade" where energy moves from higher $k$ to lower $k$ (inverse cascade) in the Langmuir spectrum.
+
+### 3. Why Coupling Involves Waves of Different Nature
+
+It is a common observation in plasma physics that a wave of type A rarely decays into two other waves of type A. For example, a photon in a vacuum cannot decay into two photons, and a Langmuir wave cannot easily decay into two Langmuir waves. This is due to the **convexity of the dispersion relation**.
+
+**The Convexity Argument:**
+Consider a dispersion relation $\omega(k)$ that is convex, meaning the second derivative $\omega''(k) > 0$. Examples include:
+* Electromagnetic waves in plasma: $\omega = \sqrt{\omega_{pe}^2 + c^2k^2}$
+* Langmuir waves: $\omega = \sqrt{\omega_{pe}^2 + 3v_{th}^2k^2}$
+
+For a convex function satisfying $\omega(0) \geq 0$, the following inequality generally holds for any non-zero vectors $\vec{k}_1, \vec{k}_2$:
+$$
+\omega(\vec{k}_1 + \vec{k}_2) < \omega(\vec{k}_1) + \omega(\vec{k}_2)
+$$
+This means that a pump wave with wavevector $\vec{k}_0 = \vec{k}_1 + \vec{k}_2$ has **less energy** than the sum of the energies of the two potential daughter waves of the same mode. Energy conservation $\omega_0 = \omega_1 + \omega_2$ cannot be satisfied.
+
+**The Necessity of Different Modes:**
+To satisfy the matching conditions, one of the daughter waves must usually belong to a different branch of the dispersion relation that has a **lower frequency** for a given wavenumber (a "slower" mode), such as an acoustic mode.
+
+* **Bridging the Gap:** In SBS and SRS, the Ion Acoustic or Langmuir waves serve as the third partner that closes the resonance triangle. They allow the high-frequency EM wave to shed momentum while conserving energy.
+* **Timescales:** This coupling mixes physical phenomena occurring at different timescales: the fast electronic timescale (light or Langmuir waves) and the slow ionic timescale (acoustic waves).
