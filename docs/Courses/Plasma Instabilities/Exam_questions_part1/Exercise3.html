@@ -232,6 +232,12 @@ window.Quarto = {
  <span class="menu-text">Three-Wave Coupling and Matching Conditions</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Derivation of Wave Energy Density</span></a>
+  </div>
+</li>
       </ul>
   </li>
       </ul>
@@ -528,8 +534,8 @@ window.Quarto = {
 <p>We assume a Fourier perturbation of the form <span class="math inline">\(\xi^r \sim \xi_0^r e^{i(n\phi - m\theta)}\)</span>. (Note: The sign convention in the result <span class="math inline">\([nq - m]\)</span> implies dependence <span class="math inline">\(\sim e^{in\phi - im\theta}\)</span>).</p>
 <p>Using the result from (a) <span class="math inline">\(\delta B^r = (\boldsymbol{B} \cdot \nabla) \xi^r\)</span> and the operator from (b): <span class="math display">\[\delta B^r = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right] \xi_0^r e^{i(n\phi - m\theta)}\]</span> Applying the derivatives (<span class="math inline">\(\partial_\phi \to in\)</span>, <span class="math inline">\(\partial_\theta \to -im\)</span>): <span class="math display">\[\delta B^r = \frac{F}{R^2} \left[ i n - \frac{i m}{q} \right] \xi^r = \frac{i F}{R^2 q} [nq - m] \xi^r\]</span></p>
 <p><strong>Leading Order Approximation:</strong> For large aspect ratio tokamaks: * <span class="math inline">\(R \approx R_0\)</span> * <span class="math inline">\(F(r) \approx R_0 B_0\)</span> (The toroidal field function is dominated by the vacuum field). Substituting these: <span class="math display">\[\frac{F}{R^2} \approx \frac{R_0 B_0}{R_0^2} = \frac{B_0}{R_0}\]</span> Thus: <span class="math display">\[\delta B_0^r = \frac{i B_0}{R_0 q} [nq - m] \xi_0^r\]</span></p>
-<p><strong>Justification for <span class="math inline">\(m\)</span>:</strong> In the large aspect ratio (cylindrical) limit, the equilibrium is symmetric in <span class="math inline">\(\theta\)</span>. The poloidal harmonics decouple, meaning equations can be solved for a single unique <span class="math inline">\(m\)</span> mode independently.</p>
-<p><strong>Comment on Rational Surface:</strong> A rational surface is defined where <span class="math inline">\(q(r) = m/n\)</span>. At this location, the term <span class="math inline">\([nq - m]\)</span> becomes zero. Consequently, <strong><span class="math inline">\(\delta B^r = 0\)</span> on the rational surface.</strong> This implies that in ideal MHD, the radial magnetic field perturbation vanishes at the resonance, preserving the magnetic topology (no magnetic island formation/reconnection).</p>
+<p><strong>Justification for</strong> <span class="math inline">\(m\)</span>: In the large aspect ratio (cylindrical) limit, the equilibrium is symmetric in <span class="math inline">\(\theta\)</span>. The poloidal harmonics decouple, meaning equations can be solved for a single unique <span class="math inline">\(m\)</span> mode independently.</p>
+<p><strong>Comment on Rational Surface:</strong> A rational surface is defined where <span class="math inline">\(q(r) = m/n\)</span>. At this location, the term <span class="math inline">\([nq - m]\)</span> becomes zero. Consequently, <span class="math inline">\(\delta B^r = 0\)</span> on the rational surface. This implies that in ideal MHD, the radial magnetic field perturbation vanishes at the resonance, preserving the magnetic topology (no magnetic island formation/reconnection).</p>
 </section>
 <section id="solution-d-stability-and-shear" class="level3">
 <h3 class="anchored" data-anchor-id="solution-d-stability-and-shear">Solution (d): Stability and Shear</h3>
@@ -538,7 +544,7 @@ window.Quarto = {
 <ul>
 <li><strong>Rational Surfaces:</strong> On a rational surface (<span class="math inline">\(q = m/n\)</span>), this term vanishes. The field lines do not “bend” in response to the perturbation because the perturbation helix matches the field line pitch. This removes the stabilizing tension force at that specific radius.</li>
 </ul>
-<p><strong>Sheared vs.&nbsp;Unsheared Plasmas:</strong> 1. <strong>Unsheared (<span class="math inline">\(q = \text{const}\)</span>):</strong> If the plasma is unsheared and <span class="math inline">\(q = m/n\)</span> everywhere (or over a large region), the stabilizing term <span class="math inline">\((nq-m)\)</span> vanishes globally. The plasma loses magnetic tension stabilization over the whole volume, making it highly unstable to helical distortions (kink modes). 2. <strong>Sheared (<span class="math inline">\(q' \neq 0\)</span>):</strong> If the plasma has shear, the resonance condition <span class="math inline">\(q(r) = m/n\)</span> is only satisfied at a specific radius (the rational surface). Away from this surface, <span class="math inline">\(|nq - m|\)</span> grows, and the field line bending term becomes non-zero.</p>
+<p><strong>Sheared vs.&nbsp;Unsheared Plasmas:</strong> 1. <strong>Unsheared (</strong><span class="math inline">\(q = \text{const}\)</span>): If the plasma is unsheared and <span class="math inline">\(q = m/n\)</span> everywhere (or over a large region), the stabilizing term <span class="math inline">\((nq-m)\)</span> vanishes globally. The plasma loses magnetic tension stabilization over the whole volume, making it highly unstable to helical distortions (kink modes). 2. <strong>Sheared (</strong><span class="math inline">\(q' \neq 0\)</span>): If the plasma has shear, the resonance condition <span class="math inline">\(q(r) = m/n\)</span> is only satisfied at a specific radius (the rational surface). Away from this surface, <span class="math inline">\(|nq - m|\)</span> grows, and the field line bending term becomes non-zero.</p>
 <p><strong>Does Shear Improve Stability?</strong> <strong>Yes.</strong> Magnetic shear localizes the region where the stabilizing field line bending force vanishes. Even if low-order rational surfaces cannot be avoided, shear ensures that the instability is essentially “pinned” or stabilized by the magnetic tension in the regions immediately surrounding the rational surface. This makes it much harder for global modes to grow compared to the shearless case.</p>
 
 

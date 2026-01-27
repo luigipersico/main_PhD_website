@@ -6,120 +6,62 @@ editor: visual
 
 ## Exercise Statement
 
-3.  The linear ideal MHD equations can be written in terms of the displacement variable $\boldsymbol{\xi} = \boldsymbol{\xi}_{\perp} + \xi_{\parallel} \boldsymbol{b}$. The perturbed magnetic field is,
-    $$\delta \boldsymbol{B} = \nabla \times (\boldsymbol{\xi} \times \boldsymbol{B}) = \nabla \times (\boldsymbol{\xi}_{\perp} \times \boldsymbol{B}) \tag{7}$$
+3.  The linear ideal MHD equations can be written in terms of the displacement variable $\boldsymbol{\xi} = \boldsymbol{\xi}_{\perp} + \xi_{\parallel} \boldsymbol{b}$. The perturbed magnetic field is, $$\delta \boldsymbol{B} = \nabla \times (\boldsymbol{\xi} \times \boldsymbol{B}) = \nabla \times (\boldsymbol{\xi}_{\perp} \times \boldsymbol{B}) \tag{7}$$
 
-**(a)** From the definition of Eq. (7), **show** using vector calculus identities that
-$$\delta \boldsymbol{B} \cdot \nabla X = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)] \tag{8}$$
-and in particular the radial contravariant perturbed field is
-$$\delta B^r \equiv \delta \boldsymbol{B} \cdot \nabla r = (\boldsymbol{B} \cdot \nabla) \xi^r$$
+**(a)** From the definition of Eq. (7), **show** using vector calculus identities that $$\delta \boldsymbol{B} \cdot \nabla X = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)] \tag{8}$$ and in particular the radial contravariant perturbed field is $$\delta B^r \equiv \delta \boldsymbol{B} \cdot \nabla r = (\boldsymbol{B} \cdot \nabla) \xi^r$$
 
-**(b)** For the representation of the magnetic field $\boldsymbol{B} = F(r)\nabla \phi + \psi' \nabla \phi \times \nabla r$ **show** that when adopting straight field line coordinates $(r, \theta, \phi)$ the magnetic operator $\boldsymbol{B} \cdot \nabla$ can be written as:
-$$\boldsymbol{B} \cdot \nabla = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right] \tag{9}$$
+**(b)** For the representation of the magnetic field $\boldsymbol{B} = F(r)\nabla \phi + \psi' \nabla \phi \times \nabla r$ **show** that when adopting straight field line coordinates $(r, \theta, \phi)$ the magnetic operator $\boldsymbol{B} \cdot \nabla$ can be written as: $$\boldsymbol{B} \cdot \nabla = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right] \tag{9}$$
 
-**(c)** Using Eq. (8) and (9) **show** that to leading order in $\epsilon$,
-$$\delta B_0^r = \frac{i B_0}{R_0 q} [nq - m] \xi_0^r$$
-where $n$ is the toroidal mode number, and you should justify the unique poloidal mode number $m$ appearing in $\delta B^r$. **Comment** on the value of $\delta B_0^r$ on a rational surface.
+**(c)** Using Eq. (8) and (9) **show** that to leading order in $\epsilon$, $$\delta B_0^r = \frac{i B_0}{R_0 q} [nq - m] \xi_0^r$$ where $n$ is the toroidal mode number, and you should justify the unique poloidal mode number $m$ appearing in $\delta B^r$. **Comment** on the value of $\delta B_0^r$ on a rational surface.
 
 **(d)** Quote the lowest order solution for the perturbed poloidal magnetic field and **consider** whether magnetic field line bending necessarily vanishes on a rational surface for sheared and unsheared plasmas? **Does** magnetic shear improve plasma stability if low order rational surfaces can't be avoided?
 
----
+------------------------------------------------------------------------
 
 ## Solutions
 
 ### Solution (a): Vector Identities
 
-**1. General Identity**
-We start with the perturbed magnetic field equation:
-$$\delta \boldsymbol{B} = \nabla \times (\boldsymbol{\xi}_{\perp} \times \boldsymbol{B})$$
-Using the vector identity for the curl of a cross product:
-$$\nabla \times (\boldsymbol{A} \times \boldsymbol{B}) = (\boldsymbol{B} \cdot \nabla)\boldsymbol{A} - (\boldsymbol{A} \cdot \nabla)\boldsymbol{B} + \boldsymbol{A}(\nabla \cdot \boldsymbol{B}) - \boldsymbol{B}(\nabla \cdot \boldsymbol{A})$$
-Substitute $\boldsymbol{A} = \boldsymbol{\xi}_{\perp}$ and note that $\nabla \cdot \boldsymbol{B} = 0$:
-$$\delta \boldsymbol{B} = (\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp} - (\boldsymbol{\xi}_{\perp} \cdot \nabla)\boldsymbol{B} - \boldsymbol{B}(\nabla \cdot \boldsymbol{\xi}_{\perp})$$
+**1. General Identity** We start with the perturbed magnetic field equation: $$\delta \boldsymbol{B} = \nabla \times (\boldsymbol{\xi}_{\perp} \times \boldsymbol{B})$$ Using the vector identity for the curl of a cross product: $$\nabla \times (\boldsymbol{A} \times \boldsymbol{B}) = (\boldsymbol{B} \cdot \nabla)\boldsymbol{A} - (\boldsymbol{A} \cdot \nabla)\boldsymbol{B} + \boldsymbol{A}(\nabla \cdot \boldsymbol{B}) - \boldsymbol{B}(\nabla \cdot \boldsymbol{A})$$ Substitute $\boldsymbol{A} = \boldsymbol{\xi}_{\perp}$ and note that $\nabla \cdot \boldsymbol{B} = 0$: $$\delta \boldsymbol{B} = (\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp} - (\boldsymbol{\xi}_{\perp} \cdot \nabla)\boldsymbol{B} - \boldsymbol{B}(\nabla \cdot \boldsymbol{\xi}_{\perp})$$
 
-Now, we take the dot product with $\nabla X$ (where $X$ is an arbitrary scalar):
-$$\delta \boldsymbol{B} \cdot \nabla X = [(\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp}] \cdot \nabla X - [(\boldsymbol{\xi}_{\perp} \cdot \nabla)\boldsymbol{B}] \cdot \nabla X - (\boldsymbol{B} \cdot \nabla X)(\nabla \cdot \boldsymbol{\xi}_{\perp})$$
+Now, we take the dot product with $\nabla X$ (where $X$ is an arbitrary scalar): $$\delta \boldsymbol{B} \cdot \nabla X = [(\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp}] \cdot \nabla X - [(\boldsymbol{\xi}_{\perp} \cdot \nabla)\boldsymbol{B}] \cdot \nabla X - (\boldsymbol{B} \cdot \nabla X)(\nabla \cdot \boldsymbol{\xi}_{\perp})$$
 
-We compare this to the desired Right Hand Side (RHS) of Eq. (8):
-$$\text{RHS} = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)]$$
-Expanding the first term of the RHS using the chain rule:
-$$(\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) = [(\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp}] \cdot \nabla X + \boldsymbol{\xi}_{\perp} \cdot [(\boldsymbol{B} \cdot \nabla)\nabla X]$$
-Expanding the second term of the RHS:
-$$\nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)] = (\boldsymbol{B} \cdot \nabla X)(\nabla \cdot \boldsymbol{\xi}_{\perp}) + \boldsymbol{\xi}_{\perp} \cdot \nabla (\boldsymbol{B} \cdot \nabla X)$$
+We compare this to the desired Right Hand Side (RHS) of Eq. (8): $$\text{RHS} = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)]$$ Expanding the first term of the RHS using the chain rule: $$(\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) = [(\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp}] \cdot \nabla X + \boldsymbol{\xi}_{\perp} \cdot [(\boldsymbol{B} \cdot \nabla)\nabla X]$$ Expanding the second term of the RHS: $$\nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)] = (\boldsymbol{B} \cdot \nabla X)(\nabla \cdot \boldsymbol{\xi}_{\perp}) + \boldsymbol{\xi}_{\perp} \cdot \nabla (\boldsymbol{B} \cdot \nabla X)$$
 
-Substituting these back into the RHS expression, the terms involving second derivatives of $X$ cancel out (specifically $\boldsymbol{\xi}_{\perp} \cdot [(\boldsymbol{B} \cdot \nabla)\nabla X]$ and $\boldsymbol{\xi}_{\perp} \cdot \nabla (\boldsymbol{B} \cdot \nabla X)$ are symmetric and cancel). We recover exactly the expression for $\delta \boldsymbol{B} \cdot \nabla X$ derived above.
-Thus, Eq. (8) is proven.
+Substituting these back into the RHS expression, the terms involving second derivatives of $X$ cancel out (specifically $\boldsymbol{\xi}_{\perp} \cdot [(\boldsymbol{B} \cdot \nabla)\nabla X]$ and $\boldsymbol{\xi}_{\perp} \cdot \nabla (\boldsymbol{B} \cdot \nabla X)$ are symmetric and cancel). We recover exactly the expression for $\delta \boldsymbol{B} \cdot \nabla X$ derived above. Thus, Eq. (8) is proven.
 
-**2. Radial Contravariant Field**
-We apply Eq. (8) with $X = r$ (the radial coordinate):
-$$\delta B^r = \delta \boldsymbol{B} \cdot \nabla r = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla r) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla r)]$$
-Since $\boldsymbol{B}$ lies on flux surfaces, it is perpendicular to the radial gradient: $\boldsymbol{B} \cdot \nabla r = 0$.
-The second term vanishes entirely.
-We define $\xi^r = \boldsymbol{\xi}_{\perp} \cdot \nabla r$.
-$$\delta B^r = (\boldsymbol{B} \cdot \nabla) \xi^r$$
+**2. Radial Contravariant Field** We apply Eq. (8) with $X = r$ (the radial coordinate): $$\delta B^r = \delta \boldsymbol{B} \cdot \nabla r = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla r) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla r)]$$ Since $\boldsymbol{B}$ lies on flux surfaces, it is perpendicular to the radial gradient: $\boldsymbol{B} \cdot \nabla r = 0$. The second term vanishes entirely. We define $\xi^r = \boldsymbol{\xi}_{\perp} \cdot \nabla r$. $$\delta B^r = (\boldsymbol{B} \cdot \nabla) \xi^r$$
 
 ### Solution (b): Magnetic Operator
 
-We are given the field representation:
-$$\boldsymbol{B} = F(r)\nabla \phi + \psi' \nabla \phi \times \nabla r$$
-The gradient operator in general coordinates is $\nabla = \nabla \phi \frac{\partial}{\partial \phi} + \nabla \theta \frac{\partial}{\partial \theta} + \nabla r \frac{\partial}{\partial r}$.
-We compute the operator $\boldsymbol{B} \cdot \nabla$:
-$$\boldsymbol{B} \cdot \nabla = (\boldsymbol{B} \cdot \nabla \phi) \frac{\partial}{\partial \phi} + (\boldsymbol{B} \cdot \nabla \theta) \frac{\partial}{\partial \theta} + (\boldsymbol{B} \cdot \nabla r) \frac{\partial}{\partial r}$$
+We are given the field representation: $$\boldsymbol{B} = F(r)\nabla \phi + \psi' \nabla \phi \times \nabla r$$ The gradient operator in general coordinates is $\nabla = \nabla \phi \frac{\partial}{\partial \phi} + \nabla \theta \frac{\partial}{\partial \theta} + \nabla r \frac{\partial}{\partial r}$. We compute the operator $\boldsymbol{B} \cdot \nabla$: $$\boldsymbol{B} \cdot \nabla = (\boldsymbol{B} \cdot \nabla \phi) \frac{\partial}{\partial \phi} + (\boldsymbol{B} \cdot \nabla \theta) \frac{\partial}{\partial \theta} + (\boldsymbol{B} \cdot \nabla r) \frac{\partial}{\partial r}$$
 
 1.  **Radial component:** As established, $\boldsymbol{B} \cdot \nabla r = 0$.
-2.  **Toroidal component:**
-    $$\boldsymbol{B} \cdot \nabla \phi = F(r) |\nabla \phi|^2 + \psi' (\nabla \phi \times \nabla r) \cdot \nabla \phi$$
-    The cross product term is zero (vector orthogonal to itself). In axisymmetric coordinates, $|\nabla \phi|^2 = 1/R^2$.
-    $$\boldsymbol{B} \cdot \nabla \phi = \frac{F}{R^2}$$
-3.  **Poloidal component:**
-    In **straight field line coordinates**, the field lines appear straight in the $\theta$-$\phi$ plane. The pitch of the field lines is defined by the safety factor $q(r)$:
-    $$\frac{\boldsymbol{B} \cdot \nabla \phi}{\boldsymbol{B} \cdot \nabla \theta} = q(r)$$
-    Therefore:
-    $$\boldsymbol{B} \cdot \nabla \theta = \frac{1}{q} (\boldsymbol{B} \cdot \nabla \phi) = \frac{F}{R^2 q}$$
+2.  **Toroidal component:** $$\boldsymbol{B} \cdot \nabla \phi = F(r) |\nabla \phi|^2 + \psi' (\nabla \phi \times \nabla r) \cdot \nabla \phi$$ The cross product term is zero (vector orthogonal to itself). In axisymmetric coordinates, $|\nabla \phi|^2 = 1/R^2$. $$\boldsymbol{B} \cdot \nabla \phi = \frac{F}{R^2}$$
+3.  **Poloidal component:** In **straight field line coordinates**, the field lines appear straight in the $\theta$-$\phi$ plane. The pitch of the field lines is defined by the safety factor $q(r)$: $$\frac{\boldsymbol{B} \cdot \nabla \phi}{\boldsymbol{B} \cdot \nabla \theta} = q(r)$$ Therefore: $$\boldsymbol{B} \cdot \nabla \theta = \frac{1}{q} (\boldsymbol{B} \cdot \nabla \phi) = \frac{F}{R^2 q}$$
 
-Substituting these coefficients back into the operator:
-$$\boldsymbol{B} \cdot \nabla = \frac{F}{R^2} \frac{\partial}{\partial \phi} + \frac{F}{R^2 q} \frac{\partial}{\partial \theta} = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right]$$
+Substituting these coefficients back into the operator: $$\boldsymbol{B} \cdot \nabla = \frac{F}{R^2} \frac{\partial}{\partial \phi} + \frac{F}{R^2 q} \frac{\partial}{\partial \theta} = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right]$$
 
 ### Solution (c): Perturbed Radial Field
 
-We assume a Fourier perturbation of the form $\xi^r \sim \xi_0^r e^{i(n\phi - m\theta)}$.
-(Note: The sign convention in the result $[nq - m]$ implies dependence $\sim e^{in\phi - im\theta}$).
+We assume a Fourier perturbation of the form $\xi^r \sim \xi_0^r e^{i(n\phi - m\theta)}$. (Note: The sign convention in the result $[nq - m]$ implies dependence $\sim e^{in\phi - im\theta}$).
 
-Using the result from (a) $\delta B^r = (\boldsymbol{B} \cdot \nabla) \xi^r$ and the operator from (b):
-$$\delta B^r = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right] \xi_0^r e^{i(n\phi - m\theta)}$$
-Applying the derivatives ($\partial_\phi \to in$, $\partial_\theta \to -im$):
-$$\delta B^r = \frac{F}{R^2} \left[ i n - \frac{i m}{q} \right] \xi^r = \frac{i F}{R^2 q} [nq - m] \xi^r$$
+Using the result from (a) $\delta B^r = (\boldsymbol{B} \cdot \nabla) \xi^r$ and the operator from (b): $$\delta B^r = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right] \xi_0^r e^{i(n\phi - m\theta)}$$ Applying the derivatives ($\partial_\phi \to in$, $\partial_\theta \to -im$): $$\delta B^r = \frac{F}{R^2} \left[ i n - \frac{i m}{q} \right] \xi^r = \frac{i F}{R^2 q} [nq - m] \xi^r$$
 
-**Leading Order Approximation:**
-For large aspect ratio tokamaks:
-* $R \approx R_0$
-* $F(r) \approx R_0 B_0$ (The toroidal field function is dominated by the vacuum field).
-Substituting these:
-$$\frac{F}{R^2} \approx \frac{R_0 B_0}{R_0^2} = \frac{B_0}{R_0}$$
-Thus:
-$$\delta B_0^r = \frac{i B_0}{R_0 q} [nq - m] \xi_0^r$$
+**Leading Order Approximation:** For large aspect ratio tokamaks: \* $R \approx R_0$ \* $F(r) \approx R_0 B_0$ (The toroidal field function is dominated by the vacuum field). Substituting these: $$\frac{F}{R^2} \approx \frac{R_0 B_0}{R_0^2} = \frac{B_0}{R_0}$$ Thus: $$\delta B_0^r = \frac{i B_0}{R_0 q} [nq - m] \xi_0^r$$
 
-**Justification for $m$:**
-In the large aspect ratio (cylindrical) limit, the equilibrium is symmetric in $\theta$. The poloidal harmonics decouple, meaning equations can be solved for a single unique $m$ mode independently.
+**Justification for** $m$: In the large aspect ratio (cylindrical) limit, the equilibrium is symmetric in $\theta$. The poloidal harmonics decouple, meaning equations can be solved for a single unique $m$ mode independently.
 
-**Comment on Rational Surface:**
-A rational surface is defined where $q(r) = m/n$. At this location, the term $[nq - m]$ becomes zero.
-Consequently, **$\delta B^r = 0$ on the rational surface.**
-This implies that in ideal MHD, the radial magnetic field perturbation vanishes at the resonance, preserving the magnetic topology (no magnetic island formation/reconnection).
+**Comment on Rational Surface:** A rational surface is defined where $q(r) = m/n$. At this location, the term $[nq - m]$ becomes zero. Consequently, $\delta B^r = 0$ on the rational surface. This implies that in ideal MHD, the radial magnetic field perturbation vanishes at the resonance, preserving the magnetic topology (no magnetic island formation/reconnection).
 
 ### Solution (d): Stability and Shear
 
-**Lowest Order Solution:**
-As derived above: $\delta B_0^r \propto (nq - m) \xi_0^r$.
+**Lowest Order Solution:** As derived above: $\delta B_0^r \propto (nq - m) \xi_0^r$.
 
-**Field Line Bending:**
-The "field line bending" term is the restoring force in the potential energy $\delta W$ arising from the tension of the magnetic field lines. It is proportional to the parallel gradient of the perturbation: $(\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi} \propto (nq - m)$.
+**Field Line Bending:** The "field line bending" term is the restoring force in the potential energy $\delta W$ arising from the tension of the magnetic field lines. It is proportional to the parallel gradient of the perturbation: $(\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi} \propto (nq - m)$.
 
-* **Rational Surfaces:** On a rational surface ($q = m/n$), this term vanishes. The field lines do not "bend" in response to the perturbation because the perturbation helix matches the field line pitch. This removes the stabilizing tension force at that specific radius.
+-   **Rational Surfaces:** On a rational surface ($q = m/n$), this term vanishes. The field lines do not "bend" in response to the perturbation because the perturbation helix matches the field line pitch. This removes the stabilizing tension force at that specific radius.
 
-**Sheared vs. Unsheared Plasmas:**
-1.  **Unsheared ($q = \text{const}$):** If the plasma is unsheared and $q = m/n$ everywhere (or over a large region), the stabilizing term $(nq-m)$ vanishes globally. The plasma loses magnetic tension stabilization over the whole volume, making it highly unstable to helical distortions (kink modes).
-2.  **Sheared ($q' \neq 0$):** If the plasma has shear, the resonance condition $q(r) = m/n$ is only satisfied at a specific radius (the rational surface). Away from this surface, $|nq - m|$ grows, and the field line bending term becomes non-zero.
+**Sheared vs. Unsheared Plasmas:** 1. **Unsheared (**$q = \text{const}$): If the plasma is unsheared and $q = m/n$ everywhere (or over a large region), the stabilizing term $(nq-m)$ vanishes globally. The plasma loses magnetic tension stabilization over the whole volume, making it highly unstable to helical distortions (kink modes). 2. **Sheared (**$q' \neq 0$): If the plasma has shear, the resonance condition $q(r) = m/n$ is only satisfied at a specific radius (the rational surface). Away from this surface, $|nq - m|$ grows, and the field line bending term becomes non-zero.
 
-**Does Shear Improve Stability?**
-**Yes.** Magnetic shear localizes the region where the stabilizing field line bending force vanishes. Even if low-order rational surfaces cannot be avoided, shear ensures that the instability is essentially "pinned" or stabilized by the magnetic tension in the regions immediately surrounding the rational surface. This makes it much harder for global modes to grow compared to the shearless case.
+**Does Shear Improve Stability?** **Yes.** Magnetic shear localizes the region where the stabilizing field line bending force vanishes. Even if low-order rational surfaces cannot be avoided, shear ensures that the instability is essentially "pinned" or stabilized by the magnetic tension in the regions immediately surrounding the rational surface. This makes it much harder for global modes to grow compared to the shearless case.
