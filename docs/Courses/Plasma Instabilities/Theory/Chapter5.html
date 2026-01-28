@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="From lecture slides by Jonathan P. Graves">
 
-<title>Exercise 3: Linear Ideal MHD and Field Line Bending – Luigi Persico - Ph.D.</title>
+<title>Lecture 5: Linear and Non-linear Tearing Modes – Luigi Persico - Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-169705d3eabda05963f3986ba613488e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-ce3cd9752fa19540e204c10d26179311.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,7 +102,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar docked fullcontent quarto-light">
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise2.html">Exam Questions Part1</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html">Exercise 3: Linear Ideal MHD and Field Line Bending</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter1.html">Theory</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter5.html">Lecture 5: Linear and Non-linear Tearing Modes</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -160,13 +161,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Exam Questions Part1</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise2.html" class="sidebar-item-text sidebar-link">
@@ -175,7 +176,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 3: Linear Ideal MHD and Field Line Bending</span></a>
   </div>
 </li>
@@ -230,13 +231,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Theory</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../Courses/Plasma Instabilities/Theory/Chapter1.html" class="sidebar-item-text sidebar-link">
@@ -263,7 +264,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter5.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter5.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lecture 5: Linear and Non-linear Tearing Modes</span></a>
   </div>
 </li>
@@ -516,19 +517,42 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#beyond-ideal-mhd-the-role-of-resistivity" id="toc-beyond-ideal-mhd-the-role-of-resistivity" class="nav-link active" data-scroll-target="#beyond-ideal-mhd-the-role-of-resistivity">1. Beyond Ideal MHD: The Role of Resistivity</a></li>
+  <li><a href="#linear-tearing-mode-theory" id="toc-linear-tearing-mode-theory" class="nav-link" data-scroll-target="#linear-tearing-mode-theory">2. Linear Tearing Mode Theory</a>
+  <ul class="collapse">
+  <li><a href="#the-outer-region-ideal-mhd" id="toc-the-outer-region-ideal-mhd" class="nav-link" data-scroll-target="#the-outer-region-ideal-mhd">The Outer Region (Ideal MHD)</a></li>
+  <li><a href="#the-inner-layer-resistive-mhd" id="toc-the-inner-layer-resistive-mhd" class="nav-link" data-scroll-target="#the-inner-layer-resistive-mhd">The Inner Layer (Resistive MHD)</a></li>
+  </ul></li>
+  <li><a href="#non-linear-evolution-rutherford-regime" id="toc-non-linear-evolution-rutherford-regime" class="nav-link" data-scroll-target="#non-linear-evolution-rutherford-regime">3. Non-linear Evolution: Rutherford Regime</a></li>
+  <li><a href="#neoclassical-tearing-modes-ntm" id="toc-neoclassical-tearing-modes-ntm" class="nav-link" data-scroll-target="#neoclassical-tearing-modes-ntm">4. Neoclassical Tearing Modes (NTM)</a></li>
+  <li><a href="#summary-of-tearing-stability" id="toc-summary-of-tearing-stability" class="nav-link" data-scroll-target="#summary-of-tearing-stability">5. Summary of Tearing Stability</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise2.html">Exam Questions Part1</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html">Exercise 3: Linear Ideal MHD and Field Line Bending</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter1.html">Theory</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter5.html">Lecture 5: Linear and Non-linear Tearing Modes</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Exercise 3: Linear Ideal MHD and Field Line Bending</h1>
+<h1 class="title">Lecture 5: Linear and Non-linear Tearing Modes</h1>
+<p class="subtitle lead">Plasma Instabilities Course Summary</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>From lecture slides by Jonathan P. Graves </p>
+          </div>
+  </div>
     
   
     
@@ -539,57 +563,86 @@ window.Quarto = {
 </header>
 
 
-<section id="exercise-statement" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-statement">Exercise Statement</h2>
-<ol start="3" type="1">
-<li>The linear ideal MHD equations can be written in terms of the displacement variable <span class="math inline">\(\boldsymbol{\xi} = \boldsymbol{\xi}_{\perp} + \xi_{\parallel} \boldsymbol{b}\)</span>. The perturbed magnetic field is, <span class="math display">\[\delta \boldsymbol{B} = \nabla \times (\boldsymbol{\xi} \times \boldsymbol{B}) = \nabla \times (\boldsymbol{\xi}_{\perp} \times \boldsymbol{B}) \tag{7}\]</span></li>
-</ol>
-<p><strong>(a)</strong> From the definition of Eq. (7), <strong>show</strong> using vector calculus identities that <span class="math display">\[\delta \boldsymbol{B} \cdot \nabla X = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)] \tag{8}\]</span> and in particular the radial contravariant perturbed field is <span class="math display">\[\delta B^r \equiv \delta \boldsymbol{B} \cdot \nabla r = (\boldsymbol{B} \cdot \nabla) \xi^r\]</span></p>
-<p><strong>(b)</strong> For the representation of the magnetic field <span class="math inline">\(\boldsymbol{B} = F(r)\nabla \phi + \psi' \nabla \phi \times \nabla r\)</span> <strong>show</strong> that when adopting straight field line coordinates <span class="math inline">\((r, \theta, \phi)\)</span> the magnetic operator <span class="math inline">\(\boldsymbol{B} \cdot \nabla\)</span> can be written as: <span class="math display">\[\boldsymbol{B} \cdot \nabla = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right] \tag{9}\]</span></p>
-<p><strong>(c)</strong> Using Eq. (8) and (9) <strong>show</strong> that to leading order in <span class="math inline">\(\epsilon\)</span>, <span class="math display">\[\delta B_0^r = \frac{i B_0}{R_0 q} [nq - m] \xi_0^r\]</span> where <span class="math inline">\(n\)</span> is the toroidal mode number, and you should justify the unique poloidal mode number <span class="math inline">\(m\)</span> appearing in <span class="math inline">\(\delta B^r\)</span>. <strong>Comment</strong> on the value of <span class="math inline">\(\delta B_0^r\)</span> on a rational surface.</p>
-<p><strong>(d)</strong> Quote the lowest order solution for the perturbed poloidal magnetic field and <strong>consider</strong> whether magnetic field line bending necessarily vanishes on a rational surface for sheared and unsheared plasmas? <strong>Does</strong> magnetic shear improve plasma stability if low order rational surfaces can’t be avoided?</p>
-<hr>
-</section>
-<section id="solutions" class="level2">
-<h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
-<section id="solution-a-vector-identities" class="level3">
-<h3 class="anchored" data-anchor-id="solution-a-vector-identities">Solution (a): Vector Identities</h3>
-<p><strong>1. General Identity</strong> We start with the perturbed magnetic field equation: <span class="math display">\[\delta \boldsymbol{B} = \nabla \times (\boldsymbol{\xi}_{\perp} \times \boldsymbol{B})\]</span> Using the vector identity for the curl of a cross product: <span class="math display">\[\nabla \times (\boldsymbol{A} \times \boldsymbol{B}) = (\boldsymbol{B} \cdot \nabla)\boldsymbol{A} - (\boldsymbol{A} \cdot \nabla)\boldsymbol{B} + \boldsymbol{A}(\nabla \cdot \boldsymbol{B}) - \boldsymbol{B}(\nabla \cdot \boldsymbol{A})\]</span> Substitute <span class="math inline">\(\boldsymbol{A} = \boldsymbol{\xi}_{\perp}\)</span> and note that <span class="math inline">\(\nabla \cdot \boldsymbol{B} = 0\)</span>: <span class="math display">\[\delta \boldsymbol{B} = (\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp} - (\boldsymbol{\xi}_{\perp} \cdot \nabla)\boldsymbol{B} - \boldsymbol{B}(\nabla \cdot \boldsymbol{\xi}_{\perp})\]</span></p>
-<p>Now, we take the dot product with <span class="math inline">\(\nabla X\)</span> (where <span class="math inline">\(X\)</span> is an arbitrary scalar): <span class="math display">\[\delta \boldsymbol{B} \cdot \nabla X = [(\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp}] \cdot \nabla X - [(\boldsymbol{\xi}_{\perp} \cdot \nabla)\boldsymbol{B}] \cdot \nabla X - (\boldsymbol{B} \cdot \nabla X)(\nabla \cdot \boldsymbol{\xi}_{\perp})\]</span></p>
-<p>We compare this to the desired Right Hand Side (RHS) of Eq. (8): <span class="math display">\[\text{RHS} = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)]\]</span> Expanding the first term of the RHS using the chain rule: <span class="math display">\[(\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) = [(\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp}] \cdot \nabla X + \boldsymbol{\xi}_{\perp} \cdot [(\boldsymbol{B} \cdot \nabla)\nabla X]\]</span> Expanding the second term of the RHS: <span class="math display">\[\nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)] = (\boldsymbol{B} \cdot \nabla X)(\nabla \cdot \boldsymbol{\xi}_{\perp}) + \boldsymbol{\xi}_{\perp} \cdot \nabla (\boldsymbol{B} \cdot \nabla X)\]</span></p>
-<p>Substituting these back into the RHS expression, the terms involving second derivatives of <span class="math inline">\(X\)</span> cancel out (specifically <span class="math inline">\(\boldsymbol{\xi}_{\perp} \cdot [(\boldsymbol{B} \cdot \nabla)\nabla X]\)</span> and <span class="math inline">\(\boldsymbol{\xi}_{\perp} \cdot \nabla (\boldsymbol{B} \cdot \nabla X)\)</span> are symmetric and cancel). We recover exactly the expression for <span class="math inline">\(\delta \boldsymbol{B} \cdot \nabla X\)</span> derived above. Thus, Eq. (8) is proven.</p>
-<p><strong>2. Radial Contravariant Field</strong> We apply Eq. (8) with <span class="math inline">\(X = r\)</span> (the radial coordinate): <span class="math display">\[\delta B^r = \delta \boldsymbol{B} \cdot \nabla r = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla r) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla r)]\]</span> Since <span class="math inline">\(\boldsymbol{B}\)</span> lies on flux surfaces, it is perpendicular to the radial gradient: <span class="math inline">\(\boldsymbol{B} \cdot \nabla r = 0\)</span>. The second term vanishes entirely. We define <span class="math inline">\(\xi^r = \boldsymbol{\xi}_{\perp} \cdot \nabla r\)</span>. <span class="math display">\[\delta B^r = (\boldsymbol{B} \cdot \nabla) \xi^r\]</span></p>
-</section>
-<section id="solution-b-magnetic-operator" class="level3">
-<h3 class="anchored" data-anchor-id="solution-b-magnetic-operator">Solution (b): Magnetic Operator</h3>
-<p>We are given the field representation: <span class="math display">\[\boldsymbol{B} = F(r)\nabla \phi + \psi' \nabla \phi \times \nabla r\]</span> The gradient operator in general coordinates is <span class="math inline">\(\nabla = \nabla \phi \frac{\partial}{\partial \phi} + \nabla \theta \frac{\partial}{\partial \theta} + \nabla r \frac{\partial}{\partial r}\)</span>. We compute the operator <span class="math inline">\(\boldsymbol{B} \cdot \nabla\)</span>: <span class="math display">\[\boldsymbol{B} \cdot \nabla = (\boldsymbol{B} \cdot \nabla \phi) \frac{\partial}{\partial \phi} + (\boldsymbol{B} \cdot \nabla \theta) \frac{\partial}{\partial \theta} + (\boldsymbol{B} \cdot \nabla r) \frac{\partial}{\partial r}\]</span></p>
-<ol type="1">
-<li><strong>Radial component:</strong> As established, <span class="math inline">\(\boldsymbol{B} \cdot \nabla r = 0\)</span>.</li>
-<li><strong>Toroidal component:</strong> <span class="math display">\[\boldsymbol{B} \cdot \nabla \phi = F(r) |\nabla \phi|^2 + \psi' (\nabla \phi \times \nabla r) \cdot \nabla \phi\]</span> The cross product term is zero (vector orthogonal to itself). In axisymmetric coordinates, <span class="math inline">\(|\nabla \phi|^2 = 1/R^2\)</span>. <span class="math display">\[\boldsymbol{B} \cdot \nabla \phi = \frac{F}{R^2}\]</span></li>
-<li><strong>Poloidal component:</strong> In <strong>straight field line coordinates</strong>, the field lines appear straight in the <span class="math inline">\(\theta\)</span>-<span class="math inline">\(\phi\)</span> plane. The pitch of the field lines is defined by the safety factor <span class="math inline">\(q(r)\)</span>: <span class="math display">\[\frac{\boldsymbol{B} \cdot \nabla \phi}{\boldsymbol{B} \cdot \nabla \theta} = q(r)\]</span> Therefore: <span class="math display">\[\boldsymbol{B} \cdot \nabla \theta = \frac{1}{q} (\boldsymbol{B} \cdot \nabla \phi) = \frac{F}{R^2 q}\]</span></li>
-</ol>
-<p>Substituting these coefficients back into the operator: <span class="math display">\[\boldsymbol{B} \cdot \nabla = \frac{F}{R^2} \frac{\partial}{\partial \phi} + \frac{F}{R^2 q} \frac{\partial}{\partial \theta} = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right]\]</span></p>
-</section>
-<section id="solution-c-perturbed-radial-field" class="level3">
-<h3 class="anchored" data-anchor-id="solution-c-perturbed-radial-field">Solution (c): Perturbed Radial Field</h3>
-<p>We assume a Fourier perturbation of the form <span class="math inline">\(\xi^r \sim \xi_0^r e^{i(n\phi - m\theta)}\)</span>. (Note: The sign convention in the result <span class="math inline">\([nq - m]\)</span> implies dependence <span class="math inline">\(\sim e^{in\phi - im\theta}\)</span>).</p>
-<p>Using the result from (a) <span class="math inline">\(\delta B^r = (\boldsymbol{B} \cdot \nabla) \xi^r\)</span> and the operator from (b): <span class="math display">\[\delta B^r = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right] \xi_0^r e^{i(n\phi - m\theta)}\]</span> Applying the derivatives (<span class="math inline">\(\partial_\phi \to in\)</span>, <span class="math inline">\(\partial_\theta \to -im\)</span>): <span class="math display">\[\delta B^r = \frac{F}{R^2} \left[ i n - \frac{i m}{q} \right] \xi^r = \frac{i F}{R^2 q} [nq - m] \xi^r\]</span></p>
-<p><strong>Leading Order Approximation:</strong> For large aspect ratio tokamaks: * <span class="math inline">\(R \approx R_0\)</span> * <span class="math inline">\(F(r) \approx R_0 B_0\)</span> (The toroidal field function is dominated by the vacuum field). Substituting these: <span class="math display">\[\frac{F}{R^2} \approx \frac{R_0 B_0}{R_0^2} = \frac{B_0}{R_0}\]</span> Thus: <span class="math display">\[\delta B_0^r = \frac{i B_0}{R_0 q} [nq - m] \xi_0^r\]</span></p>
-<p><strong>Justification for</strong> <span class="math inline">\(m\)</span>: In the large aspect ratio (cylindrical) limit, the equilibrium is symmetric in <span class="math inline">\(\theta\)</span>. The poloidal harmonics decouple, meaning equations can be solved for a single unique <span class="math inline">\(m\)</span> mode independently.</p>
-<p><strong>Comment on Rational Surface:</strong> A rational surface is defined where <span class="math inline">\(q(r) = m/n\)</span>. At this location, the term <span class="math inline">\([nq - m]\)</span> becomes zero. Consequently, <span class="math inline">\(\delta B^r = 0\)</span> on the rational surface. This implies that in ideal MHD, the radial magnetic field perturbation vanishes at the resonance, preserving the magnetic topology (no magnetic island formation/reconnection).</p>
-</section>
-<section id="solution-d-stability-and-shear" class="level3">
-<h3 class="anchored" data-anchor-id="solution-d-stability-and-shear">Solution (d): Stability and Shear</h3>
-<p><strong>Lowest Order Solution:</strong> As derived above: <span class="math inline">\(\delta B_0^r \propto (nq - m) \xi_0^r\)</span>.</p>
-<p><strong>Field Line Bending:</strong> The “field line bending” term is the restoring force in the potential energy <span class="math inline">\(\delta W\)</span> arising from the tension of the magnetic field lines. It is proportional to the parallel gradient of the perturbation: <span class="math inline">\((\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi} \propto (nq - m)\)</span>.</p>
+<section id="beyond-ideal-mhd-the-role-of-resistivity" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-ideal-mhd-the-role-of-resistivity">1. Beyond Ideal MHD: The Role of Resistivity</h2>
+<p>While previous lectures focused on Ideal MHD (where resistivity <span class="math inline">\(\eta = 0\)</span>), Lecture 5 introduces the consequences of finite resistivity. Even a small amount of resistivity allows the magnetic field topology to change, breaking the “frozen-in” constraint.</p>
 <ul>
-<li><strong>Rational Surfaces:</strong> On a rational surface (<span class="math inline">\(q = m/n\)</span>), this term vanishes. The field lines do not “bend” in response to the perturbation because the perturbation helix matches the field line pitch. This removes the stabilizing tension force at that specific radius.</li>
+<li><strong>Magnetic Reconnection</strong>: Resistivity allows magnetic field lines to “snap” and reconnect at rational surfaces where <span class="math inline">\(q = m/n\)</span>.</li>
+<li><strong>Magnetic Islands</strong>: This reconnection process leads to the formation of magnetic islands, which flatten pressure profiles and degrade confinement.</li>
 </ul>
-<p><strong>Sheared vs.&nbsp;Unsheared Plasmas:</strong> 1. <strong>Unsheared (</strong><span class="math inline">\(q = \text{const}\)</span>): If the plasma is unsheared and <span class="math inline">\(q = m/n\)</span> everywhere (or over a large region), the stabilizing term <span class="math inline">\((nq-m)\)</span> vanishes globally. The plasma loses magnetic tension stabilization over the whole volume, making it highly unstable to helical distortions (kink modes). 2. <strong>Sheared (</strong><span class="math inline">\(q' \neq 0\)</span>): If the plasma has shear, the resonance condition <span class="math inline">\(q(r) = m/n\)</span> is only satisfied at a specific radius (the rational surface). Away from this surface, <span class="math inline">\(|nq - m|\)</span> grows, and the field line bending term becomes non-zero.</p>
-<p><strong>Does Shear Improve Stability?</strong> <strong>Yes.</strong> Magnetic shear localizes the region where the stabilizing field line bending force vanishes. Even if low-order rational surfaces cannot be avoided, shear ensures that the instability is essentially “pinned” or stabilized by the magnetic tension in the regions immediately surrounding the rational surface. This makes it much harder for global modes to grow compared to the shearless case.</p>
-
-
 </section>
+<section id="linear-tearing-mode-theory" class="level2">
+<h2 class="anchored" data-anchor-id="linear-tearing-mode-theory">2. Linear Tearing Mode Theory</h2>
+<p>The stability of tearing modes is determined by the “Matching” procedure between two regions:</p>
+<section id="the-outer-region-ideal-mhd" class="level3">
+<h3 class="anchored" data-anchor-id="the-outer-region-ideal-mhd">The Outer Region (Ideal MHD)</h3>
+<ul>
+<li>Away from the rational surface (<span class="math inline">\(r_s\)</span>), resistivity is negligible.</li>
+<li>We solve the cylindrical ideal MHD equation (Newcomb equation) for the perturbed radial flux <span class="math inline">\(\psi\)</span>.</li>
+<li><strong>Stability Index (<span class="math inline">\(\Delta'\)</span>)</strong>: This critical parameter measures the jump in the logarithmic derivative of the flux across the rational surface: <span class="math display">\[\Delta' = \lim_{\epsilon \to 0} \left[ \frac{1}{\psi} \frac{d\psi}{dr} \right]_{r_s-\epsilon}^{r_s+\epsilon}\]</span>.</li>
+<li><strong>Criterion</strong>: If <span class="math inline">\(\Delta' &gt; 0\)</span>, the mode is linearly unstable and will grow.</li>
+</ul>
+</section>
+<section id="the-inner-layer-resistive-mhd" class="level3">
+<h3 class="anchored" data-anchor-id="the-inner-layer-resistive-mhd">The Inner Layer (Resistive MHD)</h3>
+<ul>
+<li>In a very narrow layer around <span class="math inline">\(r_s\)</span>, resistivity and inertia become dominant.</li>
+<li>The layer solution provides the growth rate <span class="math inline">\(\gamma\)</span>, which scales with resistivity as <span class="math inline">\(\gamma \sim \eta^{3/5}\)</span>.</li>
+</ul>
+</section>
+</section>
+<section id="non-linear-evolution-rutherford-regime" class="level2">
+<h2 class="anchored" data-anchor-id="non-linear-evolution-rutherford-regime">3. Non-linear Evolution: Rutherford Regime</h2>
+<p>As the magnetic island grows, it eventually exceeds the width of the resistive layer. At this point, the growth slows down from exponential to linear in time.</p>
+<ul>
+<li><strong>Rutherford Equation</strong>: Describes the evolution of the island width <span class="math inline">\(w\)</span>: <span class="math display">\[\frac{dw}{dt} \approx \eta \Delta'(w)\]</span>.</li>
+<li><strong>Saturated Island</strong>: The island grows until <span class="math inline">\(\Delta'(w) = 0\)</span>, reaching a steady-state size that can significantly impact plasma performance.</li>
+</ul>
+</section>
+<section id="neoclassical-tearing-modes-ntm" class="level2">
+<h2 class="anchored" data-anchor-id="neoclassical-tearing-modes-ntm">4. Neoclassical Tearing Modes (NTM)</h2>
+<p>In modern, high-pressure tokamaks, tearing modes can be driven by “bootstrap current” even if the traditional <span class="math inline">\(\Delta'\)</span> is negative (stable).</p>
+<ul>
+<li><strong>Bootstrap Current</strong>: Pressure-driven currents that exist in toroidal plasmas.</li>
+<li><strong>Seed Islands</strong>: If a small “seed” island is created (e.g., by a sawtooth crash), the pressure flattens inside the island, removing the local bootstrap current.</li>
+<li><strong>Self-Sustaining Growth</strong>: This missing current acts as an additional destabilizing force, causing the island to grow to large sizes.</li>
+</ul>
+</section>
+<section id="summary-of-tearing-stability" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-tearing-stability">5. Summary of Tearing Stability</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Linear Tearing</th>
+<th style="text-align: left;">Neoclassical Tearing (NTM)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Primary Drive</strong></td>
+<td style="text-align: left;">Current density gradients (<span class="math inline">\(\Delta' &gt; 0\)</span>)</td>
+<td style="text-align: left;">Missing bootstrap current</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Growth Phase</strong></td>
+<td style="text-align: left;">Exponential then Rutherford</td>
+<td style="text-align: left;">Requires a “seed” to start</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Impact</strong></td>
+<td style="text-align: left;">Magnetic reconnection</td>
+<td style="text-align: left;">Large island formation, confinement loss</td>
+</tr>
+</tbody>
+</table>
+
+
 </section>
 
 </main> <!-- /main -->

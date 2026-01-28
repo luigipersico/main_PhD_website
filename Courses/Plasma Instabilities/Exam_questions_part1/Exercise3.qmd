@@ -1,5 +1,5 @@
 ---
-title: "Linear Ideal MHD and Field Line Bending"
+title: "Exercise 3: Linear Ideal MHD and Field Line Bending"
 format: html
 editor: visual
 ---

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="From lecture slides by Jonathan P. Graves">
 
-<title>Grad Shafranov equation – Luigi Persico - Ph.D.</title>
+<title>Lecture 2: Grad-Shafranov Solutions - Toroidal and Shaped Equilibria – Luigi Persico - Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +24,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-169705d3eabda05963f3986ba613488e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-ce3cd9752fa19540e204c10d26179311.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -110,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item"><a href="../../Courses/Plasma Instabilities/01_MHD_model.html">Plasma Instabilities</a></li><li class="breadcrumb-item"><a href="../../Courses/Plasma Instabilities/02_Grad_Shafranov.html">Grad Shafranov equation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter1.html">Theory</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter2.html">Lecture 2: Grad-Shafranov Solutions - Toroidal and Shaped Equilibria</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,7 +125,7 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../index.html" class="sidebar-logo-link">
+      <a href="../../../index.html" class="sidebar-logo-link">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -136,7 +137,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../project-roadmap.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../project-roadmap.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ph.D.&nbsp;roadmap</span></a>
   </div>
 </li>
@@ -158,18 +159,6 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Courses/Plasma Instabilities/01_MHD_model.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">The MHD model</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../Courses/Plasma Instabilities/02_Grad_Shafranov.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Grad Shafranov equation</span></a>
-  </div>
-</li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
@@ -181,38 +170,38 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Grad-Shafranov Expansion and Shaping</span></a>
+  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 2: Grad-Shafranov Expansion and Shaping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Linear Ideal MHD and Field Line Bending</span></a>
+  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 3: Linear Ideal MHD and Field Line Bending</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">External Kink Mode Stability</span></a>
+  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 4: External Kink Mode Stability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Tearing Mode Instability</span></a>
+  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 5: Tearing Mode Instability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Ballooning Modes and Weird Curvature</span></a>
+  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 6: Ballooning Modes and Weird Curvature</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Trapped Particles and Fast Ion Stability</span></a>
+  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 7: Trapped Particles and Fast Ion Stability</span></a>
   </div>
 </li>
       </ul>
@@ -228,43 +217,79 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise4.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Three-Wave Coupling and Matching Conditions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise5.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Derivation of Wave Energy Density</span></a>
   </div>
 </li>
       </ul>
   </li>
-      </ul>
-  </li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
+          <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Papers</span></a>
+ <span class="menu-text">Theory</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../papers/Paper1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Paper1</span></a>
+  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 1: The Ideal MHD Model and Axisymmetric Equilibria</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lecture 2: Grad-Shafranov Solutions - Toroidal and Shaped Equilibria</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 3: Theory of Linear Ideal MHD Stability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 4: External Kink Modes and Inertia Treatment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 5: Linear and Non-linear Tearing Modes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 6: Localised Toroidal Instabilities: Balooning modes and interchange modes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 7: Fast Ion Effects on Pressure Driven Instabilities</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Reports</span></a>
+ <span class="menu-text">Papers</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -272,26 +297,8 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../reports/2025-09.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">September 2025</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../reports/2025-10.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">October 2025</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../reports/2025-11.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">November 2025</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../reports/2025-12.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">December 2025</span></a>
+  <a href="../../../papers/Paper1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Paper1</span></a>
   </div>
 </li>
       </ul>
@@ -299,57 +306,51 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
- <span class="menu-text">Theory</span></a>
+ <span class="menu-text">Reports</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
- <span class="menu-text">Mathematic Tools</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Mathematic_tools/Bra-ket_notation.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Bra-ket notation</span></a>
+  <a href="../../../reports/2025-09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">September 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Mathematic_tools/covariant_contravariant.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Covariant and Contravariant</span></a>
+  <a href="../../../reports/2025-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">October 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Mathematic_tools/Hermitian_adjoint.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hermitian adjoint</span></a>
+  <a href="../../../reports/2025-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">November 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Mathematic_tools/Hilbert_Space.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Hilbert Space</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../theory/Mathematic_tools/Pauli_matrices.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Pauli matrices</span></a>
+  <a href="../../../reports/2025-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">December 2025</span></a>
   </div>
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Theory</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
- <span class="menu-text">Plasma Physics</span></a>
+ <span class="menu-text">Mathematic Tools</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -357,64 +358,105 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/BES.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../theory/Mathematic_tools/Bra-ket_notation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bra-ket notation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../theory/Mathematic_tools/covariant_contravariant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Covariant and Contravariant</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../theory/Mathematic_tools/Hermitian_adjoint.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hermitian adjoint</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../theory/Mathematic_tools/Hilbert_Space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hilbert Space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../theory/Mathematic_tools/Pauli_matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pauli matrices</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Plasma Physics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../theory/Plasma_physics/BES.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beam Emission Spectroscopy (BES)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motional-Stark Effect (MSE)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/NBI.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../theory/Plasma_physics/NBI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Neutral Beam Injector (NBI)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/NBI_simulator.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../theory/Plasma_physics/NBI_simulator.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NBI Simulation: Mathematical Model &amp; Code Implementation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/Optical_spectrometer.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../theory/Plasma_physics/Optical_spectrometer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optical Spectrometer</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/Optics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../theory/Plasma_physics/Optics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/Safety_factor.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../theory/Plasma_physics/Safety_factor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Safety Factor q</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
  <span class="menu-text">Diagnostics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/Diagnostics/PD.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../theory/Plasma_physics/Diagnostics/PD.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Photodiodes (PD)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/Diagnostics/thomson.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../theory/Plasma_physics/Diagnostics/thomson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Thomson scattering system</span></a>
   </div>
 </li>
@@ -424,31 +466,8 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
- <span class="menu-text">Quantum Physics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Quatum Entanglement</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../theory/Quantum_physics/Schrödinger_eq.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Schrödinger Equation</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
- <span class="menu-text">Useful Guides</span></a>
+ <span class="menu-text">Quantum Physics</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -456,13 +475,36 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Useful_guides/Controlling_CMOS_cameras.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quatum Entanglement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../theory/Quantum_physics/Schrödinger_eq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schrödinger Equation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false">
+ <span class="menu-text">Useful Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../theory/Useful_guides/Controlling_CMOS_cameras.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to control CMOS cameras</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Useful_guides/Controlling_MSS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../theory/Useful_guides/Controlling_MSS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to control MSS</span></a>
   </div>
 </li>
@@ -476,20 +518,38 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="02_Grad_Shafranov.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#equilibrium-inputs-and-outputs" id="toc-equilibrium-inputs-and-outputs" class="nav-link active" data-scroll-target="#equilibrium-inputs-and-outputs">1. Equilibrium Inputs and Outputs</a></li>
+  <li><a href="#straight-field-line-coordinates" id="toc-straight-field-line-coordinates" class="nav-link" data-scroll-target="#straight-field-line-coordinates">2. Straight Field Line Coordinates</a></li>
+  <li><a href="#aspect-ratio-expansion-of-the-gse" id="toc-aspect-ratio-expansion-of-the-gse" class="nav-link" data-scroll-target="#aspect-ratio-expansion-of-the-gse">3. Aspect Ratio Expansion of the GSE</a></li>
+  <li><a href="#the-shafranov-shift-delta" id="toc-the-shafranov-shift-delta" class="nav-link" data-scroll-target="#the-shafranov-shift-delta">4. The Shafranov Shift (<span class="math inline">\(\Delta\)</span>)</a></li>
+  <li><a href="#plasma-shaping-coefficients" id="toc-plasma-shaping-coefficients" class="nav-link" data-scroll-target="#plasma-shaping-coefficients">5. Plasma Shaping Coefficients</a></li>
+  <li><a href="#particle-trapping-and-toroidicity" id="toc-particle-trapping-and-toroidicity" class="nav-link" data-scroll-target="#particle-trapping-and-toroidicity">6. Particle Trapping and Toroidicity</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item"><a href="../../Courses/Plasma Instabilities/01_MHD_model.html">Plasma Instabilities</a></li><li class="breadcrumb-item"><a href="../../Courses/Plasma Instabilities/02_Grad_Shafranov.html">Grad Shafranov equation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter1.html">Theory</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter2.html">Lecture 2: Grad-Shafranov Solutions - Toroidal and Shaped Equilibria</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Grad Shafranov equation</h1>
+<h1 class="title">Lecture 2: Grad-Shafranov Solutions - Toroidal and Shaped Equilibria</h1>
+<p class="subtitle lead">Plasma Instabilities Course Summary</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>From lecture slides by Jonathan P. Graves </p>
+          </div>
+  </div>
     
   
     
@@ -500,19 +560,67 @@ window.Quarto = {
 </header>
 
 
-<p><span class="math display">\[
-\Delta^{*}\psi = -R^2 \frac{dP(\psi)}{d\psi} - F(\psi)\frac{dF(\psi)}{d\psi}
-\]</span></p>
-<p>where</p>
-<p><span class="math display">\[
-\Delta^{*}= R^2\mathbb{\nabla}\cdot (\frac{1}{R^2}\mathbb{\nabla}),
-\]</span></p>
-<p><span class="math display">\[
-F(\psi)= RB_{\varphi},
-\]</span></p>
-<p>and <span class="math inline">\(P\)</span> is the plasma pressure.</p>
+<section id="equilibrium-inputs-and-outputs" class="level2">
+<h2 class="anchored" data-anchor-id="equilibrium-inputs-and-outputs">1. Equilibrium Inputs and Outputs</h2>
+<p>A tokamak equilibrium is generated by providing specific profiles and boundary conditions to the Grad-Shafranov Equation (GSE).</p>
+<ul>
+<li><strong>Inputs:</strong> Pressure profiles <span class="math inline">\(P(r)\)</span>, current function profiles <span class="math inline">\(F(r)\)</span> or safety factor profiles <span class="math inline">\(q(r)\)</span>, and the magnetic flux <span class="math inline">\(\psi\)</span> on a fixed boundary <span class="math inline">\((R, Z)\)</span>.</li>
+<li><strong>Outputs:</strong> Poloidal flux <span class="math inline">\(\psi(r)\)</span>, magnetic field strength <span class="math inline">\(B(r, \theta)\)</span>, and current density <span class="math inline">\(J(r, \theta)\)</span>.</li>
+</ul>
+</section>
+<section id="straight-field-line-coordinates" class="level2">
+<h2 class="anchored" data-anchor-id="straight-field-line-coordinates">2. Straight Field Line Coordinates</h2>
+<p>Straight field line coordinates <span class="math inline">\((r, \theta, \phi)\)</span> are essential for stability analysis because the local field pitch <span class="math inline">\(q_l\)</span> is constant on each flux surface (<span class="math inline">\(q_l = q\)</span>).</p>
+<ul>
+<li><strong>Jacobian:</strong> In this system, the Jacobian <span class="math inline">\(\mathcal{J}_\theta\)</span> is proportional to <span class="math inline">\(R^2\)</span>, specifically <span class="math inline">\(\mathcal{J}_\theta = \frac{r R^2}{R_0}\)</span>.</li>
+<li><strong>Safety Factor Relation:</strong> The safety factor <span class="math inline">\(q(r)\)</span> relates to the flux through the identity <span class="math inline">\(q(r) = \frac{r F(r)}{R_0 \psi'}\)</span>.</li>
+</ul>
+</section>
+<section id="aspect-ratio-expansion-of-the-gse" class="level2">
+<h2 class="anchored" data-anchor-id="aspect-ratio-expansion-of-the-gse">3. Aspect Ratio Expansion of the GSE</h2>
+<p>To solve the GSE analytically, R and Z are Fourier-expanded in terms of the inverse aspect ratio <span class="math inline">\(\epsilon = r/R_0\)</span>.</p>
+<ul>
+<li><strong>The Expansion:</strong>
+<ul>
+<li><span class="math inline">\(R(r, \omega) = R_0(1 + \epsilon \cos \omega - \epsilon^2 \frac{\Delta(r)}{R_0} + ...)\)</span></li>
+<li><span class="math inline">\(Z(r, \omega) = R_0(\epsilon \sin \omega - ...)\)</span></li>
+</ul></li>
+<li><strong>Harmonic Equations:</strong> Substituting these into the GSE yields decoupled equations for different Fourier components:
+<ul>
+<li><strong><span class="math inline">\(\cos(0\omega)\)</span>:</strong> Describes the balance between plasma pressure and magnetic pressure.</li>
+<li><strong><span class="math inline">\(\cos(\omega)\)</span>:</strong> Yields the radial equation for the <strong>Shafranov Shift</strong> (<span class="math inline">\(\Delta\)</span>).</li>
+<li><strong><span class="math inline">\(\cos(m\omega)\)</span>:</strong> Yields equations for cross-section <strong>shaping</strong> (elongation and triangularity).</li>
+</ul></li>
+</ul>
+</section>
+<section id="the-shafranov-shift-delta" class="level2">
+<h2 class="anchored" data-anchor-id="the-shafranov-shift-delta">4. The Shafranov Shift (<span class="math inline">\(\Delta\)</span>)</h2>
+<p>The Shafranov Shift represents the outward displacement of magnetic surfaces due to toroidal effects.</p>
+<ul>
+<li><strong>Drivers:</strong> It is driven by the <strong>Tyre Tube Force</strong> (plasma pressure) and the <strong>Hoop Force</strong> (toroidal current).</li>
+<li><strong>Governing Equation:</strong> <span class="math inline">\(\Delta'(r) = \frac{r}{R_0} [\beta_p(r) + \frac{l_i(r)}{2}]\)</span>, where <span class="math inline">\(\beta_p\)</span> is poloidal beta and <span class="math inline">\(l_i\)</span> is internal inductance.</li>
+<li><strong>Stability:</strong> A large Shafranov shift typically indicates high pressure gradients and can significantly affect MHD stability criteria.</li>
+</ul>
+</section>
+<section id="plasma-shaping-coefficients" class="level2">
+<h2 class="anchored" data-anchor-id="plasma-shaping-coefficients">5. Plasma Shaping Coefficients</h2>
+<p>Shaping (e.g., elongation <span class="math inline">\(\kappa\)</span> and triangularity <span class="math inline">\(\delta\)</span>) is prescribed at the plasma boundary and “penetrates” toward the core.</p>
+<ul>
+<li><strong>Magnetic Shear Influence:</strong> The penetration of shaping depends primarily on the magnetic shear <span class="math inline">\(s\)</span>. Higher shear reduces shaping penetration into the core.</li>
+<li><strong>Core Values:</strong> For a flat q-profile, elongation <span class="math inline">\(\kappa\)</span> remains constant while triangularity <span class="math inline">\(\delta\)</span> drops off linearly toward the magnetic axis.</li>
+</ul>
+</section>
+<section id="particle-trapping-and-toroidicity" class="level2">
+<h2 class="anchored" data-anchor-id="particle-trapping-and-toroidicity">6. Particle Trapping and Toroidicity</h2>
+<p>Toroidal effects create a “magnetic well” that traps certain particles, preventing them from circulating poloidally.</p>
+<ul>
+<li><strong>Trapping Condition:</strong> Particles are trapped if their parallel velocity <span class="math inline">\(v_{||}\)</span> reaches zero, which happens when the field strength <span class="math inline">\(B\)</span> reaches <span class="math inline">\(E/\mu\)</span>.</li>
+<li><strong>Conventional Orbits:</strong> In standard tokamaks, particles exhibit “banana orbits”.</li>
+<li><strong>Spherical Tokamaks:</strong> High pressure and strong poloidal fields in spherical tokamaks can create unconventional local magnetic wells, leading to <strong>Tear-Drop orbits</strong>.</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

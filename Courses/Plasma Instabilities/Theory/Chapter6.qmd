@@ -1,0 +1,53 @@
+---
+title: "Lecture 6: Localised Toroidal Instabilities: Balooning modes and interchange modes"
+subtitle: "Plasma Instabilities Course Summary"
+author: "From lecture slides by Jonathan P. Graves"
+format: 
+  html:
+    toc: true
+    code-fold: true
+    theme: cosmo
+---
+
+## 1. Localised Instabilities and Short Wavelengths
+Lecture 6 shifts focus toward short-wavelength instabilities that are localized to specific regions of the plasma. These modes, unlike the global kink modes, are driven by local pressure gradients and the specific geometry of the magnetic field.
+
+* **Perpendicular Perturbations**: The analysis uses a Clebsch representation for the magnetic field ($B = \nabla \beta \times \nabla \psi$) to simplify the description of perturbations that are perpendicular to the field lines.
+* **Field-Aligned Coordinates**: To treat these short-wavelength modes, an "Eikonal" representation is used, which assumes the perturbation varies rapidly across field lines but slowly along them.
+
+## 2. The Concept of Magnetic Curvature
+Curvature plays a decisive role in the stability of pressure-driven modes. 
+
+* **Favourable Curvature**: Occurs on the "Inboard" or High Field Side (HFS) of the torus. Here, the magnetic field lines bend away from the plasma, and the pressure gradient acts against the magnetic pressure, which is stabilizing.
+* **Unfavourable Curvature**: Occurs on the "Outboard" or Low Field Side (LFS). Here, the pressure gradient and curvature are aligned, pushing the plasma outward and driving instabilities.
+
+
+
+## 3. Ballooning Modes
+Ballooning modes are instabilities that "balloon" out on the Low Field Side of the torus while remaining stable or "quiet" on the High Field Side.
+
+* **The Ballooning Equation**: This is a 1D differential equation along a field line that determines stability by balancing the destabilizing pressure drive against the stabilizing effect of field line bending.
+* **The s-alpha Diagram**: A critical tool for stability analysis that plots magnetic shear ($s$) against the normalized pressure gradient ($\alpha$).
+    * **First Region of Stability**: At low pressure gradients, the plasma is stable.
+    * **Unstable Region**: As pressure increases, the ballooning mode is triggered.
+    * **Second Region of Stability**: At very high pressure, the Shafranov shift becomes so large that it creates a "magnetic well," restabilizing the plasma.
+
+
+
+## 4. Interchange Modes and Mercier Criterion
+Interchange modes involve the "swapping" of two magnetic flux tubes. 
+
+* **Suydam Criterion**: In a cylinder, stability depends only on shear and the pressure gradient.
+* **Mercier Criterion ($D_M$)**: This is the toroidal generalization of the Suydam criterion. It accounts for the "average" curvature experienced by a particle as it travels around the torus.
+* **Average Curvature**: In a torus, even if the LFS is locally unstable, the average curvature can be stabilizing if the safety factor $q > 1$. This is a major advantage of toroidal confinement over cylindrical systems.
+
+## 5. Local Magnetic Shear
+The stability of localized modes is highly sensitive to the local magnetic shear, which describes how the twist of field lines changes as you move radially.
+
+* **Pressure Influence**: High pressure gradients ($dP/dr$) can locally modify the magnetic shear, particularly on the LFS, which in turn influences the ballooning stability limits.
+* **Shaping Effects**: Plasma shaping (elongation and triangularity) alters the local curvature and shear, often allowing for higher stable pressure gradients.
+
+---
+
+**Key Research Takeaway:**
+Ballooning and interchange modes set the fundamental limit on the "Beta" ($\beta$) or pressure that a tokamak can hold. The discovery of the **Second Stability Region** was a major breakthrough, suggesting that if a plasma can be pushed past a certain pressure threshold, it might become stable again at even higher performance.

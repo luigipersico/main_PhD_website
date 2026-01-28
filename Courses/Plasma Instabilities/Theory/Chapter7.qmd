@@ -1,0 +1,48 @@
+---
+title: "Lecture 7: Fast Ion Effects on Pressure Driven Instabilities"
+subtitle: "Plasma Instabilities Course Summary"
+author: "From lecture slides by Jonathan P. Graves"
+format: 
+  html:
+    toc: true
+    code-fold: true
+    theme: cosmo
+---
+
+## 1. Integration of Fast Ions in MHD
+Lecture 7 explores how high-energy "fast" ions (from Neutral Beam Injection or alpha particles) modify standard MHD stability. While the bulk plasma carries the fluid momentum, fast ions introduce kinetic effects and pressure anisotropy that alter the equilibrium and potential energy of the system.
+
+* **Extended Momentum Equation**: The perpendicular momentum equation is modified to include terms for anisotropic pressure ($\delta P_{\perp}$ and $\delta P_{||}$) and magnetic curvature $\kappa$.
+* **Quasi-neutrality**: The model assumes $\sum q_j \delta n_j = 0$, where the sum includes both thermal species and fast ions.
+* **Leading Order Fluid Motion**: The perpendicular velocity remains dominated by the $E \times B$ drift.
+
+## 2. Kinetic-MHD Potential Energy ($\delta W$)
+The stability criterion is expanded to include a kinetic contribution from the fast particles, $\delta W_h$:
+$$\delta W = \delta W_c + \delta W_h$$
+where $\delta W_c$ is the standard "core" fluid MHD energy and $\delta W_h$ represents the fast particle response.
+
+* **Adiabatic Response**: Fast particles provide an "adiabatic" pressure response that is typically stabilizing.
+* **Kinetic Response**: This accounts for the resonant interactions between the mode frequency and the orbital frequencies (bounce or precession) of the fast ions.
+
+## 3. Fast Particle Distribution and Curvature
+The stabilization effect depends heavily on how the fast ions are distributed in phase space and their interaction with magnetic curvature.
+
+* **Pressure Averaged Curvature**: Stabilization occurs when the fast ion pressure gradient is coupled to favorable magnetic curvature.
+* **Trapped vs. Passing Particles**: Trapped particles often have a more significant impact on stability because their "precession" frequency can resonate with long-wavelength MHD modes like the internal kink.
+
+## 4. Impact on the $m=1$ Internal Kink Mode
+Fast ions have a dual role in the stability of the $m=1$ internal kink mode (the mode responsible for "sawtooth" oscillations):
+
+* **Destabilizing Effect**: They can increase the total poloidal beta ($\beta_p$), which enhances the toroidal drive for the instability.
+* **Stabilizing Effect**: The kinetic response ($\delta W_h$) provides a powerful restorative force that can "stabilize" the mode even when $q < 1$ in the core.
+* **Sawtooth Period Extension**: This stabilization explains why the presence of fast ions (e.g., from NBI) often leads to much longer intervals between sawtooth crashes.
+
+
+
+## 5. Modified Mercier Criterion
+The presence of fast particles also modifies the local stability criteria for interchange modes. The standard Mercier criterion is adjusted to account for the kinetic pressure of the hot species, which can provide an additional "magnetic well" effect or modify the average curvature term.
+
+---
+
+**Key Research Takeaway:**
+Fast particles are not just an "extra" population; they are a critical control tool for stability. By tailoring the fast ion distribution, researchers can suppress long-wavelength instabilities, though this can lead to larger "monster" sawtooth crashes when the stabilization limit is finally exceeded.

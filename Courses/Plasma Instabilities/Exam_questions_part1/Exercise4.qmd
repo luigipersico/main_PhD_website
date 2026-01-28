@@ -1,5 +1,5 @@
 ---
-title: "External Kink Mode Stability"
+title: "Exercise 4: External Kink Mode Stability"
 format: html
 editor: visual
 ---

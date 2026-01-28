@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="From lecture slides by Jonathan P. Graves">
 
-<title>Exercise 3: Linear Ideal MHD and Field Line Bending – Luigi Persico - Ph.D.</title>
+<title>Lecture 7: Fast Ion Effects on Pressure Driven Instabilities – Luigi Persico - Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-169705d3eabda05963f3986ba613488e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-ce3cd9752fa19540e204c10d26179311.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -101,7 +102,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-sidebar docked fullcontent quarto-light">
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise2.html">Exam Questions Part1</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html">Exercise 3: Linear Ideal MHD and Field Line Bending</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter1.html">Theory</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter7.html">Lecture 7: Fast Ion Effects on Pressure Driven Instabilities</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -160,13 +161,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Exam Questions Part1</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise2.html" class="sidebar-item-text sidebar-link">
@@ -175,7 +176,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 3: Linear Ideal MHD and Field Line Bending</span></a>
   </div>
 </li>
@@ -230,13 +231,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
  <span class="menu-text">Theory</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../Courses/Plasma Instabilities/Theory/Chapter1.html" class="sidebar-item-text sidebar-link">
@@ -275,7 +276,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter7.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter7.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lecture 7: Fast Ion Effects on Pressure Driven Instabilities</span></a>
   </div>
 </li>
@@ -516,19 +517,38 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#integration-of-fast-ions-in-mhd" id="toc-integration-of-fast-ions-in-mhd" class="nav-link active" data-scroll-target="#integration-of-fast-ions-in-mhd">1. Integration of Fast Ions in MHD</a></li>
+  <li><a href="#kinetic-mhd-potential-energy-delta-w" id="toc-kinetic-mhd-potential-energy-delta-w" class="nav-link" data-scroll-target="#kinetic-mhd-potential-energy-delta-w">2. Kinetic-MHD Potential Energy (<span class="math inline">\(\delta W\)</span>)</a></li>
+  <li><a href="#fast-particle-distribution-and-curvature" id="toc-fast-particle-distribution-and-curvature" class="nav-link" data-scroll-target="#fast-particle-distribution-and-curvature">3. Fast Particle Distribution and Curvature</a></li>
+  <li><a href="#impact-on-the-m1-internal-kink-mode" id="toc-impact-on-the-m1-internal-kink-mode" class="nav-link" data-scroll-target="#impact-on-the-m1-internal-kink-mode">4. Impact on the <span class="math inline">\(m=1\)</span> Internal Kink Mode</a></li>
+  <li><a href="#modified-mercier-criterion" id="toc-modified-mercier-criterion" class="nav-link" data-scroll-target="#modified-mercier-criterion">5. Modified Mercier Criterion</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise2.html">Exam Questions Part1</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html">Exercise 3: Linear Ideal MHD and Field Line Bending</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter1.html">Theory</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Theory/Chapter7.html">Lecture 7: Fast Ion Effects on Pressure Driven Instabilities</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Exercise 3: Linear Ideal MHD and Field Line Bending</h1>
+<h1 class="title">Lecture 7: Fast Ion Effects on Pressure Driven Instabilities</h1>
+<p class="subtitle lead">Plasma Instabilities Course Summary</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>From lecture slides by Jonathan P. Graves </p>
+          </div>
+  </div>
     
   
     
@@ -539,57 +559,47 @@ window.Quarto = {
 </header>
 
 
-<section id="exercise-statement" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-statement">Exercise Statement</h2>
-<ol start="3" type="1">
-<li>The linear ideal MHD equations can be written in terms of the displacement variable <span class="math inline">\(\boldsymbol{\xi} = \boldsymbol{\xi}_{\perp} + \xi_{\parallel} \boldsymbol{b}\)</span>. The perturbed magnetic field is, <span class="math display">\[\delta \boldsymbol{B} = \nabla \times (\boldsymbol{\xi} \times \boldsymbol{B}) = \nabla \times (\boldsymbol{\xi}_{\perp} \times \boldsymbol{B}) \tag{7}\]</span></li>
-</ol>
-<p><strong>(a)</strong> From the definition of Eq. (7), <strong>show</strong> using vector calculus identities that <span class="math display">\[\delta \boldsymbol{B} \cdot \nabla X = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)] \tag{8}\]</span> and in particular the radial contravariant perturbed field is <span class="math display">\[\delta B^r \equiv \delta \boldsymbol{B} \cdot \nabla r = (\boldsymbol{B} \cdot \nabla) \xi^r\]</span></p>
-<p><strong>(b)</strong> For the representation of the magnetic field <span class="math inline">\(\boldsymbol{B} = F(r)\nabla \phi + \psi' \nabla \phi \times \nabla r\)</span> <strong>show</strong> that when adopting straight field line coordinates <span class="math inline">\((r, \theta, \phi)\)</span> the magnetic operator <span class="math inline">\(\boldsymbol{B} \cdot \nabla\)</span> can be written as: <span class="math display">\[\boldsymbol{B} \cdot \nabla = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right] \tag{9}\]</span></p>
-<p><strong>(c)</strong> Using Eq. (8) and (9) <strong>show</strong> that to leading order in <span class="math inline">\(\epsilon\)</span>, <span class="math display">\[\delta B_0^r = \frac{i B_0}{R_0 q} [nq - m] \xi_0^r\]</span> where <span class="math inline">\(n\)</span> is the toroidal mode number, and you should justify the unique poloidal mode number <span class="math inline">\(m\)</span> appearing in <span class="math inline">\(\delta B^r\)</span>. <strong>Comment</strong> on the value of <span class="math inline">\(\delta B_0^r\)</span> on a rational surface.</p>
-<p><strong>(d)</strong> Quote the lowest order solution for the perturbed poloidal magnetic field and <strong>consider</strong> whether magnetic field line bending necessarily vanishes on a rational surface for sheared and unsheared plasmas? <strong>Does</strong> magnetic shear improve plasma stability if low order rational surfaces can’t be avoided?</p>
-<hr>
-</section>
-<section id="solutions" class="level2">
-<h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
-<section id="solution-a-vector-identities" class="level3">
-<h3 class="anchored" data-anchor-id="solution-a-vector-identities">Solution (a): Vector Identities</h3>
-<p><strong>1. General Identity</strong> We start with the perturbed magnetic field equation: <span class="math display">\[\delta \boldsymbol{B} = \nabla \times (\boldsymbol{\xi}_{\perp} \times \boldsymbol{B})\]</span> Using the vector identity for the curl of a cross product: <span class="math display">\[\nabla \times (\boldsymbol{A} \times \boldsymbol{B}) = (\boldsymbol{B} \cdot \nabla)\boldsymbol{A} - (\boldsymbol{A} \cdot \nabla)\boldsymbol{B} + \boldsymbol{A}(\nabla \cdot \boldsymbol{B}) - \boldsymbol{B}(\nabla \cdot \boldsymbol{A})\]</span> Substitute <span class="math inline">\(\boldsymbol{A} = \boldsymbol{\xi}_{\perp}\)</span> and note that <span class="math inline">\(\nabla \cdot \boldsymbol{B} = 0\)</span>: <span class="math display">\[\delta \boldsymbol{B} = (\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp} - (\boldsymbol{\xi}_{\perp} \cdot \nabla)\boldsymbol{B} - \boldsymbol{B}(\nabla \cdot \boldsymbol{\xi}_{\perp})\]</span></p>
-<p>Now, we take the dot product with <span class="math inline">\(\nabla X\)</span> (where <span class="math inline">\(X\)</span> is an arbitrary scalar): <span class="math display">\[\delta \boldsymbol{B} \cdot \nabla X = [(\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp}] \cdot \nabla X - [(\boldsymbol{\xi}_{\perp} \cdot \nabla)\boldsymbol{B}] \cdot \nabla X - (\boldsymbol{B} \cdot \nabla X)(\nabla \cdot \boldsymbol{\xi}_{\perp})\]</span></p>
-<p>We compare this to the desired Right Hand Side (RHS) of Eq. (8): <span class="math display">\[\text{RHS} = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)]\]</span> Expanding the first term of the RHS using the chain rule: <span class="math display">\[(\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla X) = [(\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi}_{\perp}] \cdot \nabla X + \boldsymbol{\xi}_{\perp} \cdot [(\boldsymbol{B} \cdot \nabla)\nabla X]\]</span> Expanding the second term of the RHS: <span class="math display">\[\nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla X)] = (\boldsymbol{B} \cdot \nabla X)(\nabla \cdot \boldsymbol{\xi}_{\perp}) + \boldsymbol{\xi}_{\perp} \cdot \nabla (\boldsymbol{B} \cdot \nabla X)\]</span></p>
-<p>Substituting these back into the RHS expression, the terms involving second derivatives of <span class="math inline">\(X\)</span> cancel out (specifically <span class="math inline">\(\boldsymbol{\xi}_{\perp} \cdot [(\boldsymbol{B} \cdot \nabla)\nabla X]\)</span> and <span class="math inline">\(\boldsymbol{\xi}_{\perp} \cdot \nabla (\boldsymbol{B} \cdot \nabla X)\)</span> are symmetric and cancel). We recover exactly the expression for <span class="math inline">\(\delta \boldsymbol{B} \cdot \nabla X\)</span> derived above. Thus, Eq. (8) is proven.</p>
-<p><strong>2. Radial Contravariant Field</strong> We apply Eq. (8) with <span class="math inline">\(X = r\)</span> (the radial coordinate): <span class="math display">\[\delta B^r = \delta \boldsymbol{B} \cdot \nabla r = (\boldsymbol{B} \cdot \nabla)(\boldsymbol{\xi}_{\perp} \cdot \nabla r) - \nabla \cdot [\boldsymbol{\xi}_{\perp} (\boldsymbol{B} \cdot \nabla r)]\]</span> Since <span class="math inline">\(\boldsymbol{B}\)</span> lies on flux surfaces, it is perpendicular to the radial gradient: <span class="math inline">\(\boldsymbol{B} \cdot \nabla r = 0\)</span>. The second term vanishes entirely. We define <span class="math inline">\(\xi^r = \boldsymbol{\xi}_{\perp} \cdot \nabla r\)</span>. <span class="math display">\[\delta B^r = (\boldsymbol{B} \cdot \nabla) \xi^r\]</span></p>
-</section>
-<section id="solution-b-magnetic-operator" class="level3">
-<h3 class="anchored" data-anchor-id="solution-b-magnetic-operator">Solution (b): Magnetic Operator</h3>
-<p>We are given the field representation: <span class="math display">\[\boldsymbol{B} = F(r)\nabla \phi + \psi' \nabla \phi \times \nabla r\]</span> The gradient operator in general coordinates is <span class="math inline">\(\nabla = \nabla \phi \frac{\partial}{\partial \phi} + \nabla \theta \frac{\partial}{\partial \theta} + \nabla r \frac{\partial}{\partial r}\)</span>. We compute the operator <span class="math inline">\(\boldsymbol{B} \cdot \nabla\)</span>: <span class="math display">\[\boldsymbol{B} \cdot \nabla = (\boldsymbol{B} \cdot \nabla \phi) \frac{\partial}{\partial \phi} + (\boldsymbol{B} \cdot \nabla \theta) \frac{\partial}{\partial \theta} + (\boldsymbol{B} \cdot \nabla r) \frac{\partial}{\partial r}\]</span></p>
-<ol type="1">
-<li><strong>Radial component:</strong> As established, <span class="math inline">\(\boldsymbol{B} \cdot \nabla r = 0\)</span>.</li>
-<li><strong>Toroidal component:</strong> <span class="math display">\[\boldsymbol{B} \cdot \nabla \phi = F(r) |\nabla \phi|^2 + \psi' (\nabla \phi \times \nabla r) \cdot \nabla \phi\]</span> The cross product term is zero (vector orthogonal to itself). In axisymmetric coordinates, <span class="math inline">\(|\nabla \phi|^2 = 1/R^2\)</span>. <span class="math display">\[\boldsymbol{B} \cdot \nabla \phi = \frac{F}{R^2}\]</span></li>
-<li><strong>Poloidal component:</strong> In <strong>straight field line coordinates</strong>, the field lines appear straight in the <span class="math inline">\(\theta\)</span>-<span class="math inline">\(\phi\)</span> plane. The pitch of the field lines is defined by the safety factor <span class="math inline">\(q(r)\)</span>: <span class="math display">\[\frac{\boldsymbol{B} \cdot \nabla \phi}{\boldsymbol{B} \cdot \nabla \theta} = q(r)\]</span> Therefore: <span class="math display">\[\boldsymbol{B} \cdot \nabla \theta = \frac{1}{q} (\boldsymbol{B} \cdot \nabla \phi) = \frac{F}{R^2 q}\]</span></li>
-</ol>
-<p>Substituting these coefficients back into the operator: <span class="math display">\[\boldsymbol{B} \cdot \nabla = \frac{F}{R^2} \frac{\partial}{\partial \phi} + \frac{F}{R^2 q} \frac{\partial}{\partial \theta} = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right]\]</span></p>
-</section>
-<section id="solution-c-perturbed-radial-field" class="level3">
-<h3 class="anchored" data-anchor-id="solution-c-perturbed-radial-field">Solution (c): Perturbed Radial Field</h3>
-<p>We assume a Fourier perturbation of the form <span class="math inline">\(\xi^r \sim \xi_0^r e^{i(n\phi - m\theta)}\)</span>. (Note: The sign convention in the result <span class="math inline">\([nq - m]\)</span> implies dependence <span class="math inline">\(\sim e^{in\phi - im\theta}\)</span>).</p>
-<p>Using the result from (a) <span class="math inline">\(\delta B^r = (\boldsymbol{B} \cdot \nabla) \xi^r\)</span> and the operator from (b): <span class="math display">\[\delta B^r = \frac{F}{R^2} \left[ \frac{\partial}{\partial \phi} + \frac{1}{q} \frac{\partial}{\partial \theta} \right] \xi_0^r e^{i(n\phi - m\theta)}\]</span> Applying the derivatives (<span class="math inline">\(\partial_\phi \to in\)</span>, <span class="math inline">\(\partial_\theta \to -im\)</span>): <span class="math display">\[\delta B^r = \frac{F}{R^2} \left[ i n - \frac{i m}{q} \right] \xi^r = \frac{i F}{R^2 q} [nq - m] \xi^r\]</span></p>
-<p><strong>Leading Order Approximation:</strong> For large aspect ratio tokamaks: * <span class="math inline">\(R \approx R_0\)</span> * <span class="math inline">\(F(r) \approx R_0 B_0\)</span> (The toroidal field function is dominated by the vacuum field). Substituting these: <span class="math display">\[\frac{F}{R^2} \approx \frac{R_0 B_0}{R_0^2} = \frac{B_0}{R_0}\]</span> Thus: <span class="math display">\[\delta B_0^r = \frac{i B_0}{R_0 q} [nq - m] \xi_0^r\]</span></p>
-<p><strong>Justification for</strong> <span class="math inline">\(m\)</span>: In the large aspect ratio (cylindrical) limit, the equilibrium is symmetric in <span class="math inline">\(\theta\)</span>. The poloidal harmonics decouple, meaning equations can be solved for a single unique <span class="math inline">\(m\)</span> mode independently.</p>
-<p><strong>Comment on Rational Surface:</strong> A rational surface is defined where <span class="math inline">\(q(r) = m/n\)</span>. At this location, the term <span class="math inline">\([nq - m]\)</span> becomes zero. Consequently, <span class="math inline">\(\delta B^r = 0\)</span> on the rational surface. This implies that in ideal MHD, the radial magnetic field perturbation vanishes at the resonance, preserving the magnetic topology (no magnetic island formation/reconnection).</p>
-</section>
-<section id="solution-d-stability-and-shear" class="level3">
-<h3 class="anchored" data-anchor-id="solution-d-stability-and-shear">Solution (d): Stability and Shear</h3>
-<p><strong>Lowest Order Solution:</strong> As derived above: <span class="math inline">\(\delta B_0^r \propto (nq - m) \xi_0^r\)</span>.</p>
-<p><strong>Field Line Bending:</strong> The “field line bending” term is the restoring force in the potential energy <span class="math inline">\(\delta W\)</span> arising from the tension of the magnetic field lines. It is proportional to the parallel gradient of the perturbation: <span class="math inline">\((\boldsymbol{B} \cdot \nabla)\boldsymbol{\xi} \propto (nq - m)\)</span>.</p>
+<section id="integration-of-fast-ions-in-mhd" class="level2">
+<h2 class="anchored" data-anchor-id="integration-of-fast-ions-in-mhd">1. Integration of Fast Ions in MHD</h2>
+<p>Lecture 7 explores how high-energy “fast” ions (from Neutral Beam Injection or alpha particles) modify standard MHD stability. While the bulk plasma carries the fluid momentum, fast ions introduce kinetic effects and pressure anisotropy that alter the equilibrium and potential energy of the system.</p>
 <ul>
-<li><strong>Rational Surfaces:</strong> On a rational surface (<span class="math inline">\(q = m/n\)</span>), this term vanishes. The field lines do not “bend” in response to the perturbation because the perturbation helix matches the field line pitch. This removes the stabilizing tension force at that specific radius.</li>
+<li><strong>Extended Momentum Equation</strong>: The perpendicular momentum equation is modified to include terms for anisotropic pressure (<span class="math inline">\(\delta P_{\perp}\)</span> and <span class="math inline">\(\delta P_{||}\)</span>) and magnetic curvature <span class="math inline">\(\kappa\)</span>.</li>
+<li><strong>Quasi-neutrality</strong>: The model assumes <span class="math inline">\(\sum q_j \delta n_j = 0\)</span>, where the sum includes both thermal species and fast ions.</li>
+<li><strong>Leading Order Fluid Motion</strong>: The perpendicular velocity remains dominated by the <span class="math inline">\(E \times B\)</span> drift.</li>
 </ul>
-<p><strong>Sheared vs.&nbsp;Unsheared Plasmas:</strong> 1. <strong>Unsheared (</strong><span class="math inline">\(q = \text{const}\)</span>): If the plasma is unsheared and <span class="math inline">\(q = m/n\)</span> everywhere (or over a large region), the stabilizing term <span class="math inline">\((nq-m)\)</span> vanishes globally. The plasma loses magnetic tension stabilization over the whole volume, making it highly unstable to helical distortions (kink modes). 2. <strong>Sheared (</strong><span class="math inline">\(q' \neq 0\)</span>): If the plasma has shear, the resonance condition <span class="math inline">\(q(r) = m/n\)</span> is only satisfied at a specific radius (the rational surface). Away from this surface, <span class="math inline">\(|nq - m|\)</span> grows, and the field line bending term becomes non-zero.</p>
-<p><strong>Does Shear Improve Stability?</strong> <strong>Yes.</strong> Magnetic shear localizes the region where the stabilizing field line bending force vanishes. Even if low-order rational surfaces cannot be avoided, shear ensures that the instability is essentially “pinned” or stabilized by the magnetic tension in the regions immediately surrounding the rational surface. This makes it much harder for global modes to grow compared to the shearless case.</p>
-
-
 </section>
+<section id="kinetic-mhd-potential-energy-delta-w" class="level2">
+<h2 class="anchored" data-anchor-id="kinetic-mhd-potential-energy-delta-w">2. Kinetic-MHD Potential Energy (<span class="math inline">\(\delta W\)</span>)</h2>
+<p>The stability criterion is expanded to include a kinetic contribution from the fast particles, <span class="math inline">\(\delta W_h\)</span>: <span class="math display">\[\delta W = \delta W_c + \delta W_h\]</span> where <span class="math inline">\(\delta W_c\)</span> is the standard “core” fluid MHD energy and <span class="math inline">\(\delta W_h\)</span> represents the fast particle response.</p>
+<ul>
+<li><strong>Adiabatic Response</strong>: Fast particles provide an “adiabatic” pressure response that is typically stabilizing.</li>
+<li><strong>Kinetic Response</strong>: This accounts for the resonant interactions between the mode frequency and the orbital frequencies (bounce or precession) of the fast ions.</li>
+</ul>
+</section>
+<section id="fast-particle-distribution-and-curvature" class="level2">
+<h2 class="anchored" data-anchor-id="fast-particle-distribution-and-curvature">3. Fast Particle Distribution and Curvature</h2>
+<p>The stabilization effect depends heavily on how the fast ions are distributed in phase space and their interaction with magnetic curvature.</p>
+<ul>
+<li><strong>Pressure Averaged Curvature</strong>: Stabilization occurs when the fast ion pressure gradient is coupled to favorable magnetic curvature.</li>
+<li><strong>Trapped vs.&nbsp;Passing Particles</strong>: Trapped particles often have a more significant impact on stability because their “precession” frequency can resonate with long-wavelength MHD modes like the internal kink.</li>
+</ul>
+</section>
+<section id="impact-on-the-m1-internal-kink-mode" class="level2">
+<h2 class="anchored" data-anchor-id="impact-on-the-m1-internal-kink-mode">4. Impact on the <span class="math inline">\(m=1\)</span> Internal Kink Mode</h2>
+<p>Fast ions have a dual role in the stability of the <span class="math inline">\(m=1\)</span> internal kink mode (the mode responsible for “sawtooth” oscillations):</p>
+<ul>
+<li><strong>Destabilizing Effect</strong>: They can increase the total poloidal beta (<span class="math inline">\(\beta_p\)</span>), which enhances the toroidal drive for the instability.</li>
+<li><strong>Stabilizing Effect</strong>: The kinetic response (<span class="math inline">\(\delta W_h\)</span>) provides a powerful restorative force that can “stabilize” the mode even when <span class="math inline">\(q &lt; 1\)</span> in the core.</li>
+<li><strong>Sawtooth Period Extension</strong>: This stabilization explains why the presence of fast ions (e.g., from NBI) often leads to much longer intervals between sawtooth crashes.</li>
+</ul>
+</section>
+<section id="modified-mercier-criterion" class="level2">
+<h2 class="anchored" data-anchor-id="modified-mercier-criterion">5. Modified Mercier Criterion</h2>
+<p>The presence of fast particles also modifies the local stability criteria for interchange modes. The standard Mercier criterion is adjusted to account for the kinetic pressure of the hot species, which can provide an additional “magnetic well” effect or modify the average curvature term.</p>
+<hr>
+<p><strong>Key Research Takeaway:</strong> Fast particles are not just an “extra” population; they are a critical control tool for stability. By tailoring the fast ion distribution, researchers can suppress long-wavelength instabilities, though this can lead to larger “monster” sawtooth crashes when the stabilization limit is finally exceeded.</p>
+
+
 </section>
 
 </main> <!-- /main -->

@@ -1,5 +1,5 @@
 ---
-title: "Trapped Particles and Fast Ion Stability"
+title: "Exercise 7: Trapped Particles and Fast Ion Stability"
 format: html
 editor: visual
 ---

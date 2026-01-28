@@ -1,0 +1,54 @@
+---
+title: "Lecture 3: Theory of Linear Ideal MHD Stability"
+subtitle: "Plasma Instabilities Course Summary"
+author: "From lecture slides by Jonathan P. Graves"
+format: 
+  html:
+    toc: true
+    code-fold: true
+    theme: cosmo
+---
+
+## 1. Linearized MHD Equations
+To analyze stability, MHD variables are decomposed into a static equilibrium component and a small perturbation ($Q \rightarrow Q + \delta Q$). Assuming negligible equilibrium fluid velocity ($u=0$), the perturbed velocity is defined by the fluid displacement $\xi$ as $\delta u = \partial\xi/\partial t$.
+
+* **Momentum Equation**: $\rho \frac{\partial^2\xi}{\partial t^2} = \delta F(\xi)$, where $\delta F$ is the linearized force operator.
+* **Perturbed Pressure**: $\delta P = -\gamma P \nabla \cdot \xi - \xi \cdot \nabla P$. This includes an adiabatic .
+* **Perturbed Magnetic Field**: $\delta B = \nabla \times (\xi \times B)$, derived from Faraday’s and Ohm's laws.
+
+## 2. The Energy Principle and $\delta W$
+The energy principle is the most efficient way to determine stability without solving for exact eigenvalues. Because the linear force operator $\delta F$ is self-adjoint, energy is conserved: $\delta K + \delta W = \text{constant}$.
+
+* **Kinetic Energy ($\delta K$)**: $\frac{1}{2} \int d^3x \rho |\dot{\xi}|^2$.
+* **Potential Energy ($\delta W$)**: $-\frac{1}{2} \int d^3x \xi^* \cdot \delta F(\xi)$.
+* **Stability Criterion**: An equilibrium is stable if and only if $\delta W > 0$ for all allowable displacements $\xi$.
+
+## 3. Physical Components of $\delta W$
+The potential energy $\delta W$ can be decomposed into intuitive physical terms:
+
+* **Field Line Bending**: Always stabilizing; represents magnetic energy in Alfvén waves.
+* **Magnetic Compression**: Always stabilizing; corresponds to energy needed to compress the magnetic field.
+* **Pressure Drive**: Potential energy for ballooning and interchange modes. It is destabilizing in regions of "unfavourable curvature" where $\nabla P$ and curvature $\kappa$ are parallel.
+* **Current Drive**: Free energy from parallel equilibrium current ($J_{||}$), responsible for kink instabilities.
+* **Plasma Compression**: Energy required to compress the plasma fluid, which is stabilizing.
+
+
+## 4. Incompressibility and Marginal Stability
+Near the stability boundary (marginal stability), instabilities are nearly incompressible ($\nabla \cdot \xi \approx 0$). 
+
+* In this limit, $\delta W$ can be minimized with respect to parallel displacement $\xi_{||}$ by setting the plasma compression term to zero.
+* This reduces the complexity of stability analysis, allowing $\delta W$ to be expressed in terms of perpendicular displacement $\xi_{\perp}$ alone.
+
+## 5. Inverse Aspect Ratio Expansion
+Stability equations are often expanded in the inverse aspect ratio $\epsilon = r/R_0$. 
+
+* **Second Order ($\delta W_2$)**: At this order, internal modes are stable in ideal MHD because field line bending is strongly stabilizing. Cylinder and torus stability are identical at this order.
+* **Fourth Order ($\delta W_4$)**: Necessary for analyzing the $m=n=1$ internal kink mode, where toroidal effects and the Shafranov shift become crucial.
+
+
+## 6. The $m=n=1$ Internal Kink Mode
+This mode is a special case where field line bending vanishes in the core. 
+
+* It is marginally stable to $O(\epsilon^2)$.
+* Toroidal effects are so dominant that they entirely cancel the fourth-order cylindrical stabilization terms for $n=1$.
+* The result is a "rigidly shifted" core region where $q < 1$, effectively creating a new tilted toroidal equilibrium.

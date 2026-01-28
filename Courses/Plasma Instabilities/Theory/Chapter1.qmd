@@ -1,0 +1,61 @@
+---
+title: "Lecture 1: The Ideal MHD Model and Axisymmetric Equilibria"
+subtitle: "Plasma Instabilities Course Summary"
+author: "From lecture slides by Jonathan P. Graves"
+format: 
+  html:
+    toc: true
+    code-fold: true
+    theme: cosmo
+---
+
+## 1. Scope of the Ideal MHD Model
+Ideal MHD is used to assess the "lowest level" of stability for magnetized plasmas. While it assumes the plasma is collisional, it effectively describes macroscopic perpendicular dynamics (cross-field behavior).
+
+* **Strengths:** It is a closed system that allows for the study of complex non-linear effects.
+* **Limitations:** It is a poor descriptor of dynamics parallel to the magnetic field in collisionless plasmas, as these occur too rapidly for the model.
+* **Marginal Stability:** Near marginal stability (small growth rates), plasma motions are considered incompressible.
+
+---
+
+## 2. Conservation of Flux (Frozen-in Law)
+In the Ideal limit (resistivity $\eta = 0$), the magnetic field topology is invariant.
+
+* **Ideal Ohm’s Law:** Defined as $E + u \times B = 0$.
+* **Physical Intuition:** Magnetic field lines are conceptually "frozen" into the plasma fluid.
+* **Mechanism:** The flux linking a loop moving with the fluid velocity is constant, meaning the fluid and field lines must move together.
+
+
+
+---
+
+## 3. Equilibrium Force Balance
+Static equilibrium ($u = 0$) requires the Lorentz force to balance the pressure gradient:
+$$J \times B = \nabla P$$
+
+* **Isobaric Surfaces:** Magnetic field lines ($B \cdot \nabla P = 0$) and current lines ($J \cdot \nabla P = 0$) lie on surfaces of constant pressure.
+* **Flux Surfaces:** In a tokamak, these constant pressure surfaces are known as flux surfaces.
+* **Toroidal Topology:** The "Hairy Ball" theorem states that only a toroidal surface can be covered by a non-vanishing vector field like $B$ and $J$.
+
+---
+
+## 4. The Grad-Shafranov Equation (GSE)
+The GSE is a non-linear, second-order elliptic partial differential equation that describes axisymmetric toroidal equilibria.
+
+$$\Delta^* \psi = -R^2 \frac{dP(\psi)}{d\psi} - F(\psi) \frac{dF(\psi)}{d\psi}$$
+
+### Key Components to Understand:
+* **Poloidal Flux ($\psi$):** A stream function used to represent field components in the poloidal plane.
+* **Free Functions:** To solve the GSE, one must prescribe the pressure profile $P(\psi)$ and the toroidal field/current function $F(\psi) = RB_\phi$.
+* **The Operator ($\Delta^*$):** Defined as $R^2 \nabla \cdot (\frac{1}{R^2} \nabla)$ or, in cylindrical coordinates, $R \frac{\partial}{\partial R}(\frac{1}{R} \frac{\partial}{\partial R}) + \frac{\partial^2}{\partial Z^2}$.
+
+
+
+---
+
+## 5. Solving the Equilibrium Problem
+The essence of the problem is solving for the locations of constant $\psi$ surfaces over the $(R, Z)$ plane.
+
+* **Fixed Boundary:** Defining $\psi$ on a closed contour, often assuming the boundary is a perfect conductor where $\psi$ is constant.
+* **Free Boundary:** Involves specifying flux in the vacuum region and accounting for external coil currents.
+* **Iteration:** Realistic free boundary problems require iterative procedures because the plasma current distribution depends on the resulting equilibrium shape.

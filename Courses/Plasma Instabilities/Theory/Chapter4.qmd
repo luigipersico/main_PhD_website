@@ -1,0 +1,50 @@
+---
+title: "Lecture 4: External Kink Modes and Inertia Treatment"
+subtitle: "Plasma Instabilities Course Summary"
+author: "From lecture slides by Jonathan P. Graves"
+format: 
+  html:
+    toc: true
+    code-fold: true
+    theme: cosmo
+---
+
+## 1. External Kink Modes
+External kink modes are instabilities where the perturbed magnetic field extends beyond the plasma boundary into the vacuum region. 
+
+* **Destabilization Source**: Unlike internal modes, which are stable at second order in the inverse aspect ratio, surface corrections at $O(\epsilon^2)$ can be destabilizing for external kinks.
+* **Boundary Condition**: These modes satisfy $\xi^r(a) \neq 0$, meaning the plasma-vacuum interface itself is displaced.
+* **Vacuum Energy**: Stability is determined by the total potential energy $\delta W = \delta W_P + \delta W_V$.
+* **Vacuum Perturbation**: The vacuum field $\delta \hat{B}$ is found by solving $\nabla \cdot \delta \hat{B} = 0$ and $\nabla \times \delta \hat{B} = 0$, coupled to the plasma displacement at the interface.
+
+## 2. The Role of a Conducting Wall
+A conducting wall placed at radius $r = b$ (where $b > a$) has a profound effect on the stability of external modes.
+
+* **Flux Compression**: In the ideal limit, the wall acts as a perfect conductor where the normal component of the perturbed field must vanish ($n \cdot \delta \hat{B}|_b = 0$).
+* **Stabilizing Force**: This constraint compresses the poloidal flux between the plasma and the wall, providing a restorative force.
+* **Resistive Wall Modes (RWM)**: In real devices, walls have finite resistivity. The stabilizing flux can only remain compressed for a "skin time," after which the mode can grow at a rate determined by the wall's resistance.
+
+
+
+## 3. Inertia and Growth Rates
+While the Energy Principle determines *if* a mode is unstable, calculating the growth rate $\gamma$ (where $\xi \sim e^{\gamma t}$) requires including the kinetic energy $\delta K$.
+
+* **Normal Mode Equation**: $-\omega^2 \rho \xi = \delta F(\xi)$.
+* **Eigenvalue Relation**: $\omega^2 = \delta W / K$, where $\omega^2 < 0$ corresponds to a purely growing instability ($\gamma^2 = -\omega^2$).
+* **Inertia Renormalization**: Inclusion of the parallel displacement $\xi_{||}$ in the inertia term can renormalize the growth rate. For nearly incompressible instabilities, $\gamma^2$ is scaled by a factor of $(1 + 2q^2)$.
+
+## 4. The Layer Region and Singularity
+For modes like the internal kink, the ideal MHD equations become singular at the rational surface where $q = m/n$.
+
+* **Layer Treatment**: In a narrow region (the "layer") around the singularity, ideal MHD assumptions break down, and effects like inertia, resistivity, or kinetic physics must be restored.
+* **Matching**: The solution is found by matching the "outer" ideal MHD solution to the "inner" layer solution.
+* **Internal Kink Scaling**: For the $m=n=1$ internal kink, the minimization of total energy reveals that the kinetic energy $K$ scales as $1/\omega$, leading to a growth rate $\gamma \propto \delta W$ rather than $\gamma \propto \sqrt{\delta W}$.
+
+
+
+## 5. Summary of Stability Analysis Methods
+The lecture contrasts different computational and analytical approaches:
+
+* **Initial Value Problem**: Solves the full evolution; consistent with non-linear treatment but computationally expensive.
+* **Normal Mode Method**: Solves for eigenvalues $\omega$; requires solving coupled partial differential equations.
+* **Energy Principle**: The most efficient for marginal stability; checks if any allowable displacement makes $\delta W < 0$.

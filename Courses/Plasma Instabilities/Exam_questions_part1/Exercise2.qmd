@@ -1,5 +1,5 @@
 ---
-title: "Grad-Shafranov Expansion and Shaping"
+title: "Exercise 2: Grad-Shafranov Expansion and Shaping"
 format: html
 editor: visual
 ---

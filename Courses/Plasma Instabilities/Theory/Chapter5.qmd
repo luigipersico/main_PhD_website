@@ -1,0 +1,55 @@
+---
+title: "Lecture 5: Linear and Non-linear Tearing Modes"
+subtitle: "Plasma Instabilities Course Summary"
+author: "From lecture slides by Jonathan P. Graves"
+format: 
+  html:
+    toc: true
+    code-fold: true
+    theme: cosmo
+---
+
+## 1. Beyond Ideal MHD: The Role of Resistivity
+While previous lectures focused on Ideal MHD (where resistivity $\eta = 0$), Lecture 5 introduces the consequences of finite resistivity. Even a small amount of resistivity allows the magnetic field topology to change, breaking the "frozen-in" constraint.
+
+* **Magnetic Reconnection**: Resistivity allows magnetic field lines to "snap" and reconnect at rational surfaces where $q = m/n$.
+* **Magnetic Islands**: This reconnection process leads to the formation of magnetic islands, which flatten pressure profiles and degrade confinement.
+
+
+
+## 2. Linear Tearing Mode Theory
+The stability of tearing modes is determined by the "Matching" procedure between two regions:
+
+### The Outer Region (Ideal MHD)
+* Away from the rational surface ($r_s$), resistivity is negligible.
+* We solve the cylindrical ideal MHD equation (Newcomb equation) for the perturbed radial flux $\psi$.
+* **Stability Index ($\Delta'$)**: This critical parameter measures the jump in the logarithmic derivative of the flux across the rational surface:
+  $$\Delta' = \lim_{\epsilon \to 0} \left[ \frac{1}{\psi} \frac{d\psi}{dr} \right]_{r_s-\epsilon}^{r_s+\epsilon}$$.
+* **Criterion**: If $\Delta' > 0$, the mode is linearly unstable and will grow.
+
+### The Inner Layer (Resistive MHD)
+* In a very narrow layer around $r_s$, resistivity and inertia become dominant.
+* The layer solution provides the growth rate $\gamma$, which scales with resistivity as $\gamma \sim \eta^{3/5}$.
+
+## 3. Non-linear Evolution: Rutherford Regime
+As the magnetic island grows, it eventually exceeds the width of the resistive layer. At this point, the growth slows down from exponential to linear in time.
+
+* **Rutherford Equation**: Describes the evolution of the island width $w$:
+  $$\frac{dw}{dt} \approx \eta \Delta'(w)$$.
+* **Saturated Island**: The island grows until $\Delta'(w) = 0$, reaching a steady-state size that can significantly impact plasma performance.
+
+
+
+## 4. Neoclassical Tearing Modes (NTM)
+In modern, high-pressure tokamaks, tearing modes can be driven by "bootstrap current" even if the traditional $\Delta'$ is negative (stable).
+
+* **Bootstrap Current**: Pressure-driven currents that exist in toroidal plasmas.
+* **Seed Islands**: If a small "seed" island is created (e.g., by a sawtooth crash), the pressure flattens inside the island, removing the local bootstrap current.
+* **Self-Sustaining Growth**: This missing current acts as an additional destabilizing force, causing the island to grow to large sizes.
+
+## 5. Summary of Tearing Stability
+| Feature | Linear Tearing | Neoclassical Tearing (NTM) |
+| :--- | :--- | :--- |
+| **Primary Drive** | Current density gradients ($\Delta' > 0$)  | Missing bootstrap current |
+| **Growth Phase** | Exponential then Rutherford | Requires a "seed" to start |
+| **Impact** | Magnetic reconnection | Large island formation, confinement loss |

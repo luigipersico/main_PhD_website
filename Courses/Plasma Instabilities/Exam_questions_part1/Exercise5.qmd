@@ -1,5 +1,5 @@
 ---
-title: "Tearing Mode Instability"
+title: "Exercise 5: Tearing Mode Instability"
 format: html
 editor: visual
 ---
