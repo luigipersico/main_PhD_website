@@ -1,0 +1,10 @@
+---
+title: "January 2026"
+---
+
+- Passed the plasma instabilities exam.
+- Modelling of NBI,connection with TCV shots successful.
+- Starting implementation of fitting algorithm for MSE syntethic data (not working yet)
+- BES camera failed to arrive in 2026.
+- Budget meeting to request funding for both BES camera and BES photodiodes systems.
+- Started proper calibration of BES camera but NBI2 won't work until September 2026, time to focus more on MSE.

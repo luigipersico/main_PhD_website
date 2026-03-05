@@ -4,7 +4,7 @@ title: 'How to control MSS'
 
 Here the steps needed to connect to MSS system and to control it are described:
 
-1. Connect to lac913 server 
+1. Connect to lac913 server, and choose one of the lac
 
 2. Connect to MSS system using SSH 
    ```
@@ -22,3 +22,4 @@ Here the steps needed to connect to MSS system and to control it are described:
    ```
     go to the generated file Sys13 and change the parameters as needed. Save the file and run
 5. If something as to be calibrated go to the folder /home/cxrs/MSS/Calibration and run the calibration scripts as needed.
+6. If error message "Undefined function or variable "cam_handle"." this means that the camera is not connected or that it got stuck.

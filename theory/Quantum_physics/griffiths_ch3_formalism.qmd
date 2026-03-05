@@ -1,0 +1,451 @@
+---
+title: "Hilbert-Space Formalism for Quantum Measurements (Griffiths Ch. 3 — Notes)"
+author: "Luigi Persico"
+date: 2026-03-05
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    html-math-method: mathjax
+---
+
+## Scope and goal
+
+These notes summarize **Chapter 3 (“Formalism”)** of *Introduction to Quantum Mechanics* (Griffiths & Schroeter, 3rd ed., 2018).
+
+**Big picture:** quantum mechanics is (i) a *state space* (Hilbert space), (ii) *observables* as Hermitian operators, and (iii) a *measurement postulate* giving outcomes and probabilities. Once this is in place, tools like **uncertainty relations**, **changes of basis**, and **Dirac notation** become natural.
+
+---
+
+## Notation conventions
+
+- State of the system: a vector $\psi$ in a complex Hilbert space.
+- In the **position basis**, the state has components $\psi(x)$.
+- Inner product: $\langle f, g \rangle = \int f^*(x)\, g(x)\, dx$ (for wavefunctions).
+- Expectation value: $\langle A \rangle = \langle \psi, \hat A \psi \rangle$.
+- Standard deviation (uncertainty): $\Delta A = \sqrt{\langle (\hat A-\langle A\rangle)^2\rangle}$.
+- Commutator: $[\hat A,\hat B] = \hat A\hat B - \hat B\hat A$.
+
+---
+
+## 1. Hilbert space
+
+### 1.1 Vector space of states (why we restrict it)
+
+Wavefunctions must be **normalizable** so that probabilities make sense:
+$$
+\int |\psi(x)|^2\,dx = 1.
+$$
+The natural setting is the space of **square-integrable** functions (physicists’ Hilbert space).
+
+### 1.2 Inner product and norm
+
+Define inner product (for functions):
+$$
+\langle f,g\rangle = \int f^*(x)\,g(x)\,dx,
+$$
+and norm:
+$$
+\|f\| = \sqrt{\langle f,f\rangle}.
+$$
+Key properties: linearity in the second slot, conjugate symmetry, and positivity.
+
+### 1.3 Orthonormal sets and completeness
+
+- Normalized: $\langle f,f\rangle=1$
+- Orthogonal: $\langle f,g\rangle=0$
+- Orthonormal family $\{f_n\}$: $\langle f_m,f_n\rangle=\delta_{mn}$
+
+A set $\{f_n\}$ is **complete** if any vector $f$ can be expanded:
+$$
+f = \sum_n c_n f_n.
+$$
+If the basis is orthonormal, coefficients follow from “Fourier’s trick”:
+$$
+c_n = \langle f_n, f\rangle.
+$$
+
+### 1.4 Schwarz inequality (workhorse inequality)
+
+For any $f,g$,
+$$
+|\langle f,g\rangle|^2 \le \langle f,f\rangle\,\langle g,g\rangle.
+$$
+This single inequality is the engine behind uncertainty relations.
+
+---
+
+## 2. Observables and Hermitian operators
+
+### 2.1 Observables as operators
+
+An observable $Q$ is represented by a linear operator $\hat Q$ acting on states:
+$$
+\psi \mapsto \hat Q\psi.
+$$
+
+### 2.2 Expectation values force Hermiticity
+
+The expectation value of a measurable quantity must be real:
+$$
+\langle Q\rangle = \langle \psi, \hat Q\psi\rangle \in \mathbb{R}.
+$$
+This holds for all $\psi$ only if $\hat Q$ is **Hermitian** (self-adjoint in physicists’ usage).
+
+### 2.3 Definition of Hermitian operator and adjoint
+
+The adjoint $\hat Q^\dagger$ is defined by:
+$$
+\langle f,\hat Q g\rangle = \langle \hat Q^\dagger f, g\rangle \quad \forall f,g.
+$$
+Hermitian means:
+$$
+\hat Q^\dagger = \hat Q.
+$$
+
+### 2.4 Practical note: domains and boundary terms
+
+For differential operators, Hermiticity often depends on:
+
+- boundary conditions (finite intervals),
+- decay at infinity (infinite line),
+- the domain of allowed functions.
+
+---
+
+## 3. Determinate states and the eigenvalue equation
+
+### 3.1 “Determinate state” = zero spread
+
+A state is **determinate** for observable $Q$ if every measurement returns the same value $q$. Then:
+$$
+\Delta Q = 0.
+$$
+Using $\Delta Q^2 = \langle (\hat Q-\langle Q\rangle)^2\rangle$, this implies:
+$$
+(\hat Q - q)\psi = 0 \quad \Rightarrow \quad \hat Q\psi = q\psi.
+$$
+
+### 3.2 Eigenvalues, spectrum, degeneracy
+
+- $q$ is an **eigenvalue**, $\psi$ an **eigenstate/eigenfunction**.
+- The set of all eigenvalues is the **spectrum**.
+- If multiple linearly independent eigenstates share the same eigenvalue, it’s **degenerate**.
+
+**Physical meaning:** *If the system is in an eigenstate of $\hat Q$, then measuring $Q$ is certain to yield the associated eigenvalue.*
+
+---
+
+## 4. Eigenfunctions of a Hermitian operator
+
+### 4.1 Discrete spectra: the “matrix-like” case
+
+For normalizable eigenfunctions:
+
+**Theorem 1 (Reality):** eigenvalues of a Hermitian operator are real.  
+**Theorem 2 (Orthogonality):** eigenfunctions with distinct eigenvalues are orthogonal.
+
+Degenerate subspaces can be orthonormalized (e.g., Gram–Schmidt), so we usually assume an orthonormal eigenbasis.
+
+**Completeness** is crucial; in infinite dimensions it’s not always trivial to prove, so it’s taken as an axiom/restriction for “physical” observables:
+$$
+\psi = \sum_n c_n\,\psi_n, \qquad c_n=\langle \psi_n,\psi\rangle.
+$$
+
+### 4.2 Continuous spectra: “Dirac orthonormality”
+
+For operators with continuous spectra, eigenfunctions are typically **not** square-integrable (e.g., plane waves, delta functions). Still, we use a consistent extension:
+
+- Kronecker delta $\delta_{mn}$ becomes Dirac delta $\delta(z-z')$.
+- Sums become integrals.
+
+Example: momentum operator $\hat p=-i\hbar\,\partial_x$ has eigenfunctions $e^{ipx/\hbar}$ (not normalizable), but we enforce:
+$$
+\langle p|p'\rangle = \delta(p-p').
+$$
+
+Example: position operator $\hat x$ has eigenfunctions $\delta(x-y)$ with:
+$$
+\langle x|x'\rangle = \delta(x-x').
+$$
+
+**Completeness** (continuous resolution of identity):
+$$
+\int |z\rangle\langle z|\,dz = \hat I.
+$$
+
+---
+
+## 5. Generalized statistical interpretation (measurement postulate)
+
+This is the “measurement rule” in its most general form.
+
+### 5.1 Possible outcomes
+
+If you measure observable $Q$ on a system in state $|\psi\rangle$, the outcome must be one of the eigenvalues of $\hat Q$.
+
+### 5.2 Probabilities: discrete spectrum
+
+If $\hat Q$ has orthonormal eigenstates $|q_n\rangle$,
+$$
+|\psi\rangle = \sum_n c_n |q_n\rangle, \qquad c_n=\langle q_n|\psi\rangle,
+$$
+then:
+$$
+P(q_n)=|c_n|^2.
+$$
+
+### 5.3 Probabilities: continuous spectrum
+
+If eigenstates $|q\rangle$ satisfy Dirac orthonormality,
+$$
+c(q)=\langle q|\psi\rangle,
+$$
+then probability of landing in $[q,q+dq]$ is:
+$$
+P(q\in[q,q+dq]) = |c(q)|^2\,dq.
+$$
+
+### 5.4 Collapse (state update)
+
+After measuring $Q$ and obtaining a value $q$, the state “collapses” to the corresponding eigenstate (discrete: $|q_n\rangle$; continuous: $|q\rangle$, in an idealized sense).
+
+### 5.5 Recovering position and momentum rules
+
+- Position basis: $\psi(x)=\langle x|\psi\rangle$, and $P(x\in[x,x+dx])=|\psi(x)|^2dx$.
+- Momentum basis: $\phi(p)=\langle p|\psi\rangle$, and $P(p\in[p,p+dp])=|\phi(p)|^2dp$.
+
+The map $\psi(x)\leftrightarrow \phi(p)$ is a Fourier transform:
+$$
+\phi(p) \propto \int e^{-ipx/\hbar}\,\psi(x)\,dx,
+\qquad
+\psi(x) \propto \int e^{ipx/\hbar}\,\phi(p)\,dp.
+$$
+
+---
+
+## 6. The uncertainty principle
+
+### 6.1 Uncertainty as standard deviation
+
+For any observable $A$,
+$$
+(\Delta A)^2 = \langle (\hat A-\langle A\rangle)^2\rangle.
+$$
+Important: $\Delta A$ does **not** mean your measurement device is imprecise; it means repeated measurements on identically prepared systems have an intrinsic spread.
+
+### 6.2 Generalized uncertainty relation
+
+Define $\hat A'=\hat A-\langle A\rangle$, $\hat B'=\hat B-\langle B\rangle$.
+Using Schwarz inequality with $f=\hat A'\psi$, $g=\hat B'\psi$, one obtains:
+$$
+\Delta A\,\Delta B \;\ge\; \frac{1}{2}\,|\langle [\hat A,\hat B]\rangle|.
+$$
+This is the **generalized uncertainty principle**.
+
+### 6.3 Heisenberg uncertainty as a special case
+
+For $\hat x$ and $\hat p$,
+$$
+[\hat x,\hat p]=i\hbar
+\quad\Rightarrow\quad
+\Delta x\,\Delta p \ge \frac{\hbar}{2}.
+$$
+
+### 6.4 Compatible vs incompatible observables
+
+- If $[\hat A,\hat B]=0$, observables are **compatible** and can have a complete set of simultaneous eigenstates.
+- If $[\hat A,\hat B]\neq 0$, they are **incompatible** and cannot (in general) be simultaneously determinate.
+
+Operational viewpoint: a measurement that collapses the state into an eigenstate of $A$ typically destroys any prior definiteness of $B$, unless the observables are compatible.
+
+---
+
+## 7. Minimum-uncertainty wave packets
+
+### 7.1 When does equality hold?
+
+To saturate the bound, the relevant vectors must be proportional:
+$$
+\hat A'\psi = c\,\hat B'\psi
+$$
+with the constant constrained so the “dropped” piece vanishes.
+
+### 7.2 For $x$ and $p$: the Gaussian result
+
+For the position-momentum case, the condition becomes a differential equation whose general solution is a **Gaussian**:
+$$
+\psi(x)\propto \exp\!\big(-a(x-x_0)^2 + i k_0 x\big),
+$$
+and these satisfy:
+$$
+\Delta x\,\Delta p = \frac{\hbar}{2}.
+$$
+So Gaussian wave packets are the most general *minimum-uncertainty* states (at a given instant).
+
+---
+
+## 8. Energy–time uncertainty (and why it’s different)
+
+### 8.1 Time is not an operator (nonrelativistic QM)
+
+Unlike $x,p,E$, time $t$ is the independent parameter in the Schrödinger equation, not an observable represented by an operator in the same way. So $\Delta t$ is **not** a standard deviation of “time measurements.”
+
+### 8.2 Generalized Ehrenfest theorem (commutator dynamics)
+
+For an observable $\hat Q$,
+$$
+\frac{d}{dt}\langle Q\rangle = \frac{i}{\hbar}\langle [\hat H,\hat Q]\rangle
+\quad \text{(if $\hat Q$ has no explicit $t$-dependence).}
+$$
+
+### 8.3 Mandelstam–Tamm form of energy–time uncertainty
+
+Take the generalized uncertainty relation with $A=H$ and $B=Q$. Using the previous result, one obtains:
+$$
+\Delta E\,\Delta t \gtrsim \frac{\hbar}{2},
+$$
+where $\Delta t$ is interpreted as a *timescale for significant change* in $\langle Q\rangle$, e.g.
+$$
+\Delta t \sim \frac{\Delta Q}{\left|d\langle Q\rangle/dt\right|}.
+$$
+Key meaning: **rapid evolution requires large energy spread**; stationary states ($\Delta E=0$) have time-independent expectation values.
+
+---
+
+## 9. Vectors and operators: bases, matrices, and Dirac notation
+
+### 9.1 States are abstract vectors (basis-independent)
+
+The wavefunction $\psi(x)$ is not the state itself; it’s the *representation of the state* in the position basis:
+$$
+\psi(x) = \langle x|\psi\rangle.
+$$
+Similarly, momentum-space wavefunction:
+$$
+\phi(p)=\langle p|\psi\rangle.
+$$
+And for a discrete energy basis $\{|n\rangle\}$:
+$$
+c_n = \langle n|\psi\rangle.
+$$
+All contain the same information: they are just components in different bases.
+
+### 9.2 Operators as linear transformations
+
+Operators map vectors to vectors:
+$$
+\hat A: |\psi\rangle \mapsto |\psi'\rangle.
+$$
+Once a basis $\{|n\rangle\}$ is chosen, the operator is represented by matrix elements:
+$$
+A_{mn}=\langle m|\hat A|n\rangle.
+$$
+Then components transform exactly like matrix multiplication.
+
+### 9.3 Finite-dimensional systems (e.g., two-level system)
+
+If the system admits only $N$ linearly independent states, everything reduces to standard linear algebra:
+
+- state = $N$-component column vector,
+- observable = $N\times N$ Hermitian matrix,
+- time evolution = solve Schrödinger equation with that matrix Hamiltonian.
+
+### 9.4 Dirac notation (bras, kets, outer products)
+
+Dirac splits the inner product “bracket”:
+
+- Ket $|\psi\rangle$: a vector
+- Bra $\langle \psi|$: a linear functional acting on kets to give a complex number:
+$$
+\langle \phi|\psi\rangle.
+$$
+
+Outer product (rank-1 operator):
+$$
+|\phi\rangle\langle \psi|
+$$
+acts as: it “projects onto $|\psi\rangle$” and outputs along $|\phi\rangle$ (up to normalization).
+
+**Projection operator** onto a normalized $|\alpha\rangle$:
+$$
+\hat P_\alpha = |\alpha\rangle\langle \alpha|.
+$$
+
+### 9.5 Resolution of the identity (completeness)
+
+For a discrete orthonormal basis:
+$$
+\sum_n |n\rangle\langle n| = \hat I.
+$$
+For a continuous basis:
+$$
+\int |x\rangle\langle x|\,dx = \hat I,
+\qquad
+\int |p\rangle\langle p|\,dp = \hat I.
+$$
+
+### 9.6 Changing bases cleanly
+
+Insert $\hat I$ to transform components between bases:
+$$
+\phi(p)=\langle p|\psi\rangle
+      =\int \langle p|x\rangle\,\langle x|\psi\rangle\,dx
+      =\int \langle p|x\rangle\,\psi(x)\,dx.
+$$
+Recognizing $\langle x|p\rangle$ as the momentum eigenfunction in $x$-space yields the Fourier transform.
+
+Operators transform similarly:
+$$
+\langle p|\hat x|\psi\rangle
+= \int \langle p|x\rangle\,x\,\langle x|\psi\rangle\,dx,
+$$
+leading to the momentum-space form of the position operator.
+
+---
+
+## 10. One-page cheat sheet (key formulas)
+
+### States, probabilities, expectation values
+
+- $\psi(x)=\langle x|\psi\rangle$
+- $P(x\in[x,x+dx])=|\psi(x)|^2dx$
+- $\langle A\rangle = \langle \psi|\hat A|\psi\rangle$
+
+### Determinate states
+
+- $\Delta A=0 \iff \hat A|\psi\rangle=a|\psi\rangle$
+
+### Discrete spectral expansion
+
+- $|\psi\rangle=\sum_n c_n|a_n\rangle$, $c_n=\langle a_n|\psi\rangle$
+- $P(a_n)=|c_n|^2$
+
+### Continuous spectral expansion
+
+- $c(a)=\langle a|\psi\rangle$
+- $P(a\in[a,a+da])=|c(a)|^2 da$
+
+### Uncertainty principle
+
+- $\Delta A\,\Delta B \ge \frac12 |\langle[\hat A,\hat B]\rangle|$
+- $\Delta x\,\Delta p \ge \hbar/2$
+
+### Minimum-uncertainty packets
+
+- Equality for $x,p$ $\Rightarrow$ Gaussian $\psi(x)$
+
+### Dynamics (generalized Ehrenfest)
+
+- $\dfrac{d}{dt}\langle Q\rangle = \dfrac{i}{\hbar}\langle [\hat H,\hat Q]\rangle$ (if $\partial \hat Q/\partial t=0$)
+
+### Completeness (identity)
+
+- $\sum_n |n\rangle\langle n|=\hat I$, $\int |x\rangle\langle x|dx=\hat I$
+
+---
+
+## Reference
+
+- D. J. Griffiths & D. F. Schroeter, *Introduction to Quantum Mechanics*, 3rd ed., Cambridge University Press (2018), Chapter 3.

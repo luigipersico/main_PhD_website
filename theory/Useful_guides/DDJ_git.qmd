@@ -1,0 +1,3 @@
+1. All the testing that runs before every time someone pushes something to the repository. We can only in other branches (different form master).
+2. CRPP toolbox is the place where the master branch is deployed. If we don't deploy the master code is not accessible to everybody.
+3. look up at matlab classes 

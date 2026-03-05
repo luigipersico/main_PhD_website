@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.25">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Luigi Persico">
+<meta name="dcterms.date" content="2026-03-05">
+
+<title>Hilbert-Space Formalism for Quantum Measurements (Griffiths Ch. 3 — Notes) – Luigi Persico - Ph.D.</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-169705d3eabda05963f3986ba613488e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Quantum_physics/griffiths_ch3_formalism.html">Quantum Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Quantum_physics/griffiths_ch3_formalism.html">Hilbert-Space Formalism for Quantum Measurements (Griffiths Ch. 3 — Notes)</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+      <a href="../../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../project-roadmap.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Ph.D.&nbsp;roadmap</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Courses</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+ <span class="menu-text">Atomic and Radiative Processes in Plasmas</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Atomic_and_radiative_processes_in_plasmas/lecture1_summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture1 Summary</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Plasma Instabilities</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
+ <span class="menu-text">Exam Questions Part1</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 2: Grad-Shafranov Expansion and Shaping</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 3: Linear Ideal MHD and Field Line Bending</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 4: External Kink Mode Stability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 5: Tearing Mode Instability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 6: Ballooning Modes and Weird Curvature</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Exercise 7: Trapped Particles and Fast Ion Stability</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+ <span class="menu-text">Exam Questions Part2</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Three-Wave Coupling and Matching Conditions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Derivation of Wave Energy Density</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
+ <span class="menu-text">Theory</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 1: The Ideal MHD Model and Axisymmetric Equilibria</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 2: Grad-Shafranov Solutions - Toroidal and Shaped Equilibria</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 3: Theory of Linear Ideal MHD Stability</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 4: External Kink Modes and Inertia Treatment</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 5: Linear and Non-linear Tearing Modes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 6: Localised Toroidal Instabilities: Balooning modes and interchange modes</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 7: Fast Ion Effects on Pressure Driven Instabilities</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Papers</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../papers/Paper1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Paper1</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true">
+ <span class="menu-text">Reports</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2025-09.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">September 2025</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2025-10.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">October 2025</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2025-11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">November 2025</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2025-12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">December 2025</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2026-01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">January 2026</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2026-02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">February 2026</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2026-03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">March 2026</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+ <span class="menu-text">Theory</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false">
+ <span class="menu-text">Mathematic Tools</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/Bra-ket_notation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bra-ket notation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/covariant_contravariant.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Covariant and Contravariant</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/Hermitian_adjoint.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hermitian adjoint</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/Hilbert_Space.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hilbert Space</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Mathematic_tools/Pauli_matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Pauli matrices</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+ <span class="menu-text">Plasma Physics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/BES.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Beam Emission Spectroscopy (BES)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Motional-Stark Effect (MSE)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/NBI.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Neutral Beam Injector (NBI)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/NBI_simulator.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NBI Simulation: Mathematical Model &amp; Code Implementation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/Optical_spectrometer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optical Spectrometer</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/Optics.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Optics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/Safety_factor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Safety Factor q</span></a>
+  </div>
+</li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false">
+ <span class="menu-text">Diagnostics</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-12" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth3 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/Diagnostics/PD.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Photodiodes (PD)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/Diagnostics/thomson.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Thomson scattering system</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true">
+ <span class="menu-text">Quantum Physics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-13" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Quantum_physics/griffiths_ch3_formalism.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hilbert-Space Formalism for Quantum Measurements (Griffiths Ch. 3 — Notes)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Quatum Entanglement</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Quantum_physics/Schrödinger_eq.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schrödinger Equation</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false">
+ <span class="menu-text">Useful Guides</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-14" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Useful_guides/Controlling_CMOS_cameras.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to control CMOS cameras</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Useful_guides/Controlling_MSS.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to control MSS</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Useful_guides/DDJ_git.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">DDJ Git</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#scope-and-goal" id="toc-scope-and-goal" class="nav-link active" data-scroll-target="#scope-and-goal"><span class="header-section-number">1</span> Scope and goal</a></li>
+  <li><a href="#notation-conventions" id="toc-notation-conventions" class="nav-link" data-scroll-target="#notation-conventions"><span class="header-section-number">2</span> Notation conventions</a></li>
+  <li><a href="#hilbert-space" id="toc-hilbert-space" class="nav-link" data-scroll-target="#hilbert-space"><span class="header-section-number">3</span> 1. Hilbert space</a>
+  <ul class="collapse">
+  <li><a href="#vector-space-of-states-why-we-restrict-it" id="toc-vector-space-of-states-why-we-restrict-it" class="nav-link" data-scroll-target="#vector-space-of-states-why-we-restrict-it"><span class="header-section-number">3.1</span> 1.1 Vector space of states (why we restrict it)</a></li>
+  <li><a href="#inner-product-and-norm" id="toc-inner-product-and-norm" class="nav-link" data-scroll-target="#inner-product-and-norm"><span class="header-section-number">3.2</span> 1.2 Inner product and norm</a></li>
+  <li><a href="#orthonormal-sets-and-completeness" id="toc-orthonormal-sets-and-completeness" class="nav-link" data-scroll-target="#orthonormal-sets-and-completeness"><span class="header-section-number">3.3</span> 1.3 Orthonormal sets and completeness</a></li>
+  <li><a href="#schwarz-inequality-workhorse-inequality" id="toc-schwarz-inequality-workhorse-inequality" class="nav-link" data-scroll-target="#schwarz-inequality-workhorse-inequality"><span class="header-section-number">3.4</span> 1.4 Schwarz inequality (workhorse inequality)</a></li>
+  </ul></li>
+  <li><a href="#observables-and-hermitian-operators" id="toc-observables-and-hermitian-operators" class="nav-link" data-scroll-target="#observables-and-hermitian-operators"><span class="header-section-number">4</span> 2. Observables and Hermitian operators</a>
+  <ul class="collapse">
+  <li><a href="#observables-as-operators" id="toc-observables-as-operators" class="nav-link" data-scroll-target="#observables-as-operators"><span class="header-section-number">4.1</span> 2.1 Observables as operators</a></li>
+  <li><a href="#expectation-values-force-hermiticity" id="toc-expectation-values-force-hermiticity" class="nav-link" data-scroll-target="#expectation-values-force-hermiticity"><span class="header-section-number">4.2</span> 2.2 Expectation values force Hermiticity</a></li>
+  <li><a href="#definition-of-hermitian-operator-and-adjoint" id="toc-definition-of-hermitian-operator-and-adjoint" class="nav-link" data-scroll-target="#definition-of-hermitian-operator-and-adjoint"><span class="header-section-number">4.3</span> 2.3 Definition of Hermitian operator and adjoint</a></li>
+  <li><a href="#practical-note-domains-and-boundary-terms" id="toc-practical-note-domains-and-boundary-terms" class="nav-link" data-scroll-target="#practical-note-domains-and-boundary-terms"><span class="header-section-number">4.4</span> 2.4 Practical note: domains and boundary terms</a></li>
+  </ul></li>
+  <li><a href="#determinate-states-and-the-eigenvalue-equation" id="toc-determinate-states-and-the-eigenvalue-equation" class="nav-link" data-scroll-target="#determinate-states-and-the-eigenvalue-equation"><span class="header-section-number">5</span> 3. Determinate states and the eigenvalue equation</a>
+  <ul class="collapse">
+  <li><a href="#determinate-state-zero-spread" id="toc-determinate-state-zero-spread" class="nav-link" data-scroll-target="#determinate-state-zero-spread"><span class="header-section-number">5.1</span> 3.1 “Determinate state” = zero spread</a></li>
+  <li><a href="#eigenvalues-spectrum-degeneracy" id="toc-eigenvalues-spectrum-degeneracy" class="nav-link" data-scroll-target="#eigenvalues-spectrum-degeneracy"><span class="header-section-number">5.2</span> 3.2 Eigenvalues, spectrum, degeneracy</a></li>
+  </ul></li>
+  <li><a href="#eigenfunctions-of-a-hermitian-operator" id="toc-eigenfunctions-of-a-hermitian-operator" class="nav-link" data-scroll-target="#eigenfunctions-of-a-hermitian-operator"><span class="header-section-number">6</span> 4. Eigenfunctions of a Hermitian operator</a>
+  <ul class="collapse">
+  <li><a href="#discrete-spectra-the-matrix-like-case" id="toc-discrete-spectra-the-matrix-like-case" class="nav-link" data-scroll-target="#discrete-spectra-the-matrix-like-case"><span class="header-section-number">6.1</span> 4.1 Discrete spectra: the “matrix-like” case</a></li>
+  <li><a href="#continuous-spectra-dirac-orthonormality" id="toc-continuous-spectra-dirac-orthonormality" class="nav-link" data-scroll-target="#continuous-spectra-dirac-orthonormality"><span class="header-section-number">6.2</span> 4.2 Continuous spectra: “Dirac orthonormality”</a></li>
+  </ul></li>
+  <li><a href="#generalized-statistical-interpretation-measurement-postulate" id="toc-generalized-statistical-interpretation-measurement-postulate" class="nav-link" data-scroll-target="#generalized-statistical-interpretation-measurement-postulate"><span class="header-section-number">7</span> 5. Generalized statistical interpretation (measurement postulate)</a>
+  <ul class="collapse">
+  <li><a href="#possible-outcomes" id="toc-possible-outcomes" class="nav-link" data-scroll-target="#possible-outcomes"><span class="header-section-number">7.1</span> 5.1 Possible outcomes</a></li>
+  <li><a href="#probabilities-discrete-spectrum" id="toc-probabilities-discrete-spectrum" class="nav-link" data-scroll-target="#probabilities-discrete-spectrum"><span class="header-section-number">7.2</span> 5.2 Probabilities: discrete spectrum</a></li>
+  <li><a href="#probabilities-continuous-spectrum" id="toc-probabilities-continuous-spectrum" class="nav-link" data-scroll-target="#probabilities-continuous-spectrum"><span class="header-section-number">7.3</span> 5.3 Probabilities: continuous spectrum</a></li>
+  <li><a href="#collapse-state-update" id="toc-collapse-state-update" class="nav-link" data-scroll-target="#collapse-state-update"><span class="header-section-number">7.4</span> 5.4 Collapse (state update)</a></li>
+  <li><a href="#recovering-position-and-momentum-rules" id="toc-recovering-position-and-momentum-rules" class="nav-link" data-scroll-target="#recovering-position-and-momentum-rules"><span class="header-section-number">7.5</span> 5.5 Recovering position and momentum rules</a></li>
+  </ul></li>
+  <li><a href="#the-uncertainty-principle" id="toc-the-uncertainty-principle" class="nav-link" data-scroll-target="#the-uncertainty-principle"><span class="header-section-number">8</span> 6. The uncertainty principle</a>
+  <ul class="collapse">
+  <li><a href="#uncertainty-as-standard-deviation" id="toc-uncertainty-as-standard-deviation" class="nav-link" data-scroll-target="#uncertainty-as-standard-deviation"><span class="header-section-number">8.1</span> 6.1 Uncertainty as standard deviation</a></li>
+  <li><a href="#generalized-uncertainty-relation" id="toc-generalized-uncertainty-relation" class="nav-link" data-scroll-target="#generalized-uncertainty-relation"><span class="header-section-number">8.2</span> 6.2 Generalized uncertainty relation</a></li>
+  <li><a href="#heisenberg-uncertainty-as-a-special-case" id="toc-heisenberg-uncertainty-as-a-special-case" class="nav-link" data-scroll-target="#heisenberg-uncertainty-as-a-special-case"><span class="header-section-number">8.3</span> 6.3 Heisenberg uncertainty as a special case</a></li>
+  <li><a href="#compatible-vs-incompatible-observables" id="toc-compatible-vs-incompatible-observables" class="nav-link" data-scroll-target="#compatible-vs-incompatible-observables"><span class="header-section-number">8.4</span> 6.4 Compatible vs incompatible observables</a></li>
+  </ul></li>
+  <li><a href="#minimum-uncertainty-wave-packets" id="toc-minimum-uncertainty-wave-packets" class="nav-link" data-scroll-target="#minimum-uncertainty-wave-packets"><span class="header-section-number">9</span> 7. Minimum-uncertainty wave packets</a>
+  <ul class="collapse">
+  <li><a href="#when-does-equality-hold" id="toc-when-does-equality-hold" class="nav-link" data-scroll-target="#when-does-equality-hold"><span class="header-section-number">9.1</span> 7.1 When does equality hold?</a></li>
+  <li><a href="#for-x-and-p-the-gaussian-result" id="toc-for-x-and-p-the-gaussian-result" class="nav-link" data-scroll-target="#for-x-and-p-the-gaussian-result"><span class="header-section-number">9.2</span> 7.2 For <span class="math inline">\(x\)</span> and <span class="math inline">\(p\)</span>: the Gaussian result</a></li>
+  </ul></li>
+  <li><a href="#energytime-uncertainty-and-why-its-different" id="toc-energytime-uncertainty-and-why-its-different" class="nav-link" data-scroll-target="#energytime-uncertainty-and-why-its-different"><span class="header-section-number">10</span> 8. Energy–time uncertainty (and why it’s different)</a>
+  <ul class="collapse">
+  <li><a href="#time-is-not-an-operator-nonrelativistic-qm" id="toc-time-is-not-an-operator-nonrelativistic-qm" class="nav-link" data-scroll-target="#time-is-not-an-operator-nonrelativistic-qm"><span class="header-section-number">10.1</span> 8.1 Time is not an operator (nonrelativistic QM)</a></li>
+  <li><a href="#generalized-ehrenfest-theorem-commutator-dynamics" id="toc-generalized-ehrenfest-theorem-commutator-dynamics" class="nav-link" data-scroll-target="#generalized-ehrenfest-theorem-commutator-dynamics"><span class="header-section-number">10.2</span> 8.2 Generalized Ehrenfest theorem (commutator dynamics)</a></li>
+  <li><a href="#mandelstamtamm-form-of-energytime-uncertainty" id="toc-mandelstamtamm-form-of-energytime-uncertainty" class="nav-link" data-scroll-target="#mandelstamtamm-form-of-energytime-uncertainty"><span class="header-section-number">10.3</span> 8.3 Mandelstam–Tamm form of energy–time uncertainty</a></li>
+  </ul></li>
+  <li><a href="#vectors-and-operators-bases-matrices-and-dirac-notation" id="toc-vectors-and-operators-bases-matrices-and-dirac-notation" class="nav-link" data-scroll-target="#vectors-and-operators-bases-matrices-and-dirac-notation"><span class="header-section-number">11</span> 9. Vectors and operators: bases, matrices, and Dirac notation</a>
+  <ul class="collapse">
+  <li><a href="#states-are-abstract-vectors-basis-independent" id="toc-states-are-abstract-vectors-basis-independent" class="nav-link" data-scroll-target="#states-are-abstract-vectors-basis-independent"><span class="header-section-number">11.1</span> 9.1 States are abstract vectors (basis-independent)</a></li>
+  <li><a href="#operators-as-linear-transformations" id="toc-operators-as-linear-transformations" class="nav-link" data-scroll-target="#operators-as-linear-transformations"><span class="header-section-number">11.2</span> 9.2 Operators as linear transformations</a></li>
+  <li><a href="#finite-dimensional-systems-e.g.-two-level-system" id="toc-finite-dimensional-systems-e.g.-two-level-system" class="nav-link" data-scroll-target="#finite-dimensional-systems-e.g.-two-level-system"><span class="header-section-number">11.3</span> 9.3 Finite-dimensional systems (e.g., two-level system)</a></li>
+  <li><a href="#dirac-notation-bras-kets-outer-products" id="toc-dirac-notation-bras-kets-outer-products" class="nav-link" data-scroll-target="#dirac-notation-bras-kets-outer-products"><span class="header-section-number">11.4</span> 9.4 Dirac notation (bras, kets, outer products)</a></li>
+  <li><a href="#resolution-of-the-identity-completeness" id="toc-resolution-of-the-identity-completeness" class="nav-link" data-scroll-target="#resolution-of-the-identity-completeness"><span class="header-section-number">11.5</span> 9.5 Resolution of the identity (completeness)</a></li>
+  <li><a href="#changing-bases-cleanly" id="toc-changing-bases-cleanly" class="nav-link" data-scroll-target="#changing-bases-cleanly"><span class="header-section-number">11.6</span> 9.6 Changing bases cleanly</a></li>
+  </ul></li>
+  <li><a href="#one-page-cheat-sheet-key-formulas" id="toc-one-page-cheat-sheet-key-formulas" class="nav-link" data-scroll-target="#one-page-cheat-sheet-key-formulas"><span class="header-section-number">12</span> 10. One-page cheat sheet (key formulas)</a>
+  <ul class="collapse">
+  <li><a href="#states-probabilities-expectation-values" id="toc-states-probabilities-expectation-values" class="nav-link" data-scroll-target="#states-probabilities-expectation-values"><span class="header-section-number">12.1</span> States, probabilities, expectation values</a></li>
+  <li><a href="#determinate-states" id="toc-determinate-states" class="nav-link" data-scroll-target="#determinate-states"><span class="header-section-number">12.2</span> Determinate states</a></li>
+  <li><a href="#discrete-spectral-expansion" id="toc-discrete-spectral-expansion" class="nav-link" data-scroll-target="#discrete-spectral-expansion"><span class="header-section-number">12.3</span> Discrete spectral expansion</a></li>
+  <li><a href="#continuous-spectral-expansion" id="toc-continuous-spectral-expansion" class="nav-link" data-scroll-target="#continuous-spectral-expansion"><span class="header-section-number">12.4</span> Continuous spectral expansion</a></li>
+  <li><a href="#uncertainty-principle" id="toc-uncertainty-principle" class="nav-link" data-scroll-target="#uncertainty-principle"><span class="header-section-number">12.5</span> Uncertainty principle</a></li>
+  <li><a href="#minimum-uncertainty-packets" id="toc-minimum-uncertainty-packets" class="nav-link" data-scroll-target="#minimum-uncertainty-packets"><span class="header-section-number">12.6</span> Minimum-uncertainty packets</a></li>
+  <li><a href="#dynamics-generalized-ehrenfest" id="toc-dynamics-generalized-ehrenfest" class="nav-link" data-scroll-target="#dynamics-generalized-ehrenfest"><span class="header-section-number">12.7</span> Dynamics (generalized Ehrenfest)</a></li>
+  <li><a href="#completeness-identity" id="toc-completeness-identity" class="nav-link" data-scroll-target="#completeness-identity"><span class="header-section-number">12.8</span> Completeness (identity)</a></li>
+  </ul></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference"><span class="header-section-number">13</span> Reference</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Quantum_physics/griffiths_ch3_formalism.html">Quantum Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Quantum_physics/griffiths_ch3_formalism.html">Hilbert-Space Formalism for Quantum Measurements (Griffiths Ch. 3 — Notes)</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Hilbert-Space Formalism for Quantum Measurements (Griffiths Ch. 3 — Notes)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Luigi Persico </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 5, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="scope-and-goal" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="scope-and-goal"><span class="header-section-number">1</span> Scope and goal</h2>
+<p>These notes summarize <strong>Chapter 3 (“Formalism”)</strong> of <em>Introduction to Quantum Mechanics</em> (Griffiths &amp; Schroeter, 3rd ed., 2018).</p>
+<p><strong>Big picture:</strong> quantum mechanics is (i) a <em>state space</em> (Hilbert space), (ii) <em>observables</em> as Hermitian operators, and (iii) a <em>measurement postulate</em> giving outcomes and probabilities. Once this is in place, tools like <strong>uncertainty relations</strong>, <strong>changes of basis</strong>, and <strong>Dirac notation</strong> become natural.</p>
+<hr>
+</section>
+<section id="notation-conventions" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="notation-conventions"><span class="header-section-number">2</span> Notation conventions</h2>
+<ul>
+<li>State of the system: a vector <span class="math inline">\(\psi\)</span> in a complex Hilbert space.</li>
+<li>In the <strong>position basis</strong>, the state has components <span class="math inline">\(\psi(x)\)</span>.</li>
+<li>Inner product: <span class="math inline">\(\langle f, g \rangle = \int f^*(x)\, g(x)\, dx\)</span> (for wavefunctions).</li>
+<li>Expectation value: <span class="math inline">\(\langle A \rangle = \langle \psi, \hat A \psi \rangle\)</span>.</li>
+<li>Standard deviation (uncertainty): <span class="math inline">\(\Delta A = \sqrt{\langle (\hat A-\langle A\rangle)^2\rangle}\)</span>.</li>
+<li>Commutator: <span class="math inline">\([\hat A,\hat B] = \hat A\hat B - \hat B\hat A\)</span>.</li>
+</ul>
+<hr>
+</section>
+<section id="hilbert-space" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="hilbert-space"><span class="header-section-number">3</span> 1. Hilbert space</h2>
+<section id="vector-space-of-states-why-we-restrict-it" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="vector-space-of-states-why-we-restrict-it"><span class="header-section-number">3.1</span> 1.1 Vector space of states (why we restrict it)</h3>
+<p>Wavefunctions must be <strong>normalizable</strong> so that probabilities make sense: <span class="math display">\[
+\int |\psi(x)|^2\,dx = 1.
+\]</span> The natural setting is the space of <strong>square-integrable</strong> functions (physicists’ Hilbert space).</p>
+</section>
+<section id="inner-product-and-norm" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="inner-product-and-norm"><span class="header-section-number">3.2</span> 1.2 Inner product and norm</h3>
+<p>Define inner product (for functions): <span class="math display">\[
+\langle f,g\rangle = \int f^*(x)\,g(x)\,dx,
+\]</span> and norm: <span class="math display">\[
+\|f\| = \sqrt{\langle f,f\rangle}.
+\]</span> Key properties: linearity in the second slot, conjugate symmetry, and positivity.</p>
+</section>
+<section id="orthonormal-sets-and-completeness" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="orthonormal-sets-and-completeness"><span class="header-section-number">3.3</span> 1.3 Orthonormal sets and completeness</h3>
+<ul>
+<li>Normalized: <span class="math inline">\(\langle f,f\rangle=1\)</span></li>
+<li>Orthogonal: <span class="math inline">\(\langle f,g\rangle=0\)</span></li>
+<li>Orthonormal family <span class="math inline">\(\{f_n\}\)</span>: <span class="math inline">\(\langle f_m,f_n\rangle=\delta_{mn}\)</span></li>
+</ul>
+<p>A set <span class="math inline">\(\{f_n\}\)</span> is <strong>complete</strong> if any vector <span class="math inline">\(f\)</span> can be expanded: <span class="math display">\[
+f = \sum_n c_n f_n.
+\]</span> If the basis is orthonormal, coefficients follow from “Fourier’s trick”: <span class="math display">\[
+c_n = \langle f_n, f\rangle.
+\]</span></p>
+</section>
+<section id="schwarz-inequality-workhorse-inequality" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="schwarz-inequality-workhorse-inequality"><span class="header-section-number">3.4</span> 1.4 Schwarz inequality (workhorse inequality)</h3>
+<p>For any <span class="math inline">\(f,g\)</span>, <span class="math display">\[
+|\langle f,g\rangle|^2 \le \langle f,f\rangle\,\langle g,g\rangle.
+\]</span> This single inequality is the engine behind uncertainty relations.</p>
+<hr>
+</section>
+</section>
+<section id="observables-and-hermitian-operators" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="observables-and-hermitian-operators"><span class="header-section-number">4</span> 2. Observables and Hermitian operators</h2>
+<section id="observables-as-operators" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="observables-as-operators"><span class="header-section-number">4.1</span> 2.1 Observables as operators</h3>
+<p>An observable <span class="math inline">\(Q\)</span> is represented by a linear operator <span class="math inline">\(\hat Q\)</span> acting on states: <span class="math display">\[
+\psi \mapsto \hat Q\psi.
+\]</span></p>
+</section>
+<section id="expectation-values-force-hermiticity" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="expectation-values-force-hermiticity"><span class="header-section-number">4.2</span> 2.2 Expectation values force Hermiticity</h3>
+<p>The expectation value of a measurable quantity must be real: <span class="math display">\[
+\langle Q\rangle = \langle \psi, \hat Q\psi\rangle \in \mathbb{R}.
+\]</span> This holds for all <span class="math inline">\(\psi\)</span> only if <span class="math inline">\(\hat Q\)</span> is <strong>Hermitian</strong> (self-adjoint in physicists’ usage).</p>
+</section>
+<section id="definition-of-hermitian-operator-and-adjoint" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="definition-of-hermitian-operator-and-adjoint"><span class="header-section-number">4.3</span> 2.3 Definition of Hermitian operator and adjoint</h3>
+<p>The adjoint <span class="math inline">\(\hat Q^\dagger\)</span> is defined by: <span class="math display">\[
+\langle f,\hat Q g\rangle = \langle \hat Q^\dagger f, g\rangle \quad \forall f,g.
+\]</span> Hermitian means: <span class="math display">\[
+\hat Q^\dagger = \hat Q.
+\]</span></p>
+</section>
+<section id="practical-note-domains-and-boundary-terms" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="practical-note-domains-and-boundary-terms"><span class="header-section-number">4.4</span> 2.4 Practical note: domains and boundary terms</h3>
+<p>For differential operators, Hermiticity often depends on:</p>
+<ul>
+<li>boundary conditions (finite intervals),</li>
+<li>decay at infinity (infinite line),</li>
+<li>the domain of allowed functions.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="determinate-states-and-the-eigenvalue-equation" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="determinate-states-and-the-eigenvalue-equation"><span class="header-section-number">5</span> 3. Determinate states and the eigenvalue equation</h2>
+<section id="determinate-state-zero-spread" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="determinate-state-zero-spread"><span class="header-section-number">5.1</span> 3.1 “Determinate state” = zero spread</h3>
+<p>A state is <strong>determinate</strong> for observable <span class="math inline">\(Q\)</span> if every measurement returns the same value <span class="math inline">\(q\)</span>. Then: <span class="math display">\[
+\Delta Q = 0.
+\]</span> Using <span class="math inline">\(\Delta Q^2 = \langle (\hat Q-\langle Q\rangle)^2\rangle\)</span>, this implies: <span class="math display">\[
+(\hat Q - q)\psi = 0 \quad \Rightarrow \quad \hat Q\psi = q\psi.
+\]</span></p>
+</section>
+<section id="eigenvalues-spectrum-degeneracy" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="eigenvalues-spectrum-degeneracy"><span class="header-section-number">5.2</span> 3.2 Eigenvalues, spectrum, degeneracy</h3>
+<ul>
+<li><span class="math inline">\(q\)</span> is an <strong>eigenvalue</strong>, <span class="math inline">\(\psi\)</span> an <strong>eigenstate/eigenfunction</strong>.</li>
+<li>The set of all eigenvalues is the <strong>spectrum</strong>.</li>
+<li>If multiple linearly independent eigenstates share the same eigenvalue, it’s <strong>degenerate</strong>.</li>
+</ul>
+<p><strong>Physical meaning:</strong> <em>If the system is in an eigenstate of <span class="math inline">\(\hat Q\)</span>, then measuring <span class="math inline">\(Q\)</span> is certain to yield the associated eigenvalue.</em></p>
+<hr>
+</section>
+</section>
+<section id="eigenfunctions-of-a-hermitian-operator" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="eigenfunctions-of-a-hermitian-operator"><span class="header-section-number">6</span> 4. Eigenfunctions of a Hermitian operator</h2>
+<section id="discrete-spectra-the-matrix-like-case" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="discrete-spectra-the-matrix-like-case"><span class="header-section-number">6.1</span> 4.1 Discrete spectra: the “matrix-like” case</h3>
+<p>For normalizable eigenfunctions:</p>
+<p><strong>Theorem 1 (Reality):</strong> eigenvalues of a Hermitian operator are real.<br>
+<strong>Theorem 2 (Orthogonality):</strong> eigenfunctions with distinct eigenvalues are orthogonal.</p>
+<p>Degenerate subspaces can be orthonormalized (e.g., Gram–Schmidt), so we usually assume an orthonormal eigenbasis.</p>
+<p><strong>Completeness</strong> is crucial; in infinite dimensions it’s not always trivial to prove, so it’s taken as an axiom/restriction for “physical” observables: <span class="math display">\[
+\psi = \sum_n c_n\,\psi_n, \qquad c_n=\langle \psi_n,\psi\rangle.
+\]</span></p>
+</section>
+<section id="continuous-spectra-dirac-orthonormality" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="continuous-spectra-dirac-orthonormality"><span class="header-section-number">6.2</span> 4.2 Continuous spectra: “Dirac orthonormality”</h3>
+<p>For operators with continuous spectra, eigenfunctions are typically <strong>not</strong> square-integrable (e.g., plane waves, delta functions). Still, we use a consistent extension:</p>
+<ul>
+<li>Kronecker delta <span class="math inline">\(\delta_{mn}\)</span> becomes Dirac delta <span class="math inline">\(\delta(z-z')\)</span>.</li>
+<li>Sums become integrals.</li>
+</ul>
+<p>Example: momentum operator <span class="math inline">\(\hat p=-i\hbar\,\partial_x\)</span> has eigenfunctions <span class="math inline">\(e^{ipx/\hbar}\)</span> (not normalizable), but we enforce: <span class="math display">\[
+\langle p|p'\rangle = \delta(p-p').
+\]</span></p>
+<p>Example: position operator <span class="math inline">\(\hat x\)</span> has eigenfunctions <span class="math inline">\(\delta(x-y)\)</span> with: <span class="math display">\[
+\langle x|x'\rangle = \delta(x-x').
+\]</span></p>
+<p><strong>Completeness</strong> (continuous resolution of identity): <span class="math display">\[
+\int |z\rangle\langle z|\,dz = \hat I.
+\]</span></p>
+<hr>
+</section>
+</section>
+<section id="generalized-statistical-interpretation-measurement-postulate" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="generalized-statistical-interpretation-measurement-postulate"><span class="header-section-number">7</span> 5. Generalized statistical interpretation (measurement postulate)</h2>
+<p>This is the “measurement rule” in its most general form.</p>
+<section id="possible-outcomes" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="possible-outcomes"><span class="header-section-number">7.1</span> 5.1 Possible outcomes</h3>
+<p>If you measure observable <span class="math inline">\(Q\)</span> on a system in state <span class="math inline">\(|\psi\rangle\)</span>, the outcome must be one of the eigenvalues of <span class="math inline">\(\hat Q\)</span>.</p>
+</section>
+<section id="probabilities-discrete-spectrum" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="probabilities-discrete-spectrum"><span class="header-section-number">7.2</span> 5.2 Probabilities: discrete spectrum</h3>
+<p>If <span class="math inline">\(\hat Q\)</span> has orthonormal eigenstates <span class="math inline">\(|q_n\rangle\)</span>, <span class="math display">\[
+|\psi\rangle = \sum_n c_n |q_n\rangle, \qquad c_n=\langle q_n|\psi\rangle,
+\]</span> then: <span class="math display">\[
+P(q_n)=|c_n|^2.
+\]</span></p>
+</section>
+<section id="probabilities-continuous-spectrum" class="level3" data-number="7.3">
+<h3 data-number="7.3" class="anchored" data-anchor-id="probabilities-continuous-spectrum"><span class="header-section-number">7.3</span> 5.3 Probabilities: continuous spectrum</h3>
+<p>If eigenstates <span class="math inline">\(|q\rangle\)</span> satisfy Dirac orthonormality, <span class="math display">\[
+c(q)=\langle q|\psi\rangle,
+\]</span> then probability of landing in <span class="math inline">\([q,q+dq]\)</span> is: <span class="math display">\[
+P(q\in[q,q+dq]) = |c(q)|^2\,dq.
+\]</span></p>
+</section>
+<section id="collapse-state-update" class="level3" data-number="7.4">
+<h3 data-number="7.4" class="anchored" data-anchor-id="collapse-state-update"><span class="header-section-number">7.4</span> 5.4 Collapse (state update)</h3>
+<p>After measuring <span class="math inline">\(Q\)</span> and obtaining a value <span class="math inline">\(q\)</span>, the state “collapses” to the corresponding eigenstate (discrete: <span class="math inline">\(|q_n\rangle\)</span>; continuous: <span class="math inline">\(|q\rangle\)</span>, in an idealized sense).</p>
+</section>
+<section id="recovering-position-and-momentum-rules" class="level3" data-number="7.5">
+<h3 data-number="7.5" class="anchored" data-anchor-id="recovering-position-and-momentum-rules"><span class="header-section-number">7.5</span> 5.5 Recovering position and momentum rules</h3>
+<ul>
+<li>Position basis: <span class="math inline">\(\psi(x)=\langle x|\psi\rangle\)</span>, and <span class="math inline">\(P(x\in[x,x+dx])=|\psi(x)|^2dx\)</span>.</li>
+<li>Momentum basis: <span class="math inline">\(\phi(p)=\langle p|\psi\rangle\)</span>, and <span class="math inline">\(P(p\in[p,p+dp])=|\phi(p)|^2dp\)</span>.</li>
+</ul>
+<p>The map <span class="math inline">\(\psi(x)\leftrightarrow \phi(p)\)</span> is a Fourier transform: <span class="math display">\[
+\phi(p) \propto \int e^{-ipx/\hbar}\,\psi(x)\,dx,
+\qquad
+\psi(x) \propto \int e^{ipx/\hbar}\,\phi(p)\,dp.
+\]</span></p>
+<hr>
+</section>
+</section>
+<section id="the-uncertainty-principle" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="the-uncertainty-principle"><span class="header-section-number">8</span> 6. The uncertainty principle</h2>
+<section id="uncertainty-as-standard-deviation" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="uncertainty-as-standard-deviation"><span class="header-section-number">8.1</span> 6.1 Uncertainty as standard deviation</h3>
+<p>For any observable <span class="math inline">\(A\)</span>, <span class="math display">\[
+(\Delta A)^2 = \langle (\hat A-\langle A\rangle)^2\rangle.
+\]</span> Important: <span class="math inline">\(\Delta A\)</span> does <strong>not</strong> mean your measurement device is imprecise; it means repeated measurements on identically prepared systems have an intrinsic spread.</p>
+</section>
+<section id="generalized-uncertainty-relation" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="generalized-uncertainty-relation"><span class="header-section-number">8.2</span> 6.2 Generalized uncertainty relation</h3>
+<p>Define <span class="math inline">\(\hat A'=\hat A-\langle A\rangle\)</span>, <span class="math inline">\(\hat B'=\hat B-\langle B\rangle\)</span>. Using Schwarz inequality with <span class="math inline">\(f=\hat A'\psi\)</span>, <span class="math inline">\(g=\hat B'\psi\)</span>, one obtains: <span class="math display">\[
+\Delta A\,\Delta B \;\ge\; \frac{1}{2}\,|\langle [\hat A,\hat B]\rangle|.
+\]</span> This is the <strong>generalized uncertainty principle</strong>.</p>
+</section>
+<section id="heisenberg-uncertainty-as-a-special-case" class="level3" data-number="8.3">
+<h3 data-number="8.3" class="anchored" data-anchor-id="heisenberg-uncertainty-as-a-special-case"><span class="header-section-number">8.3</span> 6.3 Heisenberg uncertainty as a special case</h3>
+<p>For <span class="math inline">\(\hat x\)</span> and <span class="math inline">\(\hat p\)</span>, <span class="math display">\[
+[\hat x,\hat p]=i\hbar
+\quad\Rightarrow\quad
+\Delta x\,\Delta p \ge \frac{\hbar}{2}.
+\]</span></p>
+</section>
+<section id="compatible-vs-incompatible-observables" class="level3" data-number="8.4">
+<h3 data-number="8.4" class="anchored" data-anchor-id="compatible-vs-incompatible-observables"><span class="header-section-number">8.4</span> 6.4 Compatible vs incompatible observables</h3>
+<ul>
+<li>If <span class="math inline">\([\hat A,\hat B]=0\)</span>, observables are <strong>compatible</strong> and can have a complete set of simultaneous eigenstates.</li>
+<li>If <span class="math inline">\([\hat A,\hat B]\neq 0\)</span>, they are <strong>incompatible</strong> and cannot (in general) be simultaneously determinate.</li>
+</ul>
+<p>Operational viewpoint: a measurement that collapses the state into an eigenstate of <span class="math inline">\(A\)</span> typically destroys any prior definiteness of <span class="math inline">\(B\)</span>, unless the observables are compatible.</p>
+<hr>
+</section>
+</section>
+<section id="minimum-uncertainty-wave-packets" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="minimum-uncertainty-wave-packets"><span class="header-section-number">9</span> 7. Minimum-uncertainty wave packets</h2>
+<section id="when-does-equality-hold" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="when-does-equality-hold"><span class="header-section-number">9.1</span> 7.1 When does equality hold?</h3>
+<p>To saturate the bound, the relevant vectors must be proportional: <span class="math display">\[
+\hat A'\psi = c\,\hat B'\psi
+\]</span> with the constant constrained so the “dropped” piece vanishes.</p>
+</section>
+<section id="for-x-and-p-the-gaussian-result" class="level3" data-number="9.2">
+<h3 data-number="9.2" class="anchored" data-anchor-id="for-x-and-p-the-gaussian-result"><span class="header-section-number">9.2</span> 7.2 For <span class="math inline">\(x\)</span> and <span class="math inline">\(p\)</span>: the Gaussian result</h3>
+<p>For the position-momentum case, the condition becomes a differential equation whose general solution is a <strong>Gaussian</strong>: <span class="math display">\[
+\psi(x)\propto \exp\!\big(-a(x-x_0)^2 + i k_0 x\big),
+\]</span> and these satisfy: <span class="math display">\[
+\Delta x\,\Delta p = \frac{\hbar}{2}.
+\]</span> So Gaussian wave packets are the most general <em>minimum-uncertainty</em> states (at a given instant).</p>
+<hr>
+</section>
+</section>
+<section id="energytime-uncertainty-and-why-its-different" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="energytime-uncertainty-and-why-its-different"><span class="header-section-number">10</span> 8. Energy–time uncertainty (and why it’s different)</h2>
+<section id="time-is-not-an-operator-nonrelativistic-qm" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="time-is-not-an-operator-nonrelativistic-qm"><span class="header-section-number">10.1</span> 8.1 Time is not an operator (nonrelativistic QM)</h3>
+<p>Unlike <span class="math inline">\(x,p,E\)</span>, time <span class="math inline">\(t\)</span> is the independent parameter in the Schrödinger equation, not an observable represented by an operator in the same way. So <span class="math inline">\(\Delta t\)</span> is <strong>not</strong> a standard deviation of “time measurements.”</p>
+</section>
+<section id="generalized-ehrenfest-theorem-commutator-dynamics" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="generalized-ehrenfest-theorem-commutator-dynamics"><span class="header-section-number">10.2</span> 8.2 Generalized Ehrenfest theorem (commutator dynamics)</h3>
+<p>For an observable <span class="math inline">\(\hat Q\)</span>, <span class="math display">\[
+\frac{d}{dt}\langle Q\rangle = \frac{i}{\hbar}\langle [\hat H,\hat Q]\rangle
+\quad \text{(if $\hat Q$ has no explicit $t$-dependence).}
+\]</span></p>
+</section>
+<section id="mandelstamtamm-form-of-energytime-uncertainty" class="level3" data-number="10.3">
+<h3 data-number="10.3" class="anchored" data-anchor-id="mandelstamtamm-form-of-energytime-uncertainty"><span class="header-section-number">10.3</span> 8.3 Mandelstam–Tamm form of energy–time uncertainty</h3>
+<p>Take the generalized uncertainty relation with <span class="math inline">\(A=H\)</span> and <span class="math inline">\(B=Q\)</span>. Using the previous result, one obtains: <span class="math display">\[
+\Delta E\,\Delta t \gtrsim \frac{\hbar}{2},
+\]</span> where <span class="math inline">\(\Delta t\)</span> is interpreted as a <em>timescale for significant change</em> in <span class="math inline">\(\langle Q\rangle\)</span>, e.g. <span class="math display">\[
+\Delta t \sim \frac{\Delta Q}{\left|d\langle Q\rangle/dt\right|}.
+\]</span> Key meaning: <strong>rapid evolution requires large energy spread</strong>; stationary states (<span class="math inline">\(\Delta E=0\)</span>) have time-independent expectation values.</p>
+<hr>
+</section>
+</section>
+<section id="vectors-and-operators-bases-matrices-and-dirac-notation" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="vectors-and-operators-bases-matrices-and-dirac-notation"><span class="header-section-number">11</span> 9. Vectors and operators: bases, matrices, and Dirac notation</h2>
+<section id="states-are-abstract-vectors-basis-independent" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="states-are-abstract-vectors-basis-independent"><span class="header-section-number">11.1</span> 9.1 States are abstract vectors (basis-independent)</h3>
+<p>The wavefunction <span class="math inline">\(\psi(x)\)</span> is not the state itself; it’s the <em>representation of the state</em> in the position basis: <span class="math display">\[
+\psi(x) = \langle x|\psi\rangle.
+\]</span> Similarly, momentum-space wavefunction: <span class="math display">\[
+\phi(p)=\langle p|\psi\rangle.
+\]</span> And for a discrete energy basis <span class="math inline">\(\{|n\rangle\}\)</span>: <span class="math display">\[
+c_n = \langle n|\psi\rangle.
+\]</span> All contain the same information: they are just components in different bases.</p>
+</section>
+<section id="operators-as-linear-transformations" class="level3" data-number="11.2">
+<h3 data-number="11.2" class="anchored" data-anchor-id="operators-as-linear-transformations"><span class="header-section-number">11.2</span> 9.2 Operators as linear transformations</h3>
+<p>Operators map vectors to vectors: <span class="math display">\[
+\hat A: |\psi\rangle \mapsto |\psi'\rangle.
+\]</span> Once a basis <span class="math inline">\(\{|n\rangle\}\)</span> is chosen, the operator is represented by matrix elements: <span class="math display">\[
+A_{mn}=\langle m|\hat A|n\rangle.
+\]</span> Then components transform exactly like matrix multiplication.</p>
+</section>
+<section id="finite-dimensional-systems-e.g.-two-level-system" class="level3" data-number="11.3">
+<h3 data-number="11.3" class="anchored" data-anchor-id="finite-dimensional-systems-e.g.-two-level-system"><span class="header-section-number">11.3</span> 9.3 Finite-dimensional systems (e.g., two-level system)</h3>
+<p>If the system admits only <span class="math inline">\(N\)</span> linearly independent states, everything reduces to standard linear algebra:</p>
+<ul>
+<li>state = <span class="math inline">\(N\)</span>-component column vector,</li>
+<li>observable = <span class="math inline">\(N\times N\)</span> Hermitian matrix,</li>
+<li>time evolution = solve Schrödinger equation with that matrix Hamiltonian.</li>
+</ul>
+</section>
+<section id="dirac-notation-bras-kets-outer-products" class="level3" data-number="11.4">
+<h3 data-number="11.4" class="anchored" data-anchor-id="dirac-notation-bras-kets-outer-products"><span class="header-section-number">11.4</span> 9.4 Dirac notation (bras, kets, outer products)</h3>
+<p>Dirac splits the inner product “bracket”:</p>
+<ul>
+<li>Ket <span class="math inline">\(|\psi\rangle\)</span>: a vector</li>
+<li>Bra <span class="math inline">\(\langle \psi|\)</span>: a linear functional acting on kets to give a complex number: <span class="math display">\[
+\langle \phi|\psi\rangle.
+\]</span></li>
+</ul>
+<p>Outer product (rank-1 operator): <span class="math display">\[
+|\phi\rangle\langle \psi|
+\]</span> acts as: it “projects onto <span class="math inline">\(|\psi\rangle\)</span>” and outputs along <span class="math inline">\(|\phi\rangle\)</span> (up to normalization).</p>
+<p><strong>Projection operator</strong> onto a normalized <span class="math inline">\(|\alpha\rangle\)</span>: <span class="math display">\[
+\hat P_\alpha = |\alpha\rangle\langle \alpha|.
+\]</span></p>
+</section>
+<section id="resolution-of-the-identity-completeness" class="level3" data-number="11.5">
+<h3 data-number="11.5" class="anchored" data-anchor-id="resolution-of-the-identity-completeness"><span class="header-section-number">11.5</span> 9.5 Resolution of the identity (completeness)</h3>
+<p>For a discrete orthonormal basis: <span class="math display">\[
+\sum_n |n\rangle\langle n| = \hat I.
+\]</span> For a continuous basis: <span class="math display">\[
+\int |x\rangle\langle x|\,dx = \hat I,
+\qquad
+\int |p\rangle\langle p|\,dp = \hat I.
+\]</span></p>
+</section>
+<section id="changing-bases-cleanly" class="level3" data-number="11.6">
+<h3 data-number="11.6" class="anchored" data-anchor-id="changing-bases-cleanly"><span class="header-section-number">11.6</span> 9.6 Changing bases cleanly</h3>
+<p>Insert <span class="math inline">\(\hat I\)</span> to transform components between bases: <span class="math display">\[
+\phi(p)=\langle p|\psi\rangle
+      =\int \langle p|x\rangle\,\langle x|\psi\rangle\,dx
+      =\int \langle p|x\rangle\,\psi(x)\,dx.
+\]</span> Recognizing <span class="math inline">\(\langle x|p\rangle\)</span> as the momentum eigenfunction in <span class="math inline">\(x\)</span>-space yields the Fourier transform.</p>
+<p>Operators transform similarly: <span class="math display">\[
+\langle p|\hat x|\psi\rangle
+= \int \langle p|x\rangle\,x\,\langle x|\psi\rangle\,dx,
+\]</span> leading to the momentum-space form of the position operator.</p>
+<hr>
+</section>
+</section>
+<section id="one-page-cheat-sheet-key-formulas" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="one-page-cheat-sheet-key-formulas"><span class="header-section-number">12</span> 10. One-page cheat sheet (key formulas)</h2>
+<section id="states-probabilities-expectation-values" class="level3" data-number="12.1">
+<h3 data-number="12.1" class="anchored" data-anchor-id="states-probabilities-expectation-values"><span class="header-section-number">12.1</span> States, probabilities, expectation values</h3>
+<ul>
+<li><span class="math inline">\(\psi(x)=\langle x|\psi\rangle\)</span></li>
+<li><span class="math inline">\(P(x\in[x,x+dx])=|\psi(x)|^2dx\)</span></li>
+<li><span class="math inline">\(\langle A\rangle = \langle \psi|\hat A|\psi\rangle\)</span></li>
+</ul>
+</section>
+<section id="determinate-states" class="level3" data-number="12.2">
+<h3 data-number="12.2" class="anchored" data-anchor-id="determinate-states"><span class="header-section-number">12.2</span> Determinate states</h3>
+<ul>
+<li><span class="math inline">\(\Delta A=0 \iff \hat A|\psi\rangle=a|\psi\rangle\)</span></li>
+</ul>
+</section>
+<section id="discrete-spectral-expansion" class="level3" data-number="12.3">
+<h3 data-number="12.3" class="anchored" data-anchor-id="discrete-spectral-expansion"><span class="header-section-number">12.3</span> Discrete spectral expansion</h3>
+<ul>
+<li><span class="math inline">\(|\psi\rangle=\sum_n c_n|a_n\rangle\)</span>, <span class="math inline">\(c_n=\langle a_n|\psi\rangle\)</span></li>
+<li><span class="math inline">\(P(a_n)=|c_n|^2\)</span></li>
+</ul>
+</section>
+<section id="continuous-spectral-expansion" class="level3" data-number="12.4">
+<h3 data-number="12.4" class="anchored" data-anchor-id="continuous-spectral-expansion"><span class="header-section-number">12.4</span> Continuous spectral expansion</h3>
+<ul>
+<li><span class="math inline">\(c(a)=\langle a|\psi\rangle\)</span></li>
+<li><span class="math inline">\(P(a\in[a,a+da])=|c(a)|^2 da\)</span></li>
+</ul>
+</section>
+<section id="uncertainty-principle" class="level3" data-number="12.5">
+<h3 data-number="12.5" class="anchored" data-anchor-id="uncertainty-principle"><span class="header-section-number">12.5</span> Uncertainty principle</h3>
+<ul>
+<li><span class="math inline">\(\Delta A\,\Delta B \ge \frac12 |\langle[\hat A,\hat B]\rangle|\)</span></li>
+<li><span class="math inline">\(\Delta x\,\Delta p \ge \hbar/2\)</span></li>
+</ul>
+</section>
+<section id="minimum-uncertainty-packets" class="level3" data-number="12.6">
+<h3 data-number="12.6" class="anchored" data-anchor-id="minimum-uncertainty-packets"><span class="header-section-number">12.6</span> Minimum-uncertainty packets</h3>
+<ul>
+<li>Equality for <span class="math inline">\(x,p\)</span> <span class="math inline">\(\Rightarrow\)</span> Gaussian <span class="math inline">\(\psi(x)\)</span></li>
+</ul>
+</section>
+<section id="dynamics-generalized-ehrenfest" class="level3" data-number="12.7">
+<h3 data-number="12.7" class="anchored" data-anchor-id="dynamics-generalized-ehrenfest"><span class="header-section-number">12.7</span> Dynamics (generalized Ehrenfest)</h3>
+<ul>
+<li><span class="math inline">\(\dfrac{d}{dt}\langle Q\rangle = \dfrac{i}{\hbar}\langle [\hat H,\hat Q]\rangle\)</span> (if <span class="math inline">\(\partial \hat Q/\partial t=0\)</span>)</li>
+</ul>
+</section>
+<section id="completeness-identity" class="level3" data-number="12.8">
+<h3 data-number="12.8" class="anchored" data-anchor-id="completeness-identity"><span class="header-section-number">12.8</span> Completeness (identity)</h3>
+<ul>
+<li><span class="math inline">\(\sum_n |n\rangle\langle n|=\hat I\)</span>, <span class="math inline">\(\int |x\rangle\langle x|dx=\hat I\)</span></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="reference" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="reference"><span class="header-section-number">13</span> Reference</h2>
+<ul>
+<li>D. J. Griffiths &amp; D. F. Schroeter, <em>Introduction to Quantum Mechanics</em>, 3rd ed., Cambridge University Press (2018), Chapter 3.</li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

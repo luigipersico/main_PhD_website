@@ -1,0 +1,10 @@
+---
+title: "March 2026"
+---
+
+- Atomic and Radiative processes in Plasmas course.
+- TA for the thermodynamics course.
+- Fitting algorithm for MSE syntethic data gives around 3% mean error on Bpol. Trying now to see what happen when using a constant Bpol, and to see how the different parameters are fitted with resepct to the input ones. Important to properly check those beam amplitudes (should I try my beam attenuation code?)
+- Experiment to anlyse polarizer dependency with respect to LOS. When doing the fitting withy many measurements observed a change in tyhe polarizing angle! We go from 39 to 46 degrees approx.
+- Experiment to see how much the magnetic field affecs the polarizing angle.
+- Starting to look into the NBI spectroscopic measurements.

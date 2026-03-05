@@ -1,0 +1,12 @@
+---
+title: "February 2026"
+---
+
+- Plasma Diagnostic course (passed)
+- Starting Atomic and Radiative processes in Plasmas course.
+- TA for the thermodynamics course.
+- Starting implementation of fitting algorithm for MSE syntethic data (not working yet).
+- Joined the DDJ Ninja team.
+- Presented expercise 1.3 in the course of Atomic and Radiative processes in Plasmas.
+- Experiment to anlyse polarizer dependency with respect to LOS. It seems no such dependence is observed.
+- Build the DDJ shifts app.

@@ -15,7 +15,7 @@ format:
         \newcommand{\vect}[1]{\boldsymbol{#1}}
 
 execute:
-  freeze: false
+  freeze: auto
 
 bibliography: references.bib
 csl: nature-physics.csl
