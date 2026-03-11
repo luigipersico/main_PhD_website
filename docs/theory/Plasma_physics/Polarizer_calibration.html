@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Luigi Persico">
+<meta name="author" content="Your Name">
 <meta name="dcterms.date" content="2026-03-11">
 
 <title>Motional-Stark Effect (MSE) and Diagnostic Calibration on TCV – Luigi Persico - Ph.D.</title>
@@ -132,7 +132,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/MSE.html">Motional-Stark Effect (MSE) and Diagnostic Calibration on TCV</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/Polarizer_calibration.html">Motional-Stark Effect (MSE) and Diagnostic Calibration on TCV</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -461,7 +461,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motional-Stark Effect (MSE) and Diagnostic Calibration on TCV</span></a>
   </div>
 </li>
@@ -487,6 +487,12 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../theory/Plasma_physics/Optics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optics</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/Polarizer_calibration.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Motional-Stark Effect (MSE) and Diagnostic Calibration on TCV</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -601,12 +607,12 @@ window.Quarto = {
   </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">6</span> References</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="MSE.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Polarizer_calibration.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/MSE.html">Motional-Stark Effect (MSE) and Diagnostic Calibration on TCV</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/Polarizer_calibration.html">Motional-Stark Effect (MSE) and Diagnostic Calibration on TCV</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Motional-Stark Effect (MSE) and Diagnostic Calibration on TCV</h1>
 </div>
@@ -618,7 +624,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Luigi Persico </p>
+             <p>Your Name </p>
           </div>
   </div>
     
@@ -644,7 +650,7 @@ window.Quarto = {
 <p><span class="math display">\[
 \nabla \times \mathbf{B} = \mu_0 \mathbf{J}
 \]</span></p>
-<p>In TCV, the poloidal magnetic field is routinely determined by the LIUQE (from “EQUIL” spelt backwards) code, an equilibrium code based on the resolution of the Grad-Shafranov equation, alongside magnetic probe measurements outside the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is no longer negligible, and the magnetic field is locally influenced. This explains the need for the MSE diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.</p>
+<p>In TCV, the poloidal magnetic field is routinely determined by the LIUQE (from “EQUIL” spelt backwards) code, an equilibrium code based on the resolution of the <a href="Grad_Shafranov.qmd">Grad-Shafranov equation</a>, alongside magnetic probe measurements outside the plasma. However, when using Neutral Beam Heating (NBH) and Electron Cyclotron Resonance Heating (ECRH), the plasma equilibrium velocity is no longer negligible, and the magnetic field is locally influenced. This explains the need for the MSE diagnostic, which provides a direct measurement of the local magnetic field inside the plasma, unaffected by external equilibrium assumptions.</p>
 </section>
 <section id="a-bit-of-history" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="a-bit-of-history"><span class="header-section-number">2</span> A Bit of History</h2>
