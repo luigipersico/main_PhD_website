@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luigi Persico">
-<meta name="dcterms.date" content="2026-03-11">
+<meta name="dcterms.date" content="2026-03-26">
 
 <title>Motional-Stark Effect (MSE) and Diagnostic Calibration on TCV – Luigi Persico - Ph.D.</title>
 <style>
@@ -599,7 +599,12 @@ window.Quarto = {
   <li><a href="#part-1-characterization-of-the-polarizing-beam-splitter-pbs" id="toc-part-1-characterization-of-the-polarizing-beam-splitter-pbs" class="nav-link" data-scroll-target="#part-1-characterization-of-the-polarizing-beam-splitter-pbs"><span class="header-section-number">5.1</span> Part 1: Characterization of the Polarizing Beam Splitter (PBS)</a></li>
   <li><a href="#part-2-in-situ-faraday-rotation-calibration" id="toc-part-2-in-situ-faraday-rotation-calibration" class="nav-link" data-scroll-target="#part-2-in-situ-faraday-rotation-calibration"><span class="header-section-number">5.2</span> Part 2: In-Situ Faraday Rotation Calibration</a></li>
   </ul></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">6</span> References</a></li>
+  <li><a href="#ideal-vs.-integrated-spectra-the-impact-of-finite-measurement-volumes" id="toc-ideal-vs.-integrated-spectra-the-impact-of-finite-measurement-volumes" class="nav-link" data-scroll-target="#ideal-vs.-integrated-spectra-the-impact-of-finite-measurement-volumes"><span class="header-section-number">6</span> Ideal vs.&nbsp;Integrated Spectra: The Impact of Finite Measurement Volumes</a>
+  <ul class="collapse">
+  <li><a href="#conservation-of-photons-and-spectral-smearing" id="toc-conservation-of-photons-and-spectral-smearing" class="nav-link" data-scroll-target="#conservation-of-photons-and-spectral-smearing"><span class="header-section-number">6.1</span> Conservation of Photons and Spectral Smearing</a></li>
+  <li><a href="#synthetic-diagnostic-validation" id="toc-synthetic-diagnostic-validation" class="nav-link" data-scroll-target="#synthetic-diagnostic-validation"><span class="header-section-number">6.2</span> Synthetic Diagnostic Validation</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7</span> References</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="MSE.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -625,7 +630,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 11, 2026</p>
+      <p class="date">March 26, 2026</p>
     </div>
   </div>
   
@@ -1112,14 +1117,277 @@ C = \frac{I_{odd} - I_{even}}{I_{odd} + I_{even}} = \cos(2(\theta_p - \theta_{PB
 </ol>
 </section>
 </section>
-<section id="references" class="level2" data-number="6">
+<section id="ideal-vs.-integrated-spectra-the-impact-of-finite-measurement-volumes" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="ideal-vs.-integrated-spectra-the-impact-of-finite-measurement-volumes"><span class="header-section-number">6</span> Ideal vs.&nbsp;Integrated Spectra: The Impact of Finite Measurement Volumes</h2>
+<p>In simplified MSE analysis, the measured emission is often approximated as originating from a single, infinitesimally small intersection point between the diagnostic Line-of-Sight (LOS) and the centerline of the neutral beam.</p>
+<p>However, the physical reality of the diagnostic entails a finite measurement volume. The intersection between the expanded optical viewing cone of the fiber and the physical width of the neutral beam creates an active integration region spanning several centimeters along the LOS.</p>
+<div id="fig-beam_intersection" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-beam_intersection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figures/3D Beam Intersection.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-beam_intersection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: 3D visualization of the finite intersection volume between the neutral beam and the diagnostic Line-of-Sight.
+</figcaption>
+</figure>
+</div>
+<p>Because the magnetic field exhibits spatial gradients within the tokamak, the magnetic field vector changes continuously as the LOS traverses this active beam volume. <a href="#fig-beam_intersection" class="quarto-xref">Figure&nbsp;6</a> and <a href="#fig-Bz_along_LOS" class="quarto-xref">Figure&nbsp;7</a> illustrate how the vertical magnetic field component, <span class="math inline">\(B_z\)</span>, varies significantly along the active integration path.</p>
+<div id="fig-Bz_along_LOS" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Bz_along_LOS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figures/B_z Variation Along Active LOS.png" class="img-fluid figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Bz_along_LOS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Variation of the vertical magnetic field component (<span class="math inline">\(B_z\)</span>) along the active integration length of a Line-of-Sight.
+</figcaption>
+</figure>
+</div>
+<p>The total measured spectral intensity is therefore a line integral of the local emissivity <span class="math inline">\(j(\lambda, s)\)</span> along the path <span class="math inline">\(s\)</span>:</p>
+<p><span class="math display">\[
+I(\lambda) = \int j(\lambda, s) ds
+\]</span></p>
+<section id="conservation-of-photons-and-spectral-smearing" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="conservation-of-photons-and-spectral-smearing"><span class="header-section-number">6.1</span> Conservation of Photons and Spectral Smearing</h3>
+<p>This spatial integration has an impact on the shape of the measured Stark multiplet. Because the Stark splitting <span class="math inline">\(\Delta \lambda\)</span> is directly proportional to <span class="math inline">\(|\mathbf{v} \times \mathbf{B}|\)</span>, the continuous variation of the magnetic field along the integration path causes the Stark lines to shift slightly at every point within the volume.</p>
+<p>When these infinitesimally shifted local spectra are summed together to form the <strong>Integrated Spectrum</strong>, the resulting peaks undergo a specific geometric broadening.</p>
+<p>If an experimental fitting algorithm relies purely on an ideal point-source forward model, this geometric “smearing” can be misinterpreted as anomalous thermal broadening, or lead to systematic errors in the inferred polarization fractions.</p>
+<div id="fig-bz_fits" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bz_fits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-bz_fits" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-bz_full" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-bz_full-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figures/Bzfit_shot86336_t1.3.png" class="img-fluid figure-img" data-ref-parent="fig-bz_fits">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-bz_full-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Full profile reconstruction.
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-bz_fits" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-bz_zoom" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-bz_zoom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figures/Bzfit_shot86336_t1.3_zoom.png" class="img-fluid figure-img" data-ref-parent="fig-bz_fits">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-bz_zoom-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Zoomed-in view showing the difference between models.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bz_fits-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Comparison of reconstructed <span class="math inline">\(B_z\)</span> profiles between the Ideal single-point assumption and the full 3D Integrated model (Shot 86336, t=1.3s).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="synthetic-diagnostic-validation" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="synthetic-diagnostic-validation"><span class="header-section-number">6.2</span> Synthetic Diagnostic Validation</h3>
+<p>To quantify the impact of the 3D spatial integration, <a href="#tbl-ideal-vs-integrated" class="quarto-xref">Table&nbsp;3</a> presents the recovered vertical magnetic field (<span class="math inline">\(B_z\)</span>) for TCV shot 86336 at <span class="math inline">\(t = 1.3\)</span> s. The relative error is computed with respect to the known True LIUQE equilibrium.</p>
+<div id="tbl-ideal-vs-integrated" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ideal-vs-integrated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Comparison of reconstructed magnetic fields (<span class="math inline">\(B_z\)</span>) between the Ideal single-point assumption and the full 3D Integrated model.
+</figcaption>
+<div aria-describedby="tbl-ideal-vs-integrated-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">LOS</th>
+<th style="text-align: center;">True <span class="math inline">\(B_z\)</span> [T]</th>
+<th style="text-align: center;">Ideal <span class="math inline">\(B_z\)</span> [T]</th>
+<th style="text-align: center;">Rel. Error Ideal [%]</th>
+<th style="text-align: center;">Integrated <span class="math inline">\(B_z\)</span> [T]</th>
+<th style="text-align: center;">Rel. Error Int [%]</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0.1261</td>
+<td style="text-align: center;">0.1230</td>
+<td style="text-align: center;">2.46</td>
+<td style="text-align: center;">0.1252</td>
+<td style="text-align: center;">0.71</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0.1323</td>
+<td style="text-align: center;">0.1330</td>
+<td style="text-align: center;">0.53</td>
+<td style="text-align: center;">0.1369</td>
+<td style="text-align: center;">3.48</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0.1384</td>
+<td style="text-align: center;">0.1398</td>
+<td style="text-align: center;">1.01</td>
+<td style="text-align: center;">0.1394</td>
+<td style="text-align: center;">0.72</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">0.1426</td>
+<td style="text-align: center;">0.1440</td>
+<td style="text-align: center;">0.98</td>
+<td style="text-align: center;">0.1394</td>
+<td style="text-align: center;">2.24</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.1426</td>
+<td style="text-align: center;">0.1416</td>
+<td style="text-align: center;">0.70</td>
+<td style="text-align: center;">0.1382</td>
+<td style="text-align: center;">3.09</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">0.1392</td>
+<td style="text-align: center;">0.1379</td>
+<td style="text-align: center;">0.93</td>
+<td style="text-align: center;">0.1343</td>
+<td style="text-align: center;">3.52</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">0.1330</td>
+<td style="text-align: center;">0.1328</td>
+<td style="text-align: center;">0.15</td>
+<td style="text-align: center;">0.1283</td>
+<td style="text-align: center;">3.53</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">0.1252</td>
+<td style="text-align: center;">0.1273</td>
+<td style="text-align: center;">1.68</td>
+<td style="text-align: center;">0.1229</td>
+<td style="text-align: center;">1.84</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">0.1159</td>
+<td style="text-align: center;">0.1182</td>
+<td style="text-align: center;">1.98</td>
+<td style="text-align: center;">0.1112</td>
+<td style="text-align: center;">4.06</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.1062</td>
+<td style="text-align: center;">0.1050</td>
+<td style="text-align: center;">1.13</td>
+<td style="text-align: center;">0.1029</td>
+<td style="text-align: center;">3.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">0.0954</td>
+<td style="text-align: center;">0.0955</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">0.0913</td>
+<td style="text-align: center;">4.30</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0.0843</td>
+<td style="text-align: center;">0.0860</td>
+<td style="text-align: center;">2.02</td>
+<td style="text-align: center;">0.0820</td>
+<td style="text-align: center;">2.73</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">0.0731</td>
+<td style="text-align: center;">0.0741</td>
+<td style="text-align: center;">1.37</td>
+<td style="text-align: center;">0.0706</td>
+<td style="text-align: center;">3.42</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">0.0620</td>
+<td style="text-align: center;">0.0613</td>
+<td style="text-align: center;">1.13</td>
+<td style="text-align: center;">0.0589</td>
+<td style="text-align: center;">5.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">0.0510</td>
+<td style="text-align: center;">0.0511</td>
+<td style="text-align: center;">0.20</td>
+<td style="text-align: center;">0.0509</td>
+<td style="text-align: center;">0.20</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">0.0402</td>
+<td style="text-align: center;">0.0411</td>
+<td style="text-align: center;">2.24</td>
+<td style="text-align: center;">0.0408</td>
+<td style="text-align: center;">1.49</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">0.0293</td>
+<td style="text-align: center;">0.0290</td>
+<td style="text-align: center;">1.02</td>
+<td style="text-align: center;">0.0286</td>
+<td style="text-align: center;">2.39</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">0.0192</td>
+<td style="text-align: center;">0.0171</td>
+<td style="text-align: center;">10.94</td>
+<td style="text-align: center;">0.0200</td>
+<td style="text-align: center;">4.17</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">0.0095</td>
+<td style="text-align: center;">0.0101</td>
+<td style="text-align: center;">6.32</td>
+<td style="text-align: center;">0.0105</td>
+<td style="text-align: center;">10.53</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p><strong>Summary of Relative Errors:</strong></p>
+<ul>
+<li><strong>Mean Error (Ideal, excluding LOS 20):</strong> <span class="math inline">\(1.94\%\)</span></li>
+<li><strong>Mean Error (Integrated, excluding LOS 20):</strong> <span class="math inline">\(3.18\%\)</span></li>
+</ul>
+</section>
+</section>
+<section id="references" class="level2" data-number="7">
 
 
 
 
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">6 References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">7 References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-stark_wikipedia" class="csl-entry" role="listitem">
 <div class="csl-left-margin">1. </div><div class="csl-right-inline">Wikipedia. <a href="https://en.wikipedia.org/wiki/Stark_effect">Stark effect</a>.</div>
 </div>

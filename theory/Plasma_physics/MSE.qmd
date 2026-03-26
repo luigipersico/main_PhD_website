@@ -219,6 +219,73 @@ The absolute polarization angle was plotted against the toroidal magnetic field 
 3. **Absolute Zero Calibration (Y-Intercept):** Evaluating the fit at exactly 0 T reveals a baseline angle of $1.94^\circ$. Because Faraday rotation is strictly zero in the absence of a magnetic field, this intercept mathematically reveals the true incoming angle of the polarized LED light. This explicitly demonstrates that the attempt to manually fix the polarizer to 0° by eye was slightly misaligned, with the true physical angle being $1.94^\circ$. 
 4. **Spatial Uniformity**: An analysis was performed grouping the 20 Lines of Sight into spatial pairs to check for geometric path-length variations (the L/cos(γ) effect). Because the vacuum window is extremely thin (2 mm), the spatial variation in the Faraday slope was found to be dominated by the detector noise floor. This justifies the use of a single, globally averaged Faraday constant for all Lines of Sight.
 
+## Ideal vs. Integrated Spectra: The Impact of Finite Measurement Volumes
+
+In simplified MSE analysis, the measured emission is often approximated as originating from a single, infinitesimally small intersection point between the diagnostic Line-of-Sight (LOS) and the centerline of the neutral beam. 
+
+However, the physical reality of the diagnostic entails a finite measurement volume. The intersection between the expanded optical viewing cone of the fiber and the physical width of the neutral beam creates an active integration region spanning several centimeters along the LOS. 
+
+![3D visualization of the finite intersection volume between the neutral beam and the diagnostic Line-of-Sight.](Figures/3D Beam Intersection.png){#fig-beam_intersection width=80%}
+
+Because the magnetic field exhibits spatial gradients within the tokamak, the magnetic field vector changes continuously as the LOS traverses this active beam volume. @fig-beam_intersection and @fig-Bz_along_LOS illustrate how the vertical magnetic field component, $B_z$, varies significantly along the active integration path.
+
+![Variation of the vertical magnetic field component ($B_z$) along the active integration length of a Line-of-Sight.](Figures/B_z Variation Along Active LOS.png){#fig-Bz_along_LOS width=80%}
+
+The total measured spectral intensity is therefore a line integral of the local emissivity $j(\lambda, s)$ along the path $s$:
+
+$$
+I(\lambda) = \int j(\lambda, s) ds
+$$
+
+### Conservation of Photons and Spectral Smearing
+
+This spatial integration has an impact on the shape of the measured Stark multiplet. Because the Stark splitting $\Delta \lambda$ is directly proportional to $|\mathbf{v} \times \mathbf{B}|$, the continuous variation of the magnetic field along the integration path causes the Stark lines to shift slightly at every point within the volume.
+
+When these infinitesimally shifted local spectra are summed together to form the **Integrated Spectrum**, the resulting peaks undergo a specific geometric broadening. 
+
+If an experimental fitting algorithm relies purely on an ideal point-source forward model, this geometric "smearing" can be misinterpreted as anomalous thermal broadening, or lead to systematic errors in the inferred polarization fractions. 
+
+::: {#fig-bz_fits layout-ncol="2"}
+![Full profile reconstruction.](Figures/Bzfit_shot86336_t1.3.png){#fig-bz_full}
+
+![Zoomed-in view showing the difference between models.](Figures/Bzfit_shot86336_t1.3_zoom.png){#fig-bz_zoom}
+
+Comparison of reconstructed $B_z$ profiles between the Ideal single-point assumption and the full 3D Integrated model (Shot 86336, t=1.3s).
+:::
+
+### Synthetic Diagnostic Validation
+
+To quantify the impact of the 3D spatial integration, @tbl-ideal-vs-integrated presents the recovered vertical magnetic field ($B_z$) for TCV shot 86336 at $t = 1.3$ s. The relative error is computed with respect to the known True LIUQE equilibrium. 
+
+| LOS | True $B_z$ [T] | Ideal $B_z$ [T] | Rel. Error Ideal [%] | Integrated $B_z$ [T] | Rel. Error Int [%] |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| 1 | 0.1261 | 0.1230 | 2.46 | 0.1252 | 0.71 |
+| 2 | 0.1323 | 0.1330 | 0.53 | 0.1369 | 3.48 |
+| 3 | 0.1384 | 0.1398 | 1.01 | 0.1394 | 0.72 |
+| 4 | 0.1426 | 0.1440 | 0.98 | 0.1394 | 2.24 |
+| 5 | 0.1426 | 0.1416 | 0.70 | 0.1382 | 3.09 |
+| 6 | 0.1392 | 0.1379 | 0.93 | 0.1343 | 3.52 |
+| 7 | 0.1330 | 0.1328 | 0.15 | 0.1283 | 3.53 |
+| 8 | 0.1252 | 0.1273 | 1.68 | 0.1229 | 1.84 |
+| 9 | 0.1159 | 0.1182 | 1.98 | 0.1112 | 4.06 |
+| 10 | 0.1062 | 0.1050 | 1.13 | 0.1029 | 3.11 |
+| 11 | 0.0954 | 0.0955 | 0.10 | 0.0913 | 4.30 |
+| 12 | 0.0843 | 0.0860 | 2.02 | 0.0820 | 2.73 |
+| 13 | 0.0731 | 0.0741 | 1.37 | 0.0706 | 3.42 |
+| 14 | 0.0620 | 0.0613 | 1.13 | 0.0589 | 5.00 |
+| 15 | 0.0510 | 0.0511 | 0.20 | 0.0509 | 0.20 |
+| 16 | 0.0402 | 0.0411 | 2.24 | 0.0408 | 1.49 |
+| 17 | 0.0293 | 0.0290 | 1.02 | 0.0286 | 2.39 |
+| 18 | 0.0192 | 0.0171 | 10.94 | 0.0200 | 4.17 |
+| 19 | 0.0095 | 0.0101 | 6.32 | 0.0105 | 10.53 |
+
+: Comparison of reconstructed magnetic fields ($B_z$) between the Ideal single-point assumption and the full 3D Integrated model. {#tbl-ideal-vs-integrated}
+
+**Summary of Relative Errors:**
+
+* **Mean Error (Ideal, excluding LOS 20):** $1.94\%$
+* **Mean Error (Integrated, excluding LOS 20):** $3.18\%$
+
 ## References
 
 ```{bibliography}
