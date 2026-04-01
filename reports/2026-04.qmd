@@ -1,0 +1,9 @@
+---
+title: "March 2026"
+---
+
+- Atomic and Radiative processes in Plasmas course.
+- TA for the thermodynamics course.
+- Need to properly extract shot density and temperature for MSS synthetic.
+- Thinking about frist calibration shots for MSS synthetic. For the moment NBI 1 is off, we will do them after easter hopefully. 
+

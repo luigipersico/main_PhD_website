@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Three-Wave Coupling and Matching Conditions – Luigi Persico - Ph.D.</title>
+<title>CMOS, CCD and EMCCD detectors for BES imaging – Luigi Persico - Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-169705d3eabda05963f3986ba613488e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-169705d3eabda05963f3986ba613488e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -69,39 +69,10 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
-<body class="nav-sidebar docked fullcontent quarto-light">
+<body class="nav-sidebar docked quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -110,7 +81,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise4.html">Exam Questions Part2</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise4.html">Three-Wave Coupling and Matching Conditions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/CMOS_CCD.html">CMOS, CCD and EMCCD detectors for BES imaging</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,7 +95,7 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-      <a href="../../../index.html" class="sidebar-logo-link">
+      <a href="../../index.html" class="sidebar-logo-link">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -136,7 +107,7 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../project-roadmap.html" class="sidebar-item-text sidebar-link">
+  <a href="../../project-roadmap.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Ph.D.&nbsp;roadmap</span></a>
   </div>
 </li>
@@ -160,7 +131,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Atomic_and_radiative_processes_in_plasmas/lecture1_summary.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Atomic_and_radiative_processes_in_plasmas/lecture1_summary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture1 Summary</span></a>
   </div>
 </li>
@@ -168,13 +139,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Plasma Instabilities</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
@@ -186,37 +157,37 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 2: Grad-Shafranov Expansion and Shaping</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 3: Linear Ideal MHD and Field Line Bending</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise4.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 4: External Kink Mode Stability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise5.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 5: Tearing Mode Instability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise6.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 6: Ballooning Modes and Weird Curvature</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise7.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part1/Exercise7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Exercise 7: Trapped Particles and Fast Ion Stability</span></a>
   </div>
 </li>
@@ -224,22 +195,22 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
  <span class="menu-text">Exam Questions Part2</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise4.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Three-Wave Coupling and Matching Conditions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise5.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Derivation of Wave Energy Density</span></a>
   </div>
 </li>
@@ -256,43 +227,43 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 1: The Ideal MHD Model and Axisymmetric Equilibria</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter2.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 2: Grad-Shafranov Solutions - Toroidal and Shaped Equilibria</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter3.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter3.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 3: Theory of Linear Ideal MHD Stability</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter4.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter4.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 4: External Kink Modes and Inertia Treatment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter5.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter5.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 5: Linear and Non-linear Tearing Modes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter6.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter6.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 6: Localised Toroidal Instabilities: Balooning modes and interchange modes</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../Courses/Plasma Instabilities/Theory/Chapter7.html" class="sidebar-item-text sidebar-link">
+  <a href="../../Courses/Plasma Instabilities/Theory/Chapter7.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lecture 7: Fast Ion Effects on Pressure Driven Instabilities</span></a>
   </div>
 </li>
@@ -313,7 +284,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../papers/Paper1.html" class="sidebar-item-text sidebar-link">
+  <a href="../../papers/Paper1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Paper1</span></a>
   </div>
 </li>
@@ -330,49 +301,49 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reports/2025-09.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2025-09.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">September 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reports/2025-10.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2025-10.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">October 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reports/2025-11.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2025-11.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">November 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reports/2025-12.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2025-12.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">December 2025</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reports/2026-01.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2026-01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">January 2026</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reports/2026-02.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2026-02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">February 2026</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reports/2026-03.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2026-03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">March 2026</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../reports/2026-04.html" class="sidebar-item-text sidebar-link">
+  <a href="../../reports/2026-04.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">March 2026</span></a>
   </div>
 </li>
@@ -398,31 +369,31 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Mathematic_tools/Bra-ket_notation.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Mathematic_tools/Bra-ket_notation.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bra-ket notation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Mathematic_tools/covariant_contravariant.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Mathematic_tools/covariant_contravariant.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Covariant and Contravariant</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Mathematic_tools/Hermitian_adjoint.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Mathematic_tools/Hermitian_adjoint.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hermitian adjoint</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Mathematic_tools/Hilbert_Space.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Mathematic_tools/Hilbert_Space.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hilbert Space</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Mathematic_tools/Pauli_matrices.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Mathematic_tools/Pauli_matrices.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Pauli matrices</span></a>
   </div>
 </li>
@@ -430,58 +401,58 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true">
  <span class="menu-text">Plasma Physics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Plasma_physics/BES.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/BES.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Beam Emission Spectroscopy (BES) on TCV</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Plasma_physics/CMOS_CCD.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/CMOS_CCD.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">CMOS, CCD and EMCCD detectors for BES imaging</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/MSE.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Motional-Stark Effect (MSE) and Diagnostic Calibration on TCV</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Plasma_physics/NBI.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/NBI.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Neutral Beam Injector (NBI)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Plasma_physics/NBI_simulator.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/NBI_simulator.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">NBI Simulation: Mathematical Model &amp; Code Implementation</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Plasma_physics/Optical_spectrometer.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Optical_spectrometer.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optical Spectrometer</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Plasma_physics/Optics.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Optics.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Optics</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Plasma_physics/Safety_factor.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Safety_factor.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Safety Factor q</span></a>
   </div>
 </li>
@@ -496,13 +467,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-12" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Plasma_physics/Diagnostics/PD.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Diagnostics/PD.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Photodiodes (PD)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Plasma_physics/Diagnostics/thomson.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Plasma_physics/Diagnostics/thomson.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Thomson scattering system</span></a>
   </div>
 </li>
@@ -521,19 +492,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-13" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Quantum_physics/griffiths_ch3_formalism.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Quantum_physics/griffiths_ch3_formalism.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hilbert-Space Formalism for Quantum Measurements (Griffiths Ch. 3 — Notes)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Quantum_physics/Quantum_entanglement.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Quatum Entanglement</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Quantum_physics/Schrödinger_eq.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Quantum_physics/Schrödinger_eq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schrödinger Equation</span></a>
   </div>
 </li>
@@ -550,19 +521,19 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-14" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Useful_guides/Controlling_CMOS_cameras.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Useful_guides/Controlling_CMOS_cameras.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to control CMOS cameras</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Useful_guides/Controlling_MSS.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Useful_guides/Controlling_MSS.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to control MSS</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../theory/Useful_guides/DDJ_git.html" class="sidebar-item-text sidebar-link">
+  <a href="../../theory/Useful_guides/DDJ_git.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">DDJ Git</span></a>
   </div>
 </li>
@@ -575,13 +546,34 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#how-ccd-and-cmos-sensors-differ" id="toc-how-ccd-and-cmos-sensors-differ" class="nav-link" data-scroll-target="#how-ccd-and-cmos-sensors-differ"><span class="header-section-number">2</span> How CCD and CMOS sensors differ</a>
+  <ul class="collapse">
+  <li><a href="#ccd-principle" id="toc-ccd-principle" class="nav-link" data-scroll-target="#ccd-principle"><span class="header-section-number">2.1</span> CCD principle</a></li>
+  <li><a href="#emccd-as-a-special-ccd-case" id="toc-emccd-as-a-special-ccd-case" class="nav-link" data-scroll-target="#emccd-as-a-special-ccd-case"><span class="header-section-number">2.2</span> EMCCD as a special CCD case</a></li>
+  <li><a href="#cmos-principle" id="toc-cmos-principle" class="nav-link" data-scroll-target="#cmos-principle"><span class="header-section-number">2.3</span> CMOS principle</a></li>
+  </ul></li>
+  <li><a href="#practical-comparison-for-bes" id="toc-practical-comparison-for-bes" class="nav-link" data-scroll-target="#practical-comparison-for-bes"><span class="header-section-number">3</span> Practical comparison for BES</a>
+  <ul class="collapse">
+  <li><a href="#advantages-of-ccd-emccd" id="toc-advantages-of-ccd-emccd" class="nav-link" data-scroll-target="#advantages-of-ccd-emccd"><span class="header-section-number">3.1</span> Advantages of CCD / EMCCD</a></li>
+  <li><a href="#disadvantages-of-ccd-emccd" id="toc-disadvantages-of-ccd-emccd" class="nav-link" data-scroll-target="#disadvantages-of-ccd-emccd"><span class="header-section-number">3.2</span> Disadvantages of CCD / EMCCD</a></li>
+  <li><a href="#advantages-of-cmos" id="toc-advantages-of-cmos" class="nav-link" data-scroll-target="#advantages-of-cmos"><span class="header-section-number">3.3</span> Advantages of CMOS</a></li>
+  <li><a href="#disadvantages-of-cmos" id="toc-disadvantages-of-cmos" class="nav-link" data-scroll-target="#disadvantages-of-cmos"><span class="header-section-number">3.4</span> Disadvantages of CMOS</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="CMOS_CCD.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Courses</li><li class="breadcrumb-item">Plasma Instabilities</li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise4.html">Exam Questions Part2</a></li><li class="breadcrumb-item"><a href="../../../Courses/Plasma Instabilities/Exam_questions_part2/Exercise4.html">Three-Wave Coupling and Matching Conditions</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/CMOS_CCD.html">CMOS, CCD and EMCCD detectors for BES imaging</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Three-Wave Coupling and Matching Conditions</h1>
+<h1 class="title">CMOS, CCD and EMCCD detectors for BES imaging</h1>
 </div>
 
 
@@ -598,64 +590,68 @@ window.Quarto = {
 </header>
 
 
-<section id="exercise-statement" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-statement">Exercise Statement</h2>
-<p><strong>Matching conditions:</strong> Discuss the geometrical solution to the set of equations formed by the matching conditions and dispersion relations. Consider some particular cases, e.g.&nbsp;SRS, Stimulated Brillouin Scattering (SBS), and/or Langmuir Decay Instability (LDI).</p>
-<p><strong>Why</strong> does resonant three wave coupling in a plasma often involve waves of different nature?</p>
-<hr>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>For an imaging Beam Emission Spectroscopy (BES) system, the choice of detector is not a secondary hardware detail: it directly determines the achievable frame rate, exposure time, noise level, image uniformity, and analysis strategy. In practice, the detector must be matched to the physics objective. If the goal is to obtain very uniform, low-noise images under photon-starved conditions, CCD-based solutions can be attractive. If the goal is to acquire images at high frame rate with short exposure time, CMOS cameras are generally more suitable.</p>
+<p>For the TCV BES imaging concept, the relevant comparison is therefore not simply “which camera is better?”, but rather <strong>which detector architecture is better matched to a high-speed fluctuation diagnostic</strong>.</p>
 </section>
-<section id="solutions" class="level2">
-<h2 class="anchored" data-anchor-id="solutions">Solutions</h2>
-<section id="geometrical-solution-to-matching-conditions" class="level3">
-<h3 class="anchored" data-anchor-id="geometrical-solution-to-matching-conditions">1. Geometrical Solution to Matching Conditions</h3>
-<p>In a plasma, a large amplitude “pump” wave can decay into two daughter waves if they satisfy the resonance conditions (also known as the Manley-Rowe relations). These conditions represent the conservation of energy and momentum for the wave quanta (quasiparticles):</p>
-<p><span class="math display">\[
-\begin{align}
-\omega_0 &amp;= \omega_1 + \omega_2 \quad (\text{Frequency Matching}) \\
-\vec{k}_0 &amp;= \vec{k}_1 + \vec{k}_2 \quad (\text{Wavenumber Matching})
-\end{align}
-\]</span></p>
-<p>where <span class="math inline">\((\omega_0, \vec{k}_0)\)</span> characterizes the pump wave, and indices 1 and 2 denote the daughter waves.</p>
-<p>In addition to these matching conditions, each wave must satisfy its own <strong>dispersion relation</strong>, which describes the allowed modes of propagation in the plasma medium: <span class="math display">\[
-\omega_i = \Omega_i(\vec{k}_i) \quad \text{for } i = 0, 1, 2
-\]</span></p>
-<p><strong>Geometrical Construction:</strong> The problem is to find the intersection of the constraints. Geometrically, this can be visualized in <span class="math inline">\(\vec{k}\)</span>-space:</p>
-<ol type="1">
-<li><strong>Fixed Pump:</strong> The pump wave vector <span class="math inline">\(\vec{k}_0\)</span> is fixed.</li>
-<li><strong>Triangle Construction:</strong> The matching condition <span class="math inline">\(\vec{k}_0 = \vec{k}_1 + \vec{k}_2\)</span> implies that the three wave vectors form a closed triangle.</li>
-<li><strong>Dispersion Surfaces:</strong> Since <span class="math inline">\(\omega\)</span> is a function of <span class="math inline">\(\vec{k}\)</span>, the frequency matching condition <span class="math inline">\(\omega_0 = \Omega_1(\vec{k}_1) + \Omega_2(\vec{k}_0 - \vec{k}_1)\)</span> defines a specific surface (or locus of points) in <span class="math inline">\(\vec{k}\)</span>-space.</li>
-</ol>
-<p>The solutions lie on the curve where the dispersion surface of wave 1 and the shifted dispersion surface of wave 2 intersect such that their frequencies sum to <span class="math inline">\(\omega_0\)</span>.</p>
+<section id="how-ccd-and-cmos-sensors-differ" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="how-ccd-and-cmos-sensors-differ"><span class="header-section-number">2</span> How CCD and CMOS sensors differ</h2>
+<section id="ccd-principle" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="ccd-principle"><span class="header-section-number">2.1</span> CCD principle</h3>
+<p>A <strong>charge-coupled device (CCD)</strong> stores the photo-generated charge in each pixel during the exposure, and then transfers that charge across the chip toward a small number of output amplifiers. In a classical CCD, many pixels are therefore read through the same output chain.</p>
+<p>This architecture has an important consequence: because the readout path is highly centralized, the pixel response is often very uniform and the fixed-pattern background can be well controlled. This is one reason why CCDs have historically been very attractive in low-light scientific imaging, including astronomy.</p>
+<p>The drawback is that the serial or quasi-serial transfer of charge makes the readout comparatively slow. In addition, during readout, charge transfer can lead to image smearing unless the sensor or the acquisition scheme is specifically designed to suppress it.</p>
 </section>
-<section id="particular-cases" class="level3">
-<h3 class="anchored" data-anchor-id="particular-cases">2. Particular Cases</h3>
-<section id="stimulated-brillouin-scattering-sbs" class="level4">
-<h4 class="anchored" data-anchor-id="stimulated-brillouin-scattering-sbs">Stimulated Brillouin Scattering (SBS)</h4>
-<p><strong>Process:</strong> An incident Electromagnetic (EM) wave decays into a scattered EM wave and an Ion Acoustic (IA) wave. * <strong>Pump:</strong> EM wave (<span class="math inline">\(\omega_0, \vec{k}_0\)</span>). * <strong>Daughter 1:</strong> Scattered EM wave (<span class="math inline">\(\omega_s, \vec{k}_s\)</span>). * <strong>Daughter 2:</strong> Ion Acoustic wave (<span class="math inline">\(\omega_{ia}, \vec{k}_{ia}\)</span>).</p>
-<p><strong>Geometrical Solution:</strong> The ion acoustic wave has a very low frequency (<span class="math inline">\(\omega_{ia} \approx c_s k_{ia} \ll \omega_0\)</span>) because the ion sound speed <span class="math inline">\(c_s\)</span> is much slower than the speed of light <span class="math inline">\(c\)</span>. * <strong>Frequency:</strong> <span class="math inline">\(\omega_s = \omega_0 - \omega_{ia} \approx \omega_0\)</span>. The scattered light has almost the same frequency as the pump. * <strong>Momentum:</strong> Because <span class="math inline">\(\omega_s \approx \omega_0\)</span>, the magnitude of the wave vectors is similar <span class="math inline">\(|\vec{k}_s| \approx |\vec{k}_0|\)</span>. To satisfy the triangle vector condition <span class="math inline">\(\vec{k}_{ia} = \vec{k}_0 - \vec{k}_s\)</span>, the ion acoustic wave vector is maximized when <span class="math inline">\(\vec{k}_s\)</span> is anti-parallel to <span class="math inline">\(\vec{k}_0\)</span>. * <strong>Result:</strong> SBS is most efficient in the <strong>backscattering</strong> geometry where <span class="math inline">\(\vec{k}_{ia} \approx 2\vec{k}_0\)</span>.</p>
+<section id="emccd-as-a-special-ccd-case" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="emccd-as-a-special-ccd-case"><span class="header-section-number">2.2</span> EMCCD as a special CCD case</h3>
+<p>An <strong>electron-multiplying CCD (EMCCD)</strong> is a special CCD architecture that introduces a multiplication register before the final amplifier. This makes it possible to amplify very weak signals before the read noise is added, which is especially useful in extremely low-light applications.</p>
+<p>EMCCDs therefore retain many of the classical CCD advantages in terms of uniform readout and sensitivity, but they are typically more expensive and are not the natural choice when very high frame rate over a reasonably large image area is the primary requirement.</p>
 </section>
-<section id="stimulated-raman-scattering-srs" class="level4">
-<h4 class="anchored" data-anchor-id="stimulated-raman-scattering-srs">Stimulated Raman Scattering (SRS)</h4>
-<p><strong>Process:</strong> An incident EM wave decays into a scattered EM wave and an Electron Plasma (EP) / Langmuir wave. * <strong>Pump:</strong> EM wave (<span class="math inline">\(\omega_0, \vec{k}_0\)</span>). * <strong>Daughter 1:</strong> Scattered EM wave (<span class="math inline">\(\omega_s, \vec{k}_s\)</span>). * <strong>Daughter 2:</strong> Langmuir wave (<span class="math inline">\(\omega_{pe}, \vec{k}_{ep}\)</span>).</p>
-<p><strong>Geometrical Solution:</strong> The Langmuir wave has a frequency close to the plasma frequency <span class="math inline">\(\omega_{ep} \approx \omega_{pe}\)</span>. * <strong>Frequency:</strong> <span class="math inline">\(\omega_s = \omega_0 - \omega_{pe}\)</span>. The scattered light is significantly downshifted in frequency (Stokes line). * <strong>Momentum:</strong> The dispersion relation for EM waves is <span class="math inline">\(\omega^2 = \omega_{pe}^2 + c^2k^2\)</span>. The matching conditions define a specific locus of scattering angles. Unlike SBS, the frequency shift is large, so <span class="math inline">\(|\vec{k}_s|\)</span> is noticeably smaller than <span class="math inline">\(|\vec{k}_0|\)</span>.</p>
-</section>
-<section id="langmuir-decay-instability-ldi" class="level4">
-<h4 class="anchored" data-anchor-id="langmuir-decay-instability-ldi">Langmuir Decay Instability (LDI)</h4>
-<p><strong>Process:</strong> A Langmuir wave decays into another Langmuir wave and an Ion Acoustic wave. * <strong>Pump:</strong> Langmuir wave. * <strong>Daughters:</strong> Langmuir wave + Ion Acoustic wave.</p>
-<p><strong>Geometrical Solution:</strong> Similar to SBS, the ion acoustic wave takes up very little frequency but significant momentum. The product Langmuir wave travels in the opposite direction with slightly lower frequency. This often leads to a “cascade” where energy moves from higher <span class="math inline">\(k\)</span> to lower <span class="math inline">\(k\)</span> (inverse cascade) in the Langmuir spectrum.</p>
+<section id="cmos-principle" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="cmos-principle"><span class="header-section-number">2.3</span> CMOS principle</h3>
+<p>A <strong>CMOS image sensor</strong> also integrates photo-generated charge in each pixel, but the readout architecture is fundamentally different. In CMOS sensors, pixels are addressed more directly, and amplification and readout functions are distributed at the pixel or column level rather than being concentrated into one single output chain.</p>
+<p>This parallelized architecture is the main reason why CMOS cameras are generally much faster than CCD cameras. It also enables a cleaner decoupling between exposure and readout, so short exposures can be combined with high acquisition frequency without the same degree of readout smearing associated with conventional CCD operation.</p>
+<p>The price to pay is that the readout is less intrinsically uniform: column-to-column or pixel-to-pixel offsets, fixed-pattern noise, and a more structured background are more common, so the analysis pipeline usually requires more image correction and background processing.</p>
 </section>
 </section>
-<section id="why-coupling-involves-waves-of-different-nature" class="level3">
-<h3 class="anchored" data-anchor-id="why-coupling-involves-waves-of-different-nature">3. Why Coupling Involves Waves of Different Nature</h3>
-<p>It is a common observation in plasma physics that a wave of type A rarely decays into two other waves of type A. For example, a photon in a vacuum cannot decay into two photons, and a Langmuir wave cannot easily decay into two Langmuir waves. This is due to the <strong>convexity of the dispersion relation</strong>.</p>
-<p><strong>The Convexity Argument:</strong> Consider a dispersion relation <span class="math inline">\(\omega(k)\)</span> that is convex, meaning the second derivative <span class="math inline">\(\omega''(k) &gt; 0\)</span>. Examples include: * Electromagnetic waves in plasma: <span class="math inline">\(\omega = \sqrt{\omega_{pe}^2 + c^2k^2}\)</span> * Langmuir waves: <span class="math inline">\(\omega = \sqrt{\omega_{pe}^2 + 3v_{th}^2k^2}\)</span></p>
-<p>For a convex function satisfying <span class="math inline">\(\omega(0) \geq 0\)</span>, the following inequality generally holds for any non-zero vectors <span class="math inline">\(\vec{k}_1, \vec{k}_2\)</span>: <span class="math display">\[
-\omega(\vec{k}_1 + \vec{k}_2) &lt; \omega(\vec{k}_1) + \omega(\vec{k}_2)
-\]</span> This means that a pump wave with wavevector <span class="math inline">\(\vec{k}_0 = \vec{k}_1 + \vec{k}_2\)</span> has <strong>less energy</strong> than the sum of the energies of the two potential daughter waves of the same mode. Energy conservation <span class="math inline">\(\omega_0 = \omega_1 + \omega_2\)</span> cannot be satisfied.</p>
-<p><strong>The Necessity of Different Modes:</strong> To satisfy the matching conditions, one of the daughter waves must usually belong to a different branch of the dispersion relation that has a <strong>lower frequency</strong> for a given wavenumber (a “slower” mode), such as an acoustic mode.</p>
+<section id="practical-comparison-for-bes" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="practical-comparison-for-bes"><span class="header-section-number">3</span> Practical comparison for BES</h2>
+<section id="advantages-of-ccd-emccd" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="advantages-of-ccd-emccd"><span class="header-section-number">3.1</span> Advantages of CCD / EMCCD</h3>
 <ul>
-<li><strong>Bridging the Gap:</strong> In SBS and SRS, the Ion Acoustic or Langmuir waves serve as the third partner that closes the resonance triangle. They allow the high-frequency EM wave to shed momentum while conserving energy.</li>
-<li><strong>Timescales:</strong> This coupling mixes physical phenomena occurring at different timescales: the fast electronic timescale (light or Langmuir waves) and the slow ionic timescale (acoustic waves).</li>
+<li>very uniform readout behavior;</li>
+<li>lower fixed-pattern background;</li>
+<li>historically strong performance in low-light scientific imaging;</li>
+<li>particularly attractive when image quality and radiometric uniformity matter more than frame rate.</li>
+</ul>
+</section>
+<section id="disadvantages-of-ccd-emccd" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="disadvantages-of-ccd-emccd"><span class="header-section-number">3.2</span> Disadvantages of CCD / EMCCD</h3>
+<ul>
+<li>slower readout;</li>
+<li>stronger constraints on acquisition speed;</li>
+<li>possible smearing during readout in conventional operation;</li>
+<li>EMCCD solutions are substantially more expensive.</li>
+</ul>
+</section>
+<section id="advantages-of-cmos" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="advantages-of-cmos"><span class="header-section-number">3.3</span> Advantages of CMOS</h3>
+<ul>
+<li>significantly lower cost in many practical configurations;</li>
+<li>much higher frame rate;</li>
+<li>short exposure time compatible with fast acquisition;</li>
+<li>no classical CCD-style smearing during serial charge transfer;</li>
+<li>more natural solution when exposure and acquisition must be partially decoupled.</li>
+</ul>
+</section>
+<section id="disadvantages-of-cmos" class="level3" data-number="3.4">
+<h3 data-number="3.4" class="anchored" data-anchor-id="disadvantages-of-cmos"><span class="header-section-number">3.4</span> Disadvantages of CMOS</h3>
+<ul>
+<li>higher noise floor in many practical cases;</li>
+<li>less uniform background;</li>
+<li>more visible fixed-pattern or column-dependent structure;</li>
+<li>larger need for calibration, flat-fielding, offset correction, and post-processing.</li>
 </ul>
 
 

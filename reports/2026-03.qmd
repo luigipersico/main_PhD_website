@@ -8,3 +8,6 @@ title: "March 2026"
 - Experiment to anlyse polarizer dependency with respect to LOS. When doing the fitting withy many measurements observed a change in tyhe polarizing angle! We go from 39 to 46 degrees approx.
 - Experiment to see how much the magnetic field affecs the polarizing angle.
 - Starting to look into the NBI spectroscopic measurements.
+- Managed to extraxt FWHM of beam instumental function as a function of MSS LOS. Need to properly manage situation in which fitting is not good.
+- Implemented the syntethic MSS but considering integration of magentic field alond LOS. Fitting results are promising, it seems the integration doen't affect that much the results. We around 2% relative error witrh the ideal fit and around 3% with the integrated one.
+- Tried for the first time to use my fitting routine to fit real experimental data. The retrieved poloidal field is really dependent on the polarization angle, need to be careful about signs of the angles.

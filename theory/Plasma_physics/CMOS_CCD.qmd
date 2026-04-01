@@ -1,0 +1,66 @@
+---
+title: "CMOS, CCD and EMCCD detectors for BES imaging"
+toc: true
+number-sections: true
+---
+
+## Introduction
+
+For an imaging Beam Emission Spectroscopy (BES) system, the choice of detector is not a secondary hardware detail: it directly determines the achievable frame rate, exposure time, noise level, image uniformity, and analysis strategy. In practice, the detector must be matched to the physics objective. If the goal is to obtain very uniform, low-noise images under photon-starved conditions, CCD-based solutions can be attractive. If the goal is to acquire images at high frame rate with short exposure time, CMOS cameras are generally more suitable.
+
+For the TCV BES imaging concept, the relevant comparison is therefore not simply "which camera is better?", but rather **which detector architecture is better matched to a high-speed fluctuation diagnostic**.
+
+## How CCD and CMOS sensors differ
+
+### CCD principle
+
+A **charge-coupled device (CCD)** stores the photo-generated charge in each pixel during the exposure, and then transfers that charge across the chip toward a small number of output amplifiers. In a classical CCD, many pixels are therefore read through the same output chain.
+
+This architecture has an important consequence: because the readout path is highly centralized, the pixel response is often very uniform and the fixed-pattern background can be well controlled. This is one reason why CCDs have historically been very attractive in low-light scientific imaging, including astronomy.
+
+The drawback is that the serial or quasi-serial transfer of charge makes the readout comparatively slow. In addition, during readout, charge transfer can lead to image smearing unless the sensor or the acquisition scheme is specifically designed to suppress it.
+
+### EMCCD as a special CCD case
+
+An **electron-multiplying CCD (EMCCD)** is a special CCD architecture that introduces a multiplication register before the final amplifier. This makes it possible to amplify very weak signals before the read noise is added, which is especially useful in extremely low-light applications.
+
+EMCCDs therefore retain many of the classical CCD advantages in terms of uniform readout and sensitivity, but they are typically more expensive and are not the natural choice when very high frame rate over a reasonably large image area is the primary requirement.
+
+### CMOS principle
+
+A **CMOS image sensor** also integrates photo-generated charge in each pixel, but the readout architecture is fundamentally different. In CMOS sensors, pixels are addressed more directly, and amplification and readout functions are distributed at the pixel or column level rather than being concentrated into one single output chain.
+
+This parallelized architecture is the main reason why CMOS cameras are generally much faster than CCD cameras. It also enables a cleaner decoupling between exposure and readout, so short exposures can be combined with high acquisition frequency without the same degree of readout smearing associated with conventional CCD operation.
+
+The price to pay is that the readout is less intrinsically uniform: column-to-column or pixel-to-pixel offsets, fixed-pattern noise, and a more structured background are more common, so the analysis pipeline usually requires more image correction and background processing.
+
+## Practical comparison for BES
+
+### Advantages of CCD / EMCCD
+
+- very uniform readout behavior;
+- lower fixed-pattern background;
+- historically strong performance in low-light scientific imaging;
+- particularly attractive when image quality and radiometric uniformity matter more than frame rate.
+
+### Disadvantages of CCD / EMCCD
+
+- slower readout;
+- stronger constraints on acquisition speed;
+- possible smearing during readout in conventional operation;
+- EMCCD solutions are substantially more expensive.
+
+### Advantages of CMOS
+
+- significantly lower cost in many practical configurations;
+- much higher frame rate;
+- short exposure time compatible with fast acquisition;
+- no classical CCD-style smearing during serial charge transfer;
+- more natural solution when exposure and acquisition must be partially decoupled.
+
+### Disadvantages of CMOS
+
+- higher noise floor in many practical cases;
+- less uniform background;
+- more visible fixed-pattern or column-dependent structure;
+- larger need for calibration, flat-fielding, offset correction, and post-processing.

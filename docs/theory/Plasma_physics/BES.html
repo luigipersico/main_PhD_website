@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Beam Emission Spectroscopy (BES) – Luigi Persico - Ph.D.</title>
+<title>Beam Emission Spectroscopy (BES) on TCV – Luigi Persico - Ph.D.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,6 +69,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -81,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Beam Emission Spectroscopy (BES)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Beam Emission Spectroscopy (BES) on TCV</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -341,6 +370,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">March 2026</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../reports/2026-04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">March 2026</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -405,7 +440,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../theory/Plasma_physics/BES.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Beam Emission Spectroscopy (BES)</span></a>
+ <span class="menu-text">Beam Emission Spectroscopy (BES) on TCV</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../theory/Plasma_physics/CMOS_CCD.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CMOS, CCD and EMCCD detectors for BES imaging</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -535,14 +576,35 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="BES.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#theoretical-background" id="toc-theoretical-background" class="nav-link" data-scroll-target="#theoretical-background"><span class="header-section-number">2</span> Theoretical background</a>
+  <ul class="collapse">
+  <li><a href="#principle-of-the-measurement" id="toc-principle-of-the-measurement" class="nav-link" data-scroll-target="#principle-of-the-measurement"><span class="header-section-number">2.1</span> Principle of the measurement</a></li>
+  <li><a href="#why-doppler-shifted-dalpha-is-used" id="toc-why-doppler-shifted-dalpha-is-used" class="nav-link" data-scroll-target="#why-doppler-shifted-dalpha-is-used"><span class="header-section-number">2.2</span> Why Doppler-shifted D<span class="math inline">\(\alpha\)</span> is used</a></li>
+  <li><a href="#spatial-and-temporal-information" id="toc-spatial-and-temporal-information" class="nav-link" data-scroll-target="#spatial-and-temporal-information"><span class="header-section-number">2.3</span> Spatial and temporal information</a></li>
+  </ul></li>
+  <li><a href="#historical-overview" id="toc-historical-overview" class="nav-link" data-scroll-target="#historical-overview"><span class="header-section-number">3</span> Historical overview</a></li>
+  <li><a href="#bes-concept-for-tcv" id="toc-bes-concept-for-tcv" class="nav-link" data-scroll-target="#bes-concept-for-tcv"><span class="header-section-number">4</span> BES concept for TCV</a>
+  <ul class="collapse">
+  <li><a href="#motivation-for-a-measurement-along-nbi-2" id="toc-motivation-for-a-measurement-along-nbi-2" class="nav-link" data-scroll-target="#motivation-for-a-measurement-along-nbi-2"><span class="header-section-number">4.1</span> Motivation for a measurement along NBI-2</a></li>
+  <li><a href="#imaging-bes-system" id="toc-imaging-bes-system" class="nav-link" data-scroll-target="#imaging-bes-system"><span class="header-section-number">4.2</span> Imaging BES system</a></li>
+  <li><a href="#fast-acquisition-bes-system" id="toc-fast-acquisition-bes-system" class="nav-link" data-scroll-target="#fast-acquisition-bes-system"><span class="header-section-number">4.3</span> Fast-acquisition BES system</a></li>
+  <li><a href="#complementarity-of-the-two-systems" id="toc-complementarity-of-the-two-systems" class="nav-link" data-scroll-target="#complementarity-of-the-two-systems"><span class="header-section-number">4.4</span> Complementarity of the two systems</a></li>
+  </ul></li>
+  <li><a href="#outlook" id="toc-outlook" class="nav-link" data-scroll-target="#outlook"><span class="header-section-number">5</span> Outlook</a></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="BES.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Beam Emission Spectroscopy (BES)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Theory</li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Plasma Physics</a></li><li class="breadcrumb-item"><a href="../../theory/Plasma_physics/BES.html">Beam Emission Spectroscopy (BES) on TCV</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Beam Emission Spectroscopy (BES)</h1>
+<h1 class="title">Beam Emission Spectroscopy (BES) on TCV</h1>
 </div>
 
 
@@ -559,21 +621,134 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Beam Emission Spectroscopy (BES) is a diagnostic technique used in plasma physics to measure density fluctuations within a plasma. It works by injecting a neutral beam into the plasma and observing the light emitted as the beam atoms interact with plasma particles. The intensity and spatial distribution of this emission provide valuable information about the local plasma density and its fluctuations, which are important for understanding turbulence and transport phenomena in fusion devices.</p>
-<p>aquistition time with fibers 32 channels, 1MHz sampling rate</p>
-<p>then using photomultipliers we can get a samling rates around 100kHz</p>
-<p>Two tipe of cameras:</p>
-<p>EM CCD:</p>
-<p>ADV: the readout is really uniform, every pixel is going through the same readout channel (one amplifer for all pixel). Good for astrophysics</p>
-<p>DIS: much more expensive,</p>
-<p>CMOS:</p>
-<p>ADV: Cheaper, much faster, no smearing during readout, shorter exposure time (decoupling between exposition and acquisition)</p>
-<p>DIS: More noise, non-uniform background, it require more image processing in analysis.</p>
-<p>With 10kHz we must use CMOS</p>
-<p>Since our fluctuations are in the order of 100kHz, speaking about time we might not be able to see time correlation. However space correlation can still be seen!</p>
-<p>How to trigger camera: Two possibilitioes: either with same cable but through trigger in the computer, or with a different cabble. Going with the first option, insterting trigger in computer…</p>
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>Beam Emission Spectroscopy (BES) is an active spectroscopy diagnostic used in magnetically confined plasmas to measure density perturbations and their dynamics. The method relies on the injection of a neutral beam into the plasma and on the observation of the line radiation emitted by beam atoms after collisional excitation. In practice, BES isolates the beam-induced D<span class="math inline">\(\alpha\)</span> emission and uses its spatio-temporal modulation as a proxy for local plasma fluctuations. This makes BES particularly valuable for the study of turbulence, magnetohydrodynamic (MHD) activity, correlation lengths, and fluctuation spectra.</p>
+<p>In the present TCV context, the proposed BES implementation is based on observations of the Doppler-shifted D<span class="math inline">\(\alpha\)</span> light from NBI-2. The design currently considers two complementary systems looking along the same beam: an <strong>imaging BES</strong> branch optimized for high spatial resolution and a <strong>fast-acquisition BES</strong> branch optimized for high temporal resolution.</p>
+</section>
+<section id="theoretical-background" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="theoretical-background"><span class="header-section-number">2</span> Theoretical background</h2>
+<section id="principle-of-the-measurement" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="principle-of-the-measurement"><span class="header-section-number">2.1</span> Principle of the measurement</h3>
+<p>When neutral deuterium from the beam penetrates the plasma, beam atoms are collisionally excited by plasma particles and subsequently emit Balmer radiation, in particular D<span class="math inline">\(\alpha\)</span>. The measured emissivity can be written schematically as</p>
+<p><span class="math display">\[
+\varepsilon_{D_\alpha} \propto n_b\,n_e\,\langle \sigma v \rangle_{\mathrm{exc}},
+\]</span></p>
+<p>where <span class="math inline">\(n_b\)</span> is the local neutral beam density, <span class="math inline">\(n_e\)</span> the electron density, and <span class="math inline">\(\langle \sigma v \rangle_{\mathrm{exc}}\)</span> an effective excitation rate coefficient. Under conditions in which the beam properties and optical throughput are sufficiently stable, fluctuations of the detected signal can be related, to first order, to plasma density fluctuations:</p>
+<p><span class="math display">\[
+\frac{\delta I}{I} \approx C_n\frac{\delta n_e}{n_e} + C_T\frac{\delta T_e}{T_e} + C_b\frac{\delta n_b}{n_b} + \cdots
+\]</span></p>
+<p>In many BES applications, the dominant term of interest is the density-fluctuation contribution, while the remaining terms must be minimized, calibrated, or interpreted carefully.</p>
+</section>
+<section id="why-doppler-shifted-dalpha-is-used" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="why-doppler-shifted-dalpha-is-used"><span class="header-section-number">2.2</span> Why Doppler-shifted D<span class="math inline">\(\alpha\)</span> is used</h3>
+<p>A crucial experimental issue is the separation of beam-induced light from intense background plasma emission. Because the injected neutral beam has a large velocity, the D<span class="math inline">\(\alpha\)</span> radiation produced by the beam is Doppler shifted relative to the passive D<span class="math inline">\(\alpha\)</span> background. An ultra-narrow band-pass filter can therefore be tuned to transmit mainly the beam emission. This substantially improves the selectivity of the diagnostic and makes localized fluctuation measurements feasible.</p>
+</section>
+<section id="spatial-and-temporal-information" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="spatial-and-temporal-information"><span class="header-section-number">2.3</span> Spatial and temporal information</h3>
+<p>BES does not measure a mathematical point value, but a signal integrated over a finite observation volume defined by the beam geometry, the line of sight, the optical system, and the atomic physics of excitation and emission. The diagnostic design is therefore a compromise between spatial localization, temporal resolution, and photon statistics:</p>
+<ul>
+<li>high spatial resolution is needed to resolve short radial correlation lengths;</li>
+<li>high temporal resolution is needed to resolve turbulence and MHD spectra;</li>
+<li>sufficient photon flux is needed to maintain an acceptable signal-to-noise ratio.</li>
+</ul>
+<p>This trade-off is precisely why the TCV concept is attractive in a dual configuration: one system emphasizes spatial detail, while the other emphasizes fast fluctuation dynamics.</p>
+</section>
+</section>
+<section id="historical-overview" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="historical-overview"><span class="header-section-number">3</span> Historical overview</h2>
+<p>BES has become a standard active spectroscopy technique for fluctuation studies in tokamaks because it combines local sensitivity with direct access to density perturbations. Over time, BES implementations have evolved in two main directions. One direction uses arrays of discrete lines of sight and fast detectors to obtain high-bandwidth fluctuation measurements. The other direction pushes toward imaging approaches, in which a larger portion of the beam is observed simultaneously to recover finer spatial structure.</p>
+<p>For the TCV project, this evolution is reflected directly in the two proposed concepts. The <strong>fast-acquisition BES</strong> design follows a proven line of development: according to the project presentation, similar diagnostic concepts have already been implemented on <strong>DIII-D, TFTR, MAST, and HL-2A</strong>. The <strong>imaging BES</strong> concept extends the diagnostic toward higher-resolution two-dimensional observation of the beam emissivity pattern, with the aim of improving spatial characterization and enabling simultaneous low-field-side and high-field-side measurements.</p>
+</section>
+<section id="bes-concept-for-tcv" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="bes-concept-for-tcv"><span class="header-section-number">4</span> BES concept for TCV</h2>
+<section id="motivation-for-a-measurement-along-nbi-2" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="motivation-for-a-measurement-along-nbi-2"><span class="header-section-number">4.1</span> Motivation for a measurement along NBI-2</h3>
+<p>The TCV proposal focuses on the Doppler-shifted D<span class="math inline">\(\alpha\)</span> emission produced along <strong>NBI-2</strong>. This geometry is appealing for several reasons:</p>
+<ul>
+<li>it gives access to density fluctuations with high spatial or temporal resolution, depending on the branch used;</li>
+<li>it can provide simultaneous information from the low-field side (LFS) and high-field side (HFS);</li>
+<li>it offers a route to improved signal-to-noise ratio through averaging along magnetic-field-aligned structures;</li>
+<li>it can be integrated with relatively limited modifications, since the imaging concept is designed to be compatible with the existing MSE diagnostic support.</li>
+</ul>
+<p><a href="#fig-imaged-area" class="quarto-xref">Figure&nbsp;1</a> shows the simulated D<span class="math inline">\(\alpha\)</span> beam emission for NB2 and the region selected for BES observation.</p>
+<div id="fig-imaged-area" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-imaged-area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Figures/bes_imaging_area.png" class="img-fluid figure-img" style="width:70.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-imaged-area-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Simulated D<span class="math inline">\(\alpha\)</span> beam emission for NB2, with the imaged area highlighted.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="imaging-bes-system" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="imaging-bes-system"><span class="header-section-number">4.2</span> Imaging BES system</h3>
+<p>The first branch is an <strong>imaging BES</strong> system designed for high-resolution studies of density fluctuations. Its main purpose is to investigate turbulence- and MHD-induced perturbations with sufficiently fine spatial sampling to estimate radial correlation lengths accurately. Because the observed region extends along the beam, the concept also enables simultaneous LFS and HFS measurements, which is particularly interesting for the detection of large field-aligned eddies in low-shear or shearless scenarios. A more detailed discussion of detector technologies for this branch is given in <a href="../../theory/Plasma_physics/CMOS_CCD.html">CMOS, CCD and EMCCD detectors for BES imaging</a>.</p>
+<p>The proposed optical chain is:</p>
+<p><strong>Collimating optics <span class="math inline">\(\rightarrow\)</span> Relay optics <span class="math inline">\(\rightarrow\)</span> Ultra-narrow band-pass filter <span class="math inline">\(\rightarrow\)</span> Focusing optics <span class="math inline">\(\rightarrow\)</span> Fast camera</strong>.</p>
+<p>A key feature of this design is the use of approximately 1 m of relay optics, which allows the camera to be placed outside the strongest TCV magnetic-field region. The ultra-narrow band-pass filter selects the Doppler-shifted beam D<span class="math inline">\(\alpha\)</span> emission, while the camera records short-exposure images at high frame rate.</p>
+<p>The main design targets reported in the presentation are:</p>
+<ul>
+<li>spatial resolution of about <strong>2 mm</strong>;</li>
+<li>acquisition frequency up to <strong>20 kframes/s</strong>;</li>
+<li>exposure time of <strong>10-20 <span class="math inline">\(\mu\)</span>s</strong>;</li>
+<li>radial coverage of about <strong>0.83-1.15 m</strong>.</li>
+</ul>
+<section id="detector-choice-for-the-imaging-branch" class="level4" data-number="4.2.1">
+<h4 data-number="4.2.1" class="anchored" data-anchor-id="detector-choice-for-the-imaging-branch"><span class="header-section-number">4.2.1</span> Detector choice for the imaging branch</h4>
+<p>For this imaging system, the detector choice is not neutral. In practice, a <strong>CMOS camera</strong> is the most suitable solution for the TCV implementation, because the diagnostic requires short exposure times together with acquisition frequencies in the <strong>10-20 kframes/s</strong> range. A CCD-based solution would offer a more uniform readout, but it would be less natural for this high-speed operating mode and would generally come with stronger readout limitations. An EMCCD would retain the CCD advantages in terms of low-light performance and uniformity, but at significantly higher cost.</p>
+<p>The CMOS choice therefore reflects a practical compromise:</p>
+<ul>
+<li>it enables high frame rate and short exposure time;</li>
+<li>it avoids the classical CCD readout-smearing issue;</li>
+<li>it is generally more cost-effective for this use case;</li>
+<li>it comes at the price of higher noise, less uniform background, and a greater need for image correction during analysis.</li>
+</ul>
+<p>This point is important for interpretation. If the relevant plasma fluctuations are of order <strong>100 kHz</strong>, then the imaging branch should not be expected to resolve their temporal correlation directly. Its main strength is instead the recovery of <strong>spatial correlation</strong> and fluctuation structure along the beam. In that sense, the imaging BES branch is primarily a high-spatial-information diagnostic rather than a high-temporal-bandwidth one.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures/bes_imaging_optical_chain.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>Schematic of the imaging BES optical chain proposed for TCV.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="fast-acquisition-bes-system" class="level3" data-number="4.3">
+<h3 data-number="4.3" class="anchored" data-anchor-id="fast-acquisition-bes-system"><span class="header-section-number">4.3</span> Fast-acquisition BES system</h3>
+<p>The second branch is a <strong>fast-acquisition BES</strong> system designed to emphasize temporal resolution. Its objective is to measure the time evolution of the Doppler-shifted D<span class="math inline">\(\alpha\)</span> signal with sufficient bandwidth to characterize fluctuation spectra, turbulence-driven activity, and MHD signatures. This branch is also attractive for estimating the amplitude distribution of density fluctuations and for performing single-shot parameter scans, in which plasma conditions change during one discharge.</p>
+<p>The proposed chain is:</p>
+<p><strong>Imaging optics <span class="math inline">\(\rightarrow\)</span> Fiber bundle <span class="math inline">\(\rightarrow\)</span> Collimating optics <span class="math inline">\(\rightarrow\)</span> Ultra-narrow band-pass filter <span class="math inline">\(\rightarrow\)</span> Focusing optics <span class="math inline">\(\rightarrow\)</span> Avalanche photodiode <span class="math inline">\(\rightarrow\)</span> D-tacq</strong>.</p>
+<p>In this concept, the imaging optics select observation points along the beam and couple the light into a fiber bundle with up to <strong>20 lines of sight</strong>. After spectral filtering and focusing, the light is detected by avalanche photodiodes and acquired with fast electronics. More generally, this branch illustrates why discrete-channel detectors remain essential for BES whenever the priority is <strong>high temporal bandwidth</strong> rather than two-dimensional imaging: MHz-class sampling is naturally pursued with fiber-coupled channels and fast photodetectors, not with a camera.</p>
+<p>The main design targets reported in the presentation are:</p>
+<ul>
+<li>spatial resolution of about <strong>15 mm</strong>;</li>
+<li>acquisition frequency up to <strong>1 MHz</strong>;</li>
+<li>radial coverage of about <strong>0.83-1.15 m</strong>.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figures/bes_fast_optical_chain.png" class="img-fluid figure-img" style="width:65.0%"></p>
+<figcaption>Schematic of the fast-acquisition BES chain and viewing geometry.</figcaption>
+</figure>
+</div>
+</section>
+<section id="complementarity-of-the-two-systems" class="level3" data-number="4.4">
+<h3 data-number="4.4" class="anchored" data-anchor-id="complementarity-of-the-two-systems"><span class="header-section-number">4.4</span> Complementarity of the two systems</h3>
+<p>The strength of the proposed TCV BES design is the complementarity between the two branches:</p>
+<ul>
+<li>the <strong>imaging system</strong> prioritizes spatial resolution and structure characterization;</li>
+<li>the <strong>fast-acquisition system</strong> prioritizes temporal bandwidth and fluctuation spectroscopy;</li>
+<li>both systems exploit the same physical principle, namely Doppler-selected D<span class="math inline">\(\alpha\)</span> emission from NBI-2;</li>
+<li>together they provide a flexible platform for studying turbulence, MHD activity, correlation lengths, spectral content, and possible LFS-HFS asymmetries.</li>
+</ul>
+<p>In other words, the imaging branch answers the question <strong>“where is the fluctuation structure and how extended is it?”</strong>, while the fast branch answers <strong>“how fast does it evolve and with which spectral content?”</strong></p>
+</section>
+</section>
+<section id="outlook" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="outlook"><span class="header-section-number">5</span> Outlook</h2>
+<p>From a diagnostic point of view, the proposed BES development on TCV is attractive because it couples a relatively straightforward integration path with a broad physics reach. The imaging branch appears especially promising for high-resolution spatial studies, whereas the fast-acquisition branch builds on an already established BES tradition in other devices. If both concepts are implemented successfully, TCV would gain a versatile diagnostic set for fluctuation studies along NBI-2, spanning both fine spatial localization and high-bandwidth temporal analysis.</p>
 
 
 </section>
